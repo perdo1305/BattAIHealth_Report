@@ -1,0 +1,448 @@
+\glsdefs@newdocentry{dns}%
+{%
+name={DNS},%
+sort={DNS},%
+type={acronym},%
+first={Domain Name System\glsspace (DNS)},%
+firstplural={Domain Name System\acrpluralsuffix \glsspace (DNS\acrpluralsuffix )},%
+text={DNS},%
+plural={DNS\acrpluralsuffix },%
+description={Domain Name System},%
+descriptionplural={Domain Name System\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Domain Name System},%
+longplural={Domain Name Systems},%
+short={DNS},%
+shortplural={DNSs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{adsl}%
+{%
+name={ADSL},%
+sort={ADSL},%
+type={acronym},%
+first={Assimetric Digital Subscriber Line\glsspace (ADSL)},%
+firstplural={Assimetric Digital Subscriber Line\acrpluralsuffix \glsspace (ADSL\acrpluralsuffix )},%
+text={ADSL},%
+plural={ADSL\acrpluralsuffix },%
+description={Assimetric Digital Subscriber Line},%
+descriptionplural={Assimetric Digital Subscriber Line\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Assimetric Digital Subscriber Line},%
+longplural={Assimetric Digital Subscriber Lines},%
+short={ADSL},%
+shortplural={ADSLs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ascii}%
+{%
+name={ASCII},%
+sort={ASCII},%
+type={acronym},%
+first={American Standard Code for Information Interchange\glsspace (ASCII)},%
+firstplural={American Standard Code for Information Interchange\acrpluralsuffix \glsspace (ASCII\acrpluralsuffix )},%
+text={ASCII},%
+plural={ASCII\acrpluralsuffix },%
+description={American Standard Code for Information Interchange},%
+descriptionplural={American Standard Code for Information Interchange\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={American Standard Code for Information Interchange},%
+longplural={American Standard Code for Information Interchanges},%
+short={ASCII},%
+shortplural={ASCIIs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{bios}%
+{%
+name={BIOS},%
+sort={BIOS},%
+type={acronym},%
+first={Basic Input/Output System\glsspace (BIOS)},%
+firstplural={Basic Input/Output System\acrpluralsuffix \glsspace (BIOS\acrpluralsuffix )},%
+text={BIOS},%
+plural={BIOS\acrpluralsuffix },%
+description={Basic Input/Output System},%
+descriptionplural={Basic Input/Output System\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Basic Input/Output System},%
+longplural={Basic Input/Output Systems},%
+short={BIOS},%
+shortplural={BIOSs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{bit}%
+{%
+name={bit},%
+sort={bit},%
+type={acronym},%
+first={Digito binário\glsspace (bit)},%
+firstplural={Digito binário\acrpluralsuffix \glsspace (bit\acrpluralsuffix )},%
+text={bit},%
+plural={bit\acrpluralsuffix },%
+description={Digito binário},%
+descriptionplural={Digito binário\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Digito binário},%
+longplural={Digito binários},%
+short={bit},%
+shortplural={bits},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{byte}%
+{%
+name={Byte},%
+sort={Byte},%
+type={acronym},%
+first={Unidade de informação digital composta por oito bits\glsspace (Byte)},%
+firstplural={Unidade de informação digital composta por oito bits\acrpluralsuffix \glsspace (Byte\acrpluralsuffix )},%
+text={Byte},%
+plural={Byte\acrpluralsuffix },%
+description={Unidade de informação digital composta por oito bits},%
+descriptionplural={Unidade de informação digital composta por oito bits\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Unidade de informação digital composta por oito bits},%
+longplural={Unidade de informação digital composta por oito bitss},%
+short={Byte},%
+shortplural={Bytes},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{cpu}%
+{%
+name={CPU},%
+sort={CPU},%
+type={acronym},%
+first={Central Processing Unit\glsspace (CPU)},%
+firstplural={Central Processing Unit\acrpluralsuffix \glsspace (CPU\acrpluralsuffix )},%
+text={CPU},%
+plural={CPU\acrpluralsuffix },%
+description={Central Processing Unit},%
+descriptionplural={Central Processing Unit\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Central Processing Unit},%
+longplural={Central Processing Units},%
+short={CPU},%
+shortplural={CPUs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{codec}%
+{%
+name={CODEC},%
+sort={CODEC},%
+type={acronym},%
+first={COmpression/DECompression\glsspace (CODEC)},%
+firstplural={COmpression/DECompression\acrpluralsuffix \glsspace (CODEC\acrpluralsuffix )},%
+text={CODEC},%
+plural={CODEC\acrpluralsuffix },%
+description={COmpression/DECompression},%
+descriptionplural={COmpression/DECompression\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={COmpression/DECompression},%
+longplural={COmpression/DECompressions},%
+short={CODEC},%
+shortplural={CODECs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{dll}%
+{%
+name={DLL},%
+sort={DLL},%
+type={acronym},%
+first={Dynamic Link Library\glsspace (DLL)},%
+firstplural={Dynamic Link Library\acrpluralsuffix \glsspace (DLL\acrpluralsuffix )},%
+text={DLL},%
+plural={DLL\acrpluralsuffix },%
+description={Dynamic Link Library},%
+descriptionplural={Dynamic Link Library\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Dynamic Link Library},%
+longplural={Dynamic Link Librarys},%
+short={DLL},%
+shortplural={DLLs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{dhcp}%
+{%
+name={DHCP},%
+sort={DHCP},%
+type={acronym},%
+first={Dynamic Host Configuration Protocol\glsspace (DHCP)},%
+firstplural={Dynamic Host Configuration Protocol\acrpluralsuffix \glsspace (DHCP\acrpluralsuffix )},%
+text={DHCP},%
+plural={DHCP\acrpluralsuffix },%
+description={Dynamic Host Configuration Protocol},%
+descriptionplural={Dynamic Host Configuration Protocol\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Dynamic Host Configuration Protocol},%
+longplural={Dynamic Host Configuration Protocols},%
+short={DHCP},%
+shortplural={DHCPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ftp}%
+{%
+name={FTP},%
+sort={FTP},%
+type={acronym},%
+first={File Transfer Protocol\glsspace (FTP)},%
+firstplural={File Transfer Protocol\acrpluralsuffix \glsspace (FTP\acrpluralsuffix )},%
+text={FTP},%
+plural={FTP\acrpluralsuffix },%
+description={File Transfer Protocol},%
+descriptionplural={File Transfer Protocol\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={File Transfer Protocol},%
+longplural={File Transfer Protocols},%
+short={FTP},%
+shortplural={FTPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ip}%
+{%
+name={IP},%
+sort={IP},%
+type={acronym},%
+first={Internet Protocol\glsspace (IP)},%
+firstplural={Internet Protocol\acrpluralsuffix \glsspace (IP\acrpluralsuffix )},%
+text={IP},%
+plural={IP\acrpluralsuffix },%
+description={Internet Protocol},%
+descriptionplural={Internet Protocol\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Internet Protocol},%
+longplural={Internet Protocols},%
+short={IP},%
+shortplural={IPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{isp}%
+{%
+name={ISP},%
+sort={ISP},%
+type={acronym},%
+first={Internet Service Provider\glsspace (ISP)},%
+firstplural={Internet Service Provider\acrpluralsuffix \glsspace (ISP\acrpluralsuffix )},%
+text={ISP},%
+plural={ISP\acrpluralsuffix },%
+description={Internet Service Provider},%
+descriptionplural={Internet Service Provider\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Internet Service Provider},%
+longplural={Internet Service Providers},%
+short={ISP},%
+shortplural={ISPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{so}%
+{%
+name={SO},%
+sort={SO},%
+type={acronym},%
+first={Sistema Operativo\glsspace (SO)},%
+firstplural={Sistema Operativo\acrpluralsuffix \glsspace (SO\acrpluralsuffix )},%
+text={SO},%
+plural={SO\acrpluralsuffix },%
+description={Sistema Operativo},%
+descriptionplural={Sistema Operativo\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Sistema Operativo},%
+longplural={Sistema Operativos},%
+short={SO},%
+shortplural={SOs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{tcp}%
+{%
+name={TCP},%
+sort={TCP},%
+type={acronym},%
+first={Transmission Control Protocol\glsspace (TCP)},%
+firstplural={Transmission Control Protocol\acrpluralsuffix \glsspace (TCP\acrpluralsuffix )},%
+text={TCP},%
+plural={TCP\acrpluralsuffix },%
+description={Transmission Control Protocol},%
+descriptionplural={Transmission Control Protocol\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Transmission Control Protocol},%
+longplural={Transmission Control Protocols},%
+short={TCP},%
+shortplural={TCPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{abc}%
+{%
+name={ABC},%
+sort={ABC},%
+type={acronym},%
+first={A lista de acrónimos deve ficar ordenada alfabeticamente\glsspace (ABC)},%
+firstplural={A lista de acrónimos deve ficar ordenada alfabeticamente\acrpluralsuffix \glsspace (ABC\acrpluralsuffix )},%
+text={ABC},%
+plural={ABC\acrpluralsuffix },%
+description={A lista de acrónimos deve ficar ordenada alfabeticamente},%
+descriptionplural={A lista de acrónimos deve ficar ordenada alfabeticamente\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={A lista de acrónimos deve ficar ordenada alfabeticamente},%
+longplural={A lista de acrónimos deve ficar ordenada alfabeticamentes},%
+short={ABC},%
+shortplural={ABCs},%
+counter={page},%
+parent={},%
+%
+}%
+

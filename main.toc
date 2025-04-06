@@ -1,0 +1,26 @@
+\babel@toc {portuguese}{}\relax 
+\vspace {-\cftbeforepartskip }
+\babel@toc {portuguese}{}\relax 
+\contentsline {chapter}{Agradecimentos}{i}{dummy.1}%
+\contentsline {chapter}{Resumo}{iii}{dummy.2}%
+\contentsline {chapter}{Abstract}{v}{dummy.3}%
+\contentsline {chapter}{Lista de Figuras}{ix}{dummy.5}%
+\contentsline {chapter}{Lista de Tabelas}{xi}{dummy.6}%
+\contentsline {chapter}{Lista de Abreviaturas}{xiii}{section*.1}%
+\vspace {\beforebibskip }
+\contentsline {chapter}{\numberline {1}{Introdução}}{1}{chapter.1}%
+\vspace {\beforebibskip }
+\contentsline {chapter}{\numberline {2}{Desenvolvimento}}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}{Estilos}}{3}{section.2.1}%
+\vspace {\beforebibskip }
+\contentsline {chapter}{\numberline {3}{Conclusões}}{5}{chapter.3}%
+\vspace {\beforebibskip }
+\contentsline {chapter}{\numberline {}{Bibliografia}}{7}{dummy.8}%
+\contentsline {part}{{Apêndices}}{9}{section*.6}%
+\vspace {\beforebibskip }
+\contentsline {chapter}{\numberline {A}{Apêndice A}}{11}{appendix.A}%
+\contentsline {section}{\numberline {A.1}{Appendix Section Test}}{11}{section.A.1}%
+\contentsline {section}{\numberline {A.2}{Another Appendix Section Test}}{12}{section.A.2}%
+\vspace {\beforebibskip }
+\contentsline {chapter}{\numberline {B}{Apêndice B}}{13}{appendix.B}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
