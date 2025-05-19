@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.4.6)  6 APR 2025 16:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.4.6)  19 MAY 2025 15:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1421,7 +1421,7 @@ Missing character: There is no ¨ in font lmsy10!
  (./Covers/Abstract.tex
 Missing character: There is no ¨ in font lmsy10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--20
+Underfull \hbox (badness 10000) in paragraph at lines 20--27
 
  []
 
@@ -1433,7 +1433,7 @@ Missing character: There is no ¨ in font lmsy10!
 ]
 Missing character: There is no ¨ in font lmsy10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
@@ -1457,6 +1457,10 @@ Missing character: There is no ¨ in font lmsy10!
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
@@ -1504,11 +1508,12 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 55.
 Missing character: There is no ¨ in font lmsy10!
 [11
 
-])
+]
+No file main.gls.
 Missing character: There is no ¨ in font lmsy10!
 [12
 
-]
+])
 \openout2 = `Covers/Acronyms.aux'.
 
  (./Covers/Acronyms.tex
@@ -1519,6 +1524,7 @@ Missing character: There is no ¨ in font lmsy10!
 No file main.acr.
 Missing character: There is no ¨ in font lmsy10!
 [13
+
 
 
 
@@ -1565,70 +1571,78 @@ l.157 \cleardoublepage\include{Chapters/Intro}
  (./Chapters/Development.tex
 Cap\'{\i }tulo 2.
 
-Overfull \hbox (38.53226pt too wide) in paragraph at lines 5--5
+Overfull \hbox (38.53226pt too wide) in paragraph at lines 6--6
 []\U/eur/b/n/70 2 
  []
 
 Missing character: There is no ¨ in font lmsy10!
+
+Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
+(lipsum)                'portuguese' will be used instead.
+
 Missing character: There is no ¨ in font lmsy10!
-<imgs/tp04a_450.jpg, id=156, 722.7pt x 336.25626pt>
-File: imgs/tp04a_450.jpg Graphic file (type jpg)
-<use imgs/tp04a_450.jpg>
-Package pdftex.def Info: imgs/tp04a_450.jpg  used on input line 25.
-(pdftex.def)             Requested size: 125.73264pt x 58.49683pt.
-File: imgs/tp04a_450.jpg Graphic file (type jpg)
-<use imgs/tp04a_450.jpg>
-Package pdftex.def Info: imgs/tp04a_450.jpg  used on input line 26.
-(pdftex.def)             Requested size: 125.73264pt x 58.49683pt.
-File: imgs/tp04a_450.jpg Graphic file (type jpg)
-<use imgs/tp04a_450.jpg>
-Package pdftex.def Info: imgs/tp04a_450.jpg  used on input line 27.
-(pdftex.def)             Requested size: 125.73264pt x 58.49683pt.
-<imgs/tp45a_450.jpg, id=157, 351.3125pt x 376.40625pt>
-File: imgs/tp45a_450.jpg Graphic file (type jpg)
-<use imgs/tp45a_450.jpg>
-Package pdftex.def Info: imgs/tp45a_450.jpg  used on input line 36.
-(pdftex.def)             Requested size: 196.45274pt x 210.49313pt.
-Missing character: There is no ¨ in font lmsy10!
-Missing character: There is no ¨ in font lmsy10!
-)
 Missing character: There is no ¨ in font lmsy10!
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.158 ...rdoublepage\include{Chapters/Development}
-                                                   [3
+l.18 \section{Supporting Technologies}
+                                       [3
 
 
 
 
 
- <./imgs/tp04a_450.jpg>]
+]
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
+Cap\'{\i }tulo 3.
 Missing character: There is no ¨ in font lmsy10!
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.158 ...rdoublepage\include{Chapters/Development}
-                                                   [4 <./imgs/tp45a_450.jpg>]
-\openout2 = `Chapters/Conclusion.aux'.
-
- (./Chapters/Conclusion.tex
-Cap\'{\i }tulo 3.
-
-Overfull \hbox (38.53226pt too wide) in paragraph at lines 5--5
+l.39 \chapter{State of the Art}
+                                [4]
+Overfull \hbox (38.53226pt too wide) in paragraph at lines 39--39
 []\U/eur/b/n/70 3 
+ []
+
+Missing character: There is no ¨ in font lmsy10!
+Cap\'{\i }tulo 4.
+Missing character: There is no ¨ in font lmsy10!
+[5
+
+] [6
+
+]
+Overfull \hbox (38.53226pt too wide) in paragraph at lines 46--46
+[]\U/eur/b/n/70 4 
  []
 
 Missing character: There is no ¨ in font lmsy10!
 )
 Missing character: There is no ¨ in font lmsy10!
-[5
+[7] [8
 
 
 
+]
+\openout2 = `Chapters/Conclusion.aux'.
+
+ (./Chapters/Conclusion.tex
+Cap\'{\i }tulo 5.
+
+Overfull \hbox (38.53226pt too wide) in paragraph at lines 5--5
+[]\U/eur/b/n/70 5 
+ []
+
+Missing character: There is no ¨ in font lmsy10!
+)
+Missing character: There is no ¨ in font lmsy10!
+[9
 
 
-] [6
+] [10
 
 
 
@@ -1639,19 +1653,19 @@ Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 )
 Missing character: There is no ¨ in font lmsy10!
-[7
+[11
 
 
-] [8
+] [12
 
 
 
 ]
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
-[9
+[13
 
-] [10]
+] [14]
 \openout2 = `Chapters/ApendixA.aux'.
 
  (./Chapters/ApendixA.tex
@@ -1662,13 +1676,9 @@ Overfull \hbox (58.08998pt too wide) in paragraph at lines 7--7
  []
 
 Missing character: There is no ¨ in font lmsy10!
-
-Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
-(lipsum)                'portuguese' will be used instead.
-
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
-[11
+[15
 
 
 
@@ -1685,7 +1695,7 @@ Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 )
 Missing character: There is no ¨ in font lmsy10!
-[12]
+[16]
 \openout2 = `Chapters/ApendixB.aux'.
 
  (./Chapters/ApendixB.tex
@@ -1698,7 +1708,7 @@ Overfull \hbox (50.84175pt too wide) in paragraph at lines 4--4
 Missing character: There is no ¨ in font lmsy10!
 )
 Missing character: There is no ¨ in font lmsy10!
-[13
+[17
 
 
 
@@ -1905,10 +1915,6 @@ Covers/Acronyms.tex
 Chapters/Intro.tex
   ts1lmr.fd    2009/10/30 v1.6 Font defs for Latin Modern
 Chapters/Development.tex
-imgs/tp04a_450.jpg
-imgs/tp04a_450.jpg
-imgs/tp04a_450.jpg
-imgs/tp45a_450.jpg
 Chapters/Conclusion.tex
 Covers/Bibliography.tex
 Chapters/ApendixA.tex
@@ -1926,18 +1932,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### semi simple group (level 1) entered at line 289 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 37882 strings out of 480154
- 737031 string characters out of 5893789
- 1764931 words of memory out of 5000000
- 54889 multiletter control sequences out of 15000+600000
- 575672 words of font info for 175 fonts, out of 8000000 for 9000
+ 37878 strings out of 480154
+ 736591 string characters out of 5893789
+ 1764922 words of memory out of 5000000
+ 54870 multiletter control sequences out of 15000+600000
+ 573095 words of font info for 180 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 108i,21n,106p,10662b,11851s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (31 pages, 375530 bytes).
+ 108i,21n,106p,10662b,11873s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on main.pdf (35 pages, 228190 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
- 265 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 66192 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 354 PDF objects out of 1000 (max. 8388607)
+ 293 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 64182 words of extra memory for PDF output out of 74296 (max. 10000000)
 

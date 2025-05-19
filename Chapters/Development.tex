@@ -1,62 +1,52 @@
 \addtocontents{toc}{\protect\vspace{\beforebibskip}} % Place slightly below the rest of the document content in the table
 
 
-%************************************************
-\chapter{Desenvolvimento}
-\label{ch:desenvolvimento}
-%************************************************
 
-O corpo do relatório constitui a parte mais extensa do trabalho e deve conter o desenvolvimento das ideias referidas na Introdução. Nesta parte do relatório incluem-se o assunto, objeto a ser tratado, a metodologia da sequência de exposição, a descrição dos métodos e técnicas usados, a construção de argumentos, a explicação de conceitos e noções, a análise e a interpretação de dados.
+%************************************************
+\chapter{Background material and Supporting Technologies}
+\label{ch:background}
+%************************************************
+\lipsum[1]
+\section{Core Concepts}
+
+Battery technology serves as the foundation for energy storage systems across numerous applications, from portable electronics to electric vehicles and grid-scale storage. Modern batteries primarily fall into several categories, including lithium-ion, lead-acid, nickel-metal hydride, and flow batteries, each with distinct electrochemical properties, energy densities, and lifecycle characteristics. The health of these batteries is characterized by parameters such as state of charge (SoC), state of health (SoH), capacity fade, internal resistance, and degradation rates, which collectively determine performance and longevity. Monitoring these parameters presents unique challenges due to the complex, nonlinear relationships between observable measurements and underlying battery conditions. Artificial intelligence and machine learning approaches offer powerful solutions to these challenges by enabling pattern recognition across multidimensional battery data. Supervised learning algorithms can predict remaining useful life, while unsupervised methods can detect anomalies indicative of impending failure. Deep learning architectures, particularly recurrent neural networks and transformers, have demonstrated exceptional capability in extracting temporal patterns from battery operational data, making them especially valuable for health prognostics in dynamic usage scenarios.
+
+%Battery fundamentals (types, chemistry, operating principles)
+%Key health monitoring parameters for batteries
+%AI/ML fundamentals relevant to your application
+
+\section{Supporting Technologies}
+%Sensor technologies for battery data collection
+%Data acquisition systems and protocols
+%Computing platforms/hardware used
+
+\section{Methodogical Background}
+%Signal processing techniques for battery data
+%Feature extraction methods
+%Relevant machine learning algorithms (classification, regression, etc.)
+%Evaluation metrics for health monitoring systems
+
+
+\section{Related Frameworks}
+%Software libraries and tools used in implementation
+%Data management approaches
+%Visualization techniques
+
+
+
+
+%************************************************
+\chapter{State of the Art}
+\label{ch:stateoftheart}
+%************************************************
+\lipsum[1-2]
+
+
+%************************************************
+\chapter{Development}
+\label{ch:Development}
+%************************************************
+\lipsum[1-2]
  
-\section{Estilos}
-
-O \LaTeXe\ trata da formação, apenas temos de usar as \emph{tags} correctas. Seguem-se alguns exemplos. 
-
-A Figura \ref{fig:terrenos} é constituída por 3 imagens em ficheiros \textbf{.jpg} separados. A Figura \ref{fig:vulcao} é constituída apenas por um ficheiro e ocupa 50\% da largura de uma linha de texto.
 
 
-% Ao omitirmos a extensão do ficheiro de imagem estamos a permitir que 
-% seja possível compilar o ficheiro com Latex ou PDFLatex
-% em contrapartida temos de ter 2 vezes a mesma imagem:
-% 	- .eps para o Latex
-% 	- .jpg ou .pdf para o PDFLatex
-\begin{figure}
- \centering
- \includegraphics[width=0.32\linewidth]{imgs/tp04a_450}
- \includegraphics[width=0.32\linewidth]{imgs/tp04a_450}
- \includegraphics[width=0.32\linewidth]{imgs/tp04a_450}
- % tp04a_450.jpg: 720x335 pixel, 72dpi, 25.40x11.82 cm, bb=0 0 720 335
- \caption[Imagem composta]{Imagem composta por três figuras em ficheiros separados}
- \label{fig:terrenos}
-\end{figure}
-
-
-\begin{figure}
- \centering
- \includegraphics[width=0.5\linewidth]{imgs/tp45a_450}
- % tp45a_450.eps: 1179666x1179666 pixel, 300dpi, 9987.84x9987.84 cm, bb=20 20 575 615
- \caption{Vulcão}
- \label{fig:vulcao}
-\end{figure}
-
-
-Na Tabela \ref{tableBenchmark} apresenta-se um exemplo de uma tabela.
-
-\begin{table}
-  \caption[Exemplo de uma tabela]{Floating point benchmark.
-	\textbf{R$_{max}$}: the performance in Gflops for the largest problem run on a machine;
-	\textbf{N$_{max}$}: the size of the largest problem run on a machine;
-	\textbf{N$_{1/2}$}: the size where half the R$_{max}$ execution rate is achieved;
-	\textbf{R$_{peak}$}: the theoretical peak performance in Gflops for the machine}
-  \label{tableBenchmark}
-  \begin{center} 
-  \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}} rccccc } \toprule
-\textbf{Linpack	Benchmark}& Proc.	& \textbf{R$_{max}$} & \textbf{N$_{max}$} & \textbf{N$_{1/2}$}	& \textbf{R$_{peak}$} \\ 
-(Full precision)	& or Cores	& GFlops	     & Order		  & Order		& GFlops \\ [0.25ex] \midrule
-Thinking Machine CM-5	& 32		& 1,900		     & 9216		  & 4096		& 4 \\
-Pentium 4 3.0 GHz & 1	& 4,730		     & 7600		  & 365			& 6 \\
-\multirow{2}{*}{IBM Cell BE 3.2 GHz} 	& \multirow{2}{*}{9}& \multirow{2}{*}{98,05} & \multirow{2}{*}{4096} & \multirow{2}{*}{1536} & 204,8 {\scriptsize{(32 bits)}} \\
-			&		&		     &			  &			& 14,6 {\scriptsize{(64 bits)}} \\ \bottomrule
-  \end{tabular*}
-  \end{center}	
-\end{table}

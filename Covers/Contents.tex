@@ -9,7 +9,7 @@
 
 \setcounter{secnumdepth}{3} % Depth of sections to number in the text itself - currently up to subsubsections
 
-\renewcommand\contentsname{Índice}
+\renewcommand\contentsname{Index}
 
 \manualmark
 \markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
@@ -82,16 +82,16 @@
 % %----------------------------------------------------------------------------------------
 % 
 % 
-% \refstepcounter{dummy}
-% \addcontentsline{toc}{chapter}{Glossário} % Uncomment if you would like the acronyms to appear in the table of contents
-% % \pdfbookmark[1]{Lista de Acrónimos}{Lista de Acrónimos} % Bookmark name visible in a PDF viewer
-% 
-% 
-% 
-% \markboth{\spacedlowsmallcaps{Glossário}}{\spacedlowsmallcaps{Glossário}}
-% \printglossary[type=\glsdefaulttype,title=Glossário]
-% 
-% 
-% 
-% 
-% \cleardoublepage
+ \refstepcounter{dummy}
+ \addcontentsline{toc}{chapter}{Glossário} % Uncomment if you would like the acronyms to appear in the table of contents
+ % \pdfbookmark[1]{Lista de Acrónimos}{Lista de Acrónimos} % Bookmark name visible in a PDF viewer
+ 
+ 
+ 
+ \markboth{\spacedlowsmallcaps{Glossário}}{\spacedlowsmallcaps{Glossário}}
+ \printglossary[type=\glsdefaulttype,title=Glossário]
+ 
+ 
+ 
+ 
+ \cleardoublepage
