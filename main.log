@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.4.6)  19 MAY 2025 15:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.4.6)  2 JUN 2025 17:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1462,6 +1462,12 @@ Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
+[7
+
+
+]
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
@@ -1479,12 +1485,7 @@ Missing character: There is no ¨ in font lmsy10!
 1: chapter
 1: section
 Missing character: There is no ¨ in font lmsy10!
-[7
-
-
-] [8
-
-]
+[8]
 Missing character: There is no ¨ in font lmsy10!
 Package tocbasic Info: character protrusion at lof deactivated on input line 40.
 (./main.lof)
@@ -1494,6 +1495,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 40.
 
 Missing character: There is no ¨ in font lmsy10!
 [9
+
 
 ] [10
 
@@ -1585,8 +1587,8 @@ Missing character: There is no ¨ in font lmsy10!
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.18 \section{Supporting Technologies}
-                                       [3
+l.18 \subsection{Battery Degradation}
+                                      [3
 
 
 
@@ -1594,35 +1596,58 @@ l.18 \section{Supporting Technologies}
 
 ]
 Missing character: There is no ¨ in font lmsy10!
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.43 \subsection{Internal Resistance Degradation}
+                                                  [4]
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no « in font lmsy8!
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
+[5]
+Missing character: There is no ¨ in font lmsy10!
+[6]
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
+[7]
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 Cap\'{\i }tulo 3.
 Missing character: There is no ¨ in font lmsy10!
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.39 \chapter{State of the Art}
-                                [4]
-Overfull \hbox (38.53226pt too wide) in paragraph at lines 39--39
+[8]
+Missing character: There is no ¨ in font lmsy10!
+[9] [10
+
+]
+Overfull \hbox (38.53226pt too wide) in paragraph at lines 146--146
 []\U/eur/b/n/70 3 
  []
 
 Missing character: There is no ¨ in font lmsy10!
 Cap\'{\i }tulo 4.
 Missing character: There is no ¨ in font lmsy10!
-[5
-
-] [6
+[11] [12
 
 ]
-Overfull \hbox (38.53226pt too wide) in paragraph at lines 46--46
+Overfull \hbox (38.53226pt too wide) in paragraph at lines 152--152
 []\U/eur/b/n/70 4 
  []
 
 Missing character: There is no ¨ in font lmsy10!
-)
 Missing character: There is no ¨ in font lmsy10!
-[7] [8
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
+[13]
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
+[14])
+Missing character: There is no ¨ in font lmsy10!
+[15] [16
 
 
 
@@ -1639,10 +1664,10 @@ Overfull \hbox (38.53226pt too wide) in paragraph at lines 5--5
 Missing character: There is no ¨ in font lmsy10!
 )
 Missing character: There is no ¨ in font lmsy10!
-[9
+[17
 
 
-] [10
+] [18
 
 
 
@@ -1653,19 +1678,19 @@ Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 )
 Missing character: There is no ¨ in font lmsy10!
-[11
+[19
 
 
-] [12
+] [20
 
 
 
 ]
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
-[13
+[21
 
-] [14]
+] [22]
 \openout2 = `Chapters/ApendixA.aux'.
 
  (./Chapters/ApendixA.tex
@@ -1678,7 +1703,7 @@ Overfull \hbox (58.08998pt too wide) in paragraph at lines 7--7
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
-[15
+[23
 
 
 
@@ -1695,7 +1720,7 @@ Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 )
 Missing character: There is no ¨ in font lmsy10!
-[16]
+[24]
 \openout2 = `Chapters/ApendixB.aux'.
 
  (./Chapters/ApendixB.tex
@@ -1708,7 +1733,7 @@ Overfull \hbox (50.84175pt too wide) in paragraph at lines 4--4
 Missing character: There is no ¨ in font lmsy10!
 )
 Missing character: There is no ¨ in font lmsy10!
-[17
+[25
 
 
 
@@ -1932,18 +1957,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### semi simple group (level 1) entered at line 289 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 37878 strings out of 480154
- 736591 string characters out of 5893789
- 1764922 words of memory out of 5000000
- 54870 multiletter control sequences out of 15000+600000
- 573095 words of font info for 180 fonts, out of 8000000 for 9000
+ 37959 strings out of 480154
+ 737549 string characters out of 5893789
+ 1767948 words of memory out of 5000000
+ 54902 multiletter control sequences out of 15000+600000
+ 573886 words of font info for 189 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 108i,21n,106p,10662b,11873s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (35 pages, 228190 bytes).
+ 108i,21n,106p,10662b,12034s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on main.pdf (43 pages, 278956 bytes).
 PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
- 63 named destinations out of 1000 (max. 500000)
- 64182 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 494 PDF objects out of 1000 (max. 8388607)
+ 421 compressed objects within 5 object streams
+ 94 named destinations out of 1000 (max. 500000)
+ 64318 words of extra memory for PDF output out of 74296 (max. 10000000)
 
