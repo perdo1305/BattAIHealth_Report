@@ -31,7 +31,7 @@
 \contentsline {subsection}{\numberline {2.10.8}{Battery Degradation}}{11}{subsection.2.10.8}%
 \contentsline {subsection}{\numberline {2.10.9}{Capacity Fade}}{12}{subsection.2.10.9}%
 \contentsline {subsection}{\numberline {2.10.10}{Internal Resistance Degradation in Lithium-Ion Batteries}}{12}{subsection.2.10.10}%
-\contentsline {subsection}{\numberline {2.10.11}{monitoring battery health}}{13}{subsection.2.10.11}%
+\contentsline {subsection}{\numberline {2.10.11}{Battery Health Monitoring}}{13}{subsection.2.10.11}%
 \contentsline {subsubsection}{\numberline {2.10.11.1}{Technical Challenges}}{13}{subsubsection.2.10.11.1}%
 \contentsline {subsubsection}{\numberline {2.10.11.2}{Complexity of Battery Chemistry}}{14}{subsubsection.2.10.11.2}%
 \contentsline {subsubsection}{\numberline {2.10.11.3}{Measurement Difficulties}}{14}{subsubsection.2.10.11.3}%
