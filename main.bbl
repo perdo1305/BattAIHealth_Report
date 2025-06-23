@@ -19,178 +19,1031 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
-    \entry{Darwin1859}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=a14236c2ceb2dd05dcdab8227460aea1}{%
-           family={Darwin},
-           familyi={D\bibinitperiod},
-           given={C.},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {John Murray}%
-      }
-      \strng{namehash}{a14236c2ceb2dd05dcdab8227460aea1}
-      \strng{fullhash}{a14236c2ceb2dd05dcdab8227460aea1}
-      \strng{bibnamehash}{a14236c2ceb2dd05dcdab8227460aea1}
-      \strng{authorbibnamehash}{a14236c2ceb2dd05dcdab8227460aea1}
-      \strng{authornamehash}{a14236c2ceb2dd05dcdab8227460aea1}
-      \strng{authorfullhash}{a14236c2ceb2dd05dcdab8227460aea1}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{On the Origin of Species by Means of Natural Selection}
-      \field{year}{1859}
-    \endentry
-    \entry{Koza1992}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=34e11484ceb01437ef4dab79c4b8c38d}{%
-           family={Koza},
-           familyi={K\bibinitperiod},
-           given={J.\bibnamedelimi R.},
-           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{34e11484ceb01437ef4dab79c4b8c38d}
-      \strng{fullhash}{34e11484ceb01437ef4dab79c4b8c38d}
-      \strng{bibnamehash}{34e11484ceb01437ef4dab79c4b8c38d}
-      \strng{authorbibnamehash}{34e11484ceb01437ef4dab79c4b8c38d}
-      \strng{authornamehash}{34e11484ceb01437ef4dab79c4b8c38d}
-      \strng{authorfullhash}{34e11484ceb01437ef4dab79c4b8c38d}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Cambridge MA: The MIT Press.}
-      \field{title}{Genetic Programming. On the programming of computers by means of natural selection}
-      \field{year}{1992}
-    \endentry
-    \entry{oetiker2000nss}{book}{}
-      \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=3b8673baa791c419ebeb1f50411d9b50}{%
-           family={Oetiker},
-           familyi={O\bibinitperiod},
-           given={T.},
+    \entry{akiba_optuna_2019}{misc}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=2939d0d5b491018f7cc7812609071a79}{%
+           family={Akiba},
+           familyi={A\bibinitperiod},
+           given={Takuya},
            giveni={T\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=4036abde1e7548a72578419041a3738e}{%
-           family={Partl},
-           familyi={P\bibinitperiod},
-           given={H.},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=a22e1b6e5ee9c60c3bf0af606cec44f2}{%
-           family={Hyna},
-           familyi={H\bibinitperiod},
-           given={I.},
-           giveni={I\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=765eaab1ba41657fe52ecd33f34c2f4e}{%
-           family={Schlegl},
+        {{un=0,uniquepart=base,hash=92311081bb41fd01eb1ce06f61805909}{%
+           family={Sano},
            familyi={S\bibinitperiod},
-           given={E.},
+           given={Shotaro},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a841fb8471f00b147fdd8954fb01c03f}{%
+           family={Yanase},
+           familyi={Y\bibinitperiod},
+           given={Toshihiko},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db73c7d77457602e9a75d75bbe181aba}{%
+           family={Ohta},
+           familyi={O\bibinitperiod},
+           given={Takeru},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d18b784f7f35111bc05bcbd245a34ce7}{%
+           family={Koyama},
+           familyi={K\bibinitperiod},
+           given={Masanori},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0da4c5b8107cb83a6bd4ba0c9b294621}
+      \strng{fullhash}{6a8f61fd5680dbd348b2b27b4a54d0d8}
+      \strng{bibnamehash}{0da4c5b8107cb83a6bd4ba0c9b294621}
+      \strng{authorbibnamehash}{0da4c5b8107cb83a6bd4ba0c9b294621}
+      \strng{authornamehash}{0da4c5b8107cb83a6bd4ba0c9b294621}
+      \strng{authorfullhash}{6a8f61fd5680dbd348b2b27b4a54d0d8}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{A hyperparameter optimization framework}
+      \field{note}{Pages: 2623–2631 Publication Title: Proceedings of the 25th ACM SIGKDD international conference on knowledge discovery \& data mining original-date: 2018-02-21T06:12:56Z}
+      \field{shorttitle}{Optuna}
+      \field{title}{Optuna: {A} next-generation hyperparameter optimization framework}
+      \field{urlday}{23}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1145/3292500.3330701
+      \endverb
+      \verb{urlraw}
+      \verb https://github.com/optuna/optuna
+      \endverb
+      \verb{url}
+      \verb https://github.com/optuna/optuna
+      \endverb
+    \endentry
+    \entry{ansel_pytorch_2024}{misc}{}
+      \name{author}{49}{}{%
+        {{un=0,uniquepart=base,hash=e78fa9bb024897b05487b4d0e3aab461}{%
+           family={Ansel},
+           familyi={A\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b9e701339e56fd0b171145b08288a1b7}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Edward},
            giveni={E\bibinitperiod},
            givenun=0}}%
-      }
-      \strng{namehash}{a889a1560def4fc6f02617169df01cf0}
-      \strng{fullhash}{109d1e040e2d712f4a841a0c236d79fb}
-      \strng{bibnamehash}{a889a1560def4fc6f02617169df01cf0}
-      \strng{authorbibnamehash}{a889a1560def4fc6f02617169df01cf0}
-      \strng{authornamehash}{a889a1560def4fc6f02617169df01cf0}
-      \strng{authorfullhash}{109d1e040e2d712f4a841a0c236d79fb}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{\url{http://www.ctan.org/tex-archive/info/lshort/english/lshort.pdf}}
-      \field{title}{{The Not So Short Introduction to \LaTeXe}}
-      \field{year}{2000}
-    \endentry
-    \entry{Rudolph2016}{book}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=c0649e317f5448568f1e709483dbd33c}{%
-           family={Rudolph},
-           familyi={R\bibinitperiod},
-           given={Konrad},
-           giveni={K\bibinitperiod},
+        {{un=0,uniquepart=base,hash=339d072cae7a701881476cb4e4958adc}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Horace},
+           giveni={H\bibinitperiod},
            givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {CTAN}%
-      }
-      \strng{namehash}{c0649e317f5448568f1e709483dbd33c}
-      \strng{fullhash}{c0649e317f5448568f1e709483dbd33c}
-      \strng{bibnamehash}{c0649e317f5448568f1e709483dbd33c}
-      \strng{authorbibnamehash}{c0649e317f5448568f1e709483dbd33c}
-      \strng{authornamehash}{c0649e317f5448568f1e709483dbd33c}
-      \strng{authorfullhash}{c0649e317f5448568f1e709483dbd33c}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{\url{http://mirrors.fe.up.pt/pub/CTAN/macros/latex/contrib/minted/minted.pdf}}
-      \field{title}{The minted package: Highlighted source code in \LaTeXe}
-      \field{year}{2016}
-    \endentry
-    \entry{Sims1992}{inproceedings}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e82e28049026b1f21b03e44e54185318}{%
-           family={Sims},
-           familyi={S\bibinitperiod},
-           given={Karl},
-           giveni={K\bibinitperiod},
+        {{un=0,uniquepart=base,hash=6e45f49ec618e619efad90c8e8a61f0c}{%
+           family={Gimelshein},
+           familyi={G\bibinitperiod},
+           given={Natalia},
+           giveni={N\bibinitperiod},
            givenun=0}}%
-      }
-      \name{editor}{2}{}{%
-        {{hash=3753afcb01bf332c638c173e7949fe54}{%
-           family={Varela},
+        {{un=0,uniquepart=base,hash=aa93352ce718dfc2ab5fa1cd8e50acdd}{%
+           family={Jain},
+           familyi={J\bibinitperiod},
+           given={Animesh},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73f61d2d529e845db2937d2141b8831b}{%
+           family={Voznesensky},
            familyi={V\bibinitperiod},
-           given={F.},
-           giveni={F\bibinitperiod}}}%
-        {{hash=b18ecc800fbee5935358b4b016c2de0f}{%
-           family={Bourgine},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f78289a128eb158da2d42b485a9e8027}{%
+           family={Bao},
            familyi={B\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Paris, FR}%
+           given={Bin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c5131d4f5264c3c5c9b3999661099d4}{%
+           family={Bell},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13798c299036ee606ca381b7aca40d33}{%
+           family={Berard},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=09a667aa6a26526bfcccb2676a494e55}{%
+           family={Burovski},
+           familyi={B\bibinitperiod},
+           given={Evgeni},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=93fe4ee5367badd822e112322753c865}{%
+           family={Chauhan},
+           familyi={C\bibinitperiod},
+           given={Geeta},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f8244207606507d74292cee3c9d25d8}{%
+           family={Chourdia},
+           familyi={C\bibinitperiod},
+           given={Anjali},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4766072c6524173c5b352a44b4e81ea2}{%
+           family={Constable},
+           familyi={C\bibinitperiod},
+           given={Will},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=954cf7680b6ce14813973eccdca3c4bc}{%
+           family={Desmaison},
+           familyi={D\bibinitperiod},
+           given={Alban},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3f9535be511fd2fa346093e63b8e61a0}{%
+           family={DeVito},
+           familyi={D\bibinitperiod},
+           given={Zachary},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d120a738223a9fb5012c14b630afaaa3}{%
+           family={Ellison},
+           familyi={E\bibinitperiod},
+           given={Elias},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3f29cb06fc723a0c40d6ad5e7607b422}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Will},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a039196851c8aa0e865ed50ca42da6ca}{%
+           family={Gong},
+           familyi={G\bibinitperiod},
+           given={Jiong},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d41895e4fca09a2ffb0c95190f6d6aca}{%
+           family={Gschwind},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=059736a3b347ddab8a72c8935276b5b8}{%
+           family={Hirsh},
+           familyi={H\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=03203988e8dec6b1f770d21267d1a5c2}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Sherlock},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f64c72869ade69fe532d502fa23aa717}{%
+           family={Kalambarkar},
+           familyi={K\bibinitperiod},
+           given={Kshiteej},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=faae2596b01f225f8d35fbc13429b809}{%
+           family={Kirsch},
+           familyi={K\bibinitperiod},
+           given={Laurent},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=72df5f29945de824df5bb27806e51ff3}{%
+           family={Lazos},
+           familyi={L\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4623402ada65204ba5cfe26c7d6ea19}{%
+           family={Lezcano},
+           familyi={L\bibinitperiod},
+           given={Mario},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e6eb092eac01d09fca25a6f3863114be}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Yanbo},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e883e862ce7bc886d867171f106b465}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4eadf32831509d81ab5104f8d3d113da}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Yinghai},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=621e3d5b442b1067863530ab2015cdd4}{%
+           family={Luk},
+           familyi={L\bibinitperiod},
+           given={CK},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7cc4922468f3d5b85a3967299da0a4aa}{%
+           family={Maher},
+           familyi={M\bibinitperiod},
+           given={Bert},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4155ee12962c958909411f6438bed201}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Yunjie},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=23ae0370ddd373ba5ecfa35f0751f0e8}{%
+           family={Puhrsch},
+           familyi={P\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=525237a0a8567b38319596dc54130c17}{%
+           family={Reso},
+           familyi={R\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb82b008b83c88d432b4e5167f3acf06}{%
+           family={Saroufim},
+           familyi={S\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d05f589be91663bdcbd3b2ec1ad95cc}{%
+           family={Siraichi},
+           familyi={S\bibinitperiod},
+           given={Marcos\bibnamedelima Yukio},
+           giveni={M\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8bf7efa7375ec8441db1315cb6341021}{%
+           family={Suk},
+           familyi={S\bibinitperiod},
+           given={Helen},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7b35fb6ae66b844d2fe7bfe0ba98886b}{%
+           family={Suo},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8593192db45495d7768162b3630207b1}{%
+           family={Tillet},
+           familyi={T\bibinitperiod},
+           given={Phil},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f5e6228a84a34d66724cf3fe7dd0fef5}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Eikan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cd26424dac955ebe267f1a2f0325d9f3}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xiaodong},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2dfd5b92a759b60ae50920845c9a5c84}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7f60c4b0ae0a2345562857e0db066b0}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shunting},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f79215132dad5094a6a084f1445d13ef}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Xu},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=520990ed6ffb6d01df7e906edcaf3e92}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Keren},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=25ddb7ef91f9d2807c51ab020400ca44}{%
+           family={Zou},
+           familyi={Z\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95cced5af9d65baaa27928c8874c1cfe}{%
+           family={Mathews},
+           familyi={M\bibinitperiod},
+           given={Ajit},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f897ed422c34d95af2e22778dfc2607e}{%
+           family={Chanan},
+           familyi={C\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8ee2464c666949638e7727e1d1d00985}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Peng},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8ef51a0906e47d2b4472c4e714ed598f}{%
+           family={Chintala},
+           familyi={C\bibinitperiod},
+           given={Soumith},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
       }
       \list{publisher}{1}{%
-        {MIT Press}%
+        {ACM}%
       }
-      \strng{namehash}{e82e28049026b1f21b03e44e54185318}
-      \strng{fullhash}{e82e28049026b1f21b03e44e54185318}
-      \strng{bibnamehash}{e82e28049026b1f21b03e44e54185318}
-      \strng{authorbibnamehash}{e82e28049026b1f21b03e44e54185318}
-      \strng{authornamehash}{e82e28049026b1f21b03e44e54185318}
-      \strng{authorfullhash}{e82e28049026b1f21b03e44e54185318}
-      \strng{editorbibnamehash}{3e96d3beb6045e8642e799b54a9f9f43}
-      \strng{editornamehash}{3e96d3beb6045e8642e799b54a9f9f43}
-      \strng{editorfullhash}{3e96d3beb6045e8642e799b54a9f9f43}
+      \strng{namehash}{a3808305ad2695511c53901a6b9071d0}
+      \strng{fullhash}{7f09690a82bc14e3737ee59a653ee52c}
+      \strng{bibnamehash}{a3808305ad2695511c53901a6b9071d0}
+      \strng{authorbibnamehash}{a3808305ad2695511c53901a6b9071d0}
+      \strng{authornamehash}{a3808305ad2695511c53901a6b9071d0}
+      \strng{authorfullhash}{7f09690a82bc14e3737ee59a653ee52c}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Tensors and Dynamic neural networks in Python with strong GPU acceleration}
+      \field{month}{4}
+      \field{note}{Publication Title: 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2 (ASPLOS '24) original-date: 2016-08-13T05:26:41Z}
+      \field{shorttitle}{{PyTorch} 2}
+      \field{title}{{PyTorch} 2: {Faster} {Machine} {Learning} {Through} {Dynamic} {Python} {Bytecode} {Transformation} and {Graph} {Compilation}}
+      \field{urlday}{23}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1145/3620665.3640366
+      \endverb
+      \verb{urlraw}
+      \verb https://docs.pytorch.org/assets/pytorch2-2.pdf
+      \endverb
+      \verb{url}
+      \verb https://docs.pytorch.org/assets/pytorch2-2.pdf
+      \endverb
+    \endentry
+    \entry{CALCE_battery_nodate}{misc}{}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{title}{Battery {Data} {|} {Center} for {Advanced} {Life} {Cycle} {Engineering}}
+      \field{urlday}{22}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Battery Data | Center for Advanced Life Cycle Engineering:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/HD9J2M9R/battery-data.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://calce.umd.edu/battery-data
+      \endverb
+      \verb{url}
+      \verb https://calce.umd.edu/battery-data
+      \endverb
+    \endentry
+    \entry{noauthor_biolaborange3_nodate}{misc}{}
+      \field{sortinit}{b}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{title}{biolab/orange3: :bulb: {Orange}: {Interactive} data analysis}
+      \field{urlday}{23}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb biolab/orange3\: \:bulb\: Orange\: Interactive data analysis:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/SC3JXIB3/orange3.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://github.com/biolab/orange3
+      \endverb
+      \verb{url}
+      \verb https://github.com/biolab/orange3
+      \endverb
+    \endentry
+    \entry{Fangfang_Yang}{article}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{PDF {|} State-of-charge (SOC), which indicates the remaining capacity at current cycle, is key to driving range prediction of electric vehicles and... {|} Find, read and cite all the research you need on ResearchGate}
+      \field{journaltitle}{ResearchGate}
+      \field{title}{{Combined} {CNN}-{LSTM} {Network} for {State}-of-{Charge} {Estimation} of {Lithium}-{Ion} {Batteries}}
+      \field{urlday}{22}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2019.2926517
+      \endverb
+      \verb{file}
+      \verb Full Text:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/C9EZ5VBK/(PDF) Combined CNN-LSTM Network for State-of-Charge Estimation of Lithium-Ion Batteries.pdf:application/pdf;Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/G83RPQVC/334119055_Combined_CNN-LSTM_Network_for_State-of-Charge_Estimation_of_Lithium-Ion_Batteries.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/334119055_Combined_CNN-LSTM_Network_for_State-of-Charge_Estimation_of_Lithium-Ion_Batteries
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/334119055_Combined_CNN-LSTM_Network_for_State-of-Charge_Estimation_of_Lithium-Ion_Batteries
+      \endverb
+    \endentry
+    \entry{conda_contributors_conda_2025}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bffe28594810f0517478de270f69497a}{%
+           family={{conda contributors}},
+           familyi={c\bibinitperiod}}}%
+      }
+      \strng{namehash}{bffe28594810f0517478de270f69497a}
+      \strng{fullhash}{bffe28594810f0517478de270f69497a}
+      \strng{bibnamehash}{bffe28594810f0517478de270f69497a}
+      \strng{authorbibnamehash}{bffe28594810f0517478de270f69497a}
+      \strng{authornamehash}{bffe28594810f0517478de270f69497a}
+      \strng{authorfullhash}{bffe28594810f0517478de270f69497a}
+      \field{sortinit}{c}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{A system-level, binary package and environment manager running on all major operating systems and platforms.}
+      \field{month}{6}
+      \field{note}{original-date: 2012-10-15T22:08:03Z}
+      \field{shorttitle}{conda}
+      \field{title}{conda: {A} system-level, binary package and environment manager running on all major operating systems and platforms.}
+      \field{urlday}{23}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/conda/conda
+      \endverb
+      \verb{url}
+      \verb https://github.com/conda/conda
+      \endverb
+    \endentry
+    \entry{MATR_dataset_nodate}{misc}{}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{title}{Experimental {Data} {Platform} ({MATR})}
+      \field{urlday}{22}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Experimental Data Platform:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/MRJP32S9/5c48dd2bc625d700019f3204.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://data.matr.io/1/projects/5c48dd2bc625d700019f3204
+      \endverb
+      \verb{url}
+      \verb https://data.matr.io/1/projects/5c48dd2bc625d700019f3204
+      \endverb
+    \endentry
+    \entry{faconti_facontidavideplotjuggler_2025}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=62726d74827a704edc19b6d6cc32475e}{%
+           family={Faconti},
+           familyi={F\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{62726d74827a704edc19b6d6cc32475e}
+      \strng{fullhash}{62726d74827a704edc19b6d6cc32475e}
+      \strng{bibnamehash}{62726d74827a704edc19b6d6cc32475e}
+      \strng{authorbibnamehash}{62726d74827a704edc19b6d6cc32475e}
+      \strng{authornamehash}{62726d74827a704edc19b6d6cc32475e}
+      \strng{authorfullhash}{62726d74827a704edc19b6d6cc32475e}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Time Series Visualization Tool that you deserve.}
+      \field{month}{6}
+      \field{note}{original-date: 2016-03-01T21:05:42Z}
+      \field{title}{facontidavide/{PlotJuggler}}
+      \field{urlday}{23}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/facontidavide/PlotJuggler
+      \endverb
+      \verb{url}
+      \verb https://github.com/facontidavide/PlotJuggler
+      \endverb
+      \keyw{chart,csv,labstreaminglayer,lua,mqtt,plot,px4,qt5,ros,rosbag,time-series,ulog,visualize-data}
+    \endentry
+    \entry{noauthor_git_nodate}{misc}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{title}{Git}
+      \field{urlday}{23}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Git:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/FB28TARX/git-scm.com.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://git-scm.com/
+      \endverb
+      \verb{url}
+      \verb https://git-scm.com/
+      \endverb
+    \endentry
+    \entry{hong_state--health_2023}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=31512e9b55710198c755b55238023b27}{%
+           family={Hong},
+           familyi={H\bibinitperiod},
+           given={Jiangnan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9705f096dfb14e9e242a3db9a00e4558}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yucheng},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e01090730d68e4e975ddfdfdfdb069bd}{%
+           family={Chai},
+           familyi={C\bibinitperiod},
+           given={Qinqin},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e1198e1582c43ffaea1ffd142d6d1f9}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Qiongbin},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56ed1afe5ccf20bc8e455a80ec343bfc}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Wu},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9f131b83691cbc90379b6b0a985b5ad3}
+      \strng{fullhash}{840c5932a22f3d9e81ded83c98a1a206}
+      \strng{bibnamehash}{9f131b83691cbc90379b6b0a985b5ad3}
+      \strng{authorbibnamehash}{9f131b83691cbc90379b6b0a985b5ad3}
+      \strng{authornamehash}{9f131b83691cbc90379b6b0a985b5ad3}
+      \strng{authorfullhash}{840c5932a22f3d9e81ded83c98a1a206}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Accurate estimation of the state of health (SOH) of lithium-ion batteries is an important guarantee to ensure safe and reliable operation of lithium-ion battery systems. However, the complex aging mechanism inside the battery makes it difficult to measure the battery SOH directly. In this paper, a SOH estimation method based on a novel dual-stage attention-based recurrent neural network (DARNN) and health feature (HF) extraction from time varying charging process is proposed. Firstly, the constant current charging time, the maximum temperature time, the isochronous voltage difference, and the isochronous current were extracted as lithium-ion battery HFs, and their correlations with SOH are verified by spearman correlation coefficient. Secondly, the DARNN is proposed to capture the time-dependent and temporal features of the input sequence and to accurately predict SOH. Finally, the proposed estimation method is validated on the NASA battery dataset. The results show that the method can accurately estimate SOH for lithium-ion batteries. The mean square error and the mean absolute percentage error of the method are {<}0.5 \%.}
+      \field{issn}{2352-152X}
+      \field{journaltitle}{Journal of Energy Storage}
+      \field{month}{11}
+      \field{title}{State-of-health estimation of lithium-ion batteries using a novel dual-stage attention mechanism based recurrent neural network}
+      \field{urlday}{22}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{volume}{72}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{109297}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.est.2023.109297
+      \endverb
+      \verb{file}
+      \verb ScienceDirect Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/JDTCMLXJ/S2352152X23026956.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2352152X23026956
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2352152X23026956
+      \endverb
+      \keyw{Dual-stage attention-based recurrent neural network,Lithium-ion battery,State of health}
+    \endentry
+    \entry{noauthor_nasa_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Can you predict the remaining useful life (RUL) of NASA batteries?}
+      \field{title}{{NASA} {Battery} {Dataset}}
+      \field{urlday}{22}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{n.d.}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/PAU85MF7/nasa-battery-dataset.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.kaggle.com/datasets/patrickfleith/nasa-battery-dataset
+      \endverb
+      \verb{url}
+      \verb https://www.kaggle.com/datasets/patrickfleith/nasa-battery-dataset
+      \endverb
+    \endentry
+    \entry{pepe_hkust_nodate}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9c292ca418bdecc3a1fd7b0715af904d}{%
+           family={Pepe},
+           familyi={P\bibinitperiod},
+           given={Simona\bibnamedelima Pepe},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE DataPort}%
+      }
+      \strng{namehash}{9c292ca418bdecc3a1fd7b0715af904d}
+      \strng{fullhash}{9c292ca418bdecc3a1fd7b0715af904d}
+      \strng{bibnamehash}{9c292ca418bdecc3a1fd7b0715af904d}
+      \strng{authorbibnamehash}{9c292ca418bdecc3a1fd7b0715af904d}
+      \strng{authornamehash}{9c292ca418bdecc3a1fd7b0715af904d}
+      \strng{authorfullhash}{9c292ca418bdecc3a1fd7b0715af904d}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This dataset encompasses cycling experiments conducted on lithium-ion batteries, involving 5 distinct batches, each originating from a different manufacturer. Within each batch, there were 6 batteries subjected to testing. The battery types employed for testing included cylindrical 21700 cells and 18650 type and nickel manganese cobalt or nickel cobalt aluminum.The testing procedure consisted of an initial Constant Current (CC) charging step, taking the batteries to 4.2 V at a rate of 0.5 C, followed by a Constant Voltage (CV) step that maintained the voltage at 4.2 V until the current dropped to 0.02 C. Subsequently, the cells underwent discharge at a rate of 1 C until the voltage reached 2.5 V.For the light cycling profile, a similar CC-CV charging protocol was applied, with an initial CC charge to 4.1 V at 0.5 C, followed by CV charging at 4.1 V until the current decayed to 0.02 C. A constant current discharge at 1 C was then executed, with a lower voltage cutoff set at 3.0 V. In all instances, there was a resting period of 10 minutes between the charge and discharge stages. The C-rate for each cell was calculated based on the nominal capacity specified by the manufacturer.}
+      \field{title}{{HKUST} lithium ion battery dataset}
+      \field{urlday}{22}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.21227/JH1V-5435
+      \endverb
+      \verb{urlraw}
+      \verb https://ieee-dataport.org/documents/hkust-lithium-ion-battery-dataset
+      \endverb
+      \verb{url}
+      \verb https://ieee-dataport.org/documents/hkust-lithium-ion-battery-dataset
+      \endverb
+    \endentry
+    \entry{stroe_degradation_2018}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=b23df57bf041f04a39044f2c794038f6}{%
+           family={Stroe},
+           familyi={S\bibinitperiod},
+           given={Daniel-Ioan},
+           giveni={D\bibinithyphendelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=66733d487615366158079f5c17131b2f}{%
+           family={Swierczynski},
+           familyi={S\bibinitperiod},
+           given={Maciej},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5004d188295853e5aa42c4aef2b284c3}{%
+           family={Kær},
+           familyi={K\bibinitperiod},
+           given={Søren\bibnamedelima Knudsen},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ddbd95086252564472b7cb1e02947208}{%
+           family={Teodorescu},
+           familyi={T\bibinitperiod},
+           given={Remus},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5d3d961b6532d3d016339d87d35c5630}
+      \strng{fullhash}{45caf33f3bbd1d2a40539bce6d5c8455}
+      \strng{bibnamehash}{5d3d961b6532d3d016339d87d35c5630}
+      \strng{authorbibnamehash}{5d3d961b6532d3d016339d87d35c5630}
+      \strng{authornamehash}{5d3d961b6532d3d016339d87d35c5630}
+      \strng{authorfullhash}{45caf33f3bbd1d2a40539bce6d5c8455}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Toward a Practice of Autonomous Systems: Proceedings of the First European Conference on Artificial Life}
-      \field{title}{{Interactive evolution of dynamical systems}}
-      \field{year}{1992}
-      \field{pages}{171\bibrangedash 178}
+      \field{abstract}{Lithium-ion batteries are regarded as the key energy storage technology for both e-mobility and stationary renewable energy storage applications. Nevertheless, Lithium-ion batteries are complex energy storage devices, which are characterized by a complex degradation behavior, which affects both their capacity and internal resistance. This paper investigates, based on extended laboratory calendar ageing tests, the degradation of the internal resistance of a lithium-ion battery. The dependence of the internal resistance increase on the temperature and state-of-charge level has been extensive studied and quantified. Based on the obtained laboratory results, an accurate semiempirical lifetime model, which is able to predict with high accuracy the internal resistance increase of the lithium-ion battery over a wide temperature range and for all state-of-charge levels, was proposed and validated.}
+      \field{issn}{1939-9367}
+      \field{journaltitle}{IEEE Transactions on Industry Applications}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Degradation {Behavior} of {Lithium}-{Ion} {Batteries} {During} {Calendar} {Ageing}—{The} {Case} of the {Internal} {Resistance} {Increase}}
+      \field{urlday}{22}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{volume}{54}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{517\bibrangedash 525}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/TIA.2017.2756026
+      \endverb
+      \verb{file}
+      \verb Full Text:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/YH8RGHTP/Stroe et al. - 2018 - Degradation Behavior of Lithium-Ion Batteries During Calendar Ageing—The Case of the Internal Resist.pdf:application/pdf;Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/SQLQJHRN/8048537.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/8048537
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/8048537
+      \endverb
+      \keyw{Aging,Calendar ageing,Chemistry,degradation,Degradation,internal resistance,lithium-ion (Li-ion) battery,modeling,Resistance,State of charge}
+    \endentry
+    \entry{sun_simultaneous_2022}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=c2a0c49bd9d099501105c03bdf94d282}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Shu},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e1198e1582c43ffaea1ffd142d6d1f9}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Qiongbin},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=83a2de52647a1a72dcd14a4c112412ac}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Huasen},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95ffae83adb6dbfb6cf7c667f743c26a}{%
+           family={Zhan},
+           familyi={Z\bibinitperiod},
+           given={Yin},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f49f485d4b1415eca9d7a5f5fdc45b69}{%
+           family={Dai},
+           familyi={D\bibinitperiod},
+           given={Yanyan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a1ac43d431dcc63460f1fb4105539f58}
+      \strng{fullhash}{4429cab3f4df744cc7d84b923a688502}
+      \strng{bibnamehash}{a1ac43d431dcc63460f1fb4105539f58}
+      \strng{authorbibnamehash}{a1ac43d431dcc63460f1fb4105539f58}
+      \strng{authornamehash}{a1ac43d431dcc63460f1fb4105539f58}
+      \strng{authorfullhash}{4429cab3f4df744cc7d84b923a688502}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Batteries are widely used in various vital energy storage occasions, so it is particularly important to monitor the state-of-charge (SOC) and the state-of-health (SOH). To estimate SOC and SOH quickly and accurately, the battery’s shock response characteristic is analyzed in this paper while fully considering the degree of aging that could impact their operating status. In this paper, a SOC and SOH simultaneous-estimation scheme is proposed based on shock response characteristics. Firstly, the effective and representative features of the voltage impulse response curve are extracted by combining different feature extraction methods. Then, the Support Vector Machine (SVM) is introduced to estimate the SOH and SOC simultaneously. The feature comes from the voltage impulse response curve, which is very convenient to obtain in practical applications. The simulation results show that this method can accurately estimate SOH and SOC for batteries in any SOH state and SOC state, which has strong robustness and generalization ability.}
+      \field{booktitle}{2022 4th {International} {Conference} on {Smart} {Power} \& {Internet} {Energy} {Systems} ({SPIES})}
+      \field{month}{12}
+      \field{title}{Simultaneous {Estimation} of {SOH} and {SOC} of {Batteries} {Based} on {SVM}}
+      \field{urlday}{22}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{1934\bibrangedash 1938}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/SPIES55999.2022.10082477
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/XNQTWXEL/Sun et al. - 2022 - Simultaneous Estimation of SOH and SOC of Batteries Based on SVM.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10082477
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10082477
+      \endverb
+      \keyw{Batteries,Electric shock,feature extraction,Feature extraction,Robustness,Simulation,state of charge,state of health,Support vector machines,SVM,Voltage}
+    \endentry
+    \entry{noauthor_weights_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Building the best tools for ML practitioners. Weights \& Biases has 145 repositories available. Follow their code on GitHub.}
+      \field{journaltitle}{GitHub}
+      \field{title}{Weights \& {Biases}}
+      \field{urlday}{23}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/UIL3YPKX/wandb.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://github.com/wandb
+      \endverb
+      \verb{url}
+      \verb https://github.com/wandb
+      \endverb
+    \endentry
+    \entry{yilmaz_transformer-based_2025}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=774a7b827abaf817578428078e0c01cb}{%
+           family={Yılmaz},
+           familyi={Y\bibinitperiod},
+           given={Metin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=086819105ee003c1bbd7d1a60200cb8c}{%
+           family={Çinar},
+           familyi={Ç\bibinitperiod},
+           given={Eyüp},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88a60b0ea4f60fec27eb53ce8a1a446b}{%
+           family={Yazıcı},
+           familyi={Y\bibinitperiod},
+           given={Ahmet},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{29ba8e1cfb1c9c26ee07284777176802}
+      \strng{fullhash}{0b5ac3789ae024fe1c50cf54cfc804b6}
+      \strng{bibnamehash}{0b5ac3789ae024fe1c50cf54cfc804b6}
+      \strng{authorbibnamehash}{0b5ac3789ae024fe1c50cf54cfc804b6}
+      \strng{authornamehash}{29ba8e1cfb1c9c26ee07284777176802}
+      \strng{authorfullhash}{0b5ac3789ae024fe1c50cf54cfc804b6}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Batteries play a critical role in Electric Vehicle (EV) systems devices. The safety and performance of these applications rely on accurate Battery Management Systems (BMS) to monitor and optimize battery performance. Traditional BMS systems face challenges in charge prediction processes due to complex chemical processes and battery aging, leading to faults. The absence of a perfect sensor highlights limitations in measurement issues arising from external factors, especially sensor noise. Therefore, there is a need for algorithms that can solve the real-world battery charge prediction problem. This study compares an innovative solution, the Transformer model, with traditional Long Short-Term Memory (LSTM), Bi-directional LSTM (Bi-LSTM) models, and Support Vector Regression (SVR). This research aims to provide new perspectives on Battery State of Charge (SoC) predictions using NASA, BMW i3, Stanford University Battery Datasets, and real-world battery data obtained from L5 EV of the Musoshi brand collected for this work. This research’s primary objective is to apply the Transformer model to real-world battery data, evaluating it as a significant step in EV range optimization and battery management. The Transformer model in the study achieved the best result with Root Mean Square Error (RMSE) value closest to 1 ( 0.99).}
+      \field{issn}{2169-3536}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{A {Transformer}-{Based} {Model} for {State} of {Charge} {Estimation} of {Electric} {Vehicle} {Batteries}}
+      \field{urlday}{22}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{volume}{13}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \field{pages}{33035\bibrangedash 33048}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2025.3542961
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/LZ2NLB9Q/Yılmaz et al. - 2025 - A Transformer-Based Model for State of Charge Estimation of Electric Vehicle Batteries.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10891541
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10891541
+      \endverb
+      \keyw{Accuracy,batteries,Batteries,Computational modeling,Data models,electric vehicle,Electric vehicles,Estimation,Predictive models,state of charge,Time series analysis,Transformer,Transformers,Vehicle dynamics}
+    \endentry
+    \entry{zhang_studies_2000}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=59d10f8a548ee180b28909fb783a76eb}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dcc23fc501bae482a62233f9d6d7d780}{%
+           family={Haran},
+           familyi={H\bibinitperiod},
+           given={B.\bibnamedelimi S},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d535e479520fa527efb4d99366ed42b}{%
+           family={Durairajan},
+           familyi={D\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7942fbf39a8a737d41c415bc9d02b0ea}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={R.\bibnamedelimi E},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b9147805626f17bb097c63de2ffc44c8}{%
+           family={Podrazhansky},
+           familyi={P\bibinitperiod},
+           given={Y},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6d8dba6d3aa77ee224787af39107c37a}{%
+           family={Popov},
+           familyi={P\bibinitperiod},
+           given={B.\bibnamedelimi N},
+           giveni={B\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6e80ccfacfc928c6fba94baacaa2a725}
+      \strng{fullhash}{405ce7ea7198adf101abeb59e8c641af}
+      \strng{bibnamehash}{6e80ccfacfc928c6fba94baacaa2a725}
+      \strng{authorbibnamehash}{6e80ccfacfc928c6fba94baacaa2a725}
+      \strng{authornamehash}{6e80ccfacfc928c6fba94baacaa2a725}
+      \strng{authorfullhash}{405ce7ea7198adf101abeb59e8c641af}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The capacity fade of Sony 18650S Li-ion cells has been analyzed using cyclic voltammetry, impedance spectroscopy and electron probe microscopic analysis (EPMA). The surface resistance at both the positive (LiCoO2) and negative (carbon) electrodes were found to increase with cycling. This increase in resistance contributes to decreased capacity. Impedance data reveal that the interfacial resistance at LiCoO2 electrode is larger than that at the carbon electrode. The impedance of the positive electrode (LiCoO2) dominates the total cell resistance initially and also after 800 charge–discharge cycles. EPMA analysis on carbon electrodes taken from the fresh and cycled cell show the presence of oxidation products in the case of cycled cells. No change in the electrolyte resistance is seen with cycling.}
+      \field{issn}{0378-7753}
+      \field{journaltitle}{Journal of Power Sources}
+      \field{month}{12}
+      \field{number}{2}
+      \field{title}{Studies on capacity fade of lithium-ion batteries}
+      \field{urlday}{22}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{volume}{91}
+      \field{year}{2000}
+      \field{urldateera}{ce}
+      \field{pages}{122\bibrangedash 129}
       \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/S0378-7753(00)00469-9
+      \endverb
+      \verb{file}
+      \verb ScienceDirect Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/EBTHGTUF/S0378775300004699.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0378775300004699
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0378775300004699
+      \endverb
+      \keyw{Capacity fade,Electrochemical impedance spectroscopy,Lithium-ion battery,Surface film}
     \endentry
   \enddatalist
+  \missing{Ref3}
+  \missing{Ref5}
+  \missing{Report}
 \endrefsection
 \endinput
 
