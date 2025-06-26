@@ -61,7 +61,7 @@
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{A hyperparameter optimization framework}
@@ -392,7 +392,7 @@
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Tensors and Dynamic neural networks in Python with strong GPU acceleration}
@@ -488,20 +488,20 @@
     \endentry
     \entry{conda_contributors_conda_2025}{misc}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=bffe28594810f0517478de270f69497a}{%
-           family={{conda contributors}},
-           familyi={c\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=447c8bb53526ebb605f9c0487cda7a79}{%
+           family={{Conda}},
+           familyi={C\bibinitperiod}}}%
       }
-      \strng{namehash}{bffe28594810f0517478de270f69497a}
-      \strng{fullhash}{bffe28594810f0517478de270f69497a}
-      \strng{bibnamehash}{bffe28594810f0517478de270f69497a}
-      \strng{authorbibnamehash}{bffe28594810f0517478de270f69497a}
-      \strng{authornamehash}{bffe28594810f0517478de270f69497a}
-      \strng{authorfullhash}{bffe28594810f0517478de270f69497a}
-      \field{sortinit}{c}
+      \strng{namehash}{447c8bb53526ebb605f9c0487cda7a79}
+      \strng{fullhash}{447c8bb53526ebb605f9c0487cda7a79}
+      \strng{bibnamehash}{447c8bb53526ebb605f9c0487cda7a79}
+      \strng{authorbibnamehash}{447c8bb53526ebb605f9c0487cda7a79}
+      \strng{authornamehash}{447c8bb53526ebb605f9c0487cda7a79}
+      \strng{authorfullhash}{447c8bb53526ebb605f9c0487cda7a79}
+      \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{A system-level, binary package and environment manager running on all major operating systems and platforms.}
@@ -560,7 +560,7 @@
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The Time Series Visualization Tool that you deserve.}
@@ -643,7 +643,7 @@
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Accurate estimation of the state of health (SOH) of lithium-ion batteries is an important guarantee to ensure safe and reliable operation of lithium-ion battery systems. However, the complex aging mechanism inside the battery makes it difficult to measure the battery SOH directly. In this paper, a SOH estimation method based on a novel dual-stage attention-based recurrent neural network (DARNN) and health feature (HF) extraction from time varying charging process is proposed. Firstly, the constant current charging time, the maximum temperature time, the isochronous voltage difference, and the isochronous current were extracted as lithium-ion battery HFs, and their correlations with SOH are verified by spearman correlation coefficient. Secondly, the DARNN is proposed to capture the time-dependent and temporal features of the input sequence and to accurately predict SOH. Finally, the proposed estimation method is validated on the NASA battery dataset. The results show that the method can accurately estimate SOH for lithium-ion batteries. The mean square error and the mean absolute percentage error of the method are {<}0.5 \%.}
@@ -680,7 +680,7 @@
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labeltitlesource}{title}
       \field{abstract}{Can you predict the remaining useful life (RUL) of NASA batteries?}
       \field{title}{{NASA} {Battery} {Dataset}}
@@ -775,7 +775,7 @@
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Lithium-ion batteries are regarded as the key energy storage technology for both e-mobility and stationary renewable energy storage applications. Nevertheless, Lithium-ion batteries are complex energy storage devices, which are characterized by a complex degradation behavior, which affects both their capacity and internal resistance. This paper investigates, based on extended laboratory calendar ageing tests, the degradation of the internal resistance of a lithium-ion battery. The dependence of the internal resistance increase on the temperature and state-of-charge level has been extensive studied and quantified. Based on the obtained laboratory results, an accurate semiempirical lifetime model, which is able to predict with high accuracy the internal resistance increase of the lithium-ion battery over a wide temperature range and for all state-of-charge levels, was proposed and validated.}
@@ -848,7 +848,7 @@
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Batteries are widely used in various vital energy storage occasions, so it is particularly important to monitor the state-of-charge (SOC) and the state-of-health (SOH). To estimate SOC and SOH quickly and accurately, the battery’s shock response characteristic is analyzed in this paper while fully considering the degree of aging that could impact their operating status. In this paper, a SOC and SOH simultaneous-estimation scheme is proposed based on shock response characteristics. Firstly, the effective and representative features of the voltage impulse response curve are extracted by combining different feature extraction methods. Then, the Support Vector Machine (SVM) is introduced to estimate the SOH and SOC simultaneously. The feature comes from the voltage impulse response curve, which is very convenient to obtain in practical applications. The simulation results show that this method can accurately estimate SOH and SOC for batteries in any SOH state and SOC state, which has strong robustness and generalization ability.}
@@ -902,6 +902,84 @@
       \verb https://github.com/wandb
       \endverb
     \endentry
+    \entry{wu_timesnet_2023}{misc}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=98dce96f41870f1bbabf03de06a05caa}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Haixu},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e8cc4324a833b03b5f60ededd557cdf}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Tengge},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc6c6f66f139beef784a50d9f1485019}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0c3d4b55e7357f9926f171ace018696d}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Hang},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5677a530ed74bcd73cbf45f8088a8418}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jianmin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=867778fd4a7456937f929a855edfaf77}{%
+           family={Long},
+           familyi={L\bibinitperiod},
+           given={Mingsheng},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{338d0f3691411e7dad093368d83de073}
+      \strng{fullhash}{1e35b5f882adb96b5619c146ed038ee9}
+      \strng{bibnamehash}{338d0f3691411e7dad093368d83de073}
+      \strng{authorbibnamehash}{338d0f3691411e7dad093368d83de073}
+      \strng{authornamehash}{338d0f3691411e7dad093368d83de073}
+      \strng{authorfullhash}{1e35b5f882adb96b5619c146ed038ee9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Time series analysis is of immense importance in extensive applications, such as weather forecasting, anomaly detection, and action recognition. This paper focuses on temporal variation modeling, which is the common key problem of extensive analysis tasks. Previous methods attempt to accomplish this directly from the 1D time series, which is extremely challenging due to the intricate temporal patterns. Based on the observation of multi-periodicity in time series, we ravel out the complex temporal variations into the multiple intraperiod- and interperiod-variations. To tackle the limitations of 1D time series in representation capability, we extend the analysis of temporal variations into the 2D space by transforming the 1D time series into a set of 2D tensors based on multiple periods. This transformation can embed the intraperiod- and interperiod-variations into the columns and rows of the 2D tensors respectively, making the 2D-variations to be easily modeled by 2D kernels. Technically, we propose the TimesNet with TimesBlock as a task-general backbone for time series analysis. TimesBlock can discover the multi-periodicity adaptively and extract the complex temporal variations from transformed 2D tensors by a parameter-efficient inception block. Our proposed TimesNet achieves consistent state-of-the-art in five mainstream time series analysis tasks, including short- and long-term forecasting, imputation, classification, and anomaly detection. Code is available at this repository: https://github.com/thuml/TimesNet.}
+      \field{month}{4}
+      \field{note}{arXiv:2210.02186 [cs]}
+      \field{shorttitle}{{TimesNet}}
+      \field{title}{{TimesNet}: {Temporal} {2D}-{Variation} {Modeling} for {General} {Time} {Series} {Analysis}}
+      \field{urlday}{19}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2210.02186
+      \endverb
+      \verb{file}
+      \verb Preprint PDF:/home/labrob/snap/zotero-snap/common/Zotero/storage/JWXACJEE/Wu et al. - 2023 - TimesNet Temporal 2D-Variation Modeling for General Time Series Analysis.pdf:application/pdf;Snapshot:/home/labrob/snap/zotero-snap/common/Zotero/storage/6MSHV2MC/2210.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2210.02186
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2210.02186
+      \endverb
+      \keyw{Computer Science - Machine Learning}
+    \endentry
     \entry{yilmaz_transformer-based_2025}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=774a7b827abaf817578428078e0c01cb}{%
@@ -932,7 +1010,7 @@
       \field{sortinit}{Y}
       \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Batteries play a critical role in Electric Vehicle (EV) systems devices. The safety and performance of these applications rely on accurate Battery Management Systems (BMS) to monitor and optimize battery performance. Traditional BMS systems face challenges in charge prediction processes due to complex chemical processes and battery aging, leading to faults. The absence of a perfect sensor highlights limitations in measurement issues arising from external factors, especially sensor noise. Therefore, there is a need for algorithms that can solve the real-world battery charge prediction problem. This study compares an innovative solution, the Transformer model, with traditional Long Short-Term Memory (LSTM), Bi-directional LSTM (Bi-LSTM) models, and Support Vector Regression (SVR). This research aims to provide new perspectives on Battery State of Charge (SoC) predictions using NASA, BMW i3, Stanford University Battery Datasets, and real-world battery data obtained from L5 EV of the Musoshi brand collected for this work. This research’s primary objective is to apply the Transformer model to real-world battery data, evaluating it as a significant step in EV range optimization and battery management. The Transformer model in the study achieved the best result with Root Mean Square Error (RMSE) value closest to 1 ( 0.99).}
@@ -1009,7 +1087,7 @@
       \field{sortinit}{Z}
       \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
       \field{extradatescope}{labelyear}
-      \field{labeldatesource}{year}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The capacity fade of Sony 18650S Li-ion cells has been analyzed using cyclic voltammetry, impedance spectroscopy and electron probe microscopic analysis (EPMA). The surface resistance at both the positive (LiCoO2) and negative (carbon) electrodes were found to increase with cycling. This increase in resistance contributes to decreased capacity. Impedance data reveal that the interfacial resistance at LiCoO2 electrode is larger than that at the carbon electrode. The impedance of the positive electrode (LiCoO2) dominates the total cell resistance initially and also after 800 charge–discharge cycles. EPMA analysis on carbon electrodes taken from the fresh and cycled cell show the presence of oxidation products in the case of cycled cells. No change in the electrolyte resistance is seen with cycling.}

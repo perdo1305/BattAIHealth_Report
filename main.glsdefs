@@ -1,14 +1,14 @@
 \glsdefs@newdocentry{dns}%
 {%
-name={DNS},%
+name={\acronymfont {\glsentryshort {dns}}},%
 sort={DNS},%
 type={acronym},%
-first={Domain Name System\glsspace (DNS)},%
-firstplural={Domain Name System\acrpluralsuffix \glsspace (DNS\acrpluralsuffix )},%
+first={DNS},%
+firstplural={DNSs},%
 text={DNS},%
-plural={DNS\acrpluralsuffix },%
+plural={DNSs},%
 description={Domain Name System},%
-descriptionplural={Domain Name System\acrpluralsuffix },%
+descriptionplural={Domain Name System},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -28,15 +28,15 @@ parent={},%
 
 \glsdefs@newdocentry{adsl}%
 {%
-name={ADSL},%
+name={\acronymfont {\glsentryshort {adsl}}},%
 sort={ADSL},%
 type={acronym},%
-first={Assimetric Digital Subscriber Line\glsspace (ADSL)},%
-firstplural={Assimetric Digital Subscriber Line\acrpluralsuffix \glsspace (ADSL\acrpluralsuffix )},%
+first={ADSL},%
+firstplural={ADSLs},%
 text={ADSL},%
-plural={ADSL\acrpluralsuffix },%
+plural={ADSLs},%
 description={Assimetric Digital Subscriber Line},%
-descriptionplural={Assimetric Digital Subscriber Line\acrpluralsuffix },%
+descriptionplural={Assimetric Digital Subscriber Line},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -56,15 +56,15 @@ parent={},%
 
 \glsdefs@newdocentry{ascii}%
 {%
-name={ASCII},%
+name={\acronymfont {\glsentryshort {ascii}}},%
 sort={ASCII},%
 type={acronym},%
-first={American Standard Code for Information Interchange\glsspace (ASCII)},%
-firstplural={American Standard Code for Information Interchange\acrpluralsuffix \glsspace (ASCII\acrpluralsuffix )},%
+first={ASCII},%
+firstplural={ASCIIs},%
 text={ASCII},%
-plural={ASCII\acrpluralsuffix },%
+plural={ASCIIs},%
 description={American Standard Code for Information Interchange},%
-descriptionplural={American Standard Code for Information Interchange\acrpluralsuffix },%
+descriptionplural={American Standard Code for Information Interchange},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -84,15 +84,15 @@ parent={},%
 
 \glsdefs@newdocentry{bios}%
 {%
-name={BIOS},%
+name={\acronymfont {\glsentryshort {bios}}},%
 sort={BIOS},%
 type={acronym},%
-first={Basic Input/Output System\glsspace (BIOS)},%
-firstplural={Basic Input/Output System\acrpluralsuffix \glsspace (BIOS\acrpluralsuffix )},%
+first={BIOS},%
+firstplural={BIOSs},%
 text={BIOS},%
-plural={BIOS\acrpluralsuffix },%
+plural={BIOSs},%
 description={Basic Input/Output System},%
-descriptionplural={Basic Input/Output System\acrpluralsuffix },%
+descriptionplural={Basic Input/Output System},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -112,15 +112,15 @@ parent={},%
 
 \glsdefs@newdocentry{bit}%
 {%
-name={bit},%
+name={\acronymfont {\glsentryshort {bit}}},%
 sort={bit},%
 type={acronym},%
-first={Digito binário\glsspace (bit)},%
-firstplural={Digito binário\acrpluralsuffix \glsspace (bit\acrpluralsuffix )},%
+first={bit},%
+firstplural={bits},%
 text={bit},%
-plural={bit\acrpluralsuffix },%
+plural={bits},%
 description={Digito binário},%
-descriptionplural={Digito binário\acrpluralsuffix },%
+descriptionplural={Digito binário},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -140,15 +140,15 @@ parent={},%
 
 \glsdefs@newdocentry{byte}%
 {%
-name={Byte},%
+name={\acronymfont {\glsentryshort {byte}}},%
 sort={Byte},%
 type={acronym},%
-first={Unidade de informação digital composta por oito bits\glsspace (Byte)},%
-firstplural={Unidade de informação digital composta por oito bits\acrpluralsuffix \glsspace (Byte\acrpluralsuffix )},%
+first={Byte},%
+firstplural={Bytes},%
 text={Byte},%
-plural={Byte\acrpluralsuffix },%
+plural={Bytes},%
 description={Unidade de informação digital composta por oito bits},%
-descriptionplural={Unidade de informação digital composta por oito bits\acrpluralsuffix },%
+descriptionplural={Unidade de informação digital composta por oito bits},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -168,15 +168,15 @@ parent={},%
 
 \glsdefs@newdocentry{cpu}%
 {%
-name={CPU},%
+name={\acronymfont {\glsentryshort {cpu}}},%
 sort={CPU},%
 type={acronym},%
-first={Central Processing Unit\glsspace (CPU)},%
-firstplural={Central Processing Unit\acrpluralsuffix \glsspace (CPU\acrpluralsuffix )},%
+first={CPU},%
+firstplural={CPUs},%
 text={CPU},%
-plural={CPU\acrpluralsuffix },%
+plural={CPUs},%
 description={Central Processing Unit},%
-descriptionplural={Central Processing Unit\acrpluralsuffix },%
+descriptionplural={Central Processing Unit},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -196,15 +196,15 @@ parent={},%
 
 \glsdefs@newdocentry{codec}%
 {%
-name={CODEC},%
+name={\acronymfont {\glsentryshort {codec}}},%
 sort={CODEC},%
 type={acronym},%
-first={COmpression/DECompression\glsspace (CODEC)},%
-firstplural={COmpression/DECompression\acrpluralsuffix \glsspace (CODEC\acrpluralsuffix )},%
+first={CODEC},%
+firstplural={CODECs},%
 text={CODEC},%
-plural={CODEC\acrpluralsuffix },%
+plural={CODECs},%
 description={COmpression/DECompression},%
-descriptionplural={COmpression/DECompression\acrpluralsuffix },%
+descriptionplural={COmpression/DECompression},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -224,15 +224,15 @@ parent={},%
 
 \glsdefs@newdocentry{dll}%
 {%
-name={DLL},%
+name={\acronymfont {\glsentryshort {dll}}},%
 sort={DLL},%
 type={acronym},%
-first={Dynamic Link Library\glsspace (DLL)},%
-firstplural={Dynamic Link Library\acrpluralsuffix \glsspace (DLL\acrpluralsuffix )},%
+first={DLL},%
+firstplural={DLLs},%
 text={DLL},%
-plural={DLL\acrpluralsuffix },%
+plural={DLLs},%
 description={Dynamic Link Library},%
-descriptionplural={Dynamic Link Library\acrpluralsuffix },%
+descriptionplural={Dynamic Link Library},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -252,15 +252,15 @@ parent={},%
 
 \glsdefs@newdocentry{dhcp}%
 {%
-name={DHCP},%
+name={\acronymfont {\glsentryshort {dhcp}}},%
 sort={DHCP},%
 type={acronym},%
-first={Dynamic Host Configuration Protocol\glsspace (DHCP)},%
-firstplural={Dynamic Host Configuration Protocol\acrpluralsuffix \glsspace (DHCP\acrpluralsuffix )},%
+first={DHCP},%
+firstplural={DHCPs},%
 text={DHCP},%
-plural={DHCP\acrpluralsuffix },%
+plural={DHCPs},%
 description={Dynamic Host Configuration Protocol},%
-descriptionplural={Dynamic Host Configuration Protocol\acrpluralsuffix },%
+descriptionplural={Dynamic Host Configuration Protocol},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -280,15 +280,15 @@ parent={},%
 
 \glsdefs@newdocentry{ftp}%
 {%
-name={FTP},%
+name={\acronymfont {\glsentryshort {ftp}}},%
 sort={FTP},%
 type={acronym},%
-first={File Transfer Protocol\glsspace (FTP)},%
-firstplural={File Transfer Protocol\acrpluralsuffix \glsspace (FTP\acrpluralsuffix )},%
+first={FTP},%
+firstplural={FTPs},%
 text={FTP},%
-plural={FTP\acrpluralsuffix },%
+plural={FTPs},%
 description={File Transfer Protocol},%
-descriptionplural={File Transfer Protocol\acrpluralsuffix },%
+descriptionplural={File Transfer Protocol},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -308,15 +308,15 @@ parent={},%
 
 \glsdefs@newdocentry{ip}%
 {%
-name={IP},%
+name={\acronymfont {\glsentryshort {ip}}},%
 sort={IP},%
 type={acronym},%
-first={Internet Protocol\glsspace (IP)},%
-firstplural={Internet Protocol\acrpluralsuffix \glsspace (IP\acrpluralsuffix )},%
+first={IP},%
+firstplural={IPs},%
 text={IP},%
-plural={IP\acrpluralsuffix },%
+plural={IPs},%
 description={Internet Protocol},%
-descriptionplural={Internet Protocol\acrpluralsuffix },%
+descriptionplural={Internet Protocol},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -336,15 +336,15 @@ parent={},%
 
 \glsdefs@newdocentry{isp}%
 {%
-name={ISP},%
+name={\acronymfont {\glsentryshort {isp}}},%
 sort={ISP},%
 type={acronym},%
-first={Internet Service Provider\glsspace (ISP)},%
-firstplural={Internet Service Provider\acrpluralsuffix \glsspace (ISP\acrpluralsuffix )},%
+first={ISP},%
+firstplural={ISPs},%
 text={ISP},%
-plural={ISP\acrpluralsuffix },%
+plural={ISPs},%
 description={Internet Service Provider},%
-descriptionplural={Internet Service Provider\acrpluralsuffix },%
+descriptionplural={Internet Service Provider},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -364,15 +364,15 @@ parent={},%
 
 \glsdefs@newdocentry{so}%
 {%
-name={SO},%
+name={\acronymfont {\glsentryshort {so}}},%
 sort={SO},%
 type={acronym},%
-first={Sistema Operativo\glsspace (SO)},%
-firstplural={Sistema Operativo\acrpluralsuffix \glsspace (SO\acrpluralsuffix )},%
+first={SO},%
+firstplural={SOs},%
 text={SO},%
-plural={SO\acrpluralsuffix },%
+plural={SOs},%
 description={Sistema Operativo},%
-descriptionplural={Sistema Operativo\acrpluralsuffix },%
+descriptionplural={Sistema Operativo},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -392,15 +392,15 @@ parent={},%
 
 \glsdefs@newdocentry{tcp}%
 {%
-name={TCP},%
+name={\acronymfont {\glsentryshort {tcp}}},%
 sort={TCP},%
 type={acronym},%
-first={Transmission Control Protocol\glsspace (TCP)},%
-firstplural={Transmission Control Protocol\acrpluralsuffix \glsspace (TCP\acrpluralsuffix )},%
+first={TCP},%
+firstplural={TCPs},%
 text={TCP},%
-plural={TCP\acrpluralsuffix },%
+plural={TCPs},%
 description={Transmission Control Protocol},%
-descriptionplural={Transmission Control Protocol\acrpluralsuffix },%
+descriptionplural={Transmission Control Protocol},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -420,15 +420,15 @@ parent={},%
 
 \glsdefs@newdocentry{abc}%
 {%
-name={ABC},%
+name={\acronymfont {\glsentryshort {abc}}},%
 sort={ABC},%
 type={acronym},%
-first={A lista de acrónimos deve ficar ordenada alfabeticamente\glsspace (ABC)},%
-firstplural={A lista de acrónimos deve ficar ordenada alfabeticamente\acrpluralsuffix \glsspace (ABC\acrpluralsuffix )},%
+first={ABC},%
+firstplural={ABCs},%
 text={ABC},%
-plural={ABC\acrpluralsuffix },%
+plural={ABCs},%
 description={A lista de acrónimos deve ficar ordenada alfabeticamente},%
-descriptionplural={A lista de acrónimos deve ficar ordenada alfabeticamente\acrpluralsuffix },%
+descriptionplural={A lista de acrónimos deve ficar ordenada alfabeticamente},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%

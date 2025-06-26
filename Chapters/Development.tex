@@ -14,11 +14,58 @@ como é feito o input dos dados para o modelo
 
 
 
-\section{Utilized Model}
-o modelo utilizado é uma arquitetura open source de redes neuronais, especialistga em dados temporais, esta biliotecam, times net é uma das que tem mais accuracy em termos de estimar dados temporais
-.... falar um pouco da arquitetura, e como foi utilizado, e o que foi feito da minha parte
+\section{Utilized Model (TimesNet)}
 
-\section{Model Opimization}
-para a optimizacao do modelo foi utilizada a ferramenta optuna, que permite a optimizacao de hiperparametros de modelos de machine learning, e a sua integracao com o wandb, que permite a visualizacao dos resultados e comparacao entre os modelos
-falar dos parametros que foram otimizados, e como foi feita a optimizacao, e o que foi aprendido com isso
-falar dos parametros mais importantes
+TimesNet is a state-of-the-art neural network architecture specifically designed for general time series analysis tasks~\cite{wu_timesnet_2023}. This model addresses the fundamental challenge of temporal variation modeling by transforming the complex problem from 1D time series analysis into 2D space analysis. The key innovation of TimesNet lies in its ability to discover multi-periodicity patterns in time series data and decompose intricate temporal variations into intraperiod and interperiod variations.
+
+The architecture works by converting 1D time series into a set of 2D tensors based on multiple identified periods. This transformation embeds intraperiod variations into the columns and interperiod variations into the rows of the 2D tensors, making temporal patterns more accessible for analysis through 2D convolution operations. The core component, TimesBlock, can adaptively discover multi-periodicity and extract complex temporal variations using parameter-efficient inception blocks.
+
+TimesNet demonstrates superior performance across five mainstream time series analysis tasks: short-term and long-term forecasting, imputation, classification, and anomaly detection. This versatility makes it particularly suitable for battery health prediction tasks, where complex temporal dependencies and multi-scale patterns are crucial for accurate state-of-health estimation. The model's ability to handle various sequence lengths and its robust architecture for capturing temporal dynamics align well with the requirements of battery degradation modeling, where both short-term fluctuations and long-term trends must be considered simultaneously.
+
+\section{Model Optimization}
+
+For model optimization, the Optuna tool was utilized, which enables hyperparameter optimization for machine learning models, integrated with Weights \& Biases (WandB), which allows for result visualization and model comparison.
+
+\subsection{Dataset Preparation for Optimization}
+
+For this test, the dataset was reduced to only 1/10 of the data, equally distributed from the original dataset, with the objective of reducing the time required for finding the best hyperparameters, since this process took approximately one week even with this reduction.
+
+\subsection{Optimization Process}
+
+For the hyperparameter search, 50 trials were performed, with 50 epochs each, using an early stopping patience of 5 epochs to avoid overfitting and accelerate the optimization process.
+
+\subsection{Optimized Parameters}
+
+The parameters that were optimized through Optuna include:
+
+\begin{itemize}
+    \item \textbf{e\_layers}: Number of encoder layers (1--3) --- controls the depth of the encoder stack
+    \item \textbf{d\_layers}: Number of decoder layers (1--3) --- controls the depth of the decoder stack  
+    \item \textbf{factor}: Expansion factor for the FFN (1--5) --- controls the complexity of frequency components in TimesNet
+    \item \textbf{freq}: Frequency for time features encoding (``s'', ``t'', ``h'') --- seconds, minutes, hours
+    \item \textbf{d\_model}: Model dimension (fixed at 16)
+    \item \textbf{top\_k}: Top-k dominant frequencies in TimesNet (1--5) --- controls how many frequency components to consider
+\end{itemize}
+
+\subsection{Parameter Importance Analysis}
+
+Through this optimization, it was possible to detect the importance of the hyperparameters. We observed that the importance factor of the \textbf{e\_layers} parameter (number of encoder layers) is the parameter that most influences the result when changed, demonstrating that the depth of the encoder architecture is critical for model performance.
+
+\subsection{Best Trial Results}
+
+The most successful trial was trial 15, which presented the following results:
+
+\begin{itemize}
+    \item \textbf{MSE Value}: 0.0015545075293630362
+    \item \textbf{Optimal Parameters}:
+    \begin{itemize}
+        \item e\_layers: 2
+        \item factor: 4  
+        \item d\_model: 16
+        \item top\_k: 9
+        \item n\_heads: 16
+    \end{itemize}
+    \item \textbf{Duration}: 7770232 ms (approximately 2 hours and 10 minutes)
+\end{itemize}
+
+The results show that using 2 encoder layers works better than deeper networks, likely avoiding overfitting on the battery dataset. The high expansion factor of 4 allows the model to capture more complex patterns, while setting top\_k to 9 means the model considers more frequency components than the default range, which helps capture the various periodic behaviors in battery degradation cycles.

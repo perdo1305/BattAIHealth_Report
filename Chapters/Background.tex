@@ -1,7 +1,7 @@
 %************************************************
 \chapter{Background material and Supporting Technologies}
 \label{ch:background}
-%************************************************
+%**********************************************
 
 This chapter presents the foundational background material and supporting technologies that were used in the project. The first section introduces the analytical frameworks used for battery data processing, including time series and spectral analysis techniques that are essential for understanding temporal patterns in battery behavior. Following this, we describe the comprehensive suite of software tools and platforms that facilitated the research and development process, from hyperparameter optimization and experiment tracking to data visualization and version control. The chapter then transitions to the core theoretical concepts fundamental to battery health monitoring, including detailed explanations of key battery parameters such as State of Charge (SoC), State of Health (SoH), and Remaining Useful Life (RUL). Additionally, we cover the essential evaluation metrics used to assess model performance and provide an in-depth discussion of battery degradation mechanisms that directly impact health estimation accuracy. Finally, the chapter addresses the technical challenges inherent in battery health monitoring, from the complexity of electrochemical processes to the practical difficulties of real-world implementation. This comprehensive background establishes the technical foundation necessary for understanding the methodologies and results presented in subsequent chapters.
 
@@ -12,26 +12,34 @@ Time series analysis focuses on the temporal evolution of battery parameters suc
 Spectral analysis is a frequency-domain technique used to characterize the dynamic behavior of battery systems by analyzing signals such as voltage, current, or impedance. This approach decomposes time-series data into its frequency components, revealing periodic patterns, noise characteristics, or system resonances that may not be evident in the time domain. Spectral analysis is particularly useful for understanding battery degradation, thermal effects, and electrochemical processes.
 
 \section{Optuna}
-Optuna is an open-source hyperparameter optimization framework used to search for the best hyperparameters in machine learning models \cite{akiba_optuna_2019}. It employs efficient algorithms like Tree-structured Parzen Estimator (TPE) to systematically explore hyperparameter spaces, supporting parallel and distributed optimization. In this work, Optuna was utilized to automate the tuning process, enhancing model performance by identifying optimal hyperparameter configurations with reduced manual effort.
+Optuna is an open-source hyperparameter optimization framework used to search for the best hyperparameters in machine learning models~\cite{akiba_optuna_2019}. It employs efficient algorithms like Tree-structured Parzen Estimator (TPE) to systematically explore hyperparameter spaces, supporting parallel and distributed optimization. In this work, Optuna was utilized to automate the tuning process, enhancing model performance by identifying optimal hyperparameter configurations with reduced manual effort.
 
 \section{Weights and Biases (WandB)}
-Weights \& Biases (WandB) is a machine learning platform designed for experiment tracking and visualization \cite{noauthor_weights_nodate}. It enables real-time logging and monitoring of training metrics, hyperparameters, and model outputs. In this study, WandB was employed to keep track of training processes and visualize losses, providing interactive dashboards to analyze experiments, debug models, and ensure reproducible workflows across iterations.
+Weights \& Biases (WandB) is a machine learning platform designed for experiment tracking and visualization~\cite{noauthor_weights_nodate}. It enables real-time logging and monitoring of training metrics, hyperparameters, and model outputs. In this study, WandB was employed to keep track of training processes and visualize losses, providing interactive dashboards to analyze experiments, debug models, and ensure reproducible workflows across iterations.
 
 \section{PlotJuggler}
-PlotJuggler is an open-source time series visualization tool designed for fast, intuitive, and extensible data analysis \cite{faconti_facontidavideplotjuggler_2025}. It features a user-friendly drag-and-drop interface, enabling efficient visualization of large datasets, both offline and in real-time. In this work, PlotJuggler was highly effective for exploring and analyzing data within datasets, allowing for the visualization of time series, identification of patterns, and application of transformations like derivatives or moving averages through its Transform Editor. Its compatibility with formats such as CSV, ROS, and MQTT, along with plugin extensibility, made it a valuable tool for detailed data inspection and analysis.
+PlotJuggler is an open-source time series visualization tool designed for fast, intuitive, and extensible data analysis~\cite{faconti_facontidavideplotjuggler_2025}. It features a user-friendly drag-and-drop interface, enabling efficient visualization of large datasets, both offline and in real-time. In this work, PlotJuggler was highly effective for exploring and analyzing data within datasets, allowing for the visualization of time series, identification of patterns, and application of transformations like derivatives or moving averages through its Transform Editor. Its compatibility with formats such as CSV, ROS, and MQTT, along with plugin extensibility, made it a valuable tool for detailed data inspection and analysis.
 
 \section{Orange Data Mining}
-Orange Data Mining is an open-source data visualization and analysis platform designed for exploratory data analysis and machine learning workflows \cite{noauthor_biolaborange3_nodate}. It provides a visual programming interface with drag-and-drop widgets that enable users to build data analysis pipelines without extensive coding. Orange offers comprehensive tools for data preprocessing, feature selection, correlation analysis, and outlier detection through interactive visualizations and statistical methods. In this work, Orange was instrumental for exploring correlations within battery datasets and identifying outliers that could potentially skew model performance. Its intuitive interface allowed for rapid prototyping of data cleaning pipelines, enabling efficient removal of anomalous data points while preserving the integrity of temporal relationships in battery time series data. The platform's correlation analysis capabilities were particularly valuable for understanding feature relationships and selecting relevant variables for subsequent machine learning models.
+Orange Data Mining is an open-source data visualization and analysis platform designed for exploratory data analysis and machine learning workflows~\cite{noauthor_biolaborange3_nodate}. It provides a visual programming interface with drag-and-drop widgets that enable users to build data analysis pipelines without extensive coding. Orange offers comprehensive tools for data preprocessing, feature selection, correlation analysis, and outlier detection through interactive visualizations and statistical methods. In this work, Orange was instrumental for exploring correlations within battery datasets and identifying outliers that could potentially skew model performance. Its intuitive interface allowed for rapid prototyping of data cleaning pipelines, enabling efficient removal of anomalous data points while preserving the integrity of temporal relationships in battery time series data. The platform's correlation analysis capabilities were particularly valuable for understanding feature relationships and selecting relevant variables for subsequent machine learning models.
 
 \section{Git Version Control}
-Git is a distributed version control system designed to handle projects of all sizes with speed and efficiency \cite{noauthor_git_nodate}. It tracks changes in source code and files during software development, enabling multiple contributors to work on the same project simultaneously while maintaining a complete history of modifications. Git provides features such as branching, merging, and distributed workflows that facilitate collaborative development and experimentation. In this work, Git was employed to ensure robust version control throughout the research process, maintaining a comprehensive history of code changes, experimental iterations, and documentation updates. All project files, including machine learning models, data processing scripts, and analysis notebooks, were systematically committed and pushed to GitHub repositories. This approach guaranteed that all work was safely preserved, enabled rollback to previous versions when needed, and facilitated reproducible research by maintaining clear documentation of the project's evolution and experimental milestones.
+Git is a distributed version control system designed to handle projects of all sizes with speed and efficiency~\cite{noauthor_git_nodate}. It tracks changes in source code and files during software development, enabling multiple contributors to work on the same project simultaneously while maintaining a complete history of modifications. Git provides features such as branching, merging, and distributed workflows that facilitate collaborative development and experimentation. In this work, Git was employed to ensure robust version control throughout the research process, maintaining a comprehensive history of code changes, experimental iterations, and documentation updates. All project files, including machine learning models, data processing scripts, and analysis notebooks, were systematically committed and pushed to GitHub repositories. This approach guaranteed that all work was safely preserved, enabled rollback to previous versions when needed, and facilitated reproducible research by maintaining clear documentation of the project's evolution and experimental milestones.
 
 \section{PyTorch}
-PyTorch is an open-source machine learning framework developed by Facebook's AI Research lab, designed for deep learning applications with a focus on flexibility and ease of use \cite{ansel_pytorch_2024}. It provides dynamic computational graphs, allowing for intuitive model development and debugging through its eager execution model. PyTorch features automatic differentiation capabilities through its autograd system, enabling efficient gradient computation for backpropagation in neural networks. The framework supports GPU acceleration through CUDA, making it suitable for training large-scale models efficiently. In this work, PyTorch served as the primary framework for developing and training deep learning models for battery health estimation. Its dynamic nature was particularly valuable for experimenting with different neural network architectures, including LSTM networks for temporal sequence modeling and CNN-LSTM hybrid models for battery state prediction. The framework's extensive ecosystem, including libraries like PyTorch Lightning for structured training loops and TorchVision for data processing utilities, facilitated rapid prototyping and model development. PyTorch's seamless integration with other tools in the machine learning pipeline, such as Optuna for hyperparameter optimization and WandB for experiment tracking, made it an ideal choice for this research project's requirements.
+PyTorch is an open-source machine learning framework developed by Facebook's AI Research lab, designed for deep learning applications with a 
+focus on flexibility and ease of use~\cite{ansel_pytorch_2024}. It provides dynamic computational graphs, 
+allowing for intuitive model development and debugging through its eager execution model. PyTorch features 
+automatic differentiation capabilities through its autograd system, enabling efficient gradient computation 
+for backpropagation in neural networks. The framework supports GPU acceleration through CUDA, making it suitable
+for training large-scale models efficiently. In this work, PyTorch served as the primary framework for
+developing and training deep learning models for the use case of the project. PyTorch is able to seamlessly integrate
+with other tools in the machine learning pipeline, such as Optuna for hyperparameter optimization and
+WandB for experiment tracking.
 
 \section{Conda environments}
 Conda is an open-source package management and environment management system that simplifies the installation, running, and updating of packages and 
-their dependencies \cite{conda_contributors_conda_2025}. It creates isolated environments where different versions of Python, libraries, 
+their dependencies~\cite{conda_contributors_conda_2025}. It creates isolated environments where different versions of Python, libraries, 
 and dependencies can coexist without conflicts, making it particularly valuable for this projects.This approach ensured that version conflicts between packages were avoided, enabled seamless collaboration across different 
 development machines, and guaranteed that the exact software environment could be recreated for reproducibility.
 
@@ -97,41 +105,45 @@ The Mean Absolute Percentage Error measures the average percentage error between
 MAPE is useful for comparing prediction accuracy across datasets with different scales, as it normalizes errors relative to the actual values. However, it can become problematic when actual values are close to zero, as in some battery SoC scenarios, leading to large percentage errors. Additionally, its reliance on relative errors may mask significant absolute deviations in critical battery performance metrics.
 
 \subsubsection{Deep Learning Training Fundamentals}
-The successful implementation of AI-based battery state estimation requires careful consideration of key training parameters that directly impact model performance and convergence. Understanding these concepts is essential for developing robust models in the context of battery health monitoring:
+Key training parameters that impact model performance in battery state estimation:
 
 \begin{itemize}
-    \item \textbf{Epochs}: An epoch represents one complete pass through the entire training dataset. In battery state estimation, the number of epochs determines how many times the model sees the complete temporal sequence of battery data. Too few epochs may result in underfitting, where the model fails to capture complex degradation patterns, while too many epochs can lead to overfitting, where the model memorizes specific battery behaviors rather than learning generalizable patterns. For battery datasets with long temporal sequences, typical epoch counts range from 50 to 500, depending on dataset complexity and model architecture.
+    \item \textbf{Epochs}: Complete passes through the training dataset. For battery data, 50--500 epochs are typical, balancing underfitting (too few) and overfitting (too many) on temporal sequences.
 
-    \item \textbf{Batch Size}: The batch size defines the number of training samples processed simultaneously before updating model parameters. In battery applications, this translates to how many battery cycles or time windows are processed together. Smaller batch sizes (e.g., 16-32) provide more frequent parameter updates and can help escape local minima, which is particularly valuable when dealing with nonlinear battery degradation patterns. Larger batch sizes (e.g., 128-256) offer more stable gradient estimates and faster training but may require more memory and can struggle with the irregular patterns common in real-world battery data.
+    \item \textbf{Batch Size}: Number of samples processed simultaneously. Smaller batches (16--32) help with nonlinear patterns, while larger batches (128--256) provide stable gradients but may struggle with irregular battery data.
 
-    \item \textbf{Patience (Early Stopping)}: Patience refers to the number of epochs to wait without improvement in validation performance before stopping training. This mechanism is crucial in battery state estimation where models must generalize across different battery chemistries, operating conditions, and degradation stages. A patience value of 10-20 epochs is commonly used, allowing the model sufficient time to overcome temporary performance plateaus while preventing excessive overfitting to specific battery behaviors. Early stopping helps ensure that models trained on one battery type or dataset can effectively transfer to new, unseen battery systems.
+    \item \textbf{Patience (Early Stopping)}: Epochs to wait without validation improvement before stopping. Values of 5--20 epochs prevent overfitting while allowing models to generalize across different battery systems.
+
+    \item \textbf{Learning Rate}: Controls parameter adjustment magnitude. Battery degradation requires careful tuning: too high (>0.01) misses subtle patterns, too low (<0.0001) causes slow convergence.
+
+    \item \textbf{Optimizers}: Adam optimizer is commonly used for adaptive learning rates. SGD with momentum provides stable convergence but requires more tuning for battery applications.
+
+    \item \textbf{Regularization}: L1/L2 regularization and dropout prevent overfitting on limited battery datasets. Particularly important when training data comes from few battery types or conditions.
+
+    \item \textbf{Loss Functions}: MSE for regression tasks (SoC, capacity), MAE for robustness against outliers, cross-entropy for classification (fault detection). Custom losses can incorporate domain knowledge.
+
+    \item \textbf{Validation}: Time-based splitting ensures models tested on future data. Cross-validation must account for temporal dependencies in degradation sequences.
 \end{itemize}
 
 
 
-\subsection{Battery Degradation}
-Battery degradation refers to the gradual loss of a battery's ability to store and deliver
-energy, driven by chemical reactions, temperature fluctuations, charge/discharge cycles,
-and aging. The more important mechanisms include:
+\subsection{Battery Degradation and Capacity Fade}
+Battery degradation refers to the gradual loss of a battery's ability to store and deliver energy, driven by chemical reactions, temperature fluctuations, charge/discharge cycles, and aging. This degradation manifests as capacity fade, resulting in reduced device runtime or diminished electric vehicle driving range. The key mechanisms include:
 
 \begin{itemize}
-    \item \textbf{Solid Electrolyte Interphase (SEI) Growth}: A layer forms on the anode, consuming lithium ions and reducing capacity. This process is accelerated at high temperatures and currents.
-    \item \textbf{Lithium Plating}: At low temperatures or high charge rates, lithium deposits on the anode, forming ``dead lithium'' that contributes to irreversible capacity loss.
-    \item \textbf{Particle Fracture}: Mechanical stress from cycling causes cracks in electrode materials, reducing active material availability.
-    \item \textbf{Positive Electrode (PE) Decomposition}: Structural changes in the cathode, such as spinel/rock salt phase formation, degrade performance.
+    \item \textbf{Solid Electrolyte Interphase (SEI) Growth}: A layer forms on the anode, consuming lithium ions and reducing capacity. This process is accelerated at high temperatures and currents, leading to an initial irreversible capacity loss of approximately 10\% during formation cycles.
+    \item \textbf{Lithium Plating}: At low temperatures or high charge rates, lithium deposits on the anode, forming ``dead lithium'' that contributes to irreversible capacity loss and increases safety risks.
+    \item \textbf{Particle Fracture}: Mechanical stress from cycling causes cracks in electrode materials, reducing active material availability and exacerbating capacity decline.
+    \item \textbf{Positive Electrode (PE) Decomposition}: Structural changes in the cathode, such as spinel/rock salt phase formation, degrade performance and contribute to active material loss.
+    \item \textbf{Impedance Increase}: Rising interfacial resistance, predominantly at the positive electrode, limits efficient charge transfer and indirectly reduces usable capacity. After 800 cycles, electrode resistance can increase tenfold.
 \end{itemize}
 
 \subsection{Capacity Fade}
 The \cite{zhang_studies_2000} paper studies and explains very well the capacity fade refers to the progressive decline in a lithium-ion battery’s ability to store energy, manifesting as reduced device runtime or diminished electric vehicle driving range. This phenomenon is driven by several key mechanisms:
 
-\begin{itemize}
-\item \textbf{Loss of Lithium Inventory (LLI)}: Growth of the solid electrolyte interphase (SEI) on the carbon anode consumes cyclable lithium, leading to an initial irreversible capacity loss of approximately 10\% during formation cycles. Subsequent SEI growth further reduces capacity over time.
-\item \textbf{Loss of Active Material (LAM)}: Particle fracture, phase changes, and positive electrode (PE) decomposition, degrade active material availability, exacerbating capacity decline.
-\item \textbf{Lithium Plating}: At high SoC or low temperatures, lithium deposition forms ``dead lithium,'' causing irreversible capacity loss and increasing safety risks.
-\item \textbf{Impedance Increase}: Rising interfacial resistance, predominantly at the positive electrode, limits efficient charge transfer, indirectly reducing usable capacity. After 800 cycles, the electrode resistance can increase tenfold, significantly contributing to capacity fade.
-\end{itemize}
 
-The study reports capacity losses ranging from 12.4\% to 32\% after 500–800 cycles, corresponding to an average loss of 0.025–0.05\% per cycle.
+
+Studies report capacity losses ranging from 12.4\% to 32\% after 500--800 cycles, corresponding to an average loss of 0.025--0.05\% per cycle~\cite{zhang_studies_2000}.
 
 
 \subsection{Internal Resistance Degradation in Lithium-Ion Batteries}
@@ -182,11 +194,6 @@ Interpreting errors in these systems remains a challenge, requiring further rese
 There is a significant discrepancy between laboratory-simulated conditions and actual operational environments. 
 Laboratory settings often use sophisticated equipment that is not available in real-world applications, limiting the applicability of monitoring methods. For example, real-world conditions like varying temperatures or road vibrations are difficult to replicate in a lab, affecting SOH estimation accuracy.
 
-\subsection{Scalability}
-Monitoring systems must handle large numbers of batteries, especially in applications like EVs or trains. 
-This requires scalable solutions that can process vast amounts of data efficiently. 
-For instance, managing battery health across a fleet of electric vehicles demands robust, centralized data systems that can scale without compromising performance.
-
 \subsection{Real-Time Monitoring}
 Achieving real-time, reliable SOH monitoring is crucial for safety-critical applications but is technically demanding. 
 Battery management systems (BMS) must balance accuracy with computational efficiency to provide timely insights without overloading system resources.
@@ -203,10 +210,6 @@ This includes the cost of sensors, data storage, and computational infrastructur
 \subsection{Data and Computational Costs}
 AI and data-driven methods require significant computational resources and high-quality data, which can be costly to acquire and process. 
 The high demand for data and computing power presents challenges, particularly for real-time monitoring applications and edge devices.
-
-\subsection{Standardization}
-The lack of standardized methods and parameters for battery health monitoring hinders interoperability and comparison across different systems. 
-This fragmentation makes it difficult to integrate monitoring solutions across diverse applications, such as consumer electronics and industrial systems.
 
 %\section{Supporting Technologies}
 %Sensor technologies for battery data collection

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.8" bltxversion="3.17" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.10" bltxversion="3.19" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -37,6 +37,11 @@
     <bcf:option type="singlevalued">
       <bcf:key>alphaothers</bcf:key>
       <bcf:value>+</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
@@ -135,6 +140,10 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>nosortothers</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>pluralothers</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -272,6 +281,11 @@
   </bcf:options>
   <!-- online -->
   <bcf:options component="biblatex" type="online">
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
+    </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
       <bcf:value>0</bcf:value>
@@ -372,11 +386,11 @@
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skiplab</bcf:key>
+      <bcf:key>skipbiblist</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skipbiblist</bcf:key>
+      <bcf:key>skiplab</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -491,6 +505,7 @@
     <bcf:option datatype="xml">sortingnamekeytemplate</bcf:option>
     <bcf:option datatype="xml">sortingtemplate</bcf:option>
     <bcf:option datatype="xml">extradatespec</bcf:option>
+    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -599,6 +614,7 @@
     <bcf:option datatype="boolean">labeltitle</bcf:option>
     <bcf:option datatype="boolean">labeltitleyear</bcf:option>
     <bcf:option datatype="boolean">labeldateparts</bcf:option>
+    <bcf:option datatype="boolean">pluralothers</bcf:option>
     <bcf:option datatype="boolean">nohashothers</bcf:option>
     <bcf:option datatype="boolean">nosortothers</bcf:option>
     <bcf:option datatype="boolean">noroman</bcf:option>
@@ -714,6 +730,7 @@
     <bcf:option datatype="xml">translit</bcf:option>
     <bcf:option datatype="xml">sortexclusion</bcf:option>
     <bcf:option datatype="xml">sortinclusion</bcf:option>
+    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -1044,7 +1061,7 @@
     <bcf:namepart order="3">given</bcf:namepart>
   </bcf:uniquenametemplate>
   <!-- SORTING NAME KEY TEMPLATES -->
-  <bcf:sortingnamekeytemplate name="global">
+  <bcf:sortingnamekeytemplate name="global" visibility="sort">
     <bcf:keypart order="1">
       <bcf:part type="namepart" order="1" use="1">prefix</bcf:part>
       <bcf:part type="namepart" order="2">family</bcf:part>
@@ -2345,52 +2362,34 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">References.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">akiba_optuna_2019</bcf:citekey>
-    <bcf:citekey order="2">noauthor_weights_nodate</bcf:citekey>
-    <bcf:citekey order="3">faconti_facontidavideplotjuggler_2025</bcf:citekey>
-    <bcf:citekey order="4">noauthor_biolaborange3_nodate</bcf:citekey>
-    <bcf:citekey order="5">noauthor_git_nodate</bcf:citekey>
-    <bcf:citekey order="6">ansel_pytorch_2024</bcf:citekey>
-    <bcf:citekey order="7">conda_contributors_conda_2025</bcf:citekey>
-    <bcf:citekey order="8">zhang_studies_2000</bcf:citekey>
-    <bcf:citekey order="9">stroe_degradation_2018</bcf:citekey>
-    <bcf:citekey order="10">Ref5</bcf:citekey>
-    <bcf:citekey order="11">Ref5</bcf:citekey>
-    <bcf:citekey order="12">Report</bcf:citekey>
-    <bcf:citekey order="13">Report</bcf:citekey>
-    <bcf:citekey order="14">sun_simultaneous_2022</bcf:citekey>
-    <bcf:citekey order="15">Fangfang_Yang</bcf:citekey>
-    <bcf:citekey order="16">noauthor_nasa_nodate</bcf:citekey>
-    <bcf:citekey order="17">hong_state--health_2023</bcf:citekey>
-    <bcf:citekey order="18">yilmaz_transformer-based_2025</bcf:citekey>
-    <bcf:citekey order="19">noauthor_nasa_nodate</bcf:citekey>
-    <bcf:citekey order="20">CALCE_battery_nodate</bcf:citekey>
-    <bcf:citekey order="21">MATR_dataset_nodate</bcf:citekey>
-    <bcf:citekey order="22">pepe_hkust_nodate</bcf:citekey>
-    <bcf:citekey order="23">Ref5</bcf:citekey>
-    <bcf:citekey order="24">Ref5</bcf:citekey>
-    <bcf:citekey order="25">Report</bcf:citekey>
-    <bcf:citekey order="26">Ref3</bcf:citekey>
-    <bcf:citekey order="27">akiba_optuna_2019</bcf:citekey>
-    <bcf:citekey order="28">noauthor_weights_nodate</bcf:citekey>
-    <bcf:citekey order="29">faconti_facontidavideplotjuggler_2025</bcf:citekey>
-    <bcf:citekey order="30">noauthor_biolaborange3_nodate</bcf:citekey>
-    <bcf:citekey order="31">noauthor_git_nodate</bcf:citekey>
-    <bcf:citekey order="32">ansel_pytorch_2024</bcf:citekey>
-    <bcf:citekey order="33">conda_contributors_conda_2025</bcf:citekey>
-    <bcf:citekey order="34">zhang_studies_2000</bcf:citekey>
-    <bcf:citekey order="35">stroe_degradation_2018</bcf:citekey>
-    <bcf:citekey order="36">Ref5</bcf:citekey>
-    <bcf:citekey order="37">Report</bcf:citekey>
-    <bcf:citekey order="38">sun_simultaneous_2022</bcf:citekey>
-    <bcf:citekey order="39">Fangfang_Yang</bcf:citekey>
-    <bcf:citekey order="40">noauthor_nasa_nodate</bcf:citekey>
-    <bcf:citekey order="41">hong_state--health_2023</bcf:citekey>
-    <bcf:citekey order="42">yilmaz_transformer-based_2025</bcf:citekey>
-    <bcf:citekey order="43">CALCE_battery_nodate</bcf:citekey>
-    <bcf:citekey order="44">MATR_dataset_nodate</bcf:citekey>
-    <bcf:citekey order="45">pepe_hkust_nodate</bcf:citekey>
-    <bcf:citekey order="46">Ref3</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">akiba_optuna_2019</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">noauthor_weights_nodate</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">faconti_facontidavideplotjuggler_2025</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">noauthor_biolaborange3_nodate</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">noauthor_git_nodate</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">ansel_pytorch_2024</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">conda_contributors_conda_2025</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">zhang_studies_2000</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">zhang_studies_2000</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">stroe_degradation_2018</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Ref5</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Ref5</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">Report</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">Report</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">sun_simultaneous_2022</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Fangfang_Yang</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">noauthor_nasa_nodate</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">hong_state--health_2023</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">yilmaz_transformer-based_2025</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">noauthor_nasa_nodate</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">CALCE_battery_nodate</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">MATR_dataset_nodate</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">pepe_hkust_nodate</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">Ref5</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">Ref5</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">Report</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">Ref3</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">wu_timesnet_2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
