@@ -30,7 +30,10 @@ Git is a distributed version control system designed to handle projects of all s
 PyTorch is an open-source machine learning framework developed by Facebook's AI Research lab, designed for deep learning applications with a focus on flexibility and ease of use \cite{ansel_pytorch_2024}. It provides dynamic computational graphs, allowing for intuitive model development and debugging through its eager execution model. PyTorch features automatic differentiation capabilities through its autograd system, enabling efficient gradient computation for backpropagation in neural networks. The framework supports GPU acceleration through CUDA, making it suitable for training large-scale models efficiently. In this work, PyTorch served as the primary framework for developing and training deep learning models for battery health estimation. Its dynamic nature was particularly valuable for experimenting with different neural network architectures, including LSTM networks for temporal sequence modeling and CNN-LSTM hybrid models for battery state prediction. The framework's extensive ecosystem, including libraries like PyTorch Lightning for structured training loops and TorchVision for data processing utilities, facilitated rapid prototyping and model development. PyTorch's seamless integration with other tools in the machine learning pipeline, such as Optuna for hyperparameter optimization and WandB for experiment tracking, made it an ideal choice for this research project's requirements.
 
 \section{Conda environments}
-Conda is an open-source package management and environment management system that simplifies the installation, running, and updating of packages and their dependencies \cite{conda_contributors_conda_2025}. It creates isolated environments where different versions of Python, libraries, and dependencies can coexist without conflicts, making it particularly valuable for research projects requiring specific software configurations. Conda supports multiple programming languages including Python, R, Ruby, Lua, Scala, Java, JavaScript, C/C++, and FORTRAN, and can install packages from various repositories including conda-forge, PyPI, and custom channels. In this work, Conda was essential for maintaining reproducible development environments across different stages of the battery health estimation project. Separate conda environments were created for different aspects of the research: one environment for data preprocessing and exploratory analysis with packages like pandas, numpy, and matplotlib; another for deep learning model development with PyTorch, CUDA libraries, and related dependencies; and a third for experiment tracking and visualization with WandB, Optuna, and Jupyter notebooks. This approach ensured that version conflicts between packages were avoided, enabled seamless collaboration across different development machines, and guaranteed that the exact software environment could be recreated for reproducibility. The use of environment.yml files allowed for easy sharing and recreation of these environments, supporting the project's open science principles and facilitating future research extensions.
+Conda is an open-source package management and environment management system that simplifies the installation, running, and updating of packages and 
+their dependencies \cite{conda_contributors_conda_2025}. It creates isolated environments where different versions of Python, libraries, 
+and dependencies can coexist without conflicts, making it particularly valuable for this projects.This approach ensured that version conflicts between packages were avoided, enabled seamless collaboration across different 
+development machines, and guaranteed that the exact software environment could be recreated for reproducibility.
 
 \section{Core Concepts}
 Battery technology serves as the foundation for energy storage systems across numerous applications, from portable electronics to electric vehicles and grid-scale storage. Modern batteries primarily fall into several categories, including lithium-ion, lead-acid, nickel-metal hydride, and flow batteries, each with distinct electrochemical properties, energy densities, and lifecycle characteristics. The health of these batteries is characterized by parameters such as state of charge (SoC), state of health (SoH), capacity fade, internal resistance, and degradation rates, which collectively determine performance and longevity. Monitoring these parameters presents unique challenges due to the complex, nonlinear relationships between observable measurements and underlying battery conditions. Artificial intelligence and machine learning approaches offer powerful solutions to these challenges by enabling pattern recognition across multidimensional battery data. Supervised learning algorithms can predict remaining useful life, while unsupervised methods can detect anomalies indicative of impending failure. Deep learning architectures, particularly recurrent neural networks and transformers, have demonstrated exceptional capability in extracting temporal patterns from battery operational data, making them especially valuable for health prognostics in dynamic usage scenarios.
@@ -41,25 +44,25 @@ Battery technology serves as the foundation for energy storage systems across nu
 
 \subsection{State of Charge (SoC)}
 The State of Charge represents the amount of energy remaining in a battery relative to its maximum capacity. It can be expressed as:
-\[
+\begin{equation}
 \text{SoC} = \frac{\text{Remaining Charge or Energy}}{\text{Maximum Charge or Energy Capacity}} \times 100\%
-\]
+\end{equation}
 However, due to the chemical complexity of batteries and variations among individual cells, the SoC is always an approximate estimate. One factor contributing to the nonlinearity in its estimation is the formation of impurity layers in the pores of the electrodes. When these pores are blocked by impurities, electron movement is hindered, leading to irregular voltages and currents.
 
 % Creating section for State of Health
 \subsection{State of Health (SoH)}
 The State of Health reflects the battery's ability to store and deliver energy compared to its original specifications. It can be expressed as:
-\[
+\begin{equation}
 \text{SoH} = \frac{\text{Current Maximum Capacity}}{\text{Original Maximum Capacity}} \times 100\%
-\]
+\end{equation}
 The nonlinearity in SoH estimation primarily arises from the progressive degradation of electrode materials. As impurities accumulate in the electrode pores, the available surface area for electrochemical reactions decreases, reducing the battery's effective capacity. This process is highly dependent on the number of charge/discharge cycles and operational conditions, making it difficult to model SoH linearly over time.
 
 % Creating section for Remaining Useful Life
 \subsection{Remaining Useful Life (RUL)}
 The Remaining Useful Life quantifies the number of cycles remaining before the battery's performance degrades below a specified threshold. It can be expressed as:
-\[
+\begin{equation}
 \text{RUL} = \text{Total Expected Useful Life} - \text{Current Age}
-\]
+\end{equation}
 Predicting RUL is particularly challenging due to the accumulation of impurities in the electrode pores. As the pores become obstructed, the degradation rate accelerates, leading to a sudden drop in battery performance. This nonlinear dynamic makes it difficult to accurately predict the exact point at which the battery will reach its end of useful life.
 % Explaining Mean Absolute Error
 \subsection{Mean Absolute Error (MAE)}
@@ -92,6 +95,19 @@ The Mean Absolute Percentage Error measures the average percentage error between
 \text{MAPE} = \frac{1}{n} \sum_{i=1}^{n} \left| \frac{y_i - \hat{y}_i}{y_i} \right| \times 100\%
 \end{equation}
 MAPE is useful for comparing prediction accuracy across datasets with different scales, as it normalizes errors relative to the actual values. However, it can become problematic when actual values are close to zero, as in some battery SoC scenarios, leading to large percentage errors. Additionally, its reliance on relative errors may mask significant absolute deviations in critical battery performance metrics.
+
+\subsubsection{Deep Learning Training Fundamentals}
+The successful implementation of AI-based battery state estimation requires careful consideration of key training parameters that directly impact model performance and convergence. Understanding these concepts is essential for developing robust models in the context of battery health monitoring:
+
+\begin{itemize}
+    \item \textbf{Epochs}: An epoch represents one complete pass through the entire training dataset. In battery state estimation, the number of epochs determines how many times the model sees the complete temporal sequence of battery data. Too few epochs may result in underfitting, where the model fails to capture complex degradation patterns, while too many epochs can lead to overfitting, where the model memorizes specific battery behaviors rather than learning generalizable patterns. For battery datasets with long temporal sequences, typical epoch counts range from 50 to 500, depending on dataset complexity and model architecture.
+
+    \item \textbf{Batch Size}: The batch size defines the number of training samples processed simultaneously before updating model parameters. In battery applications, this translates to how many battery cycles or time windows are processed together. Smaller batch sizes (e.g., 16-32) provide more frequent parameter updates and can help escape local minima, which is particularly valuable when dealing with nonlinear battery degradation patterns. Larger batch sizes (e.g., 128-256) offer more stable gradient estimates and faster training but may require more memory and can struggle with the irregular patterns common in real-world battery data.
+
+    \item \textbf{Patience (Early Stopping)}: Patience refers to the number of epochs to wait without improvement in validation performance before stopping training. This mechanism is crucial in battery state estimation where models must generalize across different battery chemistries, operating conditions, and degradation stages. A patience value of 10-20 epochs is commonly used, allowing the model sufficient time to overcome temporary performance plateaus while preventing excessive overfitting to specific battery behaviors. Early stopping helps ensure that models trained on one battery type or dataset can effectively transfer to new, unseen battery systems.
+\end{itemize}
+
+
 
 \subsection{Battery Degradation}
 Battery degradation refers to the gradual loss of a battery's ability to store and deliver

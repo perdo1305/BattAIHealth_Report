@@ -23,52 +23,53 @@
 \contentsline {section}{\numberline {2.10}{Core Concepts}}{7}{section.2.10}%
 \contentsline {subsection}{\numberline {2.10.1}{State of Charge (SoC)}}{8}{subsection.2.10.1}%
 \contentsline {subsection}{\numberline {2.10.2}{State of Health (SoH)}}{8}{subsection.2.10.2}%
-\contentsline {subsection}{\numberline {2.10.3}{Remaining Useful Life (RUL)}}{9}{subsection.2.10.3}%
+\contentsline {subsection}{\numberline {2.10.3}{Remaining Useful Life (RUL)}}{8}{subsection.2.10.3}%
 \contentsline {subsection}{\numberline {2.10.4}{Mean Absolute Error (MAE)}}{9}{subsection.2.10.4}%
-\contentsline {subsection}{\numberline {2.10.5}{Mean Squared Error (MSE)}}{10}{subsection.2.10.5}%
+\contentsline {subsection}{\numberline {2.10.5}{Mean Squared Error (MSE)}}{9}{subsection.2.10.5}%
 \contentsline {subsection}{\numberline {2.10.6}{Root Mean Squared Error (RMSE)}}{10}{subsection.2.10.6}%
-\contentsline {subsection}{\numberline {2.10.7}{Mean Absolute Percentage Error (MAPE)}}{11}{subsection.2.10.7}%
+\contentsline {subsection}{\numberline {2.10.7}{Mean Absolute Percentage Error (MAPE)}}{10}{subsection.2.10.7}%
+\contentsline {subsubsection}{\numberline {2.10.7.1}{Deep Learning Training Fundamentals}}{10}{subsubsection.2.10.7.1}%
 \contentsline {subsection}{\numberline {2.10.8}{Battery Degradation}}{11}{subsection.2.10.8}%
 \contentsline {subsection}{\numberline {2.10.9}{Capacity Fade}}{12}{subsection.2.10.9}%
-\contentsline {subsection}{\numberline {2.10.10}{Internal Resistance Degradation in Lithium-Ion Batteries}}{12}{subsection.2.10.10}%
-\contentsline {subsection}{\numberline {2.10.11}{Battery Health Monitoring}}{13}{subsection.2.10.11}%
-\contentsline {subsubsection}{\numberline {2.10.11.1}{Technical Challenges}}{13}{subsubsection.2.10.11.1}%
+\contentsline {subsection}{\numberline {2.10.10}{Internal Resistance Degradation in Lithium-Ion Batteries}}{13}{subsection.2.10.10}%
+\contentsline {subsection}{\numberline {2.10.11}{Battery Health Monitoring}}{14}{subsection.2.10.11}%
+\contentsline {subsubsection}{\numberline {2.10.11.1}{Technical Challenges}}{14}{subsubsection.2.10.11.1}%
 \contentsline {subsubsection}{\numberline {2.10.11.2}{Complexity of Battery Chemistry}}{14}{subsubsection.2.10.11.2}%
 \contentsline {subsubsection}{\numberline {2.10.11.3}{Measurement Difficulties}}{14}{subsubsection.2.10.11.3}%
 \contentsline {subsubsection}{\numberline {2.10.11.4}{Modeling and Estimation}}{14}{subsubsection.2.10.11.4}%
-\contentsline {subsubsection}{\numberline {2.10.11.5}{Limitations of Data-Driven Methods}}{14}{subsubsection.2.10.11.5}%
+\contentsline {subsubsection}{\numberline {2.10.11.5}{Limitations of Data-Driven Methods}}{15}{subsubsection.2.10.11.5}%
 \contentsline {subsubsection}{\numberline {2.10.11.6}{Complexity of Hybrid Methods}}{15}{subsubsection.2.10.11.6}%
 \contentsline {subsection}{\numberline {2.10.12}{Laboratory vs Real World Conditions}}{15}{subsection.2.10.12}%
-\contentsline {subsection}{\numberline {2.10.13}{Scalability}}{15}{subsection.2.10.13}%
-\contentsline {subsection}{\numberline {2.10.14}{Real-Time Monitoring}}{15}{subsection.2.10.14}%
+\contentsline {subsection}{\numberline {2.10.13}{Scalability}}{16}{subsection.2.10.13}%
+\contentsline {subsection}{\numberline {2.10.14}{Real-Time Monitoring}}{16}{subsection.2.10.14}%
 \contentsline {subsection}{\numberline {2.10.15}{Environmental Factors}}{16}{subsection.2.10.15}%
 \contentsline {subsection}{\numberline {2.10.16}{Cost of Monitoring Systems}}{16}{subsection.2.10.16}%
-\contentsline {subsection}{\numberline {2.10.17}{Data and Computational Costs}}{16}{subsection.2.10.17}%
-\contentsline {subsection}{\numberline {2.10.18}{Standardization}}{16}{subsection.2.10.18}%
-\contentsline {chapter}{\numberline {3}{State of the Art}}{17}{chapter.3}%
-\contentsline {subsection}{\numberline {3.0.1}{Traditional Methods for SoC, SoH, and RUL Estimation}}{17}{subsection.3.0.1}%
-\contentsline {subsubsection}{\numberline {3.0.1.1}{Physics-Based Methods}}{17}{subsubsection.3.0.1.1}%
-\contentsline {subsubsection}{\numberline {3.0.1.2}{Statistical Methods}}{18}{subsubsection.3.0.1.2}%
-\contentsline {subsection}{\numberline {3.0.2}{AI-Based Methods for Battery State Estimation}}{18}{subsection.3.0.2}%
-\contentsline {subsubsection}{\numberline {3.0.2.1}{Machine Learning Techniques}}{18}{subsubsection.3.0.2.1}%
-\contentsline {subsubsection}{\numberline {3.0.2.2}{Deep Learning Architectures}}{19}{subsubsection.3.0.2.2}%
-\contentsline {subsubsection}{\numberline {3.0.2.3}{Datasets for AI-Based Estimation}}{19}{subsubsection.3.0.2.3}%
-\contentsline {subsubsection}{\numberline {3.0.2.4}{Hybrid Approaches}}{20}{subsubsection.3.0.2.4}%
-\contentsline {subsection}{\numberline {3.0.3}{Challenges and Research Gaps}}{20}{subsection.3.0.3}%
-\contentsline {subsection}{\numberline {3.0.4}{Conclusion}}{21}{subsection.3.0.4}%
-\contentsline {chapter}{\numberline {4}{Development}}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}{Dataset Collection and Preprocessing}}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}{Utilized Model}}{23}{section.4.2}%
-\contentsline {section}{\numberline {4.3}{Model Opimization}}{24}{section.4.3}%
+\contentsline {subsection}{\numberline {2.10.17}{Data and Computational Costs}}{17}{subsection.2.10.17}%
+\contentsline {subsection}{\numberline {2.10.18}{Standardization}}{17}{subsection.2.10.18}%
+\contentsline {chapter}{\numberline {3}{State of the Art}}{19}{chapter.3}%
+\contentsline {subsection}{\numberline {3.0.1}{Traditional Methods for SoC, SoH, and RUL Estimation}}{19}{subsection.3.0.1}%
+\contentsline {subsubsection}{\numberline {3.0.1.1}{Physics-Based Methods}}{19}{subsubsection.3.0.1.1}%
+\contentsline {subsubsection}{\numberline {3.0.1.2}{Statistical Methods}}{20}{subsubsection.3.0.1.2}%
+\contentsline {subsection}{\numberline {3.0.2}{AI-Based Methods for Battery State Estimation}}{20}{subsection.3.0.2}%
+\contentsline {subsubsection}{\numberline {3.0.2.1}{Machine Learning Techniques}}{20}{subsubsection.3.0.2.1}%
+\contentsline {subsubsection}{\numberline {3.0.2.2}{Deep Learning Architectures}}{21}{subsubsection.3.0.2.2}%
+\contentsline {subsubsection}{\numberline {3.0.2.3}{Datasets for AI-Based Estimation}}{21}{subsubsection.3.0.2.3}%
+\contentsline {subsubsection}{\numberline {3.0.2.4}{Hybrid Approaches}}{22}{subsubsection.3.0.2.4}%
+\contentsline {subsection}{\numberline {3.0.3}{Challenges and Research Gaps}}{22}{subsection.3.0.3}%
+\contentsline {subsection}{\numberline {3.0.4}{Conclusion}}{23}{subsection.3.0.4}%
+\contentsline {chapter}{\numberline {4}{Development}}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}{Dataset Collection and Preprocessing}}{25}{section.4.1}%
+\contentsline {section}{\numberline {4.2}{Utilized Model}}{25}{section.4.2}%
+\contentsline {section}{\numberline {4.3}{Model Opimization}}{26}{section.4.3}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {5}{Conclusões}}{25}{chapter.5}%
+\contentsline {chapter}{\numberline {5}{Conclusões}}{27}{chapter.5}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {}{Bibliografia}}{27}{dummy.9}%
-\contentsline {part}{{Apêndices}}{29}{section*.3}%
+\contentsline {chapter}{\numberline {}{Bibliografia}}{29}{dummy.9}%
+\contentsline {part}{{Apêndices}}{31}{section*.3}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {A}{Apêndice A}}{31}{appendix.A}%
-\contentsline {section}{\numberline {A.1}{Appendix Section Test}}{31}{section.A.1}%
-\contentsline {section}{\numberline {A.2}{Another Appendix Section Test}}{32}{section.A.2}%
+\contentsline {chapter}{\numberline {A}{Apêndice A}}{33}{appendix.A}%
+\contentsline {section}{\numberline {A.1}{Appendix Section Test}}{33}{section.A.1}%
+\contentsline {section}{\numberline {A.2}{Another Appendix Section Test}}{34}{section.A.2}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {B}{Apêndice B}}{35}{appendix.B}%
+\contentsline {chapter}{\numberline {B}{Apêndice B}}{37}{appendix.B}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

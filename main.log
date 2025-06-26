@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.6.23)  23 JUN 2025 17:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.6.23)  25 JUN 2025 14:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1583,48 +1583,48 @@ Missing character: There is no ¨ in font lmsy10!
 
 
 ]
-Overfull \hbox (2.42029pt too wide) detected at line 33
+Overfull \hbox (2.42029pt too wide) detected at line 34
 \T1/lmr/m/sc/10.95 2.10.10 
  []
 
 Missing character: There is no ¨ in font lmsy10!
 
-Overfull \hbox (2.42029pt too wide) detected at line 34
+Overfull \hbox (2.42029pt too wide) detected at line 35
 \T1/lmr/m/sc/10.95 2.10.11 
  []
 
 
-Overfull \hbox (2.42029pt too wide) detected at line 41
+Overfull \hbox (2.42029pt too wide) detected at line 42
 \T1/lmr/m/sc/10.95 2.10.12 
  []
 
 
-Overfull \hbox (2.42029pt too wide) detected at line 42
+Overfull \hbox (2.42029pt too wide) detected at line 43
 \T1/lmr/m/sc/10.95 2.10.13 
  []
 
 
-Overfull \hbox (2.42029pt too wide) detected at line 43
+Overfull \hbox (2.42029pt too wide) detected at line 44
 \T1/lmr/m/sc/10.95 2.10.14 
  []
 
 
-Overfull \hbox (2.42029pt too wide) detected at line 44
+Overfull \hbox (2.42029pt too wide) detected at line 45
 \T1/lmr/m/sc/10.95 2.10.15 
  []
 
 
-Overfull \hbox (2.42029pt too wide) detected at line 45
+Overfull \hbox (2.42029pt too wide) detected at line 46
 \T1/lmr/m/sc/10.95 2.10.16 
  []
 
 
-Overfull \hbox (2.42029pt too wide) detected at line 46
+Overfull \hbox (2.42029pt too wide) detected at line 47
 \T1/lmr/m/sc/10.95 2.10.17 
  []
 
 
-Overfull \hbox (2.42029pt too wide) detected at line 47
+Overfull \hbox (2.42029pt too wide) detected at line 48
 \T1/lmr/m/sc/10.95 2.10.18 
  []
 
@@ -1768,6 +1768,7 @@ Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 [6]
 Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ½ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 [7]
@@ -1778,8 +1779,11 @@ Missing character: There is no ¨ in font lmsy10!
 [8]
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ½ in font lmsy10!
+Missing character: There is no ½ in font lmsy8!
 Missing character: There is no ½ in font lmsy10!
 Missing character: There is no ½ in font lmsy8!
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no © in font lmsy10!
 Missing character: There is no ½ in font lmsy10!
 Missing character: There is no ½ in font lmsy8!
 Missing character: There is no ¨ in font lmsy10!
@@ -1790,30 +1794,33 @@ Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ½ in font lmsy10!
 Missing character: There is no ½ in font lmsy8!
-Missing character: There is no ¨ in font lmsy10!
-Missing character: There is no © in font lmsy10!
-Missing character: There is no ½ in font lmsy10!
-Missing character: There is no ½ in font lmsy8!
-Missing character: There is no ¨ in font lmsy10!
-[10]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 102.
- (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 103.
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Missing character: There is no ¨ in font lmsy10!
+[10]
+Missing character: There is no ¨ in font lmsy10!
 [11]
+Missing character: There is no ¨ in font lmsy10!
+[12]
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no « in font lmsy8!
 Missing character: There is no ¨ in font lmsy10!
-[12]
 Missing character: There is no ¨ in font lmsy10!
 [13]
 Missing character: There is no ¨ in font lmsy10!
 [14]
 Missing character: There is no ¨ in font lmsy10!
-[15])
+[15]
 Missing character: There is no ¨ in font lmsy10!
-[16]
+[16])
+Missing character: There is no ¨ in font lmsy10!
+[17] [18
+
+
+
+]
 \openout2 = `Chapters/StateOfTheArt.aux'.
 
  (./Chapters/StateOfTheArt.tex
@@ -1828,46 +1835,43 @@ Missing character: There is no ½ in font lmsy10!
 Missing character: There is no ½ in font lmsy10!
 Missing character: There is no ½ in font lmsy10!
 
-LaTeX Warning: Citation 'Ref5' on page 17 undefined on input line 19.
+LaTeX Warning: Citation 'Ref5' on page 19 undefined on input line 19.
 
 Missing character: There is no ¨ in font lmsy10!
-[17
-
-
-
+[19
 
 
 ]
 
-LaTeX Warning: Citation 'Ref5' on page 18 undefined on input line 20.
+LaTeX Warning: Citation 'Ref5' on page 20 undefined on input line 20.
 
 
-LaTeX Warning: Citation 'Report' on page 18 undefined on input line 26.
+LaTeX Warning: Citation 'Report' on page 20 undefined on input line 26.
 
 
-LaTeX Warning: Citation 'Report' on page 18 undefined on input line 27.
+LaTeX Warning: Citation 'Report' on page 20 undefined on input line 27.
 
-Missing character: There is no ¨ in font lmsy10!
-[18]
-Missing character: There is no ¨ in font lmsy10!
-[19]
-
-LaTeX Warning: Citation 'Ref5' on page 20 undefined on input line 57.
-
-
-LaTeX Warning: Citation 'Ref5' on page 20 undefined on input line 63.
-
-
-LaTeX Warning: Citation 'Report' on page 20 undefined on input line 64.
-
-
-LaTeX Warning: Citation 'Ref3' on page 20 undefined on input line 66.
-
-)
 Missing character: There is no ¨ in font lmsy10!
 [20]
 Missing character: There is no ¨ in font lmsy10!
-[21] [22
+[21]
+
+LaTeX Warning: Citation 'Ref5' on page 22 undefined on input line 58.
+
+
+LaTeX Warning: Citation 'Ref5' on page 22 undefined on input line 64.
+
+
+LaTeX Warning: Citation 'Report' on page 22 undefined on input line 65.
+
+
+LaTeX Warning: Citation 'Ref3' on page 22 undefined on input line 67.
+
+)
+Missing character: There is no ¨ in font lmsy10!
+[22]
+Missing character: There is no ¨ in font lmsy10!
+[23] [24
 
 
 
@@ -1887,12 +1891,12 @@ Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 )
 Missing character: There is no ¨ in font lmsy10!
-[23
+[25
 
 
 ]
 Missing character: There is no ¨ in font lmsy10!
-[24]
+[26]
 \openout2 = `Chapters/Conclusion.aux'.
 
  (./Chapters/Conclusion.tex
@@ -1905,13 +1909,13 @@ Overfull \hbox (38.53226pt too wide) in paragraph at lines 5--5
 Missing character: There is no ¨ in font lmsy10!
 )
 Missing character: There is no ¨ in font lmsy10!
-[25
+[27
 
 
 
 
 
-] [26
+] [28
 
 
 
@@ -1926,7 +1930,7 @@ Overfull \hbox (18.10251pt too wide) in paragraph at lines 13--13
  []
 
 Missing character: There is no ¨ in font lmsy10!
-[27
+[29
 
 
 ]
@@ -1936,15 +1940,15 @@ Overfull \hbox (25.92656pt too wide) in paragraph at lines 13--13
 
 )
 Missing character: There is no ¨ in font lmsy10!
-[28]
+[30]
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
-[29
+[31
 
 
 
 
-] [30]
+] [32]
 \openout2 = `Chapters/ApendixA.aux'.
 
  (./Chapters/ApendixA.tex
@@ -1957,7 +1961,7 @@ Overfull \hbox (58.08998pt too wide) in paragraph at lines 7--7
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
-[31
+[33
 
 
 
@@ -1974,9 +1978,9 @@ Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 )
 Missing character: There is no ¨ in font lmsy10!
-[32]
+[34]
 Missing character: There is no ¨ in font lmsy10!
-[33] [34
+[35] [36
 
 
 
@@ -1993,7 +1997,7 @@ Overfull \hbox (50.84175pt too wide) in paragraph at lines 4--4
 Missing character: There is no ¨ in font lmsy10!
 )
 Missing character: There is no ¨ in font lmsy10!
-[35
+[37
 
 
 ] (./main.aux (./Covers/Titlepage.aux) (./Covers/Titleback.aux) (./Covers/Acknowledgments.aux) (./Covers/Abstract.aux) (./Covers/Contents.aux) (./Covers/Acronyms.aux) (./Chapters/Intro.aux) (./Chapters/Background.aux) (./Chapters/StateOfTheArt.aux) (./Chapters/Development.aux) (./Chapters/Conclusion.aux) (./Covers/Bibliography.aux) (./Chapters/ApendixA.aux) (./Chapters/ApendixB.aux)
@@ -2229,18 +2233,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### semi simple group (level 1) entered at line 289 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 39897 strings out of 478287
- 771385 string characters out of 5849289
- 1840193 words of memory out of 5000000
- 56932 multiletter control sequences out of 15000+600000
+ 39905 strings out of 478287
+ 771494 string characters out of 5849289
+ 1840199 words of memory out of 5000000
+ 56934 multiletter control sequences out of 15000+600000
  577985 words of font info for 226 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,22n,106p,10662b,13148s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 108i,22n,106p,10662b,13152s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (53 pages, 338103 bytes).
+Output written on main.pdf (55 pages, 339340 bytes).
 PDF statistics:
- 719 PDF objects out of 1000 (max. 8388607)
- 628 compressed objects within 7 object streams
- 140 named destinations out of 1000 (max. 500000)
+ 734 PDF objects out of 1000 (max. 8388607)
+ 641 compressed objects within 7 object streams
+ 146 named destinations out of 1000 (max. 500000)
  64430 words of extra memory for PDF output out of 74296 (max. 10000000)
 
