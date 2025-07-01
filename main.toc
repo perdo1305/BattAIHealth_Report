@@ -1,15 +1,16 @@
 \babel@toc {portuguese}{}\relax 
 \vspace {-\cftbeforepartskip }
-\babel@toc {portuguese}{}\relax 
+\babel@toc {english}{}\relax 
 \contentsline {chapter}{Acknowledgements}{i}{dummy.1}%
 \contentsline {chapter}{Resumo}{iii}{dummy.2}%
 \contentsline {chapter}{Abstract}{v}{dummy.3}%
-\contentsline {chapter}{Lista de Figuras}{xi}{dummy.5}%
-\contentsline {chapter}{Lista de Tabelas}{xiii}{dummy.6}%
-\contentsline {chapter}{Glossário}{xiv}{dummy.7}%
-\contentsline {chapter}{Lista de Abreviaturas}{xv}{section*.1}%
+\contentsline {chapter}{List of Figures}{xi}{dummy.5}%
+\contentsline {chapter}{List of Tables}{xiii}{dummy.6}%
+\contentsline {chapter}{Glossary}{xiv}{dummy.7}%
+\contentsline {chapter}{List of Abbreviations}{xv}{section*.1}%
+\contentsline {chapter}{List of Abbreviations}{xv}{section*.2}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {1}{Introdução}}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {1}{Introduction}}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}{Background material and Supporting Technologies}}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}{Time Series Analysis of Battery Data}}{3}{section.2.1}%
 \contentsline {section}{\numberline {2.2}{Spectral Analysis of Battery Data}}{4}{section.2.2}%
@@ -56,23 +57,43 @@
 \contentsline {subsection}{\numberline {3.0.3}{Challenges and Research Gaps}}{20}{subsection.3.0.3}%
 \contentsline {subsection}{\numberline {3.0.4}{Conclusion}}{21}{subsection.3.0.4}%
 \contentsline {chapter}{\numberline {4}{Development}}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}{Dataset Collection and Preprocessing}}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}{Utilized Model (TimesNet)}}{23}{section.4.2}%
-\contentsline {section}{\numberline {4.3}{Model Optimization}}{24}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}{Dataset Preparation for Optimization}}{24}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}{Optimization Process}}{25}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}{Optimized Parameters}}{25}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}{Parameter Importance Analysis}}{25}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}{Best Trial Results}}{26}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.1}{Introduction}}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.2}{MATLAB Modeling and Simulation}}{23}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}{Kalman Filter Implementation}}{23}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}{Coulomb Counting Integration}}{24}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}{Batemo Model Integration}}{24}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}{Neural Network Development Evolution}}{25}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}{Initial CNN+LSTM Architecture}}{25}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}{Architecture Design}}{25}{subsubsection.4.3.1.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}{Training Challenges and Limitations}}{25}{subsubsection.4.3.1.2}%
+\contentsline {subsection}{\numberline {4.3.2}{Hybrid vs. Data-Driven Approach Evaluation}}{26}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}{Hybrid Approach Implementation}}{26}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}{Data-Driven Approach Focus}}{26}{subsubsection.4.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}{Comparative Analysis Results}}{26}{subsubsection.4.3.2.3}%
+\contentsline {section}{\numberline {4.4}{Dataset Collection and Preprocessing}}{27}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}{Primary Dataset Selection}}{27}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}{Data Cleaning and Preprocessing}}{27}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}{Cycle Removal and Filtering}}{27}{subsubsection.4.4.2.1}%
+\contentsline {subsection}{\numberline {4.4.3}{Input Data Formatting}}{28}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}{Limitations of Previous Approaches}}{28}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}{Requirements for Advanced Architecture}}{29}{subsection.4.4.5}%
+\contentsline {section}{\numberline {4.5}{Utilized Model (TimesNet)}}{29}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}{Architecture Adaptation for Battery Health Prediction}}{30}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}{Model Optimization}}{30}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}{Dataset Preparation for Optimization}}{31}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}{Optimization Process}}{31}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}{Optimized Parameters}}{31}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}{Parameter Importance Analysis}}{32}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5}{Best Trial Results}}{32}{subsection.4.6.5}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {5}{Conclusões}}{27}{chapter.5}%
+\contentsline {chapter}{\numberline {5}{Conclusions}}{33}{chapter.5}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {}{Bibliografia}}{29}{dummy.9}%
-\contentsline {part}{{Apêndices}}{31}{section*.3}%
+\contentsline {chapter}{\numberline {}{Bibliography}}{35}{dummy.9}%
+\contentsline {part}{{Appendices}}{37}{section*.4}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {A}{Apêndice A}}{33}{appendix.A}%
-\contentsline {section}{\numberline {A.1}{Appendix Section Test}}{33}{section.A.1}%
-\contentsline {section}{\numberline {A.2}{Another Appendix Section Test}}{34}{section.A.2}%
+\contentsline {chapter}{\numberline {A}{Appendix A}}{39}{appendix.A}%
+\contentsline {section}{\numberline {A.1}{Appendix Section Test}}{39}{section.A.1}%
+\contentsline {section}{\numberline {A.2}{Another Appendix Section Test}}{40}{section.A.2}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {B}{Apêndice B}}{37}{appendix.B}%
+\contentsline {chapter}{\numberline {B}{Appendix B}}{43}{appendix.B}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

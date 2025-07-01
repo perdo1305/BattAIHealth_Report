@@ -2,17 +2,170 @@
 \chapter{Development}
 \label{ch:Development}
 %************************************************
-\lipsum[1]
+
+\section{Introduction}
+
+This chapter details the development phases of the battery health prediction system, encompassing the complete progression from initial MATLAB modeling to advanced deep learning implementation. The project evolved through distinct phases: (1) MATLAB-based modeling and simulation using traditional methods, (2) exploration of hybrid neural network approaches, (3) transition to pure data-driven models, and (4) implementation of state-of-the-art deep learning architectures for time series forecasting.
+
+The development process was guided by the need to create accurate, robust, and scalable battery health prediction models capable of handling real-world applications. Each phase built upon lessons learned from previous approaches, ultimately leading to the implementation of TimesNet, a cutting-edge time series analysis architecture that demonstrates superior performance in battery degradation prediction tasks.
+
+\section{MATLAB Modeling and Simulation}
+
+The initial development phase focused on implementing traditional battery modeling approaches in MATLAB to establish baseline performance and understand the fundamental characteristics of battery degradation patterns.
+
+\subsection{Kalman Filter Implementation}
+
+The Extended Kalman Filter (\gls{efk}) was implemented as the primary estimation algorithm for \gls{soc} and \gls{soh} prediction. The \gls{efk} approach was chosen for its proven effectiveness in handling the nonlinear dynamics of battery systems and its ability to provide uncertainty quantification.
+
+\subsection{Coulomb Counting Integration}
+
+Coulomb counting was integrated as a complementary method for \gls{soc} estimation, providing a reference baseline for comparison with the Kalman filter results. The implementation considered:
+
+\begin{itemize}
+    \item Current integration accuracy and drift compensation
+    \item Temperature effects on coulombic efficiency
+    \item Aging effects on capacity estimation
+    \item Calibration procedures for initial \gls{soc} determination
+\end{itemize}
+
+\subsection{Batemo Model Integration}
+
+The Batemo battery model was incorporated to provide physics-based battery behavior simulation. This integration enabled:
+
+\begin{itemize}
+    \item Validation of estimation algorithms under controlled conditions
+    \item Generation of synthetic data for algorithm testing
+    \item Analysis of model sensitivity to various degradation mechanisms
+    \item Comparison between model-based and data-driven approaches
+\end{itemize}
+
+The MATLAB implementation served as a foundation for understanding battery dynamics and provided insights that informed subsequent neural network development phases.
+
+\section{Neural Network Development Evolution}
+
+The neural network development process evolved through multiple iterations, each addressing specific limitations identified in previous approaches and incorporating lessons learned from the MATLAB modeling phase.
+
+\subsection{Initial CNN+LSTM Architecture}
+
+The first neural network implementation combined \gls{cnn} with \gls{lstm} networks to leverage both spatial feature extraction and temporal sequence modeling capabilities.
+
+\subsubsection{Architecture Design}
+
+The CNN+LSTM architecture was structured as follows:
+
+\begin{itemize}
+    \item \textbf{CNN layers}: Extract local patterns and features from battery measurement sequences
+    \item \textbf{LSTM layers}: Model long-term dependencies and temporal relationships
+    \item \textbf{Dense layers}: Final prediction mapping with appropriate activation functions
+\end{itemize}
+
+\subsubsection{Training Challenges and Limitations}
+
+Several challenges were encountered during the CNN+LSTM implementation:
+
+\begin{itemize}
+    \item \textbf{Gradient vanishing}: Long sequences caused training instability
+    \item \textbf{Overfitting}: High model complexity led to poor generalization
+    \item \textbf{Computational efficiency}: Training time was prohibitively long for large datasets
+    \item \textbf{Feature engineering}: Manual feature selection proved suboptimal
+\end{itemize}
+
+\subsection{Hybrid vs. Data-Driven Approach Evaluation}
+
+A systematic comparison was conducted between hybrid approaches (combining physics-based models with neural networks) and pure data-driven methods.
+
+\subsubsection{Hybrid Approach Implementation}
+
+The hybrid approach integrated:
+\begin{itemize}
+    \item Physics-based model outputs as additional input features
+    \item Kalman filter estimates as regularization terms
+    \item Domain knowledge constraints in loss function design
+\end{itemize}
+
+\subsubsection{Data-Driven Approach Focus}
+
+The pure data-driven approach emphasized:
+\begin{itemize}
+    \item End-to-end learning from raw sensor data
+    \item Automatic feature extraction and representation learning
+    \item Minimal domain-specific preprocessing requirements
+\end{itemize}
+
+\subsubsection{Comparative Analysis Results}
+
+The evaluation revealed that data-driven approaches demonstrated:
+\begin{itemize}
+    \item Superior generalization across different battery chemistries
+    \item Reduced dependency on accurate physics model parameters
+    \item Better scalability to large datasets
+    \item More robust performance under varying operating conditions
+\end{itemize}
+
+This analysis motivated the transition to advanced pure data-driven architectures.
+
 \section{Dataset Collection and Preprocessing}
 
-o dataset principal utilizado neste trabalho é o dataset //calce, que foi optido a partir do site x, da maneira xxxxx
-falar da separacao do dataset
-limpeza de dados (foi necessario remover o primeiro ciclo de cada ficheiro para  evitar problemas de inicializacao, e tambem remover os ciclos que nao tinham dados suficientes para serem utilizados)
-como é feito o input dos dados para o modelo
+The dataset development process was crucial for training robust and generalizable models, requiring careful consideration of data quality, diversity, and preprocessing strategies.
 
+\subsection{Primary Dataset Selection}
 
+The primary dataset utilized in this work is the CALCE (Center for Advanced Life Cycle Engineering) battery dataset, obtained from the University of Maryland's public repository. This dataset was selected for its:
 
+\begin{itemize}
+    \item Comprehensive cycle life data spanning multiple battery chemistries
+    \item High-quality measurements with consistent sampling rates
+    \item Well-documented experimental conditions and procedures
+    \item Established use in battery research community for benchmarking
+\end{itemize}
 
+\subsection{Data Cleaning and Preprocessing}
+
+Several preprocessing steps were implemented to ensure data quality and model training stability:
+
+\subsubsection{Cycle Removal and Filtering}
+
+\begin{itemize}
+    \item \textbf{Initial cycle removal}: The first charge-discharge cycle was removed from each battery file to avoid initialization artifacts and inconsistent starting conditions
+    \item \textbf{Incomplete cycle filtering}: Cycles with insufficient data points or incomplete charge/discharge sequences were excluded from the training set
+    \item \textbf{Outlier detection}: Statistical methods were applied to identify and remove measurement outliers that could negatively impact model training
+\end{itemize}
+Battery-level partitioning was employed to prevent data leakage, ensuring that cycles from the same battery appeared in only one partition.
+
+\subsection{Input Data Formatting}
+
+The input data structure was designed to optimize model performance:
+
+\begin{itemize}
+    \item \textbf{Sequence length}: Fixed-length sequences of 100 time steps were extracted from continuous battery operation data
+    \item \textbf{Feature vector}: Each time step included voltage, current, temperature, and derived features such as power and energy
+    \item \textbf{Target variables}: State of Health (SOH) values were calculated based on capacity fade measurements
+    \item \textbf{Sliding window}: Overlapping sequences were generated to maximize training data utilization
+\end{itemize}
+
+\subsection{Limitations of Previous Approaches}
+
+The evaluation of CNN+LSTM and hybrid approaches revealed several critical limitations:
+
+\begin{itemize}
+    \item \textbf{Temporal modeling constraints}: Traditional LSTM architectures struggled with very long sequences typical in battery degradation analysis
+    \item \textbf{Multi-scale pattern recognition}: Difficulty in capturing both short-term fluctuations and long-term degradation trends simultaneously
+    \item \textbf{Computational efficiency}: High computational requirements limited the scalability to large datasets
+    \item \textbf{Generalization issues}: Poor performance when applied to battery chemistries or operating conditions not seen during training
+\end{itemize}
+
+\subsection{Requirements for Advanced Architecture}
+
+The identified requirements for an improved architecture included:
+
+\begin{itemize}
+    \item \textbf{Multi-periodicity detection}: Ability to automatically identify and exploit multiple periodic patterns in battery data
+    \item \textbf{Long-range dependency modeling}: Effective capture of dependencies across extended time horizons
+    \item \textbf{Parameter efficiency}: Reduced model complexity while maintaining or improving performance
+    \item \textbf{Versatility}: Capability to handle various time series analysis tasks beyond just forecasting
+\end{itemize}
+
+These requirements led to the selection and implementation of TimesNet, a cutting-edge architecture specifically designed for general time series analysis.
 
 \section{Utilized Model (TimesNet)}
 
@@ -21,6 +174,17 @@ TimesNet is a state-of-the-art neural network architecture specifically designed
 The architecture works by converting 1D time series into a set of 2D tensors based on multiple identified periods. This transformation embeds intraperiod variations into the columns and interperiod variations into the rows of the 2D tensors, making temporal patterns more accessible for analysis through 2D convolution operations. The core component, TimesBlock, can adaptively discover multi-periodicity and extract complex temporal variations using parameter-efficient inception blocks.
 
 TimesNet demonstrates superior performance across five mainstream time series analysis tasks: short-term and long-term forecasting, imputation, classification, and anomaly detection. This versatility makes it particularly suitable for battery health prediction tasks, where complex temporal dependencies and multi-scale patterns are crucial for accurate state-of-health estimation. The model's ability to handle various sequence lengths and its robust architecture for capturing temporal dynamics align well with the requirements of battery degradation modeling, where both short-term fluctuations and long-term trends must be considered simultaneously.
+
+\subsection{Architecture Adaptation for Battery Health Prediction}
+
+The TimesNet architecture was adapted for battery health prediction with several key modifications:
+
+\begin{itemize}
+    \item \textbf{Input preprocessing}: Battery measurement sequences (voltage, current, temperature) were formatted to exploit the multi-periodicity detection capabilities
+    \item \textbf{Output configuration}: Modified for regression tasks to predict continuous SOH values rather than classification outputs
+    \item \textbf{Loss function}: Implemented Mean Squared Error (MSE) with additional regularization terms to prevent overfitting
+    \item \textbf{Feature engineering}: Minimal manual feature engineering to leverage the model's automatic pattern discovery capabilities
+\end{itemize}
 
 \section{Model Optimization}
 

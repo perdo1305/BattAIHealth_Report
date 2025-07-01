@@ -50,7 +50,7 @@
   BCOR=5mm,
   paper=a4,
   fontsize=11pt,
-  ngerman,portuguese,
+  english,ngerman,portuguese,
   dottedtoc,
 ]{scrreprt}
 
@@ -115,6 +115,14 @@ Automotive and Railway Applications using AI\xspace}
 % Lista de acrónimos
 %*******************************************************
 % \loadglsentries{Covers/Acronyms-list}
+
+% Load acronym definitions
+\newacronym{cnn}{CNN}{Convolutional Neural Network}
+\newacronym{efk}{EKF}{Extended Kalman Filter}
+\newacronym{lstm}{LSTM}{Long Short-Term Memory}
+\newacronym{soc}{SoC}{State of Charge}
+\newacronym{soh}{SoH}{State of Health}
+
 \makeglossaries
 
 
@@ -130,8 +138,8 @@ Automotive and Railway Applications using AI\xspace}
 \begin{document}
 \frenchspacing
 \raggedbottom
-\selectlanguage{portuguese}
-%\selectlanguage{English}
+%\selectlanguage{portuguese}
+\selectlanguage{English}
 \pagestyle{plain}
 
 % use \cleardoublepage here to avoid problems with pdfbookmark
@@ -177,7 +185,7 @@ Automotive and Railway Applications using AI\xspace}
 
 \cleardoublepage
 \phantomsection 
-\part*{Apêndices}
+\part*{Appendices}
 
 \cleardoublepage\include{Chapters/ApendixA}
 \cleardoublepage\include{Chapters/ApendixB}

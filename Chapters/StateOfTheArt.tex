@@ -16,15 +16,15 @@ Traditional methods for battery state estimation can be categorized into physics
 \subsubsection{Physics-Based Methods}
 Physics-based methods model the electrochemical and electrical behavior of batteries. Key approaches include:
 \begin{itemize}
-    \item \textbf{Equivalent Circuit Models (ECMs)}: Represent batteries using electrical components (e.g., resistors, capacitors) to simulate voltage and current dynamics. ECMs are computationally efficient but lack precision under varying conditions \cite{Ref5}.
-    \item \textbf{Electrochemical Models}: Simulate internal chemical reactions, offering high accuracy but requiring significant computational resources and detailed parameter knowledge \cite{Ref5}.
+    \item \textbf{Equivalent Circuit Models (ECMs)}: Represent batteries using electrical components (e.g., resistors, capacitors) to simulate voltage and current dynamics. ECMs are computationally efficient but lack precision under varying conditions.
+    \item \textbf{Electrochemical Models}: Simulate internal chemical reactions, offering high accuracy but requiring significant computational resources and detailed parameter knowledge.
 \end{itemize}
 
 \subsubsection{Statistical Methods}
 Statistical techniques rely on empirical data to estimate battery states. Common methods include:
 \begin{itemize}
-    \item \textbf{Coulomb Counting}: Integrates current over time to estimate SoC. This method is sensitive to measurement errors and initial SoC inaccuracies \cite{Report}.
-    \item \textbf{Kalman Filters}: Use recursive algorithms to refine state estimates by combining model predictions with noisy measurements. While effective for linear systems, they struggle with the nonlinear dynamics of batteries \cite{Report}.
+    \item \textbf{Coulomb Counting}: Integrates current over time to estimate SoC. This method is sensitive to measurement errors and initial SoC inaccuracies.
+    \item \textbf{Kalman Filters}: Use recursive algorithms to refine state estimates by combining model predictions with noisy measurements. While effective for linear systems, they struggle with the nonlinear dynamics of batteries.
 \end{itemize}
 
 These methods often fail to capture subtle variations in battery behavior under dynamic operating conditions, necessitating advanced approaches.
@@ -55,16 +55,16 @@ These datasets highlight the importance of incorporating real-world operating co
 
 
 \subsubsection{Hybrid Approaches}
-Hybrid models combine physics-based and data-driven methods to enhance accuracy. For example, \cite{Ref5} integrates ECMs with neural networks to refine SoC estimates, leveraging physical constraints to reduce training data requirements. Such approaches are particularly relevant for railway applications, where operational conditions vary widely.
+Hybrid models combine physics-based and data-driven methods to enhance accuracy. For example, \cite{} integrates ECMs with neural networks to refine SoC estimates, leveraging physical constraints to reduce training data requirements. Such approaches are particularly relevant for railway applications, where operational conditions vary widely.
 
 
 \subsection{Challenges and Research Gaps}
 Despite advancements, several challenges persist in battery state estimation:
 \begin{itemize}
-    \item \textbf{Data Requirements}: AI models, particularly deep learning, require large, diverse datasets, which are often limited or proprietary \cite{Ref5}.
-    \item \textbf{Operational Variability}: Battery performance varies due to temperature, load profiles, and aging, complicating model generalization \cite{Report}.
+    \item \textbf{Data Requirements}: AI models, particularly deep learning, require large, diverse datasets, which are often limited or proprietary .
+    \item \textbf{Operational Variability}: Battery performance varies due to temperature, load profiles, and aging, complicating model generalization .
     \item \textbf{Computational Complexity}: Real-time estimation in automotive and railway systems demands low-latency models, a challenge for complex deep learning architectures.
-    \item \textbf{Lack of Standardized Datasets}: The absence of universal, open-source datasets for railway applications limits model benchmarking \cite{Ref3}.
+    \item \textbf{Lack of Standardized Datasets}: The absence of universal, open-source datasets for railway applications limits model benchmarking.
 \end{itemize}
 The \textit{BattAIHealth} project addresses these gaps by developing AI models trained on both synthetic and real-world datasets, optimizing for robustness and real-time applicability in transportation systems.
 
