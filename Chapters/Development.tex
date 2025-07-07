@@ -13,31 +13,17 @@ The development process was guided by the need to create accurate, robust, and s
 
 The initial development phase focused on implementing traditional battery modeling approaches in MATLAB to establish baseline performance and understand the fundamental characteristics of battery degradation patterns.
 
-\subsection{Kalman Filter Implementation}
+\textbf{Kalman Filter Implementation}
 
-The Extended Kalman Filter (\gls{efk}) was implemented as the primary estimation algorithm for \gls{soc} and \gls{soh} prediction. The \gls{efk} approach was chosen for its proven effectiveness in handling the nonlinear dynamics of battery systems and its ability to provide uncertainty quantification.
+The Extended Kalman Filter (EFK) was implemented as the primary estimation algorithm for SOC and SOH prediction. The EFK approach was chosen for its proven effectiveness in handling the nonlinear dynamics of battery systems and its ability to provide uncertainty quantification.
 
-\subsection{Coulomb Counting Integration}
+\textbf{Coulomb Counting Integration}
 
-Coulomb counting was integrated as a complementary method for \gls{soc} estimation, providing a reference baseline for comparison with the Kalman filter results. The implementation considered:
+Coulomb counting was integrated as a complementary method for SOC estimation, providing a reference baseline for comparison with the Kalman filter results. The implementation addressed several critical considerations to ensure accuracy and reliability. \textbf{Current integration accuracy and drift compensation} were prioritized to minimize cumulative errors that could significantly impact SOC estimates over extended periods. \textbf{Temperature effects on coulombic efficiency} were carefully analyzed, as thermal variations can substantially alter the charge-discharge efficiency and affect the accuracy of capacity calculations. \textbf{Aging effects on capacity estimation} were incorporated to account for the gradual degradation of battery capacity over operational lifetime, ensuring that SOC estimates remain accurate as the battery ages. Finally, \textbf{calibration procedures for initial SOC determination} were established to provide accurate baseline measurements, which are crucial for the cumulative nature of coulomb counting methods.
 
-\begin{itemize}
-    \item Current integration accuracy and drift compensation
-    \item Temperature effects on coulombic efficiency
-    \item Aging effects on capacity estimation
-    \item Calibration procedures for initial \gls{soc} determination
-\end{itemize}
+\textbf{Batemo Model Integration}
 
-\subsection{Batemo Model Integration}
-
-The Batemo battery model was incorporated to provide physics-based battery behavior simulation. This integration enabled:
-
-\begin{itemize}
-    \item Validation of estimation algorithms under controlled conditions
-    \item Generation of synthetic data for algorithm testing
-    \item Analysis of model sensitivity to various degradation mechanisms
-    \item Comparison between model-based and data-driven approaches
-\end{itemize}
+The Batemo battery model was incorporated to provide physics-based battery behavior simulation. This integration offered comprehensive capabilities for model development and validation. \textbf{Validation of estimation algorithms under controlled conditions} was enabled through the model's ability to simulate precise battery behaviors, allowing for systematic testing of algorithm performance across various operational scenarios. \textbf{Generation of synthetic data for algorithm testing} provided a valuable resource for training and evaluating neural networks when real-world data was limited or when specific degradation patterns needed to be studied. \textbf{Analysis of model sensitivity to various degradation mechanisms} was facilitated by the physics-based nature of the Batemo model, enabling detailed investigation of how different aging phenomena affect battery performance predictions. Additionally, \textbf{comparison between model-based and data-driven approaches} was made possible, allowing for comprehensive evaluation of different estimation methodologies and their respective strengths and limitations.
 
 The MATLAB implementation served as a foundation for understanding battery dynamics and provided insights that informed subsequent neural network development phases.
 
@@ -45,62 +31,33 @@ The MATLAB implementation served as a foundation for understanding battery dynam
 
 The neural network development process evolved through multiple iterations, each addressing specific limitations identified in previous approaches and incorporating lessons learned from the MATLAB modeling phase.
 
-\subsection{Initial CNN+LSTM Architecture}
+\textbf{Initial CNN+LSTM Architecture}
 
-The first neural network implementation combined \gls{cnn} with \gls{lstm} networks to leverage both spatial feature extraction and temporal sequence modeling capabilities.
+The first neural network implementation combined CNN with LSTM networks to leverage both spatial feature extraction and temporal sequence modeling capabilities.
 
-\subsubsection{Architecture Design}
+\textbf{Architecture Design}
 
-The CNN+LSTM architecture was structured as follows:
+The CNN+LSTM architecture was structured to leverage the complementary strengths of both convolutional and recurrent neural networks. The design incorporated multiple specialized layers, each serving a distinct purpose in the feature extraction and temporal modeling pipeline. \textbf{CNN layers} were responsible for extracting local patterns and features from battery measurement sequences, identifying spatial relationships and important signal characteristics within the input data. \textbf{LSTM layers} focused on modeling long-term dependencies and temporal relationships, capturing the sequential nature of battery degradation and state evolution over time. Finally, \textbf{Dense layers} provided the final prediction mapping with appropriate activation functions, transforming the processed features into accurate SOC and SOH estimates.
 
-\begin{itemize}
-    \item \textbf{CNN layers}: Extract local patterns and features from battery measurement sequences
-    \item \textbf{LSTM layers}: Model long-term dependencies and temporal relationships
-    \item \textbf{Dense layers}: Final prediction mapping with appropriate activation functions
-\end{itemize}
+\textbf{Training Challenges and Limitations}
 
-\subsubsection{Training Challenges and Limitations}
+Several significant challenges were encountered during the CNN+LSTM implementation that highlighted the complexity of applying deep learning to battery health monitoring. These obstacles required careful analysis and ultimately influenced the decision to pursue alternative approaches. \textbf{Gradient vanishing} emerged as a critical issue where long sequences caused training instability, preventing the network from effectively learning long-term dependencies essential for accurate battery state prediction. \textbf{Overfitting} presented another major concern, as the high model complexity led to poor generalization, with the network memorizing training patterns rather than learning transferable features applicable to new battery data. \textbf{Computational efficiency} posed practical limitations, with training time becoming prohibitively long for large datasets, making the approach unsuitable for real-world applications requiring timely model updates. Additionally, \textbf{Feature engineering} proved challenging, as manual feature selection proved suboptimal, requiring extensive domain expertise and iterative refinement that limited the model's adaptability to different battery types and operating conditions.
 
-Several challenges were encountered during the CNN+LSTM implementation:
-
-\begin{itemize}
-    \item \textbf{Gradient vanishing}: Long sequences caused training instability
-    \item \textbf{Overfitting}: High model complexity led to poor generalization
-    \item \textbf{Computational efficiency}: Training time was prohibitively long for large datasets
-    \item \textbf{Feature engineering}: Manual feature selection proved suboptimal
-\end{itemize}
-
-\subsection{Hybrid vs. Data-Driven Approach Evaluation}
+\textbf{Hybrid vs. Data-Driven Approach Evaluation}
 
 A systematic comparison was conducted between hybrid approaches (combining physics-based models with neural networks) and pure data-driven methods.
 
-\subsubsection{Hybrid Approach Implementation}
+\textbf{Hybrid Approach Implementation}
 
-The hybrid approach integrated:
-\begin{itemize}
-    \item Physics-based model outputs as additional input features
-    \item Kalman filter estimates as regularization terms
-    \item Domain knowledge constraints in loss function design
-\end{itemize}
+The hybrid approach integrated multiple complementary techniques to leverage both physics-based understanding and data-driven learning capabilities. This comprehensive strategy incorporated several key components designed to enhance prediction accuracy and reliability. \textbf{Physics-based model outputs as additional input features} provided domain-specific insights that enriched the neural network's understanding of battery behavior, incorporating fundamental electrochemical principles into the learning process. \textbf{Kalman filter estimates as regularization terms} helped constrain the neural network training by incorporating well-established state estimation techniques, reducing the likelihood of unrealistic predictions and improving model stability. Furthermore, \textbf{domain knowledge constraints in loss function design} ensured that the learned models respected known physical limitations and relationships, preventing the network from learning patterns that violated fundamental battery physics principles.
 
-\subsubsection{Data-Driven Approach Focus}
+\textbf{Data-Driven Approach Focus}
 
-The pure data-driven approach emphasized:
-\begin{itemize}
-    \item End-to-end learning from raw sensor data
-    \item Automatic feature extraction and representation learning
-    \item Minimal domain-specific preprocessing requirements
-\end{itemize}
+The pure data-driven approach emphasized maximum utilization of machine learning capabilities while minimizing reliance on explicit domain knowledge. This methodology focused on allowing the neural network to discover patterns and relationships directly from the data. \textbf{End-to-end learning from raw sensor data} enabled the model to process unfiltered battery measurements, potentially capturing subtle patterns that might be lost during manual preprocessing or feature engineering steps. \textbf{Automatic feature extraction and representation learning} allowed the network to identify the most relevant characteristics for battery health prediction without requiring extensive domain expertise or manual feature design. Additionally, \textbf{minimal domain-specific preprocessing requirements} reduced implementation complexity and improved the method's adaptability to different battery types and measurement configurations, making it more suitable for diverse real-world applications.
 
-\subsubsection{Comparative Analysis Results}
+\textbf{Comparative Analysis Results}
 
-The evaluation revealed that data-driven approaches demonstrated:
-\begin{itemize}
-    \item Superior generalization across different battery chemistries
-    \item Reduced dependency on accurate physics model parameters
-    \item Better scalability to large datasets
-    \item More robust performance under varying operating conditions
-\end{itemize}
+The evaluation revealed that data-driven approaches demonstrated \textbf{superior generalization} across different battery chemistries, \textbf{reduced dependency} on accurate physics model parameters, \textbf{better scalability} to large datasets, and \textbf{more robust performance} under varying operating conditions.
 
 This analysis motivated the transition to advanced pure data-driven architectures.
 
@@ -108,7 +65,7 @@ This analysis motivated the transition to advanced pure data-driven architecture
 
 The dataset development process was crucial for training robust and generalizable models, requiring careful consideration of data quality, diversity, and preprocessing strategies.
 
-\subsection{Primary Dataset Selection}
+\textbf{Primary Dataset Selection}
 
 The primary dataset utilized in this work is the CALCE (Center for Advanced Life Cycle Engineering) battery dataset, obtained from the University of Maryland's public repository. This dataset was selected for its:
 
@@ -119,11 +76,11 @@ The primary dataset utilized in this work is the CALCE (Center for Advanced Life
     \item Established use in battery research community for benchmarking
 \end{itemize}
 
-\subsection{Data Cleaning and Preprocessing}
+\textbf{Data Cleaning and Preprocessing}
 
 Several preprocessing steps were implemented to ensure data quality and model training stability:
 
-\subsubsection{Cycle Removal and Filtering}
+\textbf{Cycle Removal and Filtering}
 
 \begin{itemize}
     \item \textbf{Initial cycle removal}: The first charge-discharge cycle was removed from each battery file to avoid initialization artifacts and inconsistent starting conditions
@@ -132,7 +89,7 @@ Several preprocessing steps were implemented to ensure data quality and model tr
 \end{itemize}
 Battery-level partitioning was employed to prevent data leakage, ensuring that cycles from the same battery appeared in only one partition.
 
-\subsection{Input Data Formatting}
+\textbf{Input Data Formatting}
 
 The input data structure was designed to optimize model performance:
 
@@ -143,7 +100,7 @@ The input data structure was designed to optimize model performance:
     \item \textbf{Sliding window}: Overlapping sequences were generated to maximize training data utilization
 \end{itemize}
 
-\subsection{Limitations of Previous Approaches}
+\textbf{Limitations of Previous Approaches}
 
 The evaluation of CNN+LSTM and hybrid approaches revealed several critical limitations:
 
@@ -154,7 +111,7 @@ The evaluation of CNN+LSTM and hybrid approaches revealed several critical limit
     \item \textbf{Generalization issues}: Poor performance when applied to battery chemistries or operating conditions not seen during training
 \end{itemize}
 
-\subsection{Requirements for Advanced Architecture}
+\textbf{Requirements for Advanced Architecture}
 
 The identified requirements for an improved architecture included:
 
@@ -175,7 +132,7 @@ The architecture works by converting 1D time series into a set of 2D tensors bas
 
 TimesNet demonstrates superior performance across five mainstream time series analysis tasks: short-term and long-term forecasting, imputation, classification, and anomaly detection. This versatility makes it particularly suitable for battery health prediction tasks, where complex temporal dependencies and multi-scale patterns are crucial for accurate state-of-health estimation. The model's ability to handle various sequence lengths and its robust architecture for capturing temporal dynamics align well with the requirements of battery degradation modeling, where both short-term fluctuations and long-term trends must be considered simultaneously.
 
-\subsection{Architecture Adaptation for Battery Health Prediction}
+\textbf{Architecture Adaptation for Battery Health Prediction}
 
 The TimesNet architecture was adapted for battery health prediction with several key modifications:
 
@@ -190,15 +147,15 @@ The TimesNet architecture was adapted for battery health prediction with several
 
 For model optimization, the Optuna tool was utilized, which enables hyperparameter optimization for machine learning models, integrated with Weights \& Biases (WandB), which allows for result visualization and model comparison.
 
-\subsection{Dataset Preparation for Optimization}
+\textbf{Dataset Preparation for Optimization}
 
 For this test, the dataset was reduced to only 1/10 of the data, equally distributed from the original dataset, with the objective of reducing the time required for finding the best hyperparameters, since this process took approximately one week even with this reduction.
 
-\subsection{Optimization Process}
+\textbf{Optimization Process}
 
 For the hyperparameter search, 50 trials were performed, with 50 epochs each, using an early stopping patience of 5 epochs to avoid overfitting and accelerate the optimization process.
 
-\subsection{Optimized Parameters}
+\textbf{Optimized Parameters}
 
 The parameters that were optimized through Optuna include:
 
@@ -211,11 +168,11 @@ The parameters that were optimized through Optuna include:
     \item \textbf{top\_k}: Top-k dominant frequencies in TimesNet (1--5) --- controls how many frequency components to consider
 \end{itemize}
 
-\subsection{Parameter Importance Analysis}
+\textbf{Parameter Importance Analysis}
 
 Through this optimization, it was possible to detect the importance of the hyperparameters. We observed that the importance factor of the \textbf{e\_layers} parameter (number of encoder layers) is the parameter that most influences the result when changed, demonstrating that the depth of the encoder architecture is critical for model performance.
 
-\subsection{Best Trial Results}
+\textbf{Best Trial Results}
 
 The most successful trial was trial 15, which presented the following results:
 

@@ -21,7 +21,7 @@
                     %floatperchapter,
                     %linedheaders,%
                     subfig,beramono,
-                    eulermath,
+%                    eulermath,
                     parts
                     }{classicthesis}
 % Available options for classicthesis.sty 
@@ -79,10 +79,13 @@
 % carrega a package biblatex
 \usepackage[
     backend=biber,    % usar o biber para processar
-    style=authoryear, % estilo de citação
+    style=numeric,    % estilo de citação numérica
     sortcites=true,
     maxcitenames=2,   % a partir de 2 escreve "et al."
 ]{biblatex} 
+
+% Remove the period after citation numbers
+\DeclareFieldFormat{labelnumberwidth}{#1}
 
 % para adicionar uma vírgula antes do ano: (Dirac, 1981)
 \renewcommand*{\nameyeardelim}{\addcomma\space}
@@ -100,6 +103,9 @@
 
 \PassOptionsToPackage{fleqn}{amsmath}		% math environments and more by the AMS 
 \usepackage{amsmath}
+\usepackage{amsfonts}                       % AMS fonts
+\usepackage{amssymb}                        % AMS symbols
+\usepackage{mathtools}                      % Enhanced math tools
 
 \usepackage{multirow}
  
@@ -115,9 +121,9 @@
 \usepackage{mparhack} % get marginpar right
 % \usepackage{fixltx2e} % fixes some LaTeX stuff 
 
-\PassOptionsToPackage{printonlyused,smaller}{acronym}
-\usepackage[acronym,toc]{glossaries} % nice macros for handling all acronyms in the thesis
-\makeglossaries % Enable glossary generation
+% \PassOptionsToPackage{printonlyused,smaller}{acronym}
+% \usepackage[acronym,toc]{glossaries} % nice macros for handling all acronyms in the thesis
+% \makeglossaries % Enable glossary generation
 
 %\renewcommand*{\acsfont}[1]{\textssc{#1}} % for MinionPro
 \newcommand{\bflabel}[1]{{#1}\hfill} % fix the list of acronyms
@@ -354,17 +360,17 @@
 \usepackage{emptypage}
 
 
-% permite quebrar a 1ª coluna
-\newglossarystyle{clong}{%
- \renewenvironment{theglossary}%
-%      {\begin{longtable}{p{.2\linewidth}p{\glsdescwidth}}}%
-     {\begin{longtable}{p{.18\linewidth}p{.78\linewidth}}}%
-     {\end{longtable}}%
-  \renewcommand*{\glossaryheader}{}%
-  \renewcommand*{\glsgroupheading}[1]{}%
-  \renewcommand*{\glossaryentryfield}[5]{%
-    \glstarget{##1}{##2} & ##3\glspostdescription\space ##5\\}%
-  \renewcommand*{\glossarysubentryfield}[6]{%
-     & \glstarget{##2}{\strut}##4\glspostdescription\space ##6\\}%
-  %\renewcommand*{\glsgroupskip}{ & \\}%
-}
+% permite quebrar a 1ª coluna - COMMENTED OUT (using manual acronym list)
+% \newglossarystyle{clong}{%
+%  \renewenvironment{theglossary}%
+% %      {\begin{longtable}{p{.2\linewidth}p{\glsdescwidth}}}%
+%      {\begin{longtable}{p{.18\linewidth}p{.78\linewidth}}}%
+%      {\end{longtable}}%
+%   \renewcommand*{\glossaryheader}{}%
+%   \renewcommand*{\glsgroupheading}[1]{}%
+%   \renewcommand*{\glossaryentryfield}[5]{%
+%     \glstarget{##1}{##2} & ##3\glspostdescription\space ##5\\}%
+%   \renewcommand*{\glossarysubentryfield}[6]{%
+%      & \glstarget{##2}{\strut}##4\glspostdescription\space ##6\\}%
+%   %\renewcommand*{\glsgroupskip}{ & \\}%
+% }

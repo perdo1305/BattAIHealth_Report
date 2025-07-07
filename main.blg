@@ -1,17 +1,17 @@
-[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[59] biber:340> INFO - === Tue Jul  1, 2025, 15:38:48
-[69] Biber.pm:419> INFO - Reading 'main.bcf'
-[119] Biber.pm:979> INFO - Found 18 citekeys in bib section 0
-[129] Biber.pm:4419> INFO - Processing section 0
-[136] Biber.pm:4610> INFO - Looking for bibtex file 'References.bib' for section 0
-[137] bibtex.pm:1713> INFO - LaTeX decoding ...
-[153] bibtex.pm:1519> INFO - Found BibTeX data source 'References.bib'
-[298] UCollate.pm:68> INFO - Overriding locale 'pt-PT' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[298] UCollate.pm:68> INFO - Overriding locale 'pt-PT' defaults 'variable = shifted' with 'variable = non-ignorable'
-[298] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'pt-PT'
-[298] Biber.pm:4245> INFO - No sort tailoring available for locale 'pt-PT'
-[316] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[328] bbl.pm:763> INFO - Output to main.bbl
-[328] Biber.pm:131> WARN - legacy year field 'n.d.' in entry 'noauthor_nasa_nodate' is not an integer - this will probably not sort properly.
-[328] Biber.pm:133> INFO - WARNINGS: 1
+[91] biber:340> INFO - === Mon Jul  7, 2025, 22:51:56
+[106] Biber.pm:418> INFO - Reading 'main.bcf'
+[191] Biber.pm:972> INFO - Found 18 citekeys in bib section 0
+[213] Biber.pm:4383> INFO - Processing section 0
+[231] Biber.pm:4574> INFO - Looking for bibtex file 'References.bib' for section 0
+[235] bibtex.pm:1713> INFO - LaTeX decoding ...
+[269] bibtex.pm:1518> INFO - Found BibTeX data source 'References.bib'
+[526] UCollate.pm:68> INFO - Overriding locale 'pt-PT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[526] UCollate.pm:68> INFO - Overriding locale 'pt-PT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[526] Biber.pm:4203> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'pt-PT'
+[526] Biber.pm:4209> INFO - No sort tailoring available for locale 'pt-PT'
+[553] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[579] bbl.pm:757> INFO - Output to main.bbl
+[580] Biber.pm:130> WARN - legacy year field 'n.d.' in entry 'noauthor_nasa_nodate' is not an integer - this will probably not sort properly.
+[580] Biber.pm:132> INFO - WARNINGS: 1

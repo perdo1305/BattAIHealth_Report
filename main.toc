@@ -2,93 +2,31 @@
 \vspace {-\cftbeforepartskip }
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{Acknowledgements}{i}{dummy.1}%
-\contentsline {chapter}{Resumo}{iii}{dummy.2}%
-\contentsline {chapter}{Abstract}{v}{dummy.3}%
+\babel@toc {portuguese}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Resumo}{v}{dummy.2}%
+\contentsline {chapter}{Abstract}{vii}{dummy.3}%
 \contentsline {chapter}{List of Figures}{xi}{dummy.5}%
 \contentsline {chapter}{List of Tables}{xiii}{dummy.6}%
-\contentsline {chapter}{Glossary}{xiv}{dummy.7}%
-\contentsline {chapter}{List of Abbreviations}{xv}{section*.1}%
-\contentsline {chapter}{List of Abbreviations}{xv}{section*.2}%
+\contentsline {chapter}{List of Acronyms}{xv}{section*.1}%
 \vspace {\beforebibskip }
 \contentsline {chapter}{\numberline {1}{Introduction}}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}{Background material and Supporting Technologies}}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}{Time Series Analysis of Battery Data}}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}{Spectral Analysis of Battery Data}}{4}{section.2.2}%
-\contentsline {section}{\numberline {2.3}{Optuna}}{4}{section.2.3}%
-\contentsline {section}{\numberline {2.4}{Weights and Biases (WandB)}}{4}{section.2.4}%
-\contentsline {section}{\numberline {2.5}{PlotJuggler}}{5}{section.2.5}%
-\contentsline {section}{\numberline {2.6}{Orange Data Mining}}{5}{section.2.6}%
-\contentsline {section}{\numberline {2.7}{Git Version Control}}{5}{section.2.7}%
-\contentsline {section}{\numberline {2.8}{PyTorch}}{6}{section.2.8}%
-\contentsline {section}{\numberline {2.9}{Conda environments}}{6}{section.2.9}%
-\contentsline {section}{\numberline {2.10}{Core Concepts}}{7}{section.2.10}%
-\contentsline {subsection}{\numberline {2.10.1}{State of Charge (SoC)}}{7}{subsection.2.10.1}%
-\contentsline {subsection}{\numberline {2.10.2}{State of Health (SoH)}}{8}{subsection.2.10.2}%
-\contentsline {subsection}{\numberline {2.10.3}{Remaining Useful Life (RUL)}}{8}{subsection.2.10.3}%
-\contentsline {subsection}{\numberline {2.10.4}{Mean Absolute Error (MAE)}}{9}{subsection.2.10.4}%
-\contentsline {subsection}{\numberline {2.10.5}{Mean Squared Error (MSE)}}{9}{subsection.2.10.5}%
-\contentsline {subsection}{\numberline {2.10.6}{Root Mean Squared Error (RMSE)}}{10}{subsection.2.10.6}%
-\contentsline {subsection}{\numberline {2.10.7}{Mean Absolute Percentage Error (MAPE)}}{10}{subsection.2.10.7}%
-\contentsline {subsubsection}{\numberline {2.10.7.1}{Deep Learning Training Fundamentals}}{10}{subsubsection.2.10.7.1}%
-\contentsline {subsection}{\numberline {2.10.8}{Battery Degradation and Capacity Fade}}{11}{subsection.2.10.8}%
-\contentsline {subsection}{\numberline {2.10.9}{Capacity Fade}}{12}{subsection.2.10.9}%
-\contentsline {subsection}{\numberline {2.10.10}{Internal Resistance Degradation in Lithium-Ion Batteries}}{12}{subsection.2.10.10}%
-\contentsline {subsection}{\numberline {2.10.11}{Battery Health Monitoring}}{13}{subsection.2.10.11}%
-\contentsline {subsubsection}{\numberline {2.10.11.1}{Technical Challenges}}{14}{subsubsection.2.10.11.1}%
-\contentsline {subsubsection}{\numberline {2.10.11.2}{Complexity of Battery Chemistry}}{14}{subsubsection.2.10.11.2}%
-\contentsline {subsubsection}{\numberline {2.10.11.3}{Measurement Difficulties}}{14}{subsubsection.2.10.11.3}%
-\contentsline {subsubsection}{\numberline {2.10.11.4}{Modeling and Estimation}}{14}{subsubsection.2.10.11.4}%
-\contentsline {subsubsection}{\numberline {2.10.11.5}{Limitations of Data-Driven Methods}}{15}{subsubsection.2.10.11.5}%
-\contentsline {subsubsection}{\numberline {2.10.11.6}{Complexity of Hybrid Methods}}{15}{subsubsection.2.10.11.6}%
-\contentsline {subsection}{\numberline {2.10.12}{Laboratory vs Real World Conditions}}{15}{subsection.2.10.12}%
-\contentsline {subsection}{\numberline {2.10.13}{Real-Time Monitoring}}{15}{subsection.2.10.13}%
-\contentsline {subsection}{\numberline {2.10.14}{Environmental Factors}}{16}{subsection.2.10.14}%
-\contentsline {subsection}{\numberline {2.10.15}{Cost of Monitoring Systems}}{16}{subsection.2.10.15}%
-\contentsline {subsection}{\numberline {2.10.16}{Data and Computational Costs}}{16}{subsection.2.10.16}%
+\contentsline {section}{\numberline {2.1}{Core Concepts}}{3}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}{Capacity Fade}}{10}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}{Supporting Technologies}}{14}{section.2.2}%
 \contentsline {chapter}{\numberline {3}{State of the Art}}{17}{chapter.3}%
-\contentsline {subsection}{\numberline {3.0.1}{Traditional Methods for SoC, SoH, and RUL Estimation}}{17}{subsection.3.0.1}%
-\contentsline {subsubsection}{\numberline {3.0.1.1}{Physics-Based Methods}}{17}{subsubsection.3.0.1.1}%
-\contentsline {subsubsection}{\numberline {3.0.1.2}{Statistical Methods}}{18}{subsubsection.3.0.1.2}%
-\contentsline {subsection}{\numberline {3.0.2}{AI-Based Methods for Battery State Estimation}}{18}{subsection.3.0.2}%
-\contentsline {subsubsection}{\numberline {3.0.2.1}{Machine Learning Techniques}}{18}{subsubsection.3.0.2.1}%
-\contentsline {subsubsection}{\numberline {3.0.2.2}{Deep Learning Architectures}}{19}{subsubsection.3.0.2.2}%
-\contentsline {subsubsection}{\numberline {3.0.2.3}{Datasets for AI-Based Estimation}}{19}{subsubsection.3.0.2.3}%
-\contentsline {subsubsection}{\numberline {3.0.2.4}{Hybrid Approaches}}{20}{subsubsection.3.0.2.4}%
-\contentsline {subsection}{\numberline {3.0.3}{Challenges and Research Gaps}}{20}{subsection.3.0.3}%
-\contentsline {subsection}{\numberline {3.0.4}{Conclusion}}{21}{subsection.3.0.4}%
-\contentsline {chapter}{\numberline {4}{Development}}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}{Introduction}}{23}{section.4.1}%
-\contentsline {section}{\numberline {4.2}{MATLAB Modeling and Simulation}}{23}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}{Kalman Filter Implementation}}{23}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}{Coulomb Counting Integration}}{24}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}{Batemo Model Integration}}{24}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}{Neural Network Development Evolution}}{25}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}{Initial CNN+LSTM Architecture}}{25}{subsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.1.1}{Architecture Design}}{25}{subsubsection.4.3.1.1}%
-\contentsline {subsubsection}{\numberline {4.3.1.2}{Training Challenges and Limitations}}{25}{subsubsection.4.3.1.2}%
-\contentsline {subsection}{\numberline {4.3.2}{Hybrid vs. Data-Driven Approach Evaluation}}{26}{subsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}{Hybrid Approach Implementation}}{26}{subsubsection.4.3.2.1}%
-\contentsline {subsubsection}{\numberline {4.3.2.2}{Data-Driven Approach Focus}}{26}{subsubsection.4.3.2.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.3}{Comparative Analysis Results}}{26}{subsubsection.4.3.2.3}%
-\contentsline {section}{\numberline {4.4}{Dataset Collection and Preprocessing}}{27}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}{Primary Dataset Selection}}{27}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}{Data Cleaning and Preprocessing}}{27}{subsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.2.1}{Cycle Removal and Filtering}}{27}{subsubsection.4.4.2.1}%
-\contentsline {subsection}{\numberline {4.4.3}{Input Data Formatting}}{28}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}{Limitations of Previous Approaches}}{28}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}{Requirements for Advanced Architecture}}{29}{subsection.4.4.5}%
-\contentsline {section}{\numberline {4.5}{Utilized Model (TimesNet)}}{29}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}{Architecture Adaptation for Battery Health Prediction}}{30}{subsection.4.5.1}%
-\contentsline {section}{\numberline {4.6}{Model Optimization}}{30}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}{Dataset Preparation for Optimization}}{31}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}{Optimization Process}}{31}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}{Optimized Parameters}}{31}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}{Parameter Importance Analysis}}{32}{subsection.4.6.4}%
-\contentsline {subsection}{\numberline {4.6.5}{Best Trial Results}}{32}{subsection.4.6.5}%
+\contentsline {chapter}{\numberline {4}{Development}}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}{Introduction}}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}{MATLAB Modeling and Simulation}}{21}{section.4.2}%
+\contentsline {section}{\numberline {4.3}{Neural Network Development Evolution}}{23}{section.4.3}%
+\contentsline {section}{\numberline {4.4}{Dataset Collection and Preprocessing}}{25}{section.4.4}%
+\contentsline {section}{\numberline {4.5}{Utilized Model (TimesNet)}}{27}{section.4.5}%
+\contentsline {section}{\numberline {4.6}{Model Optimization}}{28}{section.4.6}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {5}{Conclusions}}{33}{chapter.5}%
+\contentsline {chapter}{\numberline {5}{Conclusions}}{31}{chapter.5}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {}{Bibliography}}{35}{dummy.9}%
+\contentsline {chapter}{\numberline {}{Bibliography}}{33}{dummy.7}%
 \contentsline {part}{{Appendices}}{37}{section*.4}%
 \vspace {\beforebibskip }
 \contentsline {chapter}{\numberline {A}{Appendix A}}{39}{appendix.A}%
