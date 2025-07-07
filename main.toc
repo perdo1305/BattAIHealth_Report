@@ -2,13 +2,11 @@
 \vspace {-\cftbeforepartskip }
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{Acknowledgements}{i}{dummy.1}%
-\babel@toc {portuguese}{}\relax 
-\babel@toc {english}{}\relax 
-\contentsline {chapter}{Resumo}{v}{dummy.2}%
-\contentsline {chapter}{Abstract}{vii}{dummy.3}%
-\contentsline {chapter}{List of Figures}{xi}{dummy.5}%
-\contentsline {chapter}{List of Tables}{xiii}{dummy.6}%
-\contentsline {chapter}{List of Acronyms}{xv}{section*.1}%
+\contentsline {chapter}{Resumo}{iii}{dummy.2}%
+\contentsline {chapter}{Abstract}{v}{dummy.3}%
+\contentsline {chapter}{List of Figures}{ix}{dummy.5}%
+\contentsline {chapter}{List of Tables}{xi}{dummy.6}%
+\contentsline {chapter}{List of Acronyms}{xiii}{section*.1}%
 \vspace {\beforebibskip }
 \contentsline {chapter}{\numberline {1}{Introduction}}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}{Background material and Supporting Technologies}}{3}{chapter.2}%
@@ -27,11 +25,4 @@
 \contentsline {chapter}{\numberline {5}{Conclusions}}{31}{chapter.5}%
 \vspace {\beforebibskip }
 \contentsline {chapter}{\numberline {}{Bibliography}}{33}{dummy.7}%
-\contentsline {part}{{Appendices}}{37}{section*.4}%
-\vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {A}{Appendix A}}{39}{appendix.A}%
-\contentsline {section}{\numberline {A.1}{Appendix Section Test}}{39}{section.A.1}%
-\contentsline {section}{\numberline {A.2}{Another Appendix Section Test}}{40}{section.A.2}%
-\vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {B}{Appendix B}}{43}{appendix.B}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
