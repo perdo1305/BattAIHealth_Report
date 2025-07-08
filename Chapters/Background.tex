@@ -15,8 +15,18 @@ This section covers the core theoretical concepts fundamental to battery health 
 
 \textbf{Time Series and Spectral Analysis of Battery Data}
 
-Time series analysis focuses on the temporal evolution of battery parameters such as voltage, current, and SoC, modeling and forecasting battery behavior, identifying trends, and detecting anomalies in the time domain. Complementing this temporal approach, spectral analysis is a frequency-domain technique that characterizes the dynamic behavior of battery systems by decomposing time-series data into its frequency components, revealing periodic patterns, noise characteristics, or system resonances that may not be evident in the time domain. Together, these analytical frameworks provide comprehensive insights into battery degradation, thermal effects, and electrochemical processes across both temporal and frequency domains.
+Time series analysis focuses on the temporal evolution of battery parameters such as voltage, current, and SoC, modeling and forecasting battery behavior, identifying trends, and detecting anomalies in the time domain. A comprehensive time series analysis framework decomposes battery data into three fundamental components that reveal distinct patterns in battery behavior and degradation processes.
 
+\textbf{Trend Component} represents the long-term directional movement in battery parameters over extended periods, capturing the underlying degradation trajectory that reflects fundamental changes in battery chemistry and structure. In battery health monitoring, trend analysis reveals capacity fade patterns, where SoH exhibits a gradual declining trend over hundreds or thousands of charge-discharge cycles due to irreversible electrochemical processes such as SEI layer growth and active material loss. The trend component is particularly valuable for RUL prediction, as it provides insights into the rate of degradation and helps establish baseline expectations for battery performance decline under specific operational conditions.
+
+\textbf{Seasonal/Cyclic Component} identifies recurring patterns that occur at regular intervals within battery operational data, reflecting periodic influences such as daily usage cycles, temperature variations, or charging schedules. In automotive applications, seasonal patterns may manifest as daily driving patterns that affect SoC fluctuations, while in stationary energy storage systems, seasonal components often correspond to diurnal energy demand cycles or seasonal temperature variations that influence battery efficiency and capacity. These cyclic patterns are essential for understanding how external factors systematically influence battery behavior and for developing models that can account for predictable variations in performance.
+
+\textbf{Irregular/Noise Component} encompasses random fluctuations and unpredictable variations that cannot be attributed to trend or seasonal patterns, including measurement noise, sudden load changes, and stochastic environmental factors. In battery monitoring systems, irregular components may arise from sensor precision limitations, electromagnetic interference, sudden acceleration events in vehicles, or unexpected temperature spikes. While these components represent uncertainty in the data, proper characterization of noise patterns is crucial for developing robust estimation algorithms that can distinguish between genuine battery state changes and measurement artifacts.
+
+Complementing this temporal approach, spectral analysis is a frequency-domain technique that characterizes the dynamic behavior of battery systems by decomposing time-series data into its frequency components, revealing periodic patterns, noise characteristics, or system resonances that may not be evident in the time domain. \textbf{Cascade spectrum analysis} can be integrated with traditional spectral methods to provide multi-resolution frequency domain decomposition, enabling the identification of both broad-band and narrow-band frequency characteristics across different temporal scales. This cascaded approach is particularly valuable for battery applications where degradation mechanisms operate at multiple frequency ranges, from high-frequency electrochemical impedance variations to low-frequency capacity fade trends, allowing for comprehensive characterization of battery dynamic behavior across the entire operational frequency spectrum. Together, these analytical frameworks provide comprehensive insights into battery degradation, thermal effects, and electrochemical processes across both temporal and frequency domains.
+
+%small space
+\vspace{1cm}
 \textbf{State of Charge (SoC)}
 
 The State of Charge represents the amount of energy remaining in a battery relative to its maximum capacity. It can be expressed as:
@@ -26,6 +36,8 @@ The State of Charge represents the amount of energy remaining in a battery relat
 However, due to the chemical complexity of batteries and variations among individual cells, the SoC is always an approximate estimate. One factor contributing to the nonlinearity in its estimation is the formation of impurity layers in the pores of the electrodes. When these pores are blocked by impurities, electron movement is hindered, leading to irregular voltages and currents.
 
 % Creating section for State of Health
+\vspace{1cm}
+
 \textbf{State of Health (SoH)}
 
 The State of Health reflects the battery's ability to store and deliver energy compared to its original specifications. It can be expressed as:
@@ -35,6 +47,8 @@ The State of Health reflects the battery's ability to store and deliver energy c
 The nonlinearity in SoH estimation primarily arises from the progressive degradation of electrode materials. As impurities accumulate in the electrode pores, the available surface area for electrochemical reactions decreases, reducing the battery's effective capacity. This process is highly dependent on the number of charge/discharge cycles and operational conditions, making it difficult to model SoH linearly over time.
 
 % Creating section for Remaining Useful Life
+\vspace{1cm}
+
 \textbf{Remaining Useful Life (RUL)}
 
 The Remaining Useful Life quantifies the number of cycles remaining before the battery's performance degrades below a specified threshold. It can be expressed as:
@@ -43,6 +57,8 @@ The Remaining Useful Life quantifies the number of cycles remaining before the b
 \end{equation}
 Predicting RUL is particularly challenging due to the accumulation of impurities in the electrode pores. As the pores become obstructed, the degradation rate accelerates, leading to a sudden drop in battery performance. This nonlinear dynamic makes it difficult to accurately predict the exact point at which the battery will reach its end of useful life.
 % Explaining Mean Absolute Error
+\vspace{1cm}
+
 \textbf{Mean Absolute Error (MAE)}
 
 The Mean Absolute Error measures the average magnitude of errors in a set of predictions, without considering their direction. It is calculated as:
@@ -52,6 +68,8 @@ The Mean Absolute Error measures the average magnitude of errors in a set of pre
 where $y_i$ is the actual value, $\hat{y}_i$ is the predicted value, and $n$ is the number of observations. MAE is intuitive and robust to outliers, as it does not square the errors, but it does not penalize larger errors as heavily as other metrics. This makes it less sensitive to extreme deviations in predictions, which can be a limitation in contexts like battery performance where large errors may indicate critical failures.
 
 % Explaining Mean Squared Error
+\vspace{1cm}
+
 \textbf{Mean Squared Error (MSE)}
 
 The Mean Squared Error quantifies the average of the squared differences between predicted and actual values. It is expressed as:
@@ -61,6 +79,8 @@ The Mean Squared Error quantifies the average of the squared differences between
 MSE emphasizes larger errors due to the squaring of differences, making it sensitive to outliers. In battery modeling, this can be useful for detecting significant deviations in predictions of parameters like State of Charge or State of Health, but its sensitivity to outliers may amplify the impact of irregular data points caused by factors like electrode impurities or sensor noise.
 
 % Explaining Root Mean Squared Error
+\vspace{1cm}
+
 \textbf{Root Mean Squared Error (RMSE)}
 
 The Root Mean Squared Error is the square root of the MSE, providing an error metric in the same units as the original data. It is defined as:
@@ -70,6 +90,8 @@ The Root Mean Squared Error is the square root of the MSE, providing an error me
 RMSE balances the emphasis on larger errors from MSE while being more interpretable due to its unit consistency with the data. In battery applications, RMSE is often used to evaluate prediction accuracy for metrics like SoC or RUL, but its sensitivity to outliers can be a drawback when dealing with nonlinear degradation patterns caused by electrode pore blockages.
 
 % Explaining Mean Absolute Percentage Error
+\vspace{1cm}
+
 \textbf{Mean Absolute Percentage Error (MAPE)}
 
 The Mean Absolute Percentage Error measures the average percentage error between predicted and actual values. It is calculated as:
@@ -77,6 +99,8 @@ The Mean Absolute Percentage Error measures the average percentage error between
 \text{MAPE} = \frac{1}{n} \sum_{i=1}^{n} \left| \frac{y_i - \hat{y}_i}{y_i} \right| \times 100\%
 \end{equation}
 MAPE is useful for comparing prediction accuracy across datasets with different scales, as it normalizes errors relative to the actual values. However, it can become problematic when actual values are close to zero, as in some battery SoC scenarios, leading to large percentage errors. Additionally, its reliance on relative errors may mask significant absolute deviations in critical battery performance metrics.
+
+\vspace{1cm}
 
 \textbf{Neural Networks and Deep Learning Fundamentals}
 
@@ -96,6 +120,7 @@ Deep learning architectures consist of multiple hidden layers, each containing n
 For this project, the deep learning approach was specifically adopted due to its superior ability to capture complex temporal patterns inherent in battery degradation data and its capacity to handle the high-dimensional, sequential nature of battery health monitoring without requiring extensive domain-specific preprocessing or manual feature design. Deep learning excels in battery applications because it can automatically discover relevant features from raw sensor measurements (voltage, current, temperature) and learn the subtle, non-linear relationships between these measurements and battery health states. The hierarchical feature learning capability is particularly important for battery data, where degradation patterns manifest across multiple time scales and involve complex interactions between electrochemical processes. Furthermore, deep learning architectures such as recurrent neural networks (RNNs), Long Short-Term Memory (LSTM) networks, and Transformers are specifically designed to handle sequential data, making them ideal for modeling the temporal dependencies present in battery operational data and predicting future health states based on historical patterns.
 
 
+\vspace{1cm}
 
 \textbf{Deep Learning Training Parameters and Optimization}
 
@@ -108,11 +133,12 @@ Understanding key training parameters is crucial for developing effective batter
 \textbf{Loss Functions} must be carefully selected based on the specific task: MSE for regression problems like SoC and capacity prediction, MAE when robustness against outliers is paramount, cross-entropy for classification tasks such as fault detection, and custom loss functions that can elegantly incorporate domain-specific knowledge about battery behavior. Finally, \textbf{Validation} strategies require special consideration in battery applications, where time-based splitting ensures models are tested on genuinely future data, and cross-validation procedures must account for the inherent temporal dependencies present in battery degradation sequences.
 
 
+\vspace{1cm}
 
 \textbf{Battery Degradation and Capacity Fade}
 
 Battery degradation refers to the gradual loss of a battery's ability to store and deliver energy, driven by chemical reactions, temperature fluctuations, charge/discharge cycles, and aging. This degradation manifests as capacity fade, resulting in reduced device runtime or diminished electric vehicle driving range. The key mechanisms contributing to this degradation include several interconnected processes. \textbf{Solid Electrolyte Interphase (SEI) Growth} occurs when a layer forms on the anode, consuming lithium ions and reducing capacity. This process is accelerated at high temperatures and currents, leading to an initial irreversible capacity loss of approximately 10\% during formation cycles. \textbf{Lithium Plating} represents another critical mechanism where, at low temperatures or high charge rates, lithium deposits on the anode, forming ``dead lithium'' that contributes to irreversible capacity loss and increases safety risks. \textbf{Particle Fracture} results from mechanical stress during cycling, causing cracks in electrode materials that reduce active material availability and exacerbate capacity decline. \textbf{Positive Electrode (PE) Decomposition} involves structural changes in the cathode, such as spinel/rock salt phase formation, which degrade performance and contribute to active material loss. Finally, \textbf{Impedance Increase} manifests as rising interfacial resistance, predominantly at the positive electrode, which limits efficient charge transfer and indirectly reduces usable capacity. After 800 cycles, electrode resistance can increase tenfold, significantly impacting battery performance.
-
+\vspace{1cm}
 \subsection{Capacity Fade}
 The \cite{zhang_studies_2000} paper studies and explains very well the capacity fade refers to the progressive decline in a lithium-ion battery’s ability to store energy, manifesting as reduced device runtime or diminished electric vehicle driving range. This phenomenon is driven by several key mechanisms:
 
@@ -134,18 +160,21 @@ Battery health monitoring is critical for ensuring reliability, safety, and long
 \textbf{Technical Challenges}
 
 The technical challenges in monitoring battery health arise from the complex nature of battery systems and the difficulties in accurately estimating SOC and SOH.
+\vspace{1cm}
 
 \textbf{Complexity of Battery Chemistry}
 
 Batteries, particularly lithium-ion batteries, have intricate internal chemistries that are difficult to model and monitor.
 Factors such as temperature, charge-discharge rates, and depth of discharge influence degradation, making accurate SOH estimation challenging. 
 The nonlinear and complex degradation processes vary with usage conditions, environmental factors, and battery design, complicating predictive modeling.
+\vspace{1cm}
 
 \textbf{Measurement Difficulties}
 
 Measuring individual battery parameters, such as internal resistance, temperature, and voltage, is technically challenging, especially in real-time applications. 
 This requires precise sensors and sophisticated equipment, which may not be feasible in real-world scenarios. 
 For instance, accurately measuring internal resistance or temperature in a moving vehicle is far more complex than in a controlled lab environment.
+\vspace{1cm}
 
 \textbf{Modeling and Estimation}
 
@@ -153,38 +182,45 @@ For instance, accurately measuring internal resistance or temperature in a movin
 Developing accurate models for SOH estimation is complex. 
 Electrochemical models, which simulate battery behavior based on physical and chemical principles, require extensive computational resources and detailed parameter inputs (e.g., electrolyte properties, reaction rates). 
 Semi-empirical models often oversimplify electrochemical processes, reducing their effectiveness under extreme conditions. Equivalent circuit models (ECMs) may lack precision during high-rate charging/discharging or extreme temperatures due to their simplified nature.
+\vspace{1cm}
 
 \textbf{Limitations of Data-Driven Methods}
 
 Data-driven approaches, such as machine learning techniques (e.g. Support Vector Regression, Gaussian Process Regression, Artificial Neural Networks), rely on large, high-quality datasets, which can be difficult to obtain. 
 These methods also lack physical interpretability, making it difficult to understand their predictions. 
 Additionally, issues like overfitting and high computational demands pose challenges for real-time applications.
+\vspace{1cm}
 
 \textbf{Complexity of Hybrid Methods}
 
 Hybrid approaches, which combine model-based and data-driven methods, can improve accuracy but increase system complexity and computational costs. 
 Interpreting errors in these systems remains a challenge, requiring further research to enhance transparency and efficiency.
+\vspace{1cm}
 
 \textbf{Laboratory vs Real World Conditions}
 
 There is a significant discrepancy between laboratory-simulated conditions and actual operational environments. 
 Laboratory settings often use sophisticated equipment that is not available in real-world applications, limiting the applicability of monitoring methods. For example, real-world conditions like varying temperatures or road vibrations are difficult to replicate in a lab, affecting SOH estimation accuracy.
+\vspace{1cm}
 
 \textbf{Real-Time Monitoring}
 
 Achieving real-time, reliable SOH monitoring is crucial for safety-critical applications but is technically demanding. 
 Battery management systems (BMS) must balance accuracy with computational efficiency to provide timely insights without overloading system resources.
+\vspace{1cm}
 
 \textbf{Environmental Factors}
 
 Batteries are sensitive to environmental conditions such as temperature, humidity, and vibration. 
 Monitoring systems must account for these factors, which can significantly impact battery health and performance. 
 For example, high temperatures can accelerate battery degradation, while low temperatures may reduce capacity, complicating health estimation.
+\vspace{1cm}
 
 \textbf{Cost of Monitoring Systems}
 
 Implementing sophisticated battery health monitoring systems can be expensive, both in terms of initial setup and ongoing maintenance. 
 This includes the cost of sensors, data storage, and computational infrastructure, which can be prohibitive for smaller organizations or applications.
+\vspace{1cm}
 
 \textbf{Data and Computational Costs}
 
