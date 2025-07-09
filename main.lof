@@ -10,9 +10,10 @@
 \ttl@tocsep 
 \ttl@tocsep 
 \ttl@tocsep 
-\contentsline {figure}{\numberline {1}{\ignorespaces Comparison between traditional neural networks (left) and deep learning architectures (right), illustrating the difference in complexity and hierarchical feature learning capabilities.\relax }}{9}{figure.caption.2}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Comparison between traditional neural networks (left) and deep learning architectures (right), illustrating the difference in complexity and hierarchical feature learning capabilities.\relax }}{10}{figure.caption.2}%
 \ttl@tocsep 
 \ttl@tocsep 
+\contentsline {figure}{\numberline {2}{\ignorespaces TimesNet 2D transformation: converting 1D time series into structured 2D tensors by discovering periodicity~\blx@tocontentsinit {0}\cite {wu_timesnet_2023}.\relax }}{31}{figure.caption.3}%
 \ttl@tocsep 
 \ttl@tocsep 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

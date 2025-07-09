@@ -2,65 +2,71 @@
 \chapter{State of the Art}
 \label{ch:stateoftheart}
 %************************************************
-The accurate estimation of SoC, SoH, and RUL is critical for optimizing battery performance in automotive and railway applications. These metrics underpin the reliability and efficiency of battery management systems (BMS), providing essential indicators for battery health monitoring and predictive maintenance planning. Traditional methods, such as Coulomb Counting and Kalman Filters, often struggle with nonlinearities and dynamic operating conditions. Recent advancements in Artificial Intelligence (AI), particularly machine learning and deep learning, offer promising solutions by capturing complex patterns in battery data. This chapter reviews the state of the art in SoC, SoH, and RUL estimation, focusing on AI-based approaches.
+Getting the right measurements for SoC, SoH, and RUL is very important for making batteries work better in cars and trains. These measurements help make battery management systems (BMS) more reliable and work better. They provide key information for watching battery health and planning when to fix or replace batteries. Older methods, like Coulomb Counting and Kalman Filters, often have trouble with complex battery behavior and changing conditions. New advances in Artificial Intelligence (AI), especially machine learning and deep learning, provide better solutions by finding complex patterns in battery data. This chapter looks at the current best methods for SoC, SoH, and RUL estimation, focusing on AI-based approaches.
 
-\textbf{Traditional Methods for SoC, SoH, and RUL Estimation}
-Traditional methods for battery state estimation can be categorized into physics-based and statistical approaches, each with inherent limitations.
+\textbf{Older Methods for SoC, SoH, and RUL Estimation}
+\label{subsec:traditional_methods}
+Older methods for checking battery state can be put into two groups: physics-based and statistical approaches, each with built-in problems.
 
 \textbf{Physics-Based Methods}
-Physics-based methods model the electrochemical and electrical behavior of batteries. Key approaches include:
+Physics-based methods create models of how batteries work chemically and electrically. Key approaches include:
 \begin{itemize}
-    \item \textbf{Equivalent Circuit Models (ECMs)}: Represent batteries using electrical components (e.g., resistors, capacitors) to simulate voltage and current dynamics. ECMs are computationally efficient but lack precision under varying conditions.
-    \item \textbf{Electrochemical Models}: Simulate internal chemical reactions, offering high accuracy but requiring significant computational resources and detailed parameter knowledge.
+    \item \textbf{Equivalent Circuit Models (ECMs)}: Show batteries using electrical parts (like resistors, capacitors) to copy voltage and current behavior. ECMs are fast to compute but are not very accurate when conditions change.
+    \item \textbf{Electrochemical Models}: Copy internal chemical reactions, giving high accuracy but needing a lot of computer power and detailed knowledge of battery parameters.
 \end{itemize}
 
 \textbf{Statistical Methods}
-Statistical techniques rely on empirical data to estimate battery states. Common methods include:
+Statistical methods use real data to estimate battery states. Common methods include:
 \begin{itemize}
-    \item \textbf{Coulomb Counting}: Integrates current over time to estimate SoC. This method is sensitive to measurement errors and initial SoC inaccuracies.
-    \item \textbf{Kalman Filters}: Use recursive algorithms to refine state estimates by combining model predictions with noisy measurements. While effective for linear systems, they struggle with the nonlinear dynamics of batteries.
+    \item \textbf{Coulomb Counting}: Adds up current over time to estimate SoC. This method is easily affected by measurement errors and wrong starting SoC values.
+    \item \textbf{Kalman Filters}: Use step-by-step algorithms to improve state estimates by combining model predictions with noisy measurements. While they work well for simple systems, they have trouble with the complex behavior of batteries.
 \end{itemize}
 
-These methods often fail to capture subtle variations in battery behavior under dynamic operating conditions, necessitating advanced approaches.
+These methods often fail to capture small changes in battery behavior when conditions change, so better approaches are needed.
 
 \textbf{AI-Based Methods for Battery State Estimation}
-AI-based methods leverage machine learning and deep learning to model complex, nonlinear relationships in battery data. This section reviews key approaches, datasets, and their applications in the contex of the project.
+\label{subsec:ai_methods}
+AI-based methods use machine learning and deep learning to model complex relationships in battery data. This section looks at key approaches, datasets, and how they're used in this project.
 
 \textbf{Machine Learning Techniques}
-Supervised machine learning algorithms, such as Support Vector Machines (SVMs) and Random Forests, have been applied to predict SoC and SoH using features like voltage, current, and temperature. For instance, \cite{sun_simultaneous_2022} demonstrates SVMs achieving high accuracy in SoH estimation ( 98.26\%) for lead-acid batteries under controlled conditions. However, these methods require extensive feature engineering and struggle with temporal dependencies.
+\label{subsec:ml_techniques}
+Machine learning algorithms that learn from examples, such as Support Vector Machines (SVMs) and Random Forests, have been used to predict SoC and SoH using features like voltage, current, and temperature. For example, \cite{sun_simultaneous_2022} shows SVMs getting high accuracy in SoH estimation (98.26\%) for lead-acid batteries under controlled conditions. However, these methods need a lot of feature engineering and have trouble with time-based patterns.
 
 \textbf{Deep Learning Architectures}
-Deep learning models excel at capturing temporal and spatial patterns in battery data. Key architectures include:
+\label{subsec:deep_learning}
+Deep learning models are very good at finding time-based and spatial patterns in battery data. Key types include:
 \begin{itemize}
-    \item \textbf{Convolutional Neural Networks (CNNs)}: Extract spatial features from battery data, such as voltage profiles. Combining CNNs with Long Short-Term Memory (LSTM) units, as implemented in the \cite{Fangfang_Yang} paper, enhances forecasting accuracy by modeling temporal dependencies.
-    \item \textbf{Recurrent Neural Networks (RNNs) and LSTMs}: Designed for sequential data, LSTMs are particularly effective for RUL prediction, as they capture long-term degradation trends. Studies using the NASA Battery Dataset \cite{noauthor_nasa_nodate} report LSTM-based models outperforming traditional methods in RUL estimation as implemented in the \cite{hong_state--health_2023}.
-    \item \textbf{Transformer Models}: Emerging in battery state estimation, transformers leverage attention mechanisms to model complex dependencies, showing promise in handling variable-length sequences \cite{yilmaz_transformer-based_2025}.
+    \item \textbf{Convolutional Neural Networks (CNNs)}: Find spatial features from battery data, such as voltage profiles. Combining CNNs with Long Short-Term Memory (LSTM) units, as done in the \cite{Fangfang_Yang} paper, makes forecasting more accurate by modeling time-based patterns.
+    \item \textbf{Recurrent Neural Networks (RNNs) and LSTMs}: Made for sequential data, LSTMs are very good for RUL prediction, as they capture long-term battery wear trends. Studies using the NASA Battery Dataset \cite{noauthor_nasa_nodate} show LSTM-based models work better than older methods in RUL estimation as done in the \cite{hong_state--health_2023}.
+    \item \textbf{Transformer Models}: New in battery state estimation, transformers use attention mechanisms to model complex dependencies, showing promise in handling different-length sequences \cite{yilmaz_transformer-based_2025}.
 \end{itemize}
 
 \textbf{Datasets for AI-Based Estimation}
-The quality and diversity of datasets are critical for training robust AI models. Notable datasets include:
+\label{subsec:datasets}
+The quality and variety of datasets are very important for training strong AI models. Notable datasets include:
 \begin{itemize}
-    \item \textbf{NASA Battery Dataset} \cite{noauthor_nasa_nodate}: Provides voltage, current, temperature, and impedance data under various operating conditions, widely used for SoC and RUL estimation due to its diversity.
-    \item \textbf{CALCE Battery Dataset} \cite{CALCE_battery_nodate}:
-    \item \textbf{MATR Battery Dataset} \cite{MATR_dataset_nodate}: 
-    \item \textbf{HKUST Battery Dataset} \cite{pepe_hkust_nodate}: 
+    \item \textbf{NASA Battery Dataset} \cite{noauthor_nasa_nodate}: Gives voltage, current, temperature, and impedance data under different operating conditions, widely used for SoC and RUL estimation because it has many different scenarios.
+    \item \textbf{CALCE Battery Dataset} \cite{CALCE_battery_nodate}: Contains aging data from lithium-ion batteries under different stress conditions, useful for SoH estimation and understanding battery wear patterns.
+    \item \textbf{MATR Battery Dataset} \cite{MATR_dataset_nodate}: Provides high-quality data from automotive battery testing, focusing on real-world driving conditions and temperature variations.
+    \item \textbf{HKUST Battery Dataset} \cite{pepe_hkust_nodate}: Offers detailed cycling data for battery research, including various charge and discharge profiles for different battery types. 
 \end{itemize}
-These datasets highlight the importance of incorporating real-world operating conditions and diagnostic measurements to improve model generalizability.
+These datasets show the importance of including real-world operating conditions and diagnostic measurements to make models work better in different situations.
 
 
 \textbf{Hybrid Approaches}
-Hybrid models combine physics-based and data-driven methods to enhance accuracy. For example, \cite{} integrates ECMs with neural networks to refine SoC estimates, leveraging physical constraints to reduce training data requirements. Such approaches are particularly relevant for railway applications, where operational conditions vary widely.
+Hybrid models combine physics-based and data-driven methods to make results more accurate. For example, some studies combine ECMs with neural networks to improve SoC estimates, using physical constraints to reduce the amount of training data needed. Such approaches are very useful for railway applications, where operating conditions change a lot.
 
 
 \textbf{Challenges and Research Gaps}
-Despite advancements, several challenges persist in battery state estimation:
+Despite improvements, several challenges still exist in battery state estimation:
 \begin{itemize}
-    \item \textbf{Data Requirements}: AI models, particularly deep learning, require large, diverse datasets, which are often limited or proprietary .
-    \item \textbf{Operational Variability}: Battery performance varies due to temperature, load profiles, and aging, complicating model generalization .
-    \item \textbf{Computational Complexity}: Real-time estimation in automotive and railway systems demands low-latency models, a challenge for complex deep learning architectures.
-    \item \textbf{Lack of Standardized Datasets}: The absence of universal, open-source datasets for railway applications limits model benchmarking.
+    \item \textbf{Data Requirements}: AI models, especially deep learning, need large, varied datasets, which are often limited or private.
+    \item \textbf{Operating Variability}: Battery performance changes due to temperature, load profiles, and aging, making it hard for models to work in different situations.
+    \item \textbf{Computer Complexity}: Real-time estimation in cars and trains needs fast models, which is a challenge for complex deep learning systems.
+    \item \textbf{Lack of Standard Datasets}: The absence of universal, open-source datasets for railway applications limits model comparison and testing.
 \end{itemize}
-The \textit{BattAIHealth} project addresses these gaps by developing AI models trained on both synthetic and real-world datasets, optimizing for robustness and real-time applicability in transportation systems.
+
+%The \textit{BattAIHealth} project addresses these gaps by developing AI models trained on both synthetic and real-world datasets, making them work better and be suitable for real-time use in transportation systems.
 
 \textbf{Conclusion}
-The state of the art in battery state estimation reveals a transition from traditional physics-based and statistical methods to AI-driven approaches. While machine learning and deep learning models, supported by datasets like the NASA Battery Dataset and Aging Dataset from EV, offer superior accuracy, challenges such as data scarcity and operational variability persist. This project builds on these advancements by developing robust AI models tailored for automotive and railway applications, aiming to enhance BMS reliability and efficiency.
+The current best methods in battery state estimation show a move from older physics-based and statistical methods to AI-driven approaches. While machine learning and deep learning models, supported by datasets like the NASA Battery Dataset and Aging Dataset from EV, give better accuracy, challenges such as limited data and changing operating conditions still exist. This project builds on these improvements by developing strong AI models made for car and train applications, aiming to make BMS more reliable and work better.

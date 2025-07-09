@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.6.23)  8 JUL 2025 01:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.6.23)  9 JUL 2025 01:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1520,17 +1520,12 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 ]
 \openout2 = `Covers/Abstract.aux'.
 
- (./Covers/Abstract.tex
-Underfull \hbox (badness 10000) in paragraph at lines 17--24
-
- []
-
-[3
+ (./Covers/Abstract.tex [3
 
 ] [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
@@ -1559,15 +1554,14 @@ Package microtype Info: Character `029' is missing
 [7
 
 
-] [8
-
-]
+] [8]
 Package tocbasic Info: character protrusion at lof deactivated on input line 40.
  (./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
  [9
+
 
 ] [10
 
@@ -1581,19 +1575,19 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 55.
 
 ] [12
 
+] [13] [14
+
 ])
 \openout2 = `Covers/Acronyms.aux'.
 
- (./Covers/Acronyms.tex [13
+ (./Covers/Acronyms.tex [15
 
 
 
 
 
 
-] [14
-
-])
+] [16])
 \openout2 = `Chapters/Intro.aux'.
 
  (./Chapters/Intro.tex
@@ -1608,6 +1602,7 @@ Overfull \hbox (38.53226pt too wide) in paragraph at lines 4--4
                    \relax 
 l.174 \cleardoublepage\include{Chapters/Intro}
                                                [1
+
 
 
 
@@ -1641,18 +1636,18 @@ l.11
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.23 
-      [4] [5] [6] [7] [8]
-<imgs/neural_vs_deep.png, id=184, 690.58pt x 373.395pt>
-File: imgs/neural_vs_deep.png Graphic file (type png)
-<use imgs/neural_vs_deep.png>
-Package pdftex.def Info: imgs/neural_vs_deep.png  used on input line 113.
-(pdftex.def)             Requested size: 334.60425pt x 180.91972pt.
- [9 <./imgs/neural_vs_deep.png>] [10] [11] [12]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 154.
+l.27 
+      [4]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 35.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [13] [14] [15] [16] [17]) [18]
+) [5] [6] [7] [8]
+<imgs/neural_vs_deep.png, id=205, 690.58pt x 373.395pt>
+File: imgs/neural_vs_deep.png Graphic file (type png)
+<use imgs/neural_vs_deep.png>
+Package pdftex.def Info: imgs/neural_vs_deep.png  used on input line 125.
+(pdftex.def)             Requested size: 334.60425pt x 180.91972pt.
+ [9] [10 <./imgs/neural_vs_deep.png>] [11] [12] [13] [14] [15] [16] [17]) [18]
 \openout2 = `Chapters/StateOfTheArt.aux'.
 
  (./Chapters/StateOfTheArt.tex
@@ -1684,7 +1679,17 @@ Overfull \hbox (38.53226pt too wide) in paragraph at lines 2--2
 
 
 
-] [24] [25] [26] [27] [28] [29] [30] [31]) [32]
+] [24] [25] [26] [27] [28] [29] [30]
+<imgs/timesnet_2d_structure.pdf, id=339, 1890.69362pt x 686.88823pt>
+File: imgs/timesnet_2d_structure.pdf Graphic file (type pdf)
+<use imgs/timesnet_2d_structure.pdf>
+Package pdftex.def Info: imgs/timesnet_2d_structure.pdf  used on input line 179.
+(pdftex.def)             Requested size: 334.60425pt x 121.5593pt.
+ [31 <./imgs/timesnet_2d_structure.pdf>] [32] [33] [34] [35] [36]) [37] [38
+
+
+
+]
 \openout2 = `Chapters/Conclusion.aux'.
 
  (./Chapters/Conclusion.tex
@@ -1694,13 +1699,10 @@ Overfull \hbox (38.53226pt too wide) in paragraph at lines 5--5
 []\U/eur/b/n/70 5 
  []
 
-) [33
+) [39
 
 
-
-
-
-] [34
+] [40
 
 
 
@@ -1712,10 +1714,10 @@ Overfull \hbox (19.42007pt too wide) in paragraph at lines 13--13
 \T1/lmr/m/n/10.95 (-20) 2025. \T1/lmr/m/sc/10.95 (-20) url\T1/lmr/m/n/10.95 (-20) : [][]$\T1/lmtt/m/n/10.95 https : / / github . com / facontidavide / PlotJuggler$[][] \T1/lmr/m/n/10.95 (-20) (vis-ited on 06/23/2025). 
  []
 
-[35
+[41
 
 
-] [36]) [37] (./main.aux (./Covers/Titlepage.aux) (./Covers/Titleback.aux) (./Covers/Acknowledgments.aux) (./Covers/Abstract.aux) (./Covers/Contents.aux) (./Covers/Acronyms.aux) (./Chapters/Intro.aux) (./Chapters/Background.aux) (./Chapters/StateOfTheArt.aux) (./Chapters/Development.aux) (./Chapters/Conclusion.aux) (./Covers/Bibliography.aux)
+] [42]) [43] (./main.aux (./Covers/Titlepage.aux) (./Covers/Titleback.aux) (./Covers/Acknowledgments.aux) (./Covers/Abstract.aux) (./Covers/Contents.aux) (./Covers/Acronyms.aux) (./Chapters/Intro.aux) (./Chapters/Background.aux) (./Chapters/StateOfTheArt.aux) (./Chapters/Development.aux) (./Chapters/Conclusion.aux) (./Covers/Bibliography.aux)
 
 Package mparhack Warning: Marginpars may have changed.
 (mparhack)                Rerun to get them right.
@@ -1924,10 +1926,11 @@ Covers/Contents.tex
 Covers/Acronyms.tex
 Chapters/Intro.tex
 Chapters/Background.tex
-imgs/neural_vs_deep.png
   ts1lmr.fd    2009/10/30 v1.6 Font defs for Latin Modern
+imgs/neural_vs_deep.png
 Chapters/StateOfTheArt.tex
 Chapters/Development.tex
+imgs/timesnet_2d_structure.pdf
 Chapters/Conclusion.tex
 Covers/Bibliography.tex
  ***********
@@ -1943,18 +1946,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### semi simple group (level 1) entered at line 296 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 38678 strings out of 478287
- 753639 string characters out of 5849289
- 1826023 words of memory out of 5000000
- 55732 multiletter control sequences out of 15000+600000
- 582552 words of font info for 254 fonts, out of 8000000 for 9000
+ 38744 strings out of 478287
+ 754888 string characters out of 5849289
+ 1827523 words of memory out of 5000000
+ 55779 multiletter control sequences out of 15000+600000
+ 582704 words of font info for 256 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 108i,22n,106p,10662b,12052s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main.pdf (55 pages, 430229 bytes).
+ 108i,22n,106p,10662b,13117s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on main.pdf (63 pages, 771886 bytes).
 PDF statistics:
- 550 PDF objects out of 1000 (max. 8388607)
- 455 compressed objects within 5 object streams
- 101 named destinations out of 1000 (max. 500000)
- 64179 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 646 PDF objects out of 1000 (max. 8388607)
+ 533 compressed objects within 6 object streams
+ 115 named destinations out of 1000 (max. 500000)
+ 64208 words of extra memory for PDF output out of 74296 (max. 10000000)
 
