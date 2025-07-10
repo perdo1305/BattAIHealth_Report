@@ -4,53 +4,86 @@
 \@writefile{lot}{\ttl@tocsep }
 \def\mph@nr{4}
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}{Development}}{23}{chapter.4}\protected@file@percent }
-\newlabel{ch:Development}{{4}{23}{Supporting Technologies}{chapter.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}{Introduction}}{23}{section.4.1}\protected@file@percent }
-\newlabel{sec:dev_introduction}{{4.1}{23}{Introduction}{section.4.1}{}}
+\newlabel{ch:Development}{{4}{23}{Discussion}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}{MATLAB Modeling and Simulation}}{23}{section.4.1}\protected@file@percent }
+\newlabel{sec:matlab_modeling}{{4.1}{23}{MATLAB Modeling and Simulation}{section.4.1}{}}
 \mph@setcol{ii:23}{\mph@nr}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}{MATLAB Modeling and Simulation}}{24}{section.4.2}\protected@file@percent }
-\newlabel{sec:matlab_modeling}{{4.2}{24}{MATLAB Modeling and Simulation}{section.4.2}{}}
-\newlabel{subsec:kalman_filter}{{4.2}{24}{MATLAB Modeling and Simulation}{section.4.2}{}}
-\newlabel{subsec:coulomb_counting}{{4.2}{24}{MATLAB Modeling and Simulation}{section.4.2}{}}
-\newlabel{subsec:batemo_model}{{4.2}{24}{MATLAB Modeling and Simulation}{section.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces MATLAB Simulink implementation of Extended Kalman Filter for battery state-of-charge estimation, showing the complete simulation framework used for testing and validation.\relax }}{24}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:simulink_ekf_implementation}{{3}{24}{MATLAB Simulink implementation of Extended Kalman Filter for battery state-of-charge estimation, showing the complete simulation framework used for testing and validation.\relax }{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Block diagram of the Batemo INR21700-p45b battery model integration, showing the physics-based simulation structure used for enhanced accuracy in battery behavior modeling.\relax }}{24}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:batemo_blocks}{{4}{24}{Block diagram of the Batemo INR21700-p45b battery model integration, showing the physics-based simulation structure used for enhanced accuracy in battery behavior modeling.\relax }{figure.caption.5}{}}
 \mph@setcol{ii:24}{\mph@nr}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}{Neural Network Development Evolution}}{25}{section.4.3}\protected@file@percent }
-\newlabel{sec:neural_network_evolution}{{4.3}{25}{Neural Network Development Evolution}{section.4.3}{}}
-\newlabel{subsec:cnn_lstm_architecture}{{4.3}{25}{Neural Network Development Evolution}{section.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Extended Kalman Filter estimation results showing SOC tracking performance and comparison with reference measurements, illustrating the accuracy and reliability of the implemented algorithm.\relax }}{25}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:ekf_results}{{5}{25}{Extended Kalman Filter estimation results showing SOC tracking performance and comparison with reference measurements, illustrating the accuracy and reliability of the implemented algorithm.\relax }{figure.caption.6}{}}
 \mph@setcol{ii:25}{\mph@nr}
-\newlabel{subsec:hybrid_vs_datadriven}{{4.3}{26}{Neural Network Development Evolution}{section.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Batemo battery model configuration interface, showing the various agging and batterry parameters\relax }}{26}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:batemo_configurations}{{6}{26}{Batemo battery model configuration interface, showing the various agging and batterry parameters\relax }{figure.caption.7}{}}
 \mph@setcol{ii:26}{\mph@nr}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}{Dataset Collection and Preprocessing}}{27}{section.4.4}\protected@file@percent }
-\newlabel{sec:dataset_preprocessing}{{4.4}{27}{Dataset Collection and Preprocessing}{section.4.4}{}}
-\newlabel{subsec:primary_dataset}{{4.4}{27}{Dataset Collection and Preprocessing}{section.4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Battery state estimation results obtained using the Batemo physics-based model, demonstrating improved accuracy compared to standard battery models. The top graph shows the estimated SOC (orange line) compared with the actual SOC (yellow line).\relax }}{27}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:batemo_estimation}{{7}{27}{Battery state estimation results obtained using the Batemo physics-based model, demonstrating improved accuracy compared to standard battery models. The top graph shows the estimated SOC (orange line) compared with the actual SOC (yellow line).\relax }{figure.caption.8}{}}
 \mph@setcol{ii:27}{\mph@nr}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}{Neural Network Approaches}}{28}{section.4.2}\protected@file@percent }
+\newlabel{sec:neural_network_evolution}{{4.2}{28}{Neural Network Approaches}{section.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}{Transformer and Mixture of Experts Networks}}{28}{subsection.4.2.1}\protected@file@percent }
+\newlabel{subsec:transformer_moe_networks}{{4.2.1}{28}{Transformer and Mixture of Experts Networks}{subsection.4.2.1}{}}
 \mph@setcol{ii:28}{\mph@nr}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}{Utilized Model (TimesNet)}}{29}{section.4.5}\protected@file@percent }
-\newlabel{sec:timesnet_model}{{4.5}{29}{Utilized Model (TimesNet)}{section.4.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Transformer architecture for battery RUL prediction, showing the self-attention mechanisms and encoder-decoder structure that enables modeling of long-range dependencies in battery degradation sequences\blx@tocontentsinit {0}\cite {chen_transformer_2022}.\relax }}{29}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:transformer_architecture}{{8}{29}{Transformer architecture for battery RUL prediction, showing the self-attention mechanisms and encoder-decoder structure that enables modeling of long-range dependencies in battery degradation sequences\cite {chen_transformer_2022}.\relax }{figure.caption.9}{}}
 \mph@setcol{ii:29}{\mph@nr}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Quantitative comparison of Transformer vs. MoE network performance for battery RUL prediction\relax }}{30}{table.caption.13}\protected@file@percent }
+\newlabel{tab:transformer_moe_results}{{1}{30}{Quantitative comparison of Transformer vs. MoE network performance for battery RUL prediction\relax }{table.caption.13}{}}
 \mph@setcol{ii:30}{\mph@nr}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces TimesNet 2D transformation: converting 1D time series into structured 2D tensors by discovering periodicity~\blx@tocontentsinit {0}\cite {wu_timesnet_2023}.\relax }}{31}{figure.caption.3}\protected@file@percent }
-\newlabel{fig:timesnet_2d_transformation}{{2}{31}{TimesNet 2D transformation: converting 1D time series into structured 2D tensors by discovering periodicity~\cite {wu_timesnet_2023}.\relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Mixture of Experts (MoE) architecture for battery health prediction, showing the gating network and specialized experts that enable efficient learning of different battery degradation patterns and operating conditions~\blx@tocontentsinit {0}\cite {moe_arq}.\relax }}{31}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:moe_architecture}{{9}{31}{Mixture of Experts (MoE) architecture for battery health prediction, showing the gating network and specialized experts that enable efficient learning of different battery degradation patterns and operating conditions~\cite {moe_arq}.\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Transformer network performance results for battery RUL prediction on CALCE dataset, showing prediction accuracy and convergence behavior during training and validation phases.\relax }}{31}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:transformer_results}{{10}{31}{Transformer network performance results for battery RUL prediction on CALCE dataset, showing prediction accuracy and convergence behavior during training and validation phases.\relax }{figure.caption.11}{}}
 \mph@setcol{ii:31}{\mph@nr}
-\newlabel{subsec:timesnet_adaptation}{{4.5}{32}{Utilized Model (TimesNet)}{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Mixture of Experts (MoE) network performance results for battery RUL prediction, demonstrating competitive accuracy with reduced computational complexity compared to the Transformer approach.\relax }}{32}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:moe_results}{{11}{32}{Mixture of Experts (MoE) network performance results for battery RUL prediction, demonstrating competitive accuracy with reduced computational complexity compared to the Transformer approach.\relax }{figure.caption.12}{}}
 \mph@setcol{ii:32}{\mph@nr}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}{Model Optimization}}{33}{section.4.6}\protected@file@percent }
-\newlabel{sec:model_optimization}{{4.6}{33}{Model Optimization}{section.4.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}{Dataset Collection and Preprocessing}}{33}{section.4.3}\protected@file@percent }
+\newlabel{sec:dataset_preprocessing}{{4.3}{33}{Dataset Collection and Preprocessing}{section.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}{Dataset Comparison and Selection}}{33}{subsection.4.3.1}\protected@file@percent }
+\newlabel{subsec:dataset_comparison}{{4.3.1}{33}{Dataset Comparison and Selection}{subsection.4.3.1}{}}
 \mph@setcol{ii:33}{\mph@nr}
-\newlabel{subsec:optimization_process}{{4.6}{34}{Model Optimization}{section.4.6}{}}
-\newlabel{subsec:best_trial_results}{{4.6}{34}{Model Optimization}{section.4.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Comparison of available battery datasets and their features\relax }}{34}{table.caption.14}\protected@file@percent }
+\newlabel{tab:dataset_comparison}{{2}{34}{Comparison of available battery datasets and their features\relax }{table.caption.14}{}}
 \mph@setcol{ii:34}{\mph@nr}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}{Experiments and Results}}{35}{section.4.7}\protected@file@percent }
-\newlabel{sec:experiments_results}{{4.7}{35}{Experiments and Results}{section.4.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}{Selected Deep Learning Approach}}{35}{section.4.4}\protected@file@percent }
+\newlabel{sec:timesnet_model}{{4.4}{35}{Selected Deep Learning Approach}{section.4.4}{}}
 \mph@setcol{ii:35}{\mph@nr}
-\@writefile{toc}{\contentsline {section}{\numberline {4.8}{Conclusion and Future Work}}{36}{section.4.8}\protected@file@percent }
-\newlabel{sec:conclusion_future_work}{{4.8}{36}{Conclusion and Future Work}{section.4.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.1}{Conclusion}}{36}{subsection.4.8.1}\protected@file@percent }
 \mph@setcol{ii:36}{\mph@nr}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.2}{Future Work}}{37}{subsection.4.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}{TimesBlock Architecture}}{37}{subsection.4.4.1}\protected@file@percent }
 \mph@setcol{ii:37}{\mph@nr}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces TimesNet 2D transformation: converting 1D time series into structured 2D tensors by discovering periodicity~\blx@tocontentsinit {0}\cite {wu_timesnet_2023}.\relax }}{38}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:timesnet_2d_transformation}{{12}{38}{TimesNet 2D transformation: converting 1D time series into structured 2D tensors by discovering periodicity~\cite {wu_timesnet_2023}.\relax }{figure.caption.15}{}}
+\mph@setcol{ii:38}{\mph@nr}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}{Model Optimization}}{39}{subsection.4.4.2}\protected@file@percent }
+\newlabel{sec:model_optimization}{{4.4.2}{39}{Model Optimization}{subsection.4.4.2}{}}
+\mph@setcol{ii:39}{\mph@nr}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}{Hyperparameter Search}}{40}{subsection.4.4.3}\protected@file@percent }
+\newlabel{subsec:best_trial_results}{{4.4.3}{40}{Hyperparameter Search}{subsection.4.4.3}{}}
+\mph@setcol{ii:40}{\mph@nr}
+\mph@setcol{ii:41}{\mph@nr}
+\mph@setcol{ii:42}{\mph@nr}
+\@writefile{lof}{\ttl@tocsep }
+\@writefile{lot}{\ttl@tocsep }
+\def\mph@nr{5}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}{Experiments and Results}}{43}{chapter.5}\protected@file@percent }
+\newlabel{sec:experiments_results}{{5}{43}{Hyperparameter Search}{chapter.5}{}}
+\mph@setcol{ii:43}{\mph@nr}
+\mph@setcol{ii:44}{\mph@nr}
+\@writefile{lof}{\ttl@tocsep }
+\@writefile{lot}{\ttl@tocsep }
+\def\mph@nr{6}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}{Conclusion and Future Work}}{45}{chapter.6}\protected@file@percent }
+\newlabel{sec:conclusion_future_work}{{6}{45}{Hyperparameter Search}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}{Conclusion}}{45}{section.6.1}\protected@file@percent }
+\mph@setcol{ii:45}{\mph@nr}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}{Future Work}}{46}{section.6.2}\protected@file@percent }
+\mph@setcol{ii:46}{\mph@nr}
 \@setckpt{Chapters/Development}{
-\setcounter{page}{38}
+\setcounter{page}{47}
 \setcounter{equation}{7}
 \setcounter{enumi}{2}
 \setcounter{enumii}{0}
@@ -59,14 +92,14 @@
 \setcounter{footnote}{0}
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
-\setcounter{chapter}{4}
-\setcounter{section}{8}
-\setcounter{subsection}{2}
+\setcounter{chapter}{6}
+\setcounter{section}{2}
+\setcounter{subsection}{0}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{2}
-\setcounter{table}{0}
+\setcounter{figure}{12}
+\setcounter{table}{2}
 \setcounter{dummy}{6}
 \setcounter{tabx@nest}{0}
 \setcounter{listtotal}{0}
@@ -77,7 +110,7 @@
 \setcounter{citetotal}{0}
 \setcounter{multicitecount}{0}
 \setcounter{multicitetotal}{0}
-\setcounter{instcount}{23}
+\setcounter{instcount}{42}
 \setcounter{maxnames}{2}
 \setcounter{minnames}{1}
 \setcounter{maxitems}{3}
@@ -101,7 +134,7 @@
 \setcounter{parenlevel}{0}
 \setcounter{blx@maxsection}{0}
 \setcounter{blx@maxsegment@0}{0}
-\setcounter{blx@sectionciteorder@0}{23}
+\setcounter{blx@sectionciteorder@0}{42}
 \setcounter{mincomprange}{10}
 \setcounter{maxcomprange}{100000}
 \setcounter{mincompwidth}{1}
@@ -195,7 +228,7 @@
 \setcounter{subtable}{0}
 \setcounter{subtable@save}{0}
 \setcounter{lotdepth}{1}
-\setcounter{Item}{2}
+\setcounter{Item}{9}
 \setcounter{bookmark@seq@number}{0}
 \setcounter{AM@survey}{0}
 \setcounter{su@anzahl}{0}

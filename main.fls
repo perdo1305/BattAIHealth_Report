@@ -2078,6 +2078,7 @@ INPUT ./Chapters/Background.tex
 INPUT Chapters/Background.tex
 INPUT ./Chapters/Background.tex
 INPUT Chapters/Background.tex
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
 INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
 INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
@@ -2098,6 +2099,11 @@ INPUT ./imgs/neural_vs_deep.png
 INPUT imgs/neural_vs_deep.png
 INPUT ./imgs/neural_vs_deep.png
 INPUT ./imgs/neural_vs_deep.png
+INPUT ./imgs/Degradation mechanisms in Li-ion cells.jpg
+INPUT ./imgs/Degradation mechanisms in Li-ion cells.jpg
+INPUT imgs/Degradation mechanisms in Li-ion cells.jpg
+INPUT ./imgs/Degradation mechanisms in Li-ion cells.jpg
+INPUT ./imgs/Degradation mechanisms in Li-ion cells.jpg
 INPUT ./Chapters/StateOfTheArt.tex
 INPUT ./Chapters/StateOfTheArt.tex
 INPUT ./Chapters/StateOfTheArt.tex
@@ -2118,12 +2124,62 @@ INPUT ./Chapters/Development.tex
 INPUT Chapters/Development.tex
 INPUT ./Chapters/Development.tex
 INPUT Chapters/Development.tex
+INPUT ./imgs/simulink_EKF.png
+INPUT ./imgs/simulink_EKF.png
+INPUT imgs/simulink_EKF.png
+INPUT ./imgs/simulink_EKF.png
+INPUT ./imgs/simulink_EKF.png
+INPUT ./imgs/batemo_blocks.png
+INPUT ./imgs/batemo_blocks.png
+INPUT imgs/batemo_blocks.png
+INPUT ./imgs/batemo_blocks.png
+INPUT ./imgs/batemo_blocks.png
+INPUT ./imgs/EKF_results.png
+INPUT ./imgs/EKF_results.png
+INPUT imgs/EKF_results.png
+INPUT ./imgs/EKF_results.png
+INPUT ./imgs/EKF_results.png
+INPUT ./imgs/batemo_configurations.png
+INPUT ./imgs/batemo_configurations.png
+INPUT imgs/batemo_configurations.png
+INPUT ./imgs/batemo_configurations.png
+INPUT ./imgs/batemo_configurations.png
+INPUT ./imgs/batemo_estimation.png
+INPUT ./imgs/batemo_estimation.png
+INPUT imgs/batemo_estimation.png
+INPUT ./imgs/batemo_estimation.png
+INPUT ./imgs/batemo_estimation.png
+INPUT ./imgs/transformer_arq.png
+INPUT ./imgs/transformer_arq.png
+INPUT imgs/transformer_arq.png
+INPUT ./imgs/transformer_arq.png
+INPUT ./imgs/transformer_arq.png
+INPUT ./imgs/Moe_arq.png
+INPUT ./imgs/Moe_arq.png
+INPUT imgs/Moe_arq.png
+INPUT ./imgs/Moe_arq.png
+INPUT ./imgs/Moe_arq.png
+INPUT ./imgs/transf_graph_results.png
+INPUT ./imgs/transf_graph_results.png
+INPUT imgs/transf_graph_results.png
+INPUT ./imgs/transf_graph_results.png
+INPUT ./imgs/transf_graph_results.png
+INPUT ./imgs/moe_graph_results.png
+INPUT ./imgs/moe_graph_results.png
+INPUT imgs/moe_graph_results.png
+INPUT ./imgs/moe_graph_results.png
+INPUT ./imgs/moe_graph_results.png
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr5.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmmi5.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy5.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
 INPUT ./imgs/timesnet_2d_structure.pdf
 INPUT ./imgs/timesnet_2d_structure.pdf
 INPUT imgs/timesnet_2d_structure.pdf
 INPUT ./imgs/timesnet_2d_structure.pdf
 INPUT ./imgs/timesnet_2d_structure.pdf
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT ./Chapters/Conclusion.tex
 INPUT ./Chapters/Conclusion.tex
 INPUT ./Chapters/Conclusion.tex
@@ -2185,13 +2241,13 @@ INPUT ./main.out
 INPUT ./main.out
 INPUT main.run.xml
 OUTPUT main.run.xml
-INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb
@@ -2205,4 +2261,5 @@ INPUT /usr/share/texmf/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmri10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb

@@ -19,6 +19,30 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{noauthor_comprehensive_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Access 135+ million publications and connect with 20+ million researchers. Join for free and gain visibility by uploading your research.}
+      \field{journaltitle}{ResearchGate}
+      \field{title}{A comprehensive review on the state of charge estimation for lithium‐ion battery based on neural network}
+      \field{urlday}{9}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/MF264IXL/357101284_A_comprehensive_review_on_the_state_of_charge_estimation_for_lithium-ion_battery_base.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/357101284_A_comprehensive_review_on_the_state_of_charge_estimation_for_lithium-ion_battery_based_on_neural_network
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/357101284_A_comprehensive_review_on_the_state_of_charge_estimation_for_lithium-ion_battery_based_on_neural_network
+      \endverb
+    \endentry
     \entry{akiba_optuna_2019}{misc}{}
       \name{author}{5}{}{%
         {{hash=2939d0d5b491018f7cc7812609071a79}{%
@@ -376,6 +400,29 @@
       \verb https://calce.umd.edu/battery-data
       \endverb
     \endentry
+    \entry{mathworks_battery_soc_2024}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This example shows how to estimate the battery state of charge (SOC) by using a Kalman filter.}
+      \field{title}{Battery {State}-of-{Charge} {Estimation} - {MATLAB} \&amp; {Simulink}}
+      \field{urlday}{10}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/5S98QPQW/battery-state-of-charge-estimation.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mathworks.com/help/simscape-battery/ug/battery-state-of-charge-estimation.html
+      \endverb
+      \verb{url}
+      \verb https://www.mathworks.com/help/simscape-battery/ug/battery-state-of-charge-estimation.html
+      \endverb
+    \endentry
     \entry{noauthor_biolaborange3_nodate}{misc}{}
       \field{sortinit}{b}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
@@ -394,6 +441,136 @@
       \verb{url}
       \verb https://github.com/biolab/orange3
       \endverb
+    \endentry
+    \entry{che_battery_2023}{article}{}
+      \name{author}{7}{}{%
+        {{hash=607270facec37a99111a9a3e31e4abc0}{%
+           family={Che},
+           familyi={C\bibinitperiod},
+           given={Yunhong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=6ba0b81cabdf88188d4ebffe295856f9}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Yusheng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=5054d8715f6746af9ed28c566f168046}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Yue},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=9feb35eebafd8448903ded74f17d5587}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Xianke},
+           giveni={X\bibinitperiod}}}%
+        {{hash=7900ca67ecd64b4eebb258b006342bd3}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Jiacheng},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4c2223c6a8a46ddd60adaf8fc3a359a6}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Xiaosong},
+           giveni={X\bibinitperiod}}}%
+        {{hash=ddbd95086252564472b7cb1e02947208}{%
+           family={Teodorescu},
+           familyi={T\bibinitperiod},
+           given={Remus},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{af3c5bba02c0f98bb29879651f6e19b6}
+      \strng{fullhash}{e02efc2188f274265902ba9d565921de}
+      \strng{bibnamehash}{af3c5bba02c0f98bb29879651f6e19b6}
+      \strng{authorbibnamehash}{af3c5bba02c0f98bb29879651f6e19b6}
+      \strng{authornamehash}{af3c5bba02c0f98bb29879651f6e19b6}
+      \strng{authorfullhash}{e02efc2188f274265902ba9d565921de}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{State/temperature monitoring is one of the key requirements of battery management systems that facilitates efficient and intelligent management to ensure the safe operation of batteries in electrified transportation. This paper proposes an online end-to-end state monitoring method based on transferred multi-task learning. Measurement data is directly used for sharing information generation with the convolutional neural network. Then, the multiple task-specific layers are added for state/temperature monitoring. The transfer learning strategy is designed to improve accuracy further under various application scenarios. Experiments under different working profiles, temperatures, and aging conditions are conducted to evaluate the method, which covers the wide usage ranges in electric vehicles. Comparisons with several benchmarks illustrate the superiority of the proposed method with better accuracy and computational efficiency. The monitoring results under extremely current working profiles and variable internal and external conditions are evaluated. Results show that the mean absolute error and root mean square error of state of charge and state of energy estimation are less than 2.31\% and 3.31\%, respectively. The above errors in the prediction of future temperature five steps ahead are less than 0.89 °C and 1.29 °C, respectively. The framework is also suitable for monitoring second-life batteries retired from electric vehicles. This paper illustrates the potential application of data-driven multi-state monitoring throughout the entire battery life.}
+      \field{issn}{1939-9359}
+      \field{journaltitle}{IEEE Transactions on Vehicular Technology}
+      \field{month}{8}
+      \field{number}{8}
+      \field{title}{Battery {States} {Monitoring} for {Electric} {Vehicles} {Based} on {Transferred} {Multi}-{Task} {Learning}}
+      \field{urlday}{10}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{72}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{10037\bibrangedash 10047}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/TVT.2023.3260466
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/SG63NYJQ/Che et al. - 2023 - Battery States Monitoring for Electric Vehicles Based on Transferred Multi-Task Learning.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10078315
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10078315
+      \endverb
+      \keyw{Aging,Batteries,Battery charge measurement,Battery states monitoring,Estimation,Monitoring,multi-task learning,State of charge,Temperature measurement,temperature prediction,transfer learning}
+    \endentry
+    \entry{chen_transformer_2022}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8e8ab20e8b690da2d62d1987893150cb}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Daoquan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=fbd277a61171ddde9f113026d8246fd4}{%
+           family={Hong},
+           familyi={H\bibinitperiod},
+           given={Weicong},
+           giveni={W\bibinitperiod}}}%
+        {{hash=6d0c353c0a1f18e3e7662624fccf1954}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Xiuze},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{2a20169f17fb589956ccbbc20526de52}
+      \strng{fullhash}{8dfc4dde360a3966d5d3964158dfaa30}
+      \strng{bibnamehash}{8dfc4dde360a3966d5d3964158dfaa30}
+      \strng{authorbibnamehash}{8dfc4dde360a3966d5d3964158dfaa30}
+      \strng{authornamehash}{2a20169f17fb589956ccbbc20526de52}
+      \strng{authorfullhash}{8dfc4dde360a3966d5d3964158dfaa30}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Accurately predicting the Remaining Useful Life (RUL) of a Li-ion battery plays an important role in managing the health and estimating the state of a battery. With the rapid development of electric vehicles, there is an increasing need to develop and improve the techniques for predicting RUL. To predict RUL, we designed a Transformer-based neural network. First, battery capacity data is always full of noise, especially during battery charge/discharge regeneration. To alleviate this problem, we applied a Denoising Auto-Encoder (DAE) to process raw data. Then, to capture temporal information and learn useful features, a reconstructed sequence was fed into a Transformer network. Finally, to bridge denoising and prediction tasks, we combined these two tasks into a unified framework. Results of extensive experiments conducted on two data sets and a comparison with some existing methods show that our proposed method performs better in predicting RUL. Our projects are all open source and are available at https://github.com/XiuzeZhou/RUL.}
+      \field{issn}{2169-3536}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Transformer {Network} for {Remaining} {Useful} {Life} {Prediction} of {Lithium}-{Ion} {Batteries}}
+      \field{urlday}{9}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{10}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{19621\bibrangedash 19628}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2022.3151975
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/5W4LBB2M/Chen et al. - 2022 - Transformer Network for Remaining Useful Life Prediction of Lithium-Ion Batteries.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9714323
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9714323
+      \endverb
+      \keyw{Data models,Degradation,denoising auto-encoder,Li-ion battery,Lithium-ion batteries,neural network,Noise reduction,Predictive models,remaining useful life,Task analysis,transformer,Transformers}
     \endentry
     \entry{Fangfang_Yang}{article}{}
       \list{language}{1}{%
@@ -528,6 +705,27 @@
       \verb https://git-scm.com/
       \endverb
     \endentry
+    \entry{batemo_website_2024}{misc}{}
+      \list{language}{1}{%
+        {en-US}%
+      }
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Your partner for high-precision lithium-ion battery models and battery simulation solutions. We solve central problems in battery development.}
+      \field{journaltitle}{Batemo GmbH}
+      \field{title}{Home}
+      \field{urlday}{10}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.batemo.com/
+      \endverb
+      \verb{url}
+      \verb https://www.batemo.com/
+      \endverb
+    \endentry
     \entry{hong_state--health_2023}{article}{}
       \name{author}{5}{}{%
         {{hash=31512e9b55710198c755b55238023b27}{%
@@ -593,6 +791,96 @@
       \endverb
       \keyw{Dual-stage attention-based recurrent neural network,Lithium-ion battery,State of health}
     \endentry
+    \entry{kabir_degradation_2017}{article}{}
+      \name{author}{2}{}{%
+        {{hash=fe59eb29200a4406c7d1c582b3a6b3b5}{%
+           family={Kabir},
+           familyi={K\bibinitperiod},
+           given={M.\bibnamedelimi M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=946e9e3fa495942461ea26a11cd269c6}{%
+           family={Demirocak},
+           familyi={D\bibinitperiod},
+           given={Dervis\bibnamedelima Emre},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{9017d65e86bbc2a693535e0f3d602dfb}
+      \strng{fullhash}{9017d65e86bbc2a693535e0f3d602dfb}
+      \strng{bibnamehash}{9017d65e86bbc2a693535e0f3d602dfb}
+      \strng{authorbibnamehash}{9017d65e86bbc2a693535e0f3d602dfb}
+      \strng{authornamehash}{9017d65e86bbc2a693535e0f3d602dfb}
+      \strng{authorfullhash}{9017d65e86bbc2a693535e0f3d602dfb}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{One of the most prominent energy storage technologies which are under continuous development, especially for mobile applications, is the Li-ion batteries due to their superior gravimetric and volumetric energy density. However, limited cycle life of Li-ion batteries inhibits their extended use in stationary energy storage applications. To enable wider market penetration of Li-ion batteries, detailed understanding of the degradation mechanisms is required. A typical Li-ion battery comprised of an active material, binder, separator, current collector, and electrolyte, and the interaction between these components plays a critical role in successful operation of such batteries. Degradation of Li-ion batteries can have both chemical and mechanical origins and manifests itself by capacity loss, power fading or both. Mechanical degradation mechanisms are associated with the volume changes and stress generated during repetitive intercalation of Li ions into the active material, whereas chemical degradation mechanisms are associated with the parasitic side reactions such as solid electrolyte interphase formation, electrolyte decomposition/reduction and active material dissolution. In this study, the main degradation mechanisms in Li-ion batteries are reviewed. Copyright © 2017 John Wiley \& Sons, Ltd.}
+      \field{issn}{1099-114X}
+      \field{journaltitle}{International Journal of Energy Research}
+      \field{note}{\_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/er.3762}
+      \field{number}{14}
+      \field{shorttitle}{Degradation mechanisms in {Li}-ion batteries}
+      \field{title}{Degradation mechanisms in {Li}-ion batteries: a state-of-the-art review}
+      \field{urlday}{9}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{41}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \field{pages}{1963\bibrangedash 1986}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1002/er.3762
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/MKE7IJHG/Kabir and Demirocak - 2017 - Degradation mechanisms in Li-ion batteries a state-of-the-art review.pdf:application/pdf;Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/E5983NAF/er.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/er.3762
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/er.3762
+      \endverb
+      \keyw{characterization techniques,chemical origin,degradation causes,degradation mechanisms,Li-ion batteries,mechanical origin}
+    \endentry
+    \entry{moe_arq}{unknown}{}
+      \name{author}{3}{}{%
+        {{hash=e07f80d7c3cddb419c1a144c8b222e63}{%
+           family={Krishnamurthy},
+           familyi={K\bibinitperiod},
+           given={Yamuna},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=e2a3d0e19d16321bbefea294d95a6eb8}{%
+           family={Watkins},
+           familyi={W\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8caa55c44b04a8f6a0c322a19feceac2}{%
+           family={Gaertner},
+           familyi={G\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c5c236e1ce1ea52837ffa2672bf0fd6e}
+      \strng{fullhash}{566ebbdd7556e8f3540150b29ad3723c}
+      \strng{bibnamehash}{566ebbdd7556e8f3540150b29ad3723c}
+      \strng{authorbibnamehash}{566ebbdd7556e8f3540150b29ad3723c}
+      \strng{authornamehash}{c5c236e1ce1ea52837ffa2672bf0fd6e}
+      \strng{authorfullhash}{566ebbdd7556e8f3540150b29ad3723c}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{02}
+      \field{title}{Improving Expert Specialization in Mixture of Experts}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.48550/arXiv.2302.14703
+      \endverb
+    \endentry
     \entry{noauthor_nasa_nodate}{misc}{}
       \list{language}{1}{%
         {en}%
@@ -653,6 +941,108 @@
       \verb{url}
       \verb https://ieee-dataport.org/documents/hkust-lithium-ion-battery-dataset
       \endverb
+    \endentry
+    \entry{ren_review_2023}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a6bbc587c63b73c2cdb26bfcc718e13f}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Zhong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=02a53fd5ed368af248753080e0ce76d5}{%
+           family={Du},
+           familyi={D\bibinitperiod},
+           given={Changqing},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{923be89af0387c66dbb9df9dacaf4745}
+      \strng{fullhash}{923be89af0387c66dbb9df9dacaf4745}
+      \strng{bibnamehash}{923be89af0387c66dbb9df9dacaf4745}
+      \strng{authorbibnamehash}{923be89af0387c66dbb9df9dacaf4745}
+      \strng{authornamehash}{923be89af0387c66dbb9df9dacaf4745}
+      \strng{authorfullhash}{923be89af0387c66dbb9df9dacaf4745}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Vehicle electrification has been proven to be an efficient way to reduce carbon dioxide emissions and solve the energy crisis. Lithium-ion batteries (LiBs) are considered the dominant energy storage medium for electric vehicles (EVs) owing to their high energy density and long lifespan. To maintain a safe, efficient, and stable operating condition for the battery system, we must monitor the state of the battery, especially the state-of-charge (SOC) and state-of-health (SOH). With the development of big data, cloud computing, and other emerging techniques, data-driven machine learning (ML) techniques have attracted attention for their enormous potential in state estimation for LiBs. Therefore, this paper reviews the four most studied types of ML algorithms for SOC and SOH estimation, including shallow neural network (NN), deep learning (DL), support vector machine (SVM), and Gaussian process regression (GPR) methods. The basic principles and uniform flowcharts of different ML algorithms are introduced. Then, the applications of each ML algorithm for state estimation within recent years are comprehensively reviewed and compared in terms of used datasets, input features, hyperparameter selection, performance metrics, advantages, and disadvantages. Based on the investigation, this review discusses the current challenges and prospects from four aspects, aiming to provide some inspiration for developing advanced ML state estimation algorithms.}
+      \field{issn}{2352-4847}
+      \field{journaltitle}{Energy Reports}
+      \field{month}{12}
+      \field{note}{Publisher: Elsevier BV}
+      \field{title}{A review of machine learning state-of-charge and state-of-health estimation algorithms for lithium-ion batteries}
+      \field{urlday}{9}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{9}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{2993\bibrangedash 3021}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1016/j.egyr.2023.01.108
+      \endverb
+      \verb{file}
+      \verb PDF:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/XEZDBXET/Ren and Du - 2023 - A review of machine learning state-of-charge and state-of-health estimation algorithms for lithium-i.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S235248472300118X
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S235248472300118X
+      \endverb
+    \endentry
+    \entry{renold_comprehensive_2024}{article}{}
+      \name{author}{2}{}{%
+        {{hash=36b2cb95f506bb03d6cc9c8e37b0149a}{%
+           family={Renold},
+           familyi={R\bibinitperiod},
+           given={A.\bibnamedelimi Pravin},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=b979df11802048638b7d9e9c63b95d9b}{%
+           family={Kathayat},
+           familyi={K\bibinitperiod},
+           given={Neeraj\bibnamedelima Singh},
+           giveni={N\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{acacb2c67bf8d3968cea03c47d1cdf64}
+      \strng{fullhash}{acacb2c67bf8d3968cea03c47d1cdf64}
+      \strng{bibnamehash}{acacb2c67bf8d3968cea03c47d1cdf64}
+      \strng{authorbibnamehash}{acacb2c67bf8d3968cea03c47d1cdf64}
+      \strng{authornamehash}{acacb2c67bf8d3968cea03c47d1cdf64}
+      \strng{authorfullhash}{acacb2c67bf8d3968cea03c47d1cdf64}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents a comprehensive survey of machine learning, deep learning, and digital twin technology methods for predicting and managing the battery state of health in electric vehicles. Battery state of health estimation is essential for optimizing the battery usage, performance, safety, and cost-effectiveness of electric vehicles. Estimating the state of health of a battery is a complex undertaking due to its dependency on multiple factors. These factors include battery characteristics such as type, chemistry, size, temperature, current, voltage, impedance, cycle number, and driving pattern. There are drawbacks to traditional methods, such as experimental and model-based approaches, in terms of accuracy, complexity, expense, and viability for real-time applications. By employing a variety of algorithms to discover the nonlinear and dynamic link between the battery parameters and the state of health, data-driven techniques like machine learning, deep learning, and data-driven digital twin technologies can get beyond these restrictions. Data-driven methods can also incorporate physics and domain knowledge to improve the explainability and interpretability of the results. This paper reviews the latest advancements and challenges of using data-driven techniques for battery state of health estimation and management in electric vehicles. The paper also discusses the future directions and opportunities for further research and development in this field. The survey scope spans publications from the year 2021 to 2023.}
+      \field{issn}{2169-3536}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Comprehensive {Review} of {Machine} {Learning}, {Deep} {Learning}, and {Digital} {Twin} {Data}-{Driven} {Approaches} in {Battery} {Health} {Prediction} of {Electric} {Vehicles}}
+      \field{urlday}{9}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{12}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{43984\bibrangedash 43999}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2024.3380452
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/URLP9F8J/Renold and Kathayat - 2024 - Comprehensive Review of Machine Learning, Deep Learning, and Digital Twin Data-Driven Approaches in.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10477658
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10477658
+      \endverb
+      \keyw{Batteries,battery health prediction,data-driven methods,Deep learning,deep learning models,digital twin technology,electric vehicles,Electric vehicles,Estimation,lithium-ion batteries,Machine learning,Machine learning models,Predictive models,Reviews}
     \endentry
     \entry{stroe_degradation_2018}{article}{}
       \name{author}{4}{}{%
@@ -777,6 +1167,55 @@
       \verb https://ieeexplore.ieee.org/document/10082477
       \endverb
       \keyw{Batteries,Electric shock,feature extraction,Feature extraction,Robustness,Simulation,state of charge,state of health,Support vector machines,SVM,Voltage}
+    \endentry
+    \entry{vijaychandra_comprehensive_2024}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=981cd805da88fdfe6663ef728725db79}{%
+           family={Vijaychandra},
+           familyi={V\bibinitperiod},
+           given={Joddumahanthi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=73cbb67ab06ce807b80dd6598af0b3a7}{%
+           family={Knypiński},
+           familyi={K\bibinitperiod},
+           given={Łukasz},
+           giveni={Ł\bibinitperiod}}}%
+      }
+      \strng{namehash}{abde8818678a545ee82ae9cc9a114dc0}
+      \strng{fullhash}{abde8818678a545ee82ae9cc9a114dc0}
+      \strng{bibnamehash}{abde8818678a545ee82ae9cc9a114dc0}
+      \strng{authorbibnamehash}{abde8818678a545ee82ae9cc9a114dc0}
+      \strng{authornamehash}{abde8818678a545ee82ae9cc9a114dc0}
+      \strng{authorfullhash}{abde8818678a545ee82ae9cc9a114dc0}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Electric vehicle (EV) technology has come up with showing many alternative solutions to the issues mainly caused due to the carbon emissions by the conventional vehicles and hence grabbed a massive attention of the entire world. Furthermore, while electric vehicles (EVs) have their own advantages, they also have a number of drawbacks, such as concerns with heat management, battery management, health degradation, integration of power electronic conversions, charging and discharging issues, etc. The estimation of SOC and RUL is quiet difficult task as these are highly dependent of temperature measurements. Hence, thermal management is the key challenging task that to be considered in EVs. A comprehensive discussion of battery management systems, including their significant attributes has been addressed in this article.}
+      \field{booktitle}{2024 {Progress} in {Applied} {Electrical} {Engineering} ({PAEE})}
+      \field{month}{6}
+      \field{note}{ISSN: 2837-8326}
+      \field{title}{A {Comprehensive} {Review} on {Challenges} and {Possible} {Solutions} of {Battery} {Management} {Systems} in {Electric} {Vehicles}}
+      \field{urlday}{9}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/PAEE63906.2024.10701438
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/J78QYT6J/Vijaychandra and Knypiński - 2024 - A Comprehensive Review on Challenges and Possible Solutions of Battery Management Systems in Electri.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10701438
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10701438
+      \endverb
+      \keyw{Battery management,Battery management systems,electric vehicles,Electric vehicles,Estimation,lithium-ion batteries,Lithium-ion batteries,Power electronics,Resistance heating,Reviews,state of charge,State of charge,Temperature measurement,thermal management,Thermal management of electronics}
     \endentry
     \entry{noauthor_weights_nodate}{misc}{}
       \list{language}{1}{%
