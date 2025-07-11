@@ -14,8 +14,20 @@ Traditional methods for checking battery state can be put into two groups: physi
 
 \textbf{Physics-Based Methods} create models of how batteries work chemically and electrically. Key approaches include:
 \begin{itemize}
-    \item \textbf{Equivalent Circuit Models (ECMs)}: Show batteries using electrical parts (like resistors, capacitors) to copy voltage and current behavior. ECMs are fast to compute, but they are not very accurate when conditions change.\color{Red}faltam referências nesta subsecção\color{Black}
-    \item \textbf{Electrochemical Models}: Copy internal chemical reactions, giving high accuracy but needing a lot of computer power and detailed knowledge of battery parameters.\color{Red}faltam referências nesta subsecção\color{Black}
+    \item \textbf{Equivalent Circuit Models (ECMs)}: Show batteries using electrical parts (like resistors, capacitors) to copy voltage and current behavior. ECMs represent battery dynamics through simplified electrical circuits that capture the essential electrochemical behaviors while maintaining computational efficiency. Figure~\ref{fig:ecm_models} illustrates two common ECM configurations: (a) the Thévenin model with a single RC pair representing charge transfer resistance and double-layer capacitance, and (b) the Partnership for a New Generation of Vehicles (PNGV) model with multiple RC pairs capturing different time constants in battery response. These models include internal resistance ($R_0$), polarization resistances ($R_{Th}$, $R_{pa}$, $R_{pc}$), and corresponding capacitances ($C_{Th}$, $C_{pa}$, $C_{pc}$) to model various electrochemical processes. ECMs are fast to compute and suitable for real-time applications, but they are not very accurate when conditions change and require parameter identification for different operating conditions \cite{tran_comparative_2021}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{imgs/ECM_1st_2nd_order.png}
+\caption{Equivalent Circuit Models (ECMs) showing (a) Thévenin model with single RC pair and (b) PNGV model with multiple RC pairs. These models use electrical components to represent battery electrochemical behavior, where $R_0$ represents ohmic resistance, $R_{Th}/C_{Th}$ and $R_{pa}/C_{pa}$, $R_{pc}/C_{pc}$ represent different polarization effects with their respective time constants \cite{tran_comparative_2021}.}
+\label{fig:ecm_models}
+\end{figure}
+
+    \item \textbf{Electrochemical Models}: Copy internal chemical reactions, giving high accuracy but needing a lot of computer power and detailed knowledge of battery parameters. These models are based on fundamental electrochemical principles and describe the physical and chemical processes occurring within battery cells, including ion transport, charge transfer reactions, and material phase changes \cite{mama_comprehensive_2025}. Electrochemical models typically solve complex partial differential equations that describe mass and charge conservation, making them computationally intensive but highly accurate for predicting battery behavior under various operating conditions.
+
+    A notable example of modern electrochemical modeling frameworks is BattMo (Battery Modeling in MATLAB), an open-source battery simulation platform that provides comprehensive tools for electrochemical battery modeling \cite{noauthor_battmo_2024}. BattMo offers advanced capabilities including multi-physics coupling, detailed electrode modeling, and thermal effects integration, making it suitable for research and development applications.
+
+    During the initial phases of this research, BattMo was evaluated as a potential modeling framework for generating synthetic battery data and understanding fundamental battery behavior. The platform's comprehensive approach to electrochemical modeling and its integration with MATLAB made it an attractive option for physics-based battery simulation. However, after preliminary exploration, the focus shifted toward data-driven approaches due to the computational complexity requirements and the need for extensive parameter identification that electrochemical models demand for practical applications in real-time battery management systems.
 \end{itemize}
 
 Unlike these, \textbf{ statistical methods} use real data to estimate battery states. Common methods include:
@@ -49,9 +61,24 @@ AI-based methods use machine learning and deep learning to model complex relatio
 \textbf{Machine Learning} algorithms that learn from examples, such as Support Vector Machines (SVMs) and Random Forests, have been used to predict SoC and SoH using features like voltage, current, and temperature. For example, \cite{sun_simultaneous_2022} shows SVMs getting high accuracy in SoH estimation (98.26\%) for lead-acid batteries under controlled conditions. However, these methods need a lot of feature engineering and have trouble with time-based patterns. On the contrary, \textbf{Deep Learning} models are very good at finding time-based and spatial patterns in battery data. Key types include:
 \begin{itemize}
     \item \textbf{Convolutional Neural Networks (CNNs)}: Find spatial features from battery data, such as voltage profiles. Combining CNNs with Long Short-Term Memory (LSTM) units, as done in the \cite{Fangfang_Yang} paper, makes forecasting more accurate by modeling time-based patterns.
-    \item \textbf{Recurrent Neural Networks (RNNs) and LSTMs}: Made for sequential data, LSTMs are very good for RUL prediction, as they capture long-term battery wear trends. Studies using the NASA Battery Dataset \cite{noauthor_nasa_nodate} show LSTM-based models work better than older methods in RUL estimation as done in the \cite{hong_state--health_2023}.
-    \item \textbf{Transformer Models}: New in battery state estimation, transformers use attention mechanisms to model complex dependencies, showing promise in handling different-length sequences \cite{yilmaz_transformer-based_2025}.
+    \item \textbf{Recurrent Neural Networks (RNNs) and LSTMs}: Made for sequential data, LSTMs are very good for RUL prediction, as they capture long-term battery wear trends. The key advantage of LSTMs over traditional RNNs lies in their ability to selectively remember and forget information through specialized gate mechanisms, as illustrated in Figure~\ref{fig:rnn_vs_lstm_comparison}. While standard RNNs suffer from vanishing gradient problems that limit their ability to capture long-term dependencies, LSTMs incorporate long-term memory cells alongside working memory, enabling effective modeling of extended battery degradation sequences. This architectural improvement is crucial for battery applications where degradation patterns span hundreds or thousands of cycles \cite{noauthor_phenomnet_nodate}. Studies using the NASA Battery Dataset \cite{noauthor_nasa_nodate} show LSTM-based models work better than older methods in RUL estimation as done in the \cite{hong_state--health_2023}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1\textwidth]{imgs/rnn_lstm.png}
+\caption{Comparison between RNN and LSTM architectures showing the fundamental difference in memory mechanisms. RNNs rely solely on working memory with limited long-term retention capabilities, while LSTMs incorporate both working memory and long-term memory cells, enabling better modeling of extended temporal dependencies in battery degradation data \cite{noauthor_phenomnet_nodate}.}
+\label{fig:rnn_vs_lstm_comparison}
+\end{figure}
+
+    \item \textbf{Transformer Models}: New in battery state estimation, transformers use attention mechanisms to model complex dependencies, showing promise in handling different-length sequences \cite{yilmaz_transformer-based_2025}. The Transformer architecture, illustrated in Figure~\ref{fig:transformer_detailed_architecture}, consists of an encoder-decoder structure with multiple specialized components. The encoder processes input sequences through multiple layers containing self-attention mechanisms, positional encoding, and feed-forward networks, enabling the model to capture long-range dependencies in battery time series data. The decoder utilizes both self-attention and encoder-decoder attention mechanisms to generate predictions, with linear mapping layers producing the final output. This architecture is particularly effective for battery applications because the attention mechanisms can automatically identify relevant temporal patterns and relationships between different time steps in battery degradation sequences, eliminating the need for manual feature engineering while maintaining computational efficiency through parallel processing capabilities.
 \end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{imgs/transformer_input.png}
+\caption{Detailed Transformer architecture showing the encoder-decoder structure with self-attention mechanisms, positional encoding, and feed-forward networks. The encoder processes input sequences (T1-T4) while the decoder generates output predictions (T5-T6) using attention mechanisms to capture temporal dependencies in battery data.}
+\label{fig:transformer_detailed_architecture}
+\end{figure}
 
 \subsection{Hybrid Approaches}
 \color{Red}faltam referências nesta subsecção\color{Black}

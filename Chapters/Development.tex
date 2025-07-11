@@ -163,90 +163,157 @@ This experiment demonstrated the potential of MoE networks as an efficient alter
 \section{Dataset Collection and Preprocessing}
 \label{sec:dataset_preprocessing}
 
-The dataset development process was crucial for training strong and generalizable models, requiring careful consideration of data quality, diversity, and preprocessing strategies. Based on the comprehensive dataset analysis presented in Chapter~\ref{ch:stateoftheart}, the CALCE (Center for Advanced Life Cycle Engineering) battery dataset~\cite{CALCE_battery_nodate} was selected as the primary dataset for this work due to its comprehensive feature set and established use in the battery research community.
+The CALCE battery dataset was selected as the primary dataset for this work due to its comprehensive feature set and established use in the battery research community.
 
 \subsection{Dataset Characteristics and Features}
 \label{subsec:dataset_characteristics}
 
-The processed dataset consists of a battery data folder containing 886 CSV files with realistic battery cycle data and comprehensive measurements. Each file represents individual battery cycle measurements in chronological sequence, numbered sequentially from 1.csv to 886.csv. The dataset includes three critical features essential for battery health prediction:
+The dataset consists of 886 CSV files with battery cycle data. Initially, the data comes in batches of 50 cycles each. The first cycle of each batch is removed to eliminate initialization artifacts. A Python script separates all cycles into individual files, numbered sequentially from 1.csv to 886.csv.
 
-\begin{itemize}
-    \item \textbf{State of Charge (SOC)}: Represents the current charge level of the battery, critical for understanding battery behavior patterns and used in predictive modeling for battery performance assessment
-    \item \textbf{State of Health (SOH)}: Indicates the overall health condition of the battery, serving as a key metric for degradation analysis and essential for remaining useful life predictions
-    \item \textbf{Remaining Useful Life (RUL)}: Target variable for predictive modeling, representing cycles remaining before end-of-life and serving as the primary output for machine learning models
-\end{itemize}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{imgs/cycles_files.png}
+\caption{Dataset structure showing the systematic organization of battery cycle data from batches to individual files.}
+\label{fig:dataset_structure}
+\end{figure}
 
-The selection of these features provides a comprehensive representation of battery behavior across multiple dimensions: current operational state (SOC), long-term health status (SOH), and predictive lifetime assessment (RUL). This combination enables the development of robust models capable of capturing both immediate battery behavior and long-term degradation patterns.
+The original data contains multiple features including capacity, energy, current, voltage, and resistance measurements. Through preprocessing, the dataset is streamlined to focus on essential variables: Capacity\_Difference, Cumulative\_Cycle\_Index, Current(A), Date\_Time, RUL, SOC, SOH, and Voltage(V).
 
+\subsubsection{State of Charge (SOC) Calculation}
+\label{subsubsec:soc_calculation}
+
+SOC is calculated using a cycle-relative approach for each charge-discharge cycle:
+
+\begin{enumerate}
+    \item \textbf{Cycle-based maximum capacity determination}: For each cycle, the maximum discharge capacity is identified using:
+    \begin{equation}
+        C_{max,cycle} = \max(\text{Reset\_Discharge\_Capacity}_{cycle})
+    \end{equation}
+    
+    \item \textbf{Instantaneous SOC calculation}: The SOC at any given time point is calculated as:
+    \begin{equation}
+        SOC = \frac{\text{Reset\_Discharge\_Capacity}}{\text{Cycle\_Max\_Discharge}} \times 100\%
+    \end{equation}
+    
+    SOC values are clipped to ensure they remain within the physically meaningful range of 0-100\%.
+\end{enumerate}
+
+This approach ensures that SOC represents the true state of charge within each cycle, providing accurate representation of the battery's immediate operational state regardless of capacity degradation over time.
+
+\subsubsection{State of Health (SOH) Calculation}
+\label{subsubsec:soh_calculation}
+
+The State of Health calculation provides a measure of the battery's current capacity relative to its initial capacity, serving as a key indicator of degradation progression. The calculation process involves:
+
+\begin{enumerate}
+    \item \textbf{Cycle maximum capacity extraction}: For each cycle, the maximum discharge capacity is determined:
+    \begin{equation}
+        C_{max,cycle} = \max(\text{Reset\_Discharge\_Capacity}_{cycle})
+    \end{equation}
+    
+    \item \textbf{Reference capacity establishment}: The overall maximum capacity is identified from all cycles, typically representing the battery's initial capacity:
+    \begin{equation}
+        C_{reference} = \max(\text{all cycle maximum capacities})
+    \end{equation}
+    
+    \item \textbf{SOH percentage calculation}: The SOH is calculated as:
+    \begin{equation}
+        SOH = \frac{C_{max,cycle}}{C_{reference}} \times 100\%
+    \end{equation}
+\end{enumerate}
+
+This methodology ensures that SOH accurately reflects the battery's capacity retention throughout its operational lifetime, with 100\% representing the initial capacity and declining values indicating progressive degradation.
+
+\subsubsection{Remaining Useful Life (RUL) Calculation}
+\label{subsubsec:rul_calculation}
+
+The Remaining Useful Life calculation provides a predictive metric indicating how much operational life remains before the battery reaches end-of-life conditions. The implementation follows industry-standard practices:
+
+\begin{enumerate}
+    \item \textbf{End-of-life threshold definition}: The end-of-life condition is defined as 80\% of initial capacity, following typical industry standards:
+    \begin{equation}
+        \text{EOL\_threshold} = 80\%
+    \end{equation}
+    
+    \item \textbf{RUL percentage calculation}: The RUL is calculated as a percentage of remaining useful life:
+    \begin{equation}
+        RUL = \frac{SOH - \text{EOL\_threshold}}{100\% - \text{EOL\_threshold}} \times 100\%
+    \end{equation}
+    
+    RUL values are clipped to ensure they remain within the 0-100\% range, with 0\% indicating end-of-life conditions.
+\end{enumerate}
+
+This calculation approach provides a normalized measure of remaining battery life, where 100\% represents a new battery and 0\% indicates that the battery has reached end-of-life conditions. The linear relationship between SOH and RUL enables straightforward interpretation and facilitates machine learning model training.
+
+\subsubsection{Capacity Reset and Tracking}
+\label{subsubsec:capacity_tracking}
+
+The accurate calculation of SOC, SOH, and RUL depends on proper capacity tracking throughout battery testing. The implementation includes sophisticated capacity reset mechanisms:
+
+\begin{enumerate}
+    \item \textbf{Step-based capacity reset}: Capacities are reset when the step index reaches 9, indicating the start of a new charge-discharge cycle:
+    \begin{equation}
+        \text{Reset\_Charge\_Capacity} = 0, \quad \text{Reset\_Discharge\_Capacity} = 0
+    \end{equation}
+    
+    \item \textbf{Incremental capacity tracking}: Capacities are tracked by calculating differences between consecutive measurements:
+    \begin{align}
+        \Delta C_{charge} &= C_{charge}(t) - C_{charge}(t-1) \\
+        \Delta C_{discharge} &= C_{discharge}(t) - C_{discharge}(t-1)
+    \end{align}
+    
+    \item \textbf{Capacity difference calculation}: The net capacity difference is computed to track charge-discharge imbalances:
+    \begin{equation}
+        \text{Capacity\_Difference} = \text{Reset\_Charge\_Capacity} - \text{Reset\_Discharge\_Capacity}
+    \end{equation}
+\end{enumerate}
+
+This systematic approach ensures that all capacity-based calculations maintain accuracy throughout the battery's operational history, providing reliable foundation data for SOC, SOH, and RUL computations that are essential for effective battery health prediction modeling.
 \subsection{Cycle Selection System}
 \label{subsec:cycle_selection_system}
 
-To ensure optimal data distribution for machine learning applications, a sophisticated Cycle Selection System was developed and implemented from scratch using Python. This custom-built tool was specifically designed for this research to intelligently organize battery cycle data files using a group-based selection algorithm that ensures balanced representation across training, validation, and test datasets. The Python implementation provides complete control over the data distribution process and enables reproducible experimental setups tailored to the specific requirements of battery health prediction modeling.
+A custom Python tool organizes the 886 CSV files using a group-based selection algorithm. Files are divided into groups of 10, with a 7:2:1 ratio applied within each group for training, validation, and test sets. This yields approximately 70\% training, 20\% validation, and 10\% test data.
 
-\subsubsection{Group-Based Selection Algorithm}
+\subsubsection{Data Shuffling}
 
-The core algorithm implements a sophisticated group-based selection approach designed to maintain balanced representation across all data splits:
-
-\begin{enumerate}
-    \item \textbf{File Loading}: All 886 CSV files are loaded with numerical sorting to maintain proper chronological sequence (1.csv through 886.csv)
-    \item \textbf{Grouping Phase}: The files are divided into groups of 10, creating 88 complete groups plus 1 partial group containing 6 files, totaling 89 groups
-    \item \textbf{Selection Phase}: Within each group, a 7:2:1 ratio is applied, allocating 7 files to training, 2 files to validation, and 1 file to test sets
-    \item \textbf{Distribution Results}: This approach yields approximately 620 training files (70\%), 176 validation files (20\%), and 90 test files (10\%)
-\end{enumerate}
-
-The group-based approach offers several advantages over traditional random sampling: balanced representation ensures every group contributes proportionally to all splits, reduced bias prevents clustering of similar data in single splits, and scalability allows easy adaptation to different dataset sizes while maintaining reproducible distribution patterns.
-
-\subsubsection{Multi-Level Shuffling Implementation}
-
-The system implements randomization at multiple levels to eliminate order bias and improve model generalization:
-
-\begin{itemize}
-    \item \textbf{Group-level shuffling}: Randomizes file order within each group before selection
-    \item \textbf{Selection-level distribution}: Maintains balanced allocation while incorporating randomness
-    \item \textbf{Final list shuffling}: Additional randomization of complete train/validation/test lists
-\end{itemize}
-
-This multi-level randomization ensures that models cannot learn sequence patterns, promotes diverse training examples, and creates statistically valid, unbiased data splits while maintaining reproducibility through seed-based randomization.
+The cycle data are shuffled to prevent the network from memorizing data order and to avoid overfitting. Randomization is implemented with seed-based reproducibility.
 
 \subsection{Data Preprocessing Pipeline}
 \label{subsec:preprocessing_pipeline}
 
-Several preprocessing steps were implemented to ensure data quality and model training stability:
-
-\begin{itemize}
-    \item \textbf{Initial cycle removal}: The first charge-discharge cycle was removed from each battery file to avoid initialization artifacts and inconsistent starting conditions
-    \item \textbf{Incomplete cycle filtering}: Cycles with insufficient data points or incomplete charge/discharge sequences were excluded from the training set
-    \item \textbf{Outlier detection}: Statistical methods were applied to identify and remove measurement outliers that could negatively impact model training
-    \item \textbf{Data validation}: Comprehensive validation ensures file integrity and consistent data format across all cycles
-\end{itemize}
-
-Battery-level partitioning was employed to prevent data leakage, ensuring that cycles from the same battery appeared in only one partition. This approach maintains the independence of training, validation, and test sets, which is crucial for accurate model evaluation and generalization assessment.
+Several preprocessing steps ensure data quality: initial cycle removal, incomplete cycle filtering, outlier detection, and data validation. Battery-level partitioning prevents data leakage between training, validation, and test sets.
 
 \subsection{Input Data Structure}
 \label{subsec:input_data_structure}
 
-The input data structure was designed to optimize model performance and capture the temporal dependencies essential for battery degradation modeling:
-
-\begin{itemize}
-    \item \textbf{Sequence length}: Fixed-length sequences of 100 time steps were extracted from continuous battery operation data to capture sufficient temporal context while maintaining computational efficiency
-    \item \textbf{Feature vector}: Each time step included voltage, current, temperature, and derived features such as power and energy, providing comprehensive representation of battery operational state
-    \item \textbf{Target variables}: State of Health (SOH) values were calculated based on capacity fade measurements, ensuring accurate ground truth for model training
-    \item \textbf{Sliding window}: Overlapping sequences were generated to maximize training data utilization while preserving temporal relationships
-\end{itemize}
+Individual battery cycles are fed to the network in shuffled order. TimesNet automatically discovers periodic patterns and temporal dependencies within this shuffled data using FFT-based period detection and 2D transformation capabilities.
 
 \subsection{Configuration Management and Reproducibility}
 \label{subsec:config_management}
 
-The preprocessing system incorporates robust configuration management to ensure reproducible results and flexible experimental setups:
+The preprocessing pipeline outputs multiple JSON files containing organized file paths for different experimental scenarios. These JSON files include basic selection outputs, distributed subsets, and configurations with specific preprocessing steps applied. This approach ensures that all subsequent modeling phases have access to consistently processed, well-documented datasets with clear provenance and reproducible preparation methodology.
 
-\begin{itemize}
-    \item \textbf{JSON-based configuration}: Split ratios and processing parameters are defined in configuration files, allowing easy modification without code changes
-    \item \textbf{Metadata preservation}: All output files include comprehensive metadata with file counts, generation timestamps, and algorithm version information
-    \item \textbf{Seed management}: Optional random seed specification ensures reproducible randomization across experimental runs
-    \item \textbf{Version tracking}: Algorithm version metadata embedded in outputs enables tracking of processing methodology changes
-\end{itemize}
+\subsection{Calculated Values Analysis}
+\label{subsec:calculated_values_analysis}
 
-The preprocessing pipeline outputs multiple JSON files containing organized file paths for different experimental scenarios, including basic selection outputs, distributed subsets, and configurations with specific preprocessing steps applied. This systematic approach ensures that all subsequent modeling phases have access to consistently processed, well-documented datasets with clear provenance and reproducible preparation methodology.
+Figure~\ref{fig:calculated_values} presents the calculated SOC, SOH, and RUL values across the complete battery dataset, demonstrating the characteristic patterns of battery degradation over operational cycles.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{imgs/soc_soh_rul.png}
+\caption{Calculated SOC, SOH, and RUL values across battery operational cycles, showing the characteristic patterns of battery degradation and state evolution.}
+\label{fig:calculated_values}
+\end{figure}
+
+The results demonstrate three distinct behavioral patterns that are fundamental to battery health monitoring:
+
+\textbf{State of Health (SOH) Degradation}: The SOH values show a clear declining trend as battery cycles progress, starting at 100\% and gradually decreasing to approximately 40\% by the end of the dataset. This degradation pattern reflects the natural capacity fade that occurs in lithium-ion batteries due to various aging mechanisms. The occasional sharp drops in SOH correspond to specific degradation events or measurement artifacts during battery testing.
+
+\textbf{State of Charge (SOC) Cycling}: The SOC values exhibit consistent oscillating behavior between 0\% and 100\%, representing the regular charge-discharge cycles throughout battery operation. This cyclic pattern confirms that the SOC calculation correctly captures the charge state variations within each operational cycle, independent of the overall capacity degradation.
+
+\textbf{Remaining Useful Life (RUL) Decline}: The RUL values demonstrate a progressive decrease as battery cycles advance, starting at 100\% and declining toward 0\% as the battery approaches end-of-life conditions. The RUL calculation effectively translates the SOH degradation into a predictive metric, providing valuable information about the battery's remaining operational capacity.
+
+These patterns validate the accuracy of the implemented calculation methods and provide the foundation for training machine learning models that can predict battery health evolution and remaining useful life based on operational data.
 
 \section{Selected Deep Learning Approach}
 \label{sec:timesnet_model}
@@ -404,7 +471,7 @@ The most successful trial was trial 15, which presented the following results:
 
 The results show that using 2 encoder layers works better than deeper networks, likely avoiding overfitting on the battery dataset. The high expansion factor of 4 allows the model to capture more complex patterns, while setting top\_k to 9 means the model considers more frequency components than the default range, which helps capture the various periodic behaviors in battery degradation cycles.
 
-The optimization process was also monitored using Weights \& Biases, which provided real-time tracking of the validation loss across all trials. Figure~\ref{fig:wandb_validation_loss} shows the validation loss curves for different trials, illustrating the convergence behavior and helping identify the most promising hyperparameter configurations during the optimization process.
+The optimization process was also monitored using Weights \& Biases, which provided real-time tracking of the validation loss across all trials. This monitoring capability proved extremely valuable for verifying that training was proceeding correctly, particularly given the very slow nature of the hyperparameter search process. The ability to observe real-time training progress allowed for early detection of problematic configurations and ensured efficient use of computational resources during the week-long optimization process. Figure~\ref{fig:wandb_validation_loss} shows the validation loss curves for different trials, illustrating the convergence behavior and helping identify the most promi-sing hyperparameter configurations during the optimization process.
 
 \begin{figure}[htbp]
     \centering

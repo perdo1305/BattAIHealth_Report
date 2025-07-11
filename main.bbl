@@ -423,6 +423,32 @@
       \verb https://www.mathworks.com/help/simscape-battery/ug/battery-state-of-charge-estimation.html
       \endverb
     \endentry
+    \entry{noauthor_battmo_2024}{misc}{}
+      \list{language}{1}{%
+        {en-GB}%
+      }
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labeltitlesource}{title}
+      \field{abstract}{BattMo Welcome to the Battery Modelling Toolbox (BattMo), a comprehensive solution for continuum modelling of electrochemical devices in MATLAB and Julia!The code is open-source and available for d…}
+      \field{journaltitle}{Batterymodel.com}
+      \field{month}{9}
+      \field{title}{{BattMo}}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/RQB4UWSP/battmo.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://batterymodel.com/battmo/
+      \endverb
+      \verb{url}
+      \verb https://batterymodel.com/battmo/
+      \endverb
+    \endentry
     \entry{becker_wwwkalmanfilternet_online_nodate}{misc}{}
       \name{author}{1}{}{%
         {{hash=8b9a97e5aa79cf33a18655e991ad1097}{%
@@ -942,6 +968,72 @@
       \verb 10.48550/arXiv.2302.14703
       \endverb
     \endentry
+    \entry{mama_comprehensive_2025}{article}{}
+      \name{author}{5}{}{%
+        {{hash=59422540cb9f55624b8c532f4fd36460}{%
+           family={Mama},
+           familyi={M\bibinitperiod},
+           given={Magui},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b27f272f72ed3d07cafcdba32c09ceb6}{%
+           family={Solai},
+           familyi={S\bibinitperiod},
+           given={Elie},
+           giveni={E\bibinitperiod}}}%
+        {{hash=9017c7d24e26a1e02374305949443732}{%
+           family={Capurso},
+           familyi={C\bibinitperiod},
+           given={Tommaso},
+           giveni={T\bibinitperiod}}}%
+        {{hash=ac047479abef30efbe044689052152dd}{%
+           family={Danlos},
+           familyi={D\bibinitperiod},
+           given={Amelie},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2ba93741caeed712b5a49d7c01ad2554}{%
+           family={Khelladi},
+           familyi={K\bibinitperiod},
+           given={Sofiane},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{bbd4dac72e5e61141bd8ace1efed7331}
+      \strng{fullhash}{239c76cd309d897cdb3242ce065c7737}
+      \strng{bibnamehash}{bbd4dac72e5e61141bd8ace1efed7331}
+      \strng{authorbibnamehash}{bbd4dac72e5e61141bd8ace1efed7331}
+      \strng{authornamehash}{bbd4dac72e5e61141bd8ace1efed7331}
+      \strng{authorfullhash}{239c76cd309d897cdb3242ce065c7737}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The growing development of lithium-ion battery technology goes along with the new energy storage era across various sectors, e.g., mobility (electric vehicles), power generation and dispatching. The need for sophisticated modeling approaches has become a crucial tool to predict and optimize battery behavior given the demand of ever-higher performance, longevity, and safety. This review integrates the state-of-the-art in lithium-ion battery modeling, covering various scales, from particle-level simulations to pack-level thermal management systems, involving particle scale simplifications, microscale electrochemical models, and battery scale electrical models with thermal and heat generation prediction. Beyond that, authors highlight the growing trend in integrating highly accurate physics-based with thermal approaches such as the electrochemical-thermal coupled model to fully answer the multiscale challenges. Through capturing the electrochemical phenomena and thermal dynamics, and developing a comprehensive understanding of battery kinetics, safety risks such as thermal runaway can be thoroughly mitigated. Authors emphasize the trade-offs between computational efficiency and model complexity, explaining the limitations, strengths, and applications of diverse modeling approaches. This review illuminates the integration of battery management systems and cooling strategies.}
+      \field{issn}{0196-8904}
+      \field{journaltitle}{Energy Conversion and Management}
+      \field{month}{2}
+      \field{shorttitle}{Comprehensive review of multi-scale {Lithium}-ion batteries modeling}
+      \field{title}{Comprehensive review of multi-scale {Lithium}-ion batteries modeling: {From} electro-chemical dynamics up to heat transfer in battery thermal management system}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{325}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \field{pages}{119223}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.enconman.2024.119223
+      \endverb
+      \verb{file}
+      \verb ScienceDirect Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/S9RHEFAB/S0196890424011646.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0196890424011646
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0196890424011646
+      \endverb
+      \keyw{Battery safety,Battery thermal management,Degradation mechanism,Energy storage,Lithium-ion batteries,Multi-scale modeling,Thermal runaway}
+    \endentry
     \entry{mastali_battery_2013}{article}{}
       \name{author}{6}{}{%
         {{hash=40cd5d72d612072eb820fed8e083ccbf}{%
@@ -1093,6 +1185,31 @@
       \endverb
       \verb{url}
       \verb https://www.kaggle.com/datasets/patrickfleith/nasa-battery-dataset
+      \endverb
+    \endentry
+    \entry{noauthor_phenomnet_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Access 135+ million publications and connect with 20+ million researchers. Join for free and gain visibility by uploading your research.}
+      \field{journaltitle}{ResearchGate}
+      \field{shorttitle}{{PhenomNet}}
+      \field{title}{{PhenomNet}: {Bridging} {Phenotype}-{Genotype} {Gap}: {A} {CNN}-{LSTM} {Based} {Automatic} {Plant} {Root} {Anatomization} {System}}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/6RMT5NDN/341131167_PhenomNet_Bridging_Phenotype-Genotype_Gap_A_CNN-LSTM_Based_Automatic_Plant_Root_Anato.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/341131167_PhenomNet_Bridging_Phenotype-Genotype_Gap_A_CNN-LSTM_Based_Automatic_Plant_Root_Anatomization_System
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/341131167_PhenomNet_Bridging_Phenotype-Genotype_Gap_A_CNN-LSTM_Based_Automatic_Plant_Root_Anatomization_System
       \endverb
     \endentry
     \entry{ren_review_2023}{article}{}
@@ -1320,6 +1437,77 @@
       \verb https://ieeexplore.ieee.org/document/10082477
       \endverb
       \keyw{Batteries,Electric shock,feature extraction,Feature extraction,Robustness,Simulation,state of charge,state of health,Support vector machines,SVM,Voltage}
+    \endentry
+    \entry{tran_comparative_2021}{article}{}
+      \name{author}{5}{}{%
+        {{hash=d119003012c2e5793d9a56e6d40f1bb9}{%
+           family={Tran},
+           familyi={T\bibinitperiod},
+           given={Manh-Kien},
+           giveni={M\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=ef20f5d7f20b367b2370997b52a71093}{%
+           family={DaCosta},
+           familyi={D\bibinitperiod},
+           given={Andre},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b5f4e53df5063031ad653032fcb92e4a}{%
+           family={Mevawalla},
+           familyi={M\bibinitperiod},
+           given={Anosh},
+           giveni={A\bibinitperiod}}}%
+        {{hash=77a443f0eb59e6ae318b09ecdeb2a373}{%
+           family={Panchal},
+           familyi={P\bibinitperiod},
+           given={Satyam},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f2213a44353e9e1f37fe545ba90bbd05}{%
+           family={Fowler},
+           familyi={F\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{65fd27b5392355292df10a6b0a214125}
+      \strng{fullhash}{6005fede2e51bca191066e5aa76c1310}
+      \strng{bibnamehash}{65fd27b5392355292df10a6b0a214125}
+      \strng{authorbibnamehash}{65fd27b5392355292df10a6b0a214125}
+      \strng{authornamehash}{65fd27b5392355292df10a6b0a214125}
+      \strng{authorfullhash}{6005fede2e51bca191066e5aa76c1310}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Lithium-ion (Li-ion) batteries are an important component of energy storage systems used in various applications such as electric vehicles and portable electronics. There are many chemistries of Li-ion battery, but LFP, NMC, LMO, and NCA are four commonly used types. In order for the battery applications to operate safely and effectively, battery modeling is very important. The equivalent circuit model (ECM) is a battery model often used in the battery management system (BMS) to monitor and control Li-ion batteries. In this study, experiments were performed to investigate the performance of three different ECMs (1RC, 2RC, and 1RC with hysteresis) on four Li-ion battery chemistries (LFP, NMC, LMO, and NCA). The results indicated that all three models are usable for the four types of Li-ion chemistries, with low errors. It was also found that the ECMs tend to perform better in dynamic current profiles compared to non-dynamic ones. Overall, the best-performed model for LFP and NCA was the 1RC with hysteresis ECM, while the most suited model for NMC and LMO was the 1RC ECM. The results from this study showed that different ECMs would be suited for different Li-ion battery chemistries, which should be an important factor to be considered in real-world battery and BMS applications.}
+      \field{issn}{2313-0105}
+      \field{journaltitle}{Batteries}
+      \field{month}{9}
+      \field{note}{Number: 3 Publisher: Multidisciplinary Digital Publishing Institute}
+      \field{number}{3}
+      \field{shorttitle}{Comparative {Study} of {Equivalent} {Circuit} {Models} {Performance} in {Four} {Common} {Lithium}-{Ion} {Batteries}}
+      \field{title}{Comparative {Study} of {Equivalent} {Circuit} {Models} {Performance} in {Four} {Common} {Lithium}-{Ion} {Batteries}: {LFP}, {NMC}, {LMO}, {NCA}}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{7}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{51}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/batteries7030051
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/9AMD59VG/Tran et al. - 2021 - Comparative Study of Equivalent Circuit Models Performance in Four Common Lithium-Ion Batteries LFP.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2313-0105/7/3/51
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2313-0105/7/3/51
+      \endverb
+      \keyw{battery modeling,cell chemistry,equivalent circuit model,hysteresis effect,LFP,lithium-ion battery,LMO,NCA,NMC}
     \endentry
     \entry{vijaychandra_comprehensive_2024}{inproceedings}{}
       \name{author}{2}{}{%
