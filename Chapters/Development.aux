@@ -10,9 +10,9 @@
 \mph@setcol{ii:27}{\mph@nr}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces MATLAB Simulink implementation of Extended Kalman Filter for battery state-of-charge estimation, showing the complete simulation framework used for testing and validation.\relax }}{28}{figure.caption.7}\protected@file@percent }
 \newlabel{fig:simulink_ekf_implementation}{{5}{28}{MATLAB Simulink implementation of Extended Kalman Filter for battery state-of-charge estimation, showing the complete simulation framework used for testing and validation.\relax }{figure.caption.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Block diagram of the Batemo INR21700-p45b battery model integration, showing the physics-based simulation structure used for enhanced accuracy in battery behavior modeling.\relax }}{28}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:batemo_blocks}{{6}{28}{Block diagram of the Batemo INR21700-p45b battery model integration, showing the physics-based simulation structure used for enhanced accuracy in battery behavior modeling.\relax }{figure.caption.8}{}}
 \mph@setcol{ii:28}{\mph@nr}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Block diagram of the Batemo INR21700-p45b battery model integration, showing the physics-based simulation structure used for enhanced accuracy in battery behavior modeling.\relax }}{29}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:batemo_blocks}{{6}{29}{Block diagram of the Batemo INR21700-p45b battery model integration, showing the physics-based simulation structure used for enhanced accuracy in battery behavior modeling.\relax }{figure.caption.8}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Extended Kalman Filter estimation results showing SOC tracking performance and comparison with reference measurements, illustrating the accuracy and reliability of the implemented algorithm.\relax }}{29}{figure.caption.9}\protected@file@percent }
 \newlabel{fig:ekf_results}{{7}{29}{Extended Kalman Filter estimation results showing SOC tracking performance and comparison with reference measurements, illustrating the accuracy and reliability of the implemented algorithm.\relax }{figure.caption.9}{}}
 \mph@setcol{ii:29}{\mph@nr}
@@ -43,41 +43,67 @@
 \mph@setcol{ii:36}{\mph@nr}
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}{Dataset Collection and Preprocessing}}{37}{section.4.3}\protected@file@percent }
 \newlabel{sec:dataset_preprocessing}{{4.3}{37}{Dataset Collection and Preprocessing}{section.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}{Dataset Characteristics and Features}}{37}{subsection.4.3.1}\protected@file@percent }
+\newlabel{subsec:dataset_characteristics}{{4.3.1}{37}{Dataset Characteristics and Features}{subsection.4.3.1}{}}
 \mph@setcol{ii:37}{\mph@nr}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}{Selected Deep Learning Approach}}{38}{section.4.4}\protected@file@percent }
-\newlabel{sec:timesnet_model}{{4.4}{38}{Selected Deep Learning Approach}{section.4.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}{Cycle Selection System}}{38}{subsection.4.3.2}\protected@file@percent }
+\newlabel{subsec:cycle_selection_system}{{4.3.2}{38}{Cycle Selection System}{subsection.4.3.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.1}{Group-Based Selection Algorithm}}{38}{subsubsection.4.3.2.1}\protected@file@percent }
 \mph@setcol{ii:38}{\mph@nr}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.2}{Multi-Level Shuffling Implementation}}{39}{subsubsection.4.3.2.2}\protected@file@percent }
 \mph@setcol{ii:39}{\mph@nr}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}{TimesBlock Architecture}}{40}{subsection.4.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}{Data Preprocessing Pipeline}}{40}{subsection.4.3.3}\protected@file@percent }
+\newlabel{subsec:preprocessing_pipeline}{{4.3.3}{40}{Data Preprocessing Pipeline}{subsection.4.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.4}{Input Data Structure}}{40}{subsection.4.3.4}\protected@file@percent }
+\newlabel{subsec:input_data_structure}{{4.3.4}{40}{Input Data Structure}{subsection.4.3.4}{}}
 \mph@setcol{ii:40}{\mph@nr}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces TimesNet 2D transformation: converting 1D time series into structured 2D tensors by discovering periodicity~\blx@tocontentsinit {0}\cite {wu_timesnet_2023}.\relax }}{41}{figure.caption.17}\protected@file@percent }
-\newlabel{fig:timesnet_2d_transformation}{{14}{41}{TimesNet 2D transformation: converting 1D time series into structured 2D tensors by discovering periodicity~\cite {wu_timesnet_2023}.\relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.5}{Configuration Management and Reproducibility}}{41}{subsection.4.3.5}\protected@file@percent }
+\newlabel{subsec:config_management}{{4.3.5}{41}{Configuration Management and Reproducibility}{subsection.4.3.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}{Selected Deep Learning Approach}}{41}{section.4.4}\protected@file@percent }
+\newlabel{sec:timesnet_model}{{4.4}{41}{Selected Deep Learning Approach}{section.4.4}{}}
 \mph@setcol{ii:41}{\mph@nr}
 \mph@setcol{ii:42}{\mph@nr}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}{Model Optimization}}{43}{subsection.4.4.2}\protected@file@percent }
-\newlabel{sec:model_optimization}{{4.4.2}{43}{Model Optimization}{subsection.4.4.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}{Hyperparameter Search}}{43}{subsection.4.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}{TimesBlock Architecture}}{43}{subsection.4.4.1}\protected@file@percent }
 \mph@setcol{ii:43}{\mph@nr}
-\newlabel{subsec:best_trial_results}{{4.4.3}{44}{Hyperparameter Search}{subsection.4.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces TimesNet 2D transformation: converting 1D time series into structured 2D tensors by discovering periodicity~\blx@tocontentsinit {0}\cite {wu_timesnet_2023}.\relax }}{44}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:timesnet_2d_transformation}{{14}{44}{TimesNet 2D transformation: converting 1D time series into structured 2D tensors by discovering periodicity~\cite {wu_timesnet_2023}.\relax }{figure.caption.17}{}}
 \mph@setcol{ii:44}{\mph@nr}
+\mph@setcol{ii:45}{\mph@nr}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}{Model Optimization}}{46}{subsection.4.4.2}\protected@file@percent }
+\newlabel{sec:model_optimization}{{4.4.2}{46}{Model Optimization}{subsection.4.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}{Hyperparameter Search}}{46}{subsection.4.4.3}\protected@file@percent }
+\mph@setcol{ii:46}{\mph@nr}
+\mph@setcol{ii:47}{\mph@nr}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Hyperparameter importance analysis showing the relative influence of each parameter on model performance during Optuna optimization.\relax }}{48}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:hyperparameter_importance}{{15}{48}{Hyperparameter importance analysis showing the relative influence of each parameter on model performance during Optuna optimization.\relax }{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Parallel coordinate plot showing the relationship between hyperparameter configurations and objective values across all 50 optimization trials. Each line represents a trial, with color intensity indicating performance (darker lines represent better MSE values).\relax }}{48}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:parallel_coordinates}{{16}{48}{Parallel coordinate plot showing the relationship between hyperparameter configurations and objective values across all 50 optimization trials. Each line represents a trial, with color intensity indicating performance (darker lines represent better MSE values).\relax }{figure.caption.19}{}}
+\mph@setcol{ii:48}{\mph@nr}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Optuna objective value progression showing the improvement in MSE loss over 50 optimization trials.\relax }}{49}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:optuna_objective}{{17}{49}{Optuna objective value progression showing the improvement in MSE loss over 50 optimization trials.\relax }{figure.caption.20}{}}
+\newlabel{subsec:best_trial_results}{{4.4.3}{49}{Hyperparameter Search}{figure.caption.20}{}}
+\mph@setcol{ii:49}{\mph@nr}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Weights \& Biases validation loss tracking across multiple Optuna trials, showing the convergence behavior and performance comparison between different hyperparameter configurations.\relax }}{50}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:wandb_validation_loss}{{18}{50}{Weights \& Biases validation loss tracking across multiple Optuna trials, showing the convergence behavior and performance comparison between different hyperparameter configurations.\relax }{figure.caption.21}{}}
+\mph@setcol{ii:50}{\mph@nr}
 \@writefile{lof}{\ttl@tocsep }
 \@writefile{lot}{\ttl@tocsep }
 \def\mph@nr{5}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}{Experiments and Results}}{45}{chapter.5}\protected@file@percent }
-\newlabel{sec:experiments_results}{{5}{45}{Hyperparameter Search}{chapter.5}{}}
-\mph@setcol{ii:45}{\mph@nr}
-\mph@setcol{ii:46}{\mph@nr}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}{Experiments and Results}}{51}{chapter.5}\protected@file@percent }
+\newlabel{sec:experiments_results}{{5}{51}{Hyperparameter Search}{chapter.5}{}}
+\mph@setcol{ii:51}{\mph@nr}
+\mph@setcol{ii:52}{\mph@nr}
 \@writefile{lof}{\ttl@tocsep }
 \@writefile{lot}{\ttl@tocsep }
 \def\mph@nr{6}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}{Conclusion and Future Work}}{47}{chapter.6}\protected@file@percent }
-\newlabel{sec:conclusion_future_work}{{6}{47}{Hyperparameter Search}{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}{Conclusion}}{47}{section.6.1}\protected@file@percent }
-\mph@setcol{ii:47}{\mph@nr}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}{Future Work}}{48}{section.6.2}\protected@file@percent }
-\mph@setcol{ii:48}{\mph@nr}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}{Conclusion and Future Work}}{53}{chapter.6}\protected@file@percent }
+\newlabel{sec:conclusion_future_work}{{6}{53}{Hyperparameter Search}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}{Conclusion}}{53}{section.6.1}\protected@file@percent }
+\mph@setcol{ii:53}{\mph@nr}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}{Future Work}}{54}{section.6.2}\protected@file@percent }
+\mph@setcol{ii:54}{\mph@nr}
 \@setckpt{Chapters/Development}{
-\setcounter{page}{49}
+\setcounter{page}{55}
 \setcounter{equation}{7}
 \setcounter{enumi}{2}
 \setcounter{enumii}{0}
@@ -92,7 +118,7 @@
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{14}
+\setcounter{figure}{18}
 \setcounter{table}{2}
 \setcounter{dummy}{6}
 \setcounter{tabx@nest}{0}

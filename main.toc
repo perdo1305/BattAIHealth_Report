@@ -5,8 +5,8 @@
 \contentsline {chapter}{Resumo}{iii}{dummy.2}%
 \contentsline {chapter}{Abstract}{v}{dummy.3}%
 \contentsline {chapter}{List of Figures}{ix}{dummy.5}%
-\contentsline {chapter}{List of Tables}{xi}{dummy.6}%
-\contentsline {chapter}{List of Acronyms}{xv}{section*.1}%
+\contentsline {chapter}{List of Tables}{xiii}{dummy.6}%
+\contentsline {chapter}{List of Acronyms}{xvii}{section*.1}%
 \vspace {\beforebibskip }
 \contentsline {chapter}{\numberline {1}{Introduction}}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}{Background Material and Supporting Technologies}}{3}{chapter.2}%
@@ -32,16 +32,23 @@
 \contentsline {section}{\numberline {4.2}{Neural Network Approaches}}{32}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}{Transformer and Mixture of Experts Networks}}{32}{subsection.4.2.1}%
 \contentsline {section}{\numberline {4.3}{Dataset Collection and Preprocessing}}{37}{section.4.3}%
-\contentsline {section}{\numberline {4.4}{Selected Deep Learning Approach}}{38}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}{TimesBlock Architecture}}{40}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}{Model Optimization}}{43}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}{Hyperparameter Search}}{43}{subsection.4.4.3}%
-\contentsline {chapter}{\numberline {5}{Experiments and Results}}{45}{chapter.5}%
-\contentsline {chapter}{\numberline {6}{Conclusion and Future Work}}{47}{chapter.6}%
-\contentsline {section}{\numberline {6.1}{Conclusion}}{47}{section.6.1}%
-\contentsline {section}{\numberline {6.2}{Future Work}}{48}{section.6.2}%
+\contentsline {subsection}{\numberline {4.3.1}{Dataset Characteristics and Features}}{37}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}{Cycle Selection System}}{38}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}{Group-Based Selection Algorithm}}{38}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}{Multi-Level Shuffling Implementation}}{39}{subsubsection.4.3.2.2}%
+\contentsline {subsection}{\numberline {4.3.3}{Data Preprocessing Pipeline}}{40}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}{Input Data Structure}}{40}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}{Configuration Management and Reproducibility}}{41}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}{Selected Deep Learning Approach}}{41}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}{TimesBlock Architecture}}{43}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}{Model Optimization}}{46}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}{Hyperparameter Search}}{46}{subsection.4.4.3}%
+\contentsline {chapter}{\numberline {5}{Experiments and Results}}{51}{chapter.5}%
+\contentsline {chapter}{\numberline {6}{Conclusion and Future Work}}{53}{chapter.6}%
+\contentsline {section}{\numberline {6.1}{Conclusion}}{53}{section.6.1}%
+\contentsline {section}{\numberline {6.2}{Future Work}}{54}{section.6.2}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {7}{Conclusions}}{49}{chapter.7}%
+\contentsline {chapter}{\numberline {7}{Conclusions}}{55}{chapter.7}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {}{Bibliography}}{51}{dummy.7}%
+\contentsline {chapter}{\numberline {}{Bibliography}}{57}{dummy.7}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

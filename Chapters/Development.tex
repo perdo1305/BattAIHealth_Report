@@ -20,7 +20,7 @@ The exploration began with the MATLAB Simulink Battery State-of-Charge Estimatio
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{imgs/simulink_EKF.png}
+\includegraphics[width=1\textwidth]{imgs/simulink_EKF.png}
 \caption{MATLAB Simulink implementation of Extended Kalman Filter for battery state-of-charge estimation, showing the complete simulation framework used for testing and validation.}
 \label{fig:simulink_ekf_implementation}
 \end{figure}
@@ -165,30 +165,88 @@ This experiment demonstrated the potential of MoE networks as an efficient alter
 
 The dataset development process was crucial for training strong and generalizable models, requiring careful consideration of data quality, diversity, and preprocessing strategies. Based on the comprehensive dataset analysis presented in Chapter~\ref{ch:stateoftheart}, the CALCE (Center for Advanced Life Cycle Engineering) battery dataset~\cite{CALCE_battery_nodate} was selected as the primary dataset for this work due to its comprehensive feature set and established use in the battery research community.
 
+\subsection{Dataset Characteristics and Features}
+\label{subsec:dataset_characteristics}
+
+The processed dataset consists of a battery data folder containing 886 CSV files with realistic battery cycle data and comprehensive measurements. Each file represents individual battery cycle measurements in chronological sequence, numbered sequentially from 1.csv to 886.csv. The dataset includes three critical features essential for battery health prediction:
+
+\begin{itemize}
+    \item \textbf{State of Charge (SOC)}: Represents the current charge level of the battery, critical for understanding battery behavior patterns and used in predictive modeling for battery performance assessment
+    \item \textbf{State of Health (SOH)}: Indicates the overall health condition of the battery, serving as a key metric for degradation analysis and essential for remaining useful life predictions
+    \item \textbf{Remaining Useful Life (RUL)}: Target variable for predictive modeling, representing cycles remaining before end-of-life and serving as the primary output for machine learning models
+\end{itemize}
+
+The selection of these features provides a comprehensive representation of battery behavior across multiple dimensions: current operational state (SOC), long-term health status (SOH), and predictive lifetime assessment (RUL). This combination enables the development of robust models capable of capturing both immediate battery behavior and long-term degradation patterns.
+
+\subsection{Cycle Selection System}
+\label{subsec:cycle_selection_system}
+
+To ensure optimal data distribution for machine learning applications, a sophisticated Cycle Selection System was developed and implemented from scratch using Python. This custom-built tool was specifically designed for this research to intelligently organize battery cycle data files using a group-based selection algorithm that ensures balanced representation across training, validation, and test datasets. The Python implementation provides complete control over the data distribution process and enables reproducible experimental setups tailored to the specific requirements of battery health prediction modeling.
+
+\subsubsection{Group-Based Selection Algorithm}
+
+The core algorithm implements a sophisticated group-based selection approach designed to maintain balanced representation across all data splits:
+
 \begin{enumerate}
-    \item Complete cycle life data spanning multiple battery chemistries
-    \item High-quality measurements with consistent sampling rates
-    \item Well-documented experimental conditions and procedures
-    \item Established use in battery research community for benchmarking
+    \item \textbf{File Loading}: All 886 CSV files are loaded with numerical sorting to maintain proper chronological sequence (1.csv through 886.csv)
+    \item \textbf{Grouping Phase}: The files are divided into groups of 10, creating 88 complete groups plus 1 partial group containing 6 files, totaling 89 groups
+    \item \textbf{Selection Phase}: Within each group, a 7:2:1 ratio is applied, allocating 7 files to training, 2 files to validation, and 1 file to test sets
+    \item \textbf{Distribution Results}: This approach yields approximately 620 training files (70\%), 176 validation files (20\%), and 90 test files (10\%)
 \end{enumerate}
 
+The group-based approach offers several advantages over traditional random sampling: balanced representation ensures every group contributes proportionally to all splits, reduced bias prevents clustering of similar data in single splits, and scalability allows easy adaptation to different dataset sizes while maintaining reproducible distribution patterns.
 
-Several preprocessing steps were implemented to ensure data quality and model training stability, namely:
+\subsubsection{Multi-Level Shuffling Implementation}
+
+The system implements randomization at multiple levels to eliminate order bias and improve model generalization:
+
+\begin{itemize}
+    \item \textbf{Group-level shuffling}: Randomizes file order within each group before selection
+    \item \textbf{Selection-level distribution}: Maintains balanced allocation while incorporating randomness
+    \item \textbf{Final list shuffling}: Additional randomization of complete train/validation/test lists
+\end{itemize}
+
+This multi-level randomization ensures that models cannot learn sequence patterns, promotes diverse training examples, and creates statistically valid, unbiased data splits while maintaining reproducibility through seed-based randomization.
+
+\subsection{Data Preprocessing Pipeline}
+\label{subsec:preprocessing_pipeline}
+
+Several preprocessing steps were implemented to ensure data quality and model training stability:
 
 \begin{itemize}
     \item \textbf{Initial cycle removal}: The first charge-discharge cycle was removed from each battery file to avoid initialization artifacts and inconsistent starting conditions
     \item \textbf{Incomplete cycle filtering}: Cycles with insufficient data points or incomplete charge/discharge sequences were excluded from the training set
     \item \textbf{Outlier detection}: Statistical methods were applied to identify and remove measurement outliers that could negatively impact model training
+    \item \textbf{Data validation}: Comprehensive validation ensures file integrity and consistent data format across all cycles
 \end{itemize}
 
-Battery-level partitioning was also employed to prevent data leakage, ensuring that cycles from the same battery appeared in only one partition. The input data structure was then designed to optimize model performance, using the following techiques:
+Battery-level partitioning was employed to prevent data leakage, ensuring that cycles from the same battery appeared in only one partition. This approach maintains the independence of training, validation, and test sets, which is crucial for accurate model evaluation and generalization assessment.
+
+\subsection{Input Data Structure}
+\label{subsec:input_data_structure}
+
+The input data structure was designed to optimize model performance and capture the temporal dependencies essential for battery degradation modeling:
 
 \begin{itemize}
-    \item \textbf{Sequence length}: Fixed-length sequences of 100 time steps were extracted from continuous battery operation data.
-    \item \textbf{Feature vector}: Each time step included voltage, current, temperature, and derived features such as power and energy.
-    \item \textbf{Target variables}: State of Health (SOH) values were calculated based on capacity fade measurements.
-    \item \textbf{Sliding window}: Overlapping sequences were generated to maximize training data utilization.
+    \item \textbf{Sequence length}: Fixed-length sequences of 100 time steps were extracted from continuous battery operation data to capture sufficient temporal context while maintaining computational efficiency
+    \item \textbf{Feature vector}: Each time step included voltage, current, temperature, and derived features such as power and energy, providing comprehensive representation of battery operational state
+    \item \textbf{Target variables}: State of Health (SOH) values were calculated based on capacity fade measurements, ensuring accurate ground truth for model training
+    \item \textbf{Sliding window}: Overlapping sequences were generated to maximize training data utilization while preserving temporal relationships
 \end{itemize}
+
+\subsection{Configuration Management and Reproducibility}
+\label{subsec:config_management}
+
+The preprocessing system incorporates robust configuration management to ensure reproducible results and flexible experimental setups:
+
+\begin{itemize}
+    \item \textbf{JSON-based configuration}: Split ratios and processing parameters are defined in configuration files, allowing easy modification without code changes
+    \item \textbf{Metadata preservation}: All output files include comprehensive metadata with file counts, generation timestamps, and algorithm version information
+    \item \textbf{Seed management}: Optional random seed specification ensures reproducible randomization across experimental runs
+    \item \textbf{Version tracking}: Algorithm version metadata embedded in outputs enables tracking of processing methodology changes
+\end{itemize}
+
+The preprocessing pipeline outputs multiple JSON files containing organized file paths for different experimental scenarios, including basic selection outputs, distributed subsets, and configurations with specific preprocessing steps applied. This systematic approach ensures that all subsequent modeling phases have access to consistently processed, well-documented datasets with clear provenance and reproducible preparation methodology.
 
 \section{Selected Deep Learning Approach}
 \label{sec:timesnet_model}
@@ -290,7 +348,41 @@ For the hyperparameter search, 50 trials were performed, with 50 epochs each, us
     \item \textbf{top\_k}: Top-k dominant frequencies in TimesNet (1--5) --- controls how many frequency components to consider
 \end{itemize}
 
-Through this optimization, it was possible to detect the importance of the hyperparameters. The analysis showed that the importance factor of the \textbf{e\_layers} parameter (number of encoder layers) is the parameter that most influences the result when changed, demonstrating that the depth of the encoder architecture is critical for model performance.
+Through this optimization, it was possible to detect the importance of the hyperparameters. The analysis showed that the importance factor of the \textbf{e\_layers} parameter (number of encoder layers) is the parameter that most influences the result when changed, demonstrating that the depth of the encoder architecture is critical for model performance. Figure~\ref{fig:hyperparameter_importance} illustrates the relative importance of each hyperparameter in the optimization process, clearly showing that \textbf{e\_layers} dominates with an importance score of 0.59, followed by \textbf{factor} (0.22) and \textbf{top\_k} (0.18).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{imgs/Hyperparameter_importance.png}
+    \caption{Hyperparameter importance analysis showing the relative influence of each parameter on model performance during Optuna optimization.}
+    \label{fig:hyperparameter_importance}
+\end{figure}
+
+The hyperparameter optimization process can be further analyzed through the parallel coordinate plot shown in Figure~\ref{fig:parallel_coordinates}. This visualization technique displays the relationship between different hyperparameter configurations and their corresponding objective values (MSE loss). In the parallel coordinate plot, each vertical axis represents a different hyperparameter, and each line connects the parameter values for a single trial, with the line color indicating the objective value performance.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{imgs/objective_parallel_coordinate.png}
+    \caption{Parallel coordinate plot showing the relationship between hyperparameter configurations and objective values across all 50 optimization trials. Each line represents a trial, with color intensity indicating performance (darker lines represent better MSE values).}
+    \label{fig:parallel_coordinates}
+\end{figure}
+
+The parallel coordinate visualization reveals several important insights about the hyperparameter space:
+
+\begin{itemize}
+    \item \textbf{Convergence patterns}: The darker lines (representing trials with lower MSE values) show clustering around specific parameter combinations, indicating optimal regions in the hyperparameter space.
+    \item \textbf{Parameter interactions}: The plot reveals how different parameter combinations interact with each other, particularly showing that successful trials tend to have \textbf{e\_layers} values of 2, which aligns with the importance analysis.
+    \item \textbf{Search efficiency}: The distribution of lines across the parameter space demonstrates Optuna's efficient exploration strategy, focusing sampling on promising regions as the optimization progresses.
+    \item \textbf{Trade-off visualization}: The varying line colors across different parameter combinations help identify trade-offs between different hyperparameter settings and their impact on model performance.
+\end{itemize}
+
+Additionally, Figure~\ref{fig:optuna_objective} shows the progression of the objective value throughout the optimization process, demonstrating how Optuna efficiently converges toward better solutions over the 50 trials.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{imgs/optuna_objective_plot.png}
+    \caption{Optuna objective value progression showing the improvement in MSE loss over 50 optimization trials.}
+    \label{fig:optuna_objective}
+\end{figure}
 
 \textbf{Network Optimization Discussion}
 \label{subsec:best_trial_results}
@@ -311,6 +403,15 @@ The most successful trial was trial 15, which presented the following results:
 \end{itemize}
 
 The results show that using 2 encoder layers works better than deeper networks, likely avoiding overfitting on the battery dataset. The high expansion factor of 4 allows the model to capture more complex patterns, while setting top\_k to 9 means the model considers more frequency components than the default range, which helps capture the various periodic behaviors in battery degradation cycles.
+
+The optimization process was also monitored using Weights \& Biases, which provided real-time tracking of the validation loss across all trials. Figure~\ref{fig:wandb_validation_loss} shows the validation loss curves for different trials, illustrating the convergence behavior and helping identify the most promising hyperparameter configurations during the optimization process.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1.0\textwidth]{imgs/W&B_optimization_validation_loss.png}
+    \caption{Weights \& Biases validation loss tracking across multiple Optuna trials, showing the convergence behavior and performance comparison between different hyperparameter configurations.}
+    \label{fig:wandb_validation_loss}
+\end{figure}
 
 \chapter{Experiments and Results}
 \label{sec:experiments_results}
