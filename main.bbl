@@ -423,6 +423,43 @@
       \verb https://www.mathworks.com/help/simscape-battery/ug/battery-state-of-charge-estimation.html
       \endverb
     \endentry
+    \entry{becker_wwwkalmanfilternet_online_nodate}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b9a97e5aa79cf33a18655e991ad1097}{%
+           family={Becker\bibnamedelima (www.kalmanfilter.net)},
+           familyi={B\bibinitperiod\bibinitdelim (\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{8b9a97e5aa79cf33a18655e991ad1097}
+      \strng{fullhash}{8b9a97e5aa79cf33a18655e991ad1097}
+      \strng{bibnamehash}{8b9a97e5aa79cf33a18655e991ad1097}
+      \strng{authorbibnamehash}{8b9a97e5aa79cf33a18655e991ad1097}
+      \strng{authornamehash}{8b9a97e5aa79cf33a18655e991ad1097}
+      \strng{authorfullhash}{8b9a97e5aa79cf33a18655e991ad1097}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Easy and intuitive Kalman Filter tutorial}
+      \field{title}{Online {Kalman} {Filter} {Tutorial}}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/HH9C45P2/kalman1d.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.kalmanfilter.net/
+      \endverb
+      \verb{url}
+      \verb https://www.kalmanfilter.net/
+      \endverb
+    \endentry
     \entry{noauthor_biolaborange3_nodate}{misc}{}
       \field{sortinit}{b}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
@@ -791,6 +828,30 @@
       \endverb
       \keyw{Dual-stage attention-based recurrent neural network,Lithium-ion battery,State of health}
     \endentry
+    \entry{noauthor_implementation_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Access 135+ million publications and connect with 20+ million researchers. Join for free and gain visibility by uploading your research.}
+      \field{journaltitle}{ResearchGate}
+      \field{title}{Implementation of {Coulomb} {Counting} {Method} for {Estimating} the {State} of {Charge} of {Lithium}-{Ion} {Battery}}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/V6MUDSWR/352428548_Implementation_of_Coulomb_Counting_Method_for_Estimating_the_State_of_Charge_of_Lithi.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/352428548_Implementation_of_Coulomb_Counting_Method_for_Estimating_the_State_of_Charge_of_Lithium-Ion_Battery
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/352428548_Implementation_of_Coulomb_Counting_Method_for_Estimating_the_State_of_Charge_of_Lithium-Ion_Battery
+      \endverb
+    \endentry
     \entry{kabir_degradation_2017}{article}{}
       \name{author}{2}{}{%
         {{hash=fe59eb29200a4406c7d1c582b3a6b3b5}{%
@@ -881,6 +942,135 @@
       \verb 10.48550/arXiv.2302.14703
       \endverb
     \endentry
+    \entry{mastali_battery_2013}{article}{}
+      \name{author}{6}{}{%
+        {{hash=40cd5d72d612072eb820fed8e083ccbf}{%
+           family={Mastali},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=312df06a219771daea424c5419457861}{%
+           family={Vazquez-Arenas},
+           familyi={V\bibinithyphendelim A\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=838b3f576fa639f0ea08082c6ac5f04a}{%
+           family={Fraser},
+           familyi={F\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c3035fa4fc8a043ebf2ea4bff39adda1}{%
+           family={Fowler},
+           familyi={F\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5ec149a60c377c1ab679a2446ee35fbd}{%
+           family={Afshar},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3a207b24eda7910d54a8715581231ebc}{%
+           family={Stevens},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec8f8ce36dd4397b8e21f673817f31b9}
+      \strng{fullhash}{35b0556ded21e2c9a9bf205f12f0e439}
+      \strng{bibnamehash}{ec8f8ce36dd4397b8e21f673817f31b9}
+      \strng{authorbibnamehash}{ec8f8ce36dd4397b8e21f673817f31b9}
+      \strng{authornamehash}{ec8f8ce36dd4397b8e21f673817f31b9}
+      \strng{authorfullhash}{35b0556ded21e2c9a9bf205f12f0e439}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Battery management system (BMS) requires an accurate prediction the remaining energy level or state of charge (SOC) of the cell or battery pack. However, in electric vehicles, batteries experience a dynamic operational environment whereby the simple algorithms employed in the portable devices to predict SOC, such as coulomb counting, are insufficient for this purpose. To address this problem, a Kalman filtering method is used to estimate the state of the charge of two different commercial lithium-ion batteries, with new physical insight being provided through an analysis of the Kalman filter covariance noise parameters. For example, the effect of geometry of the battery on value of these parameters is discussed. Different models are developed, tested and incorporated in the filter design. Subsequently, two types of Kalman filters including the extended Kalman filter and dual extended Kalman filter are implemented in order to predict the state of charge of the batteries. It is shown that the Kalman filtering can predict state of the charge of the battery with maximum 4\% error.}
+      \field{issn}{0378-7753}
+      \field{journaltitle}{Journal of Power Sources}
+      \field{month}{10}
+      \field{title}{Battery state of the charge estimation using {Kalman} filtering}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{239}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \field{pages}{294\bibrangedash 307}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.jpowsour.2013.03.131
+      \endverb
+      \verb{file}
+      \verb ScienceDirect Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/GRDWIV2K/S0378775313005259.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0378775313005259
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0378775313005259
+      \endverb
+      \keyw{Battery SOC estimation,Hybrid electric vehicles,Kalman filter,Plug-in hybrid electric vehicles}
+    \endentry
+    \entry{movassagh_critical_2021}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=e3427fe7323f4bc41ed8b61eac13cd44}{%
+           family={Movassagh},
+           familyi={M\bibinitperiod},
+           given={Kiarash},
+           giveni={K\bibinitperiod}}}%
+        {{hash=99d334001fc27f5eebd60afa5595b1c2}{%
+           family={Raihan},
+           familyi={R\bibinitperiod},
+           given={Sheikh\bibnamedelima Arif},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=c7df0b035a6e83e6c9b1e01d9063b381}{%
+           family={Balasingam},
+           familyi={B\bibinitperiod},
+           given={Balakumar},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8c6e9ced6bb033ac45a4edb46261c2b0}{%
+           family={Pattipati},
+           familyi={P\bibinitperiod},
+           given={Krishna},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{037519c28d5788ed3a1d23d4e25d3c1d}
+      \strng{fullhash}{db24299a8829af4622afc4ee264997c7}
+      \strng{bibnamehash}{037519c28d5788ed3a1d23d4e25d3c1d}
+      \strng{authorbibnamehash}{037519c28d5788ed3a1d23d4e25d3c1d}
+      \strng{authornamehash}{037519c28d5788ed3a1d23d4e25d3c1d}
+      \strng{authorfullhash}{db24299a8829af4622afc4ee264997c7}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we consider the problem of state of charge estimation for rechargeable batteries. Coulomb counting is one of the traditional approaches to state of charge estimation and it is considered reliable as long as the battery capacity and initial state of charge are known. However, the Coulomb counting method is susceptible to errors from several sources and the extent of these errors are not studied in the literature. In this paper, we formally derive and quantify the state of charge estimation error during Coulomb counting due to the following four types of error sources: (i) current measurement error; (ii) current integration approximation error; (iii) battery capacity uncertainty; and (iv) the timing oscillator error/drift. It is shown that the resulting state of charge error can either be of the time-cumulative or of state-of-charge-proportional type. Time-cumulative errors increase with time and has the potential to completely invalidate the state of charge estimation in the long run. State-of-charge-proportional errors increase with the accumulated state of charge and reach its worst value within one charge/discharge cycle. Simulation analyses are presented to demonstrate the extent of these errors under several realistic scenarios and the paper discusses approaches to reduce the time-cumulative and state of charge-proportional errors.}
+      \field{month}{1}
+      \field{note}{arXiv:2101.05435 [eess]}
+      \field{title}{A {Critical} {Look} at {Coulomb} {Counting} {Towards} {Improving} the {Kalman} {Filter} {Based} {State} of {Charge} {Tracking} {Algorithms} in {Rechargeable} {Batteries}}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2101.05435
+      \endverb
+      \verb{file}
+      \verb Preprint PDF:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/5X9TDFYS/Movassagh et al. - 2021 - A Critical Look at Coulomb Counting Towards Improving the Kalman Filter Based State of Charge Tracki.pdf:application/pdf;Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/S5HDNCV2/2101.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2101.05435
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2101.05435
+      \endverb
+      \keyw{Computer Science - Systems and Control,Electrical Engineering and Systems Science - Systems and Control}
+    \endentry
     \entry{noauthor_nasa_nodate}{misc}{}
       \list{language}{1}{%
         {en}%
@@ -903,43 +1093,6 @@
       \endverb
       \verb{url}
       \verb https://www.kaggle.com/datasets/patrickfleith/nasa-battery-dataset
-      \endverb
-    \endentry
-    \entry{pepe_hkust_nodate}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=9c292ca418bdecc3a1fd7b0715af904d}{%
-           family={Pepe},
-           familyi={P\bibinitperiod},
-           given={Simona\bibnamedelima Pepe},
-           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE DataPort}%
-      }
-      \strng{namehash}{9c292ca418bdecc3a1fd7b0715af904d}
-      \strng{fullhash}{9c292ca418bdecc3a1fd7b0715af904d}
-      \strng{bibnamehash}{9c292ca418bdecc3a1fd7b0715af904d}
-      \strng{authorbibnamehash}{9c292ca418bdecc3a1fd7b0715af904d}
-      \strng{authornamehash}{9c292ca418bdecc3a1fd7b0715af904d}
-      \strng{authorfullhash}{9c292ca418bdecc3a1fd7b0715af904d}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{This dataset encompasses cycling experiments conducted on lithium-ion batteries, involving 5 distinct batches, each originating from a different manufacturer. Within each batch, there were 6 batteries subjected to testing. The battery types employed for testing included cylindrical 21700 cells and 18650 type and nickel manganese cobalt or nickel cobalt aluminum.The testing procedure consisted of an initial Constant Current (CC) charging step, taking the batteries to 4.2 V at a rate of 0.5 C, followed by a Constant Voltage (CV) step that maintained the voltage at 4.2 V until the current dropped to 0.02 C. Subsequently, the cells underwent discharge at a rate of 1 C until the voltage reached 2.5 V.For the light cycling profile, a similar CC-CV charging protocol was applied, with an initial CC charge to 4.1 V at 0.5 C, followed by CV charging at 4.1 V until the current decayed to 0.02 C. A constant current discharge at 1 C was then executed, with a lower voltage cutoff set at 3.0 V. In all instances, there was a resting period of 10 minutes between the charge and discharge stages. The C-rate for each cell was calculated based on the nominal capacity specified by the manufacturer.}
-      \field{title}{{HKUST} lithium ion battery dataset}
-      \field{urlday}{22}
-      \field{urlmonth}{6}
-      \field{urlyear}{2025}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.21227/JH1V-5435
-      \endverb
-      \verb{urlraw}
-      \verb https://ieee-dataport.org/documents/hkust-lithium-ion-battery-dataset
-      \endverb
-      \verb{url}
-      \verb https://ieee-dataport.org/documents/hkust-lithium-ion-battery-dataset
       \endverb
     \endentry
     \entry{ren_review_2023}{article}{}

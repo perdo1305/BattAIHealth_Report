@@ -20,8 +20,24 @@ Traditional methods for checking battery state can be put into two groups: physi
 
 Unlike these, \textbf{ statistical methods} use real data to estimate battery states. Common methods include:
 \begin{itemize}
-    \item \textbf{Coulomb Counting}: Adds up current over time to estimate the SoC. This method is easily affected by measurement errors and wrong starting SoC values.\color{Red}faltam referências nesta subsecção\color{Black}
-    \item \textbf{Kalman Filters}: Use step-by-step algorithms to improve state estimates by combining model predictions with noisy measurements. Although they work well for simple systems, they have trouble with the complex behavior of batteries.\color{Red}faltam referências nesta subsecção\color{Black}
+    \item \textbf{Coulomb Counting}: This method estimates SoC by integrating current over time, following the fundamental principle that charge accumulation equals the integral of current. While conceptually straightforward, coulomb counting suffers from significant practical limitations including sensitivity to measurement noise, current sensor drift, and initialization errors. Figure~\ref{fig:current_integration_error} illustrates how current integration errors accumulate over time, demonstrating the inherent challenges of this approach. The method's accuracy degrades particularly under varying sampling rates and temperature conditions~\cite{noauthor_implementation_nodate}. Despite these limitations, coulomb counting remains widely used due to its computational simplicity, often serving as a baseline method or being combined with other estimation techniques for improved reliability~\cite{movassagh_critical_2021}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{imgs/coulomb.jpg}
+\caption{Current integration error accumulation over time showing how measurement uncertainties and sampling effects impact coulomb counting accuracy. The step-like behavior demonstrates the discrete nature of current sampling, while the smooth curve represents the theoretical continuous integration~\cite{movassagh_critical_2021}.}
+\label{fig:current_integration_error}
+\end{figure}
+
+    \item \textbf{Kalman Filters}: Kalman filters represent a sophisticated recursive approach to state estimation that optimally combines model predictions with noisy measurements using statistical principles. The filter operates in two phases: prediction (using system dynamics) and correction (incorporating new measurements). For battery applications, the Extended Kalman Filter (EKF) is commonly employed to handle the nonlinear relationship between battery states and observable quantities such as terminal voltage~\cite{mastali_battery_2013}. Figure~\ref{fig:ekf_diagram} illustrates the EKF estimation process, showing how the algorithm iteratively refines state estimates by balancing model predictions with measurement data. While Kalman filters provide optimal estimates under Gaussian noise assumptions, their performance degrades significantly when dealing with the complex nonlinear dynamics and time-varying parameters characteristic of battery systems. The method requires accurate system models and proper tuning of noise covariance matrices, which can be challenging in practical applications where battery parameters drift over time due to aging and temperature variations~\cite{becker_wwwkalmanfilternet_online_nodate}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{imgs/ekf.png}
+\caption{Extended Kalman Filter (EKF) State estimation process showing Prior Estimate (orange), Measurement (green), State Update (gray), and Current State Estimate (blue).~\cite{becker_wwwkalmanfilternet_online_nodate}.}
+\label{fig:ekf_diagram}
+\end{figure}
+    
 \end{itemize}
 
 Because these methods often fail to capture small changes in battery behavior when conditions change, multiple AI-based approaches have been proposed in the last decade.
@@ -50,17 +66,41 @@ Hybrid models combine physics-based and data-driven methods to make results more
 
 \section{Datasets for AI-Based Estimation}
 \label{subsec:datasets}
-The quality and variety of datasets are very important for training strong AI models. Notable datasets include:
+The quality and variety of datasets are very important for training strong AI models. A comprehensive analysis of available battery datasets reveals significant variation in data completeness, experimental conditions, and feature availability. Table~\ref{tab:battery_datasets_comparison} presents a detailed comparison of notable publicly available battery datasets, highlighting their characteristics and available measurements.
+
+\begin{table}[htbp]
+\centering
+\caption{Comprehensive comparison of available battery datasets and their features}
+\label{tab:battery_datasets_comparison}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccccccccccccc}
+\hline
+\textbf{Dataset} & \textbf{Cell Type} & \textbf{Chemistry} & \textbf{Time} & \textbf{C/D Ind.} & \textbf{Cycle} & \textbf{Current} & \textbf{Voltage} & \textbf{Dis. Cap.} & \textbf{Ch. Cap.} & \textbf{Ch. Energy} & \textbf{Dis. Energy} & \textbf{dV/dt} & \textbf{Int. Res.} & \textbf{AC Imp.} & \textbf{ACI Phase} & \textbf{Temp.} \\
+\hline
+Zn-ion, Na-ion @2025 & Various & Zn-ion, Na-ion & $\checkmark$ & $\checkmark$ & & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & & & & & & & \\
+CALCE CS2 @2010 & Prismatic & LiCoO2 & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\pm$ & $\pm$ & Initial \\
+MATR @2019 & 18650 & LFP/graphite & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & & & $\checkmark$ \\
+MATR @2019 CL & 18650 & LFP/graphite & $\checkmark$ & & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & & & & $\checkmark$ \\
+HUST @2022 & Various & LFP/graphite & $\checkmark$ & $\pm$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & & & & & & & \\
+RWTH @2017 & 18650 & Lithium Ion & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & & & & & $\checkmark$ \\
+ISU-ILCC @2023 & 502030 & Li-polymer & $\checkmark$ & & & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & & & & & \\
+XJTU @2022 & 18650 & NCM Li-ion & $\checkmark$ & & & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & & & & & & & $\checkmark$ \\
+Tongji @2022 & 18650 & NCA/NCM & $\checkmark$ & & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & & & & & & & \\
+Stanford @2024 & 21700 & Graphite/Si & $\checkmark$ & & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & & & $\checkmark$ \\
+\hline
+\end{tabular}}
+\end{table}
+
+The analysis reveals several key insights about the current state of battery datasets:
+
+Notable datasets with comprehensive feature sets include:
 \begin{itemize}
-    \item \textbf{NASA Battery Dataset} \cite{noauthor_nasa_nodate}: Gives voltage, current, temperature, and impedance data under different operating conditions, widely used for SoC and RUL estimation because it has many different scenarios.
-    \item \textbf{CALCE Battery Dataset} \cite{CALCE_battery_nodate}: Contains aging data from lithium-ion batteries under different stress conditions, useful for SoH estimation and understanding battery wear patterns.
-    \item \textbf{MATR Battery Dataset} \cite{MATR_dataset_nodate}: Provides high-quality data from automotive battery testing, focusing on real-world driving conditions and temperature variations.
-    \item \textbf{HKUST Battery Dataset} \cite{pepe_hkust_nodate}: Offers detailed cycling data for battery research, including various charge and discharge profiles for different battery types. 
+    \item \textbf{NASA Battery Dataset} \cite{noauthor_nasa_nodate}: Provides voltage, current, temperature, and impedance data under different operating conditions, widely used for SoC and RUL estimation due to its diverse experimental scenarios and comprehensive measurement suite.
+    \item \textbf{CALCE Battery Dataset} \cite{CALCE_battery_nodate}: Contains extensive aging data from lithium-ion batteries under different stress conditions, particularly valuable for SoH estimation and understanding battery degradation patterns. Notable for its complete feature set including energy measurements and impedance data.
+    \item \textbf{MATR Battery Dataset} \cite{MATR_dataset_nodate}: Provides high-quality data from automotive battery testing, focusing on real-world driving conditions and temperature variations with comprehensive measurement capabilities.
+    \item \textbf{Stanford Dataset}: Offers the most recent data with advanced battery chemistries (graphite/silicon) and comprehensive measurements including internal resistance and energy metrics.
 \end{itemize}
 These datasets show the importance of including real-world operating conditions and diagnostic measurements to make models work better in different situations.
-
-
-
 
 %The \textit{BattAIHealth} project addresses these gaps by developing AI models trained on both synthetic and real-world datasets, making them work better and be suitable for real-time use in transportation systems.
 
