@@ -1,0 +1,10 @@
+Conclusion and future work
+	conclusion
+		foi um  projeto muito desafiantes e fora do que normalmente se da nas aulas e no curso
+		aprendi imensas ferramentas e conceitos que 100% irei utilizazr em projetos futuros,
+		qunato a rede, embora nao ter sido um bom resultado, foi um resultado onde deu para aprender coisas e ver que a solucao para a maior parte dos probelmas pode nao ser a solucao para um problema mais especifico.
+		esplicar as conclusoes com base nos resultados blablabla.
+		falar que este tipo de trabalhos tem sempre algum tipo de significado pois o mundo esta a tornar se cada vez mais um mundo eletrificado onde formas de medir/estimar estas coisa é bastante importante, ainda mais em ambientes tao estremos como os automoveis e comboios
+	future work
+		falar das opcoes que sao viaveis para a estimacao das 3 features em simultaneo
+		e desenvolver mais o problemam e como resolucionar  

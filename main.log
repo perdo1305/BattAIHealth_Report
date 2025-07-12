@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.6.23)  12 JUL 2025 16:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.6.23)  12 JUL 2025 20:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1820,22 +1820,22 @@ Overfull \hbox (38.53226pt too wide) in paragraph at lines 483--483
 []\U/eur/b/n/70 5 
  []
 
-[57]
-<imgs/loss_funtions.png, id=781, 7609.42876pt x 1331.97626pt>
+[57] [58]
+<imgs/loss_funtions.png, id=785, 7609.42876pt x 1331.97626pt>
 File: imgs/loss_funtions.png Graphic file (type png)
 <use imgs/loss_funtions.png>
-Package pdftex.def Info: imgs/loss_funtions.png  used on input line 534.
+Package pdftex.def Info: imgs/loss_funtions.png  used on input line 536.
 (pdftex.def)             Requested size: 418.25372pt x 73.2081pt.
- [58] [59 <./imgs/loss_funtions.png>] [60] [61] [62] [63]
+ [59 <./imgs/loss_funtions.png>] [60] [61] [62] [63] [64]
 Chapter 6.
-[64]
-Overfull \hbox (38.53226pt too wide) in paragraph at lines 698--698
+[65] [66
+
+]
+Overfull \hbox (38.53226pt too wide) in paragraph at lines 688--688
 []\U/eur/b/n/70 6 
  []
 
-[65
-
-]) [66]
+[67] [68] [69]) [70]
 \openout2 = `Chapters/Conclusion.aux'.
 
  (./Chapters/Conclusion.tex
@@ -1845,20 +1845,20 @@ Overfull \hbox (38.53226pt too wide) in paragraph at lines 5--5
 []\U/eur/b/n/70 7 
  []
 
-) [67
+) [71
 
 
 
 
 
-] [68
+] [72
 
 
 
 ]
 \openout2 = `Covers/Bibliography.aux'.
 
- (./Covers/Bibliography.tex [69
+ (./Covers/Bibliography.tex [73
 
 
 ]
@@ -1866,12 +1866,12 @@ Overfull \hbox (19.42007pt too wide) in paragraph at lines 13--13
 \T1/lmr/m/n/10.95 (-20) 2025. \T1/lmr/m/sc/10.95 (-20) url\T1/lmr/m/n/10.95 (-20) : [][]$\T1/lmtt/m/n/10.95 https : / / github . com / facontidavide / PlotJuggler$[][] \T1/lmr/m/n/10.95 (-20) (vis-ited on 06/23/2025). 
  []
 
-[70]
+[74]
 
 Package biblatex Warning: No driver for entry type 'unknown'.
 (biblatex)                Using fallback driver on input line 12.
 
-[71] [72]) [73] (./main.aux (./Covers/Titlepage.aux) (./Covers/Titleback.aux) (./Covers/Acknowledgments.aux) (./Covers/Abstract.aux) (./Covers/Contents.aux) (./Covers/Acronyms.aux) (./Chapters/Intro.aux) (./Chapters/Background.aux) (./Chapters/StateOfTheArt.aux) (./Chapters/Development.aux) (./Chapters/Conclusion.aux) (./Covers/Bibliography.aux)
+[75] [76]) [77] (./main.aux (./Covers/Titlepage.aux) (./Covers/Titleback.aux) (./Covers/Acknowledgments.aux) (./Covers/Abstract.aux) (./Covers/Contents.aux) (./Covers/Acronyms.aux) (./Chapters/Intro.aux) (./Chapters/Background.aux) (./Chapters/StateOfTheArt.aux) (./Chapters/Development.aux) (./Chapters/Conclusion.aux) (./Covers/Bibliography.aux)
 
 Package mparhack Warning: Marginpars may have changed.
 (mparhack)                Rerun to get them right.
@@ -2122,18 +2122,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### semi simple group (level 1) entered at line 296 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 39378 strings out of 478287
- 769700 string characters out of 5849289
- 1850962 words of memory out of 5000000
- 56186 multiletter control sequences out of 15000+600000
- 590800 words of font info for 291 fonts, out of 8000000 for 9000
+ 39392 strings out of 478287
+ 769862 string characters out of 5849289
+ 1851053 words of memory out of 5000000
+ 56190 multiletter control sequences out of 15000+600000
+ 591082 words of font info for 294 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,22n,106p,10662b,13117s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main.pdf (97 pages, 3121299 bytes).
+Output written on main.pdf (101 pages, 3130415 bytes).
 PDF statistics:
- 1262 PDF objects out of 1440 (max. 8388607)
- 1060 compressed objects within 11 object streams
- 261 named destinations out of 1000 (max. 500000)
+ 1279 PDF objects out of 1440 (max. 8388607)
+ 1073 compressed objects within 11 object streams
+ 265 named destinations out of 1000 (max. 500000)
  67158 words of extra memory for PDF output out of 74296 (max. 10000000)
 

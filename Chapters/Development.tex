@@ -511,6 +511,8 @@ The model processes six essential input features that capture the comprehensive 
     \item \textbf{RUL}: Remaining Useful Life feedback for predictive modeling
 \end{itemize}
 
+The selection of voltage and current as the primary input parameters was driven by their fundamental importance and practical accessibility in battery monitoring systems. These parameters represent the \textbf{most basic and straightforward measurements} that can be obtained from any battery system without requiring specialized or expensive instrumentation. Unlike more complex measurements such as impedance spectroscopy, temperature gradients, or electrochemical impedance, voltage and current can be acquired using \textbf{simple, cost-effective sensors} that are readily available in commercial battery management systems. This approach ensures that the developed model can be practically implemented in real-world applications without requiring sophisticated measurement infrastructure, making it accessible for widespread deployment in various battery monitoring scenarios.
+
 This multi-dimensional input configuration enables the model to learn complex interdependencies between different battery state variables, supporting the simultaneous prediction of multiple health indicators.
 
 \subsection{Training Performance and Convergence}
@@ -554,7 +556,7 @@ The overall training behavior suggests a stable learning process with good conve
 \section{Model Testing and Performance Evaluation}
 \label{sec:model_testing}
 
-The trained TimesNet model was evaluated separately for each target variable (SOC, SOH, and RUL) to assess its performance in multi-task battery health prediction. The evaluation was conducted on 4,910 test samples, providing comprehensive performance metrics across different battery health indicators.
+The trained TimesNet model was evaluated separately for each target variable (SOC, SOH, and RUL) to assess its performance in multi-task battery health prediction. The evaluation provides comprehensive performance metrics across different battery health indicators.
 
 \subsection{State of Charge (SOC) Prediction Results}
 \label{subsec:soc_results}
@@ -572,7 +574,6 @@ The SOC prediction performance demonstrates the model's capability to track char
 Mean Absolute Error (MAE) & 0.0621 \\
 Mean Squared Error (MSE) & 0.0507 \\
 Root Mean Squared Error (RMSE) & 0.2251 \\
-Test Samples & 4,910 \\
 \hline
 \end{tabular}
 \end{table}
@@ -602,7 +603,6 @@ The SOH prediction results reveal the challenges associated with modeling batter
 Mean Absolute Error (MAE) & 0.2039 \\
 Mean Squared Error (MSE) & 0.2790 \\
 Root Mean Squared Error (RMSE) & 0.5282 \\
-Test Samples & 4,910 \\
 \hline
 \end{tabular}
 \end{table}
@@ -632,7 +632,6 @@ The RUL prediction represents the most challenging aspect of battery health mode
 Mean Absolute Error (MAE) & 0.2078 \\
 Mean Squared Error (MSE) & 0.2821 \\
 Root Mean Squared Error (RMSE) & 0.5311 \\
-Test Samples & 4,910 \\
 \hline
 \end{tabular}
 \end{table}
@@ -660,47 +659,73 @@ This performance gradient reflects the increasing complexity of the prediction t
 \subsection{Limitations and Challenges}
 \label{subsec:limitations}
 
-Despite utilizing a state-of-the-art TimesNet architecture, the results did not achieve the expected performance levels for multi-task battery health prediction. Several factors contribute to these limitations:
+Despite utilizing a state-of-the-art TimesNet architecture, the results did not achieve the expected performance levels for multi-task battery health prediction. The \textbf{multi-task learning complexity} presents the most significant challenge, as simultaneous prediction of SOC, SOH, and RUL in a single network creates \textbf{competing optimization objectives}. Each target variable has fundamentally different temporal characteristics - SOC prediction benefits from short-term electrical patterns, while SOH and RUL require long-term degradation modeling. This creates \textbf{conflicting gradients} during training that limit overall performance.
 
-\textbf{Multi-task Learning Complexity}: The simultaneous prediction of SOC, SOH, and RUL in a single network presents significant challenges. Each target variable has different temporal characteristics and requires different types of pattern recognition, making it difficult for a single architecture to optimize for all tasks simultaneously.
-
-\textbf{Competing Objectives}: The different target variables may have conflicting optimization requirements. SOC prediction benefits from focusing on short-term electrical patterns, while SOH and RUL require long-term degradation modeling. This creates competing gradients during training that can limit overall performance.
-
-\textbf{Limited Architectural Specialization}: While TimesNet provides advanced temporal modeling capabilities, the multi-task approach prevents the architecture from specializing in the specific patterns most relevant to each individual prediction task.
+Additionally, the \textbf{multi-task approach prevents architectural specialization}, meaning the network cannot focus entirely on the specific patterns most relevant to each individual prediction task. While TimesNet provides advanced temporal modeling capabilities, the shared architecture must balance between three different objectives rather than excelling at one. This trade-off between \textbf{system integration} and \textbf{individual task performance} represents a fundamental limitation of the unified approach.
 
 \subsection{Comparison with Simpler Approaches}
 \label{subsec:comparison_simpler}
 
-When comparing these results with simpler neural network approaches that focus on single-task prediction (e.g., networks designed exclusively for SOC estimation), the trade-offs become apparent. Single-task networks typically achieve better performance on their specific target due to:
+When comparing these results with simpler neural network approaches that focus on single-task prediction (e.g., networks designed exclusively for SOC estimation), the trade-offs become apparent. Single-task networks typically achieve better performance on their specific target due to their \textbf{specialized architecture}, where the entire network capacity is dedicated to one prediction task. This allows for \textbf{focused optimization}, as training optimization is not diluted across multiple objectives, and enables \textbf{task-specific features} where feature extraction can be optimized for the specific characteristics of the target variable.
 
-\begin{itemize}
-    \item \textbf{Specialized Architecture}: The entire network capacity is dedicated to one prediction task
-    \item \textbf{Focused Optimization}: Training optimization is not diluted across multiple objectives
-    \item \textbf{Task-Specific Features}: Feature extraction can be optimized for the specific characteristics of the target variable
-\end{itemize}
-
-The multi-task approach, while providing comprehensive battery health monitoring in a single model, sacrifices individual task performance for system integration and computational efficiency.
+The multi-task approach, while providing comprehensive battery health monitoring in a single model, sacrifices individual task performance for \textbf{system integration} and \textbf{computational efficiency}. This represents a fundamental trade-off in deep learning system design between specialized performance and unified functionality.
 
 \subsection{Future Research Directions}
 \label{subsec:future_directions}
 
-The results suggest several promising research directions for improving multi-task battery health prediction:
+The results suggest several promising research directions for improving multi-task battery health prediction. These approaches address the fundamental limitations identified in the unified multi-task approach while leveraging the strengths of specialized architectures.
 
-\begin{itemize}
-    \item \textbf{Hierarchical Multi-task Learning}: Implementing specialized sub-networks for each prediction task while maintaining shared feature extraction
-    \item \textbf{Dynamic Task Weighting}: Developing adaptive loss weighting schemes that balance the competing objectives during training
-    \item \textbf{Transfer Learning Approaches}: Pre-training on single-task objectives before fine-tuning for multi-task prediction
-    \item \textbf{Ensemble Methods}: Combining multiple specialized models to achieve both individual task performance and comprehensive monitoring
-\end{itemize}
+\textbf{Ensemble Methods for Specialized Task Integration}: The combination of multiple specialized models represents a particularly promising direction, where separate models optimized for SOC, SOH, and RUL prediction are combined using advanced fusion techniques. This approach would leverage \textbf{task-specific architectures} - such as CNNs for feature extraction from voltage and temperature data, LSTMs for time-series RUL prediction, and gradient-boosted decision trees for SOH estimation. The integration could be achieved through \textbf{weighted averaging}, \textbf{stacking}, or \textbf{boosting} methods, allowing each model to excel in its specialized domain while maintaining comprehensive battery health monitoring capabilities.
 
-These findings contribute to the understanding of deep learning applications in battery health monitoring and highlight the ongoing challenges in developing unified architectures for complex multi-task prediction scenarios.
+\textbf{Transfer Learning and Sequential Task Modeling}: A hierarchical approach to battery health prediction could address the task interdependency challenges observed in this work. By \textbf{pre-training models on abundant SOC data} and subsequently fine-tuning for SOH and RUL prediction, this approach would exploit the natural dependencies between battery health indicators. The sequential modeling paradigm, where SOC predictions feed into SOH estimation and both inform RUL prediction, would explicitly model the \textbf{causal relationships} between these variables while avoiding the competing optimization objectives that limited the unified approach.
+
+\textbf{Hybrid Physics-Informed Neural Networks}: Integration of domain knowledge through physics-based models presents an opportunity to improve both interpretability and performance. This approach would combine \textbf{electrochemical models} (such as Thevenin equivalent circuits) for SOC estimation with \textbf{data-driven models} for capturing complex degradation patterns in SOH and RUL prediction. The physics-informed approach could provide \textbf{regularization} for the neural network training while ensuring that predictions respect fundamental battery physics principles.
+
+\textbf{Advanced Graph Neural Networks}: The representation of battery data as graphs offers a novel approach to capturing complex temporal and electrochemical relationships. In this framework, nodes would represent battery measurements at different time steps, while edges would encode temporal dependencies and physical relationships. This approach could be particularly valuable for \textbf{battery pack applications} where cell-to-cell interactions significantly influence overall system health, extending beyond single-cell prediction to comprehensive system-level monitoring.
+
+These future directions collectively address the core challenges identified in this work: the need for architectural specialization, the importance of task relationships, and the integration of domain knowledge. Implementation of these approaches could significantly advance the state-of-the-art in battery health prediction while maintaining the practical benefits of comprehensive monitoring systems.
 
 \chapter{Conclusion and Future Work}
 \label{sec:conclusion_future_work}
-\lipsum[1]
+
+This chapter presents the key findings, achievements, and limitations of the BattAIHealth project, along with recommendations for future research directions. The project represents a comprehensive exploration of battery health prediction using state-of-the-art deep learning techniques, spanning from traditional MATLAB-based approaches to cutting-edge TimesNet architectures for simultaneous prediction of State of Charge (SOC), State of Health (SOH), and Remaining Useful Life (RUL).
+
 \section{Conclusion}
-\lipsum[5-6]
+\label{sec:conclusion}
+
+This project was exceptionally challenging and extended far beyond the typical scope of coursework. It required deep exploration of advanced concepts and technologies that I had never encountered before, providing invaluable learning experiences with tools and methodologies that will undoubtedly prove essential for future professional projects.
+
+The journey through this project encompassed multiple phases of technological exploration. I started with traditional MATLAB-based modeling using Extended Kalman Filters and physics-based Batemo battery models, then explored hybrid CNN-LSTM architectures, investigated cutting-edge Transformer and Mixture of Experts networks, and ultimately implemented the state-of-the-art TimesNet architecture for multi-task battery health prediction. Each phase taught me something new and highlighted just how complex accurate battery health monitoring really is.
+
+Working with the MATLAB implementation taught me the fundamentals of traditional battery modeling techniques. The Extended Kalman Filters and physics-based simulation using the Batemo INR21700-p45b model provided crucial insights into the challenges of battery state estimation and the limitations of conventional approaches. This foundation was essential for understanding why more advanced approaches were needed.
+
+The exploration of neural network architectures revealed important trade-offs between model complexity and performance. The comparative analysis between Transformer and Mixture of Experts networks was particularly interesting - I discovered that simpler architectures can achieve competitive performance with significantly reduced computational requirements. The MoE implementation achieved an RMSE of 0.0335 compared to the Transformer's 0.0297, representing a minimal performance difference while offering substantial computational advantages.
+
+The TimesNet implementation was the most technically challenging part of the project. It required mastering advanced concepts including FFT-based period detection, 2D transformation of time series data, and multi-task learning optimization. The systematic hyperparameter optimization using Optuna across 50 trials with 50 epochs each was a rigorous process that highlighted the critical importance of encoder depth in model performance.
+
+However, the results were not as good as I initially hoped. The TimesNet model achieved differentiated performance across the three prediction tasks, with SOC prediction showing the best results (RMSE = 0.2251), followed by SOH (RMSE = 0.5282) and RUL (RMSE = 0.5311) prediction. While this represents a substantial engineering achievement, it did not reach the initially anticipated performance levels for multi-task learning.
+
+The project taught me that general-purpose solutions, while appealing for their comprehensiveness, may not always be the optimal approach for specific problems. The multi-task learning approach, despite using a state-of-the-art TimesNet architecture, highlighted the fundamental trade-off between system integration and individual task performance. This suggests that specialized architectures optimized for specific prediction tasks may achieve superior performance compared to unified approaches.
+
+The computational complexity of the final model (37.5 million parameters, 143.42 MB memory footprint) also presents practical deployment challenges, particularly for resource-constrained embedded systems typical in automotive and railway applications. The hyperparameter optimization process required approximately one week of computational time even with reduced dataset size, highlighting the substantial computational resources required for comprehensive model optimization.
+
+Despite these limitations, this type of research carries significant practical importance as the world continues its transition toward electrification. The increasing adoption of electric vehicles, renewable energy storage systems, and battery-powered industrial equipment creates growing demand for accurate, reliable battery health monitoring solutions. The extreme operating conditions in automotive and railway applications—including temperature variations, vibrations, and demanding load profiles—make battery health prediction particularly challenging and important for safety and reliability.
+
 \section{Future Work}
-\lipsum[7-8]
+\label{sec:future_work}
+
+Based on the findings from this project, several promising directions emerge for future research and development in battery health prediction systems. The main lesson learned is that trying to solve all three prediction tasks (SOC, SOH, and RUL) simultaneously may not be the best approach.
+
+The most promising direction for future work would be to develop ensemble methods that combine multiple specialized models, each optimized for individual prediction tasks. Instead of one large model trying to do everything, we could have separate models for SOC estimation using CNNs for feature extraction from voltage and current profiles, LSTM networks specifically designed for time-series RUL prediction, and gradient-boosted decision trees for SOH estimation. These specialized models could then be combined using advanced fusion techniques like weighted averaging or stacking methods.
+
+Another interesting approach would be hierarchical task modeling, where we exploit the natural dependencies between battery health indicators. We could pre-train models on abundant SOC data and then fine-tune them for SOH and RUL prediction. This sequential approach, where SOC predictions feed into SOH estimation and both inform RUL prediction, would explicitly model the causal relationships between these variables while avoiding the competing optimization objectives that limited our unified approach.
+
+The integration of physics-based knowledge through physics-informed neural networks also presents significant opportunities. This hybrid approach would combine electrochemical models (like Thevenin equivalent circuits) for SOC estimation with data-driven models for capturing complex degradation patterns in SOH and RUL prediction. The physics-informed approach could provide regularization for neural network training while ensuring that predictions respect fundamental battery physics principles.
+
+For battery pack applications, representing battery data as graphs offers a novel approach to capturing complex temporal and electrochemical relationships. Nodes would represent battery measurements at different time steps, while edges would encode temporal dependencies and physical relationships. This could be particularly valuable for battery pack applications where cell-to-cell interactions significantly influence overall system health.
+
+The practical deployment challenges identified in this work also need attention. Future research should focus on developing efficient model architectures specifically designed for real-time deployment in resource-constrained environments. This includes exploring model compression techniques, knowledge distillation approaches, and hardware-aware neural architecture search methods to create edge-optimized models that can run efficiently on embedded systems.
+
+Finally, the battery health prediction community would benefit from standardized benchmarks and evaluation protocols. Creating comprehensive datasets that include diverse battery chemistries, operating conditions, and degradation patterns would facilitate meaningful comparison between different approaches and accelerate progress in the field. This should also address the challenges of data sharing and reproducibility in battery research.
 
 
