@@ -36,6 +36,7 @@
 \contentsline {figure}{\numberline {22}{\ignorespaces Optuna objective value progression showing the improvement in MSE loss over 50 optimization trials.\relax }}{53}{figure.caption.25}%
 \contentsline {figure}{\numberline {23}{\ignorespaces Weights \& Biases validation loss tracking across multiple Optuna trials, showing the convergence behavior and performance comparison between different hyperparameter configurations.\relax }}{55}{figure.caption.26}%
 \ttl@tocsep 
+\contentsline {figure}{\numberline {24}{\ignorespaces Training, validation, and test loss progression throughout the training process, showing individual convergence behavior for each dataset split and demonstrating the generalization performance of the TimesNet model.\relax }}{59}{figure.caption.27}%
 \ttl@tocsep 
 \ttl@tocsep 
 \ttl@tocsep 

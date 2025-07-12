@@ -483,7 +483,217 @@ The optimization process was also monitored using Weights \& Biases, which provi
 \chapter{Experiments and Results}
 \label{sec:experiments_results}
 
-\lipsum[2-4]
+This chapter presents the comprehensive experimental evaluation of the TimesNet architecture for battery health prediction. The experiments were conducted using the optimized hyperparameters obtained from the Optuna search process detailed in Section~\ref{sec:model_optimization}. The model was trained to simultaneously predict State of Charge (SOC), State of Health (SOH), and Remaining Useful Life (RUL) from multi-dimensional battery operational data.
+
+\section{Model Training Configuration}
+\label{sec:training_config}
+
+The TimesNet model was trained using the optimal hyperparameters identified through the systematic optimization process. The model architecture includes the following key specifications:
+
+\subsection{Model Architecture and Complexity}
+\label{subsec:model_complexity}
+
+The final TimesNet model comprises 37,515,455 trainable parameters, making it a substantially complex deep learning architecture. To provide perspective on this complexity, this parameter count is comparable to smaller versions of modern language models - for context, GPT-2 Small contains 124 million parameters, making our model approximately 30\% of that size. This comparison helps illustrate the computational requirements for general users unfamiliar with neural network scales.
+
+The model's memory footprint is 143.42 MB, which presents important considerations for deployment scenarios. While this size makes the model suitable for modern desktop and server environments, it poses challenges for edge device deployment. The memory requirements exceed typical constraints for embedded systems or mobile devices, limiting real-time battery monitoring applications in resource-constrained environments such as IoT devices or embedded battery management systems.
+
+\subsection{Input Feature Configuration}
+\label{subsec:input_features}
+
+The model processes six essential input features that capture the comprehensive operational state of battery systems:
+
+\begin{itemize}
+    \item \textbf{Voltage(V)}: Primary electrical characteristic indicating battery terminal voltage
+    \item \textbf{Current(A)}: Charge and discharge current measurements
+    \item \textbf{Time}: Temporal information for sequence modeling
+    \item \textbf{SOC}: State of Charge feedback for multi-task learning
+    \item \textbf{SOH}: State of Health feedback for degradation tracking
+    \item \textbf{RUL}: Remaining Useful Life feedback for predictive modeling
+\end{itemize}
+
+This multi-dimensional input configuration enables the model to learn complex interdependencies between different battery state variables, supporting the simultaneous prediction of multiple health indicators.
+
+\subsection{Training Performance and Convergence}
+\label{subsec:training_performance}
+
+The model was trained for 43 epochs with a total training time of 39.81 hours. The training process demonstrated the following performance characteristics:
+
+\begin{itemize}
+    \item \textbf{Final Training Loss}: 0.07669
+    \item \textbf{Final Validation Loss}: 0.02939
+    \item \textbf{Final Test Loss}: 0.05030
+    \item \textbf{Learning Rate}: 0.001 (fixed)
+    \item \textbf{Batch Size}: 32
+    \item \textbf{Total Training Steps}: 3,756
+\end{itemize}
+
+The training process utilized 120,169 samples for training, 4,900 samples for validation, and 4,910 samples for testing, ensuring robust evaluation across different data distributions.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{imgs/loss_funtions.png}
+\caption{Training, validation, and test loss progression throughout the training process, showing individual convergence behavior for each dataset split and demonstrating the generalization performance of the TimesNet model.}
+\label{fig:training_losses}
+\end{figure}
+
+Figure~\ref{fig:training_losses} presents the training progression across all three dataset splits, with separate plots showing the individual loss curves for training, validation, and test sets. The plots illustrate the convergence behavior and demonstrate how the model performs across different data distributions throughout the optimization process.
+
+\subsubsection{Training Convergence Analysis}
+\label{subsubsec:training_convergence}
+
+The training progression demonstrates several key characteristics that provide insights into model performance and learning stability:
+
+\textbf{Positive Training Indicators}: The training loss exhibits a steady downward trend throughout the optimization process, indicating that the model is effectively learning patterns from the training data. The test loss also decreases consistently and remains below the training loss, suggesting good generalization capability without significant overfitting. The validation loss, despite exhibiting some fluctuation, reaches its lowest point at the end of training and shows no signs of divergence or instability, indicating stable learning progression.
+
+\textbf{Areas of Concern}: The validation loss exhibits considerable noise throughout training, with frequent fluctuations that may indicate several potential issues. This variability could be attributed to the relatively small validation set size (4,900 samples), which increases variance in loss measurements. Additionally, the noisy validation curve may suggest that the model requires additional regularization or exhibits sensitivity to small changes in the validation data distribution.
+
+\textbf{Training-Test Loss Relationship}: An unusual characteristic observed is that the test loss consistently performs better than the training loss throughout most of the training process. While this could indicate good generalization, it represents atypical behavior that warrants further investigation. This pattern may result from differences in how the metrics are computed across datasets or variations in data distribution between training and test sets.
+
+The overall training behavior suggests a stable learning process with good convergence properties, though the validation loss volatility indicates potential areas for improvement in model regularization and training stability.
+
+\section{Model Testing and Performance Evaluation}
+\label{sec:model_testing}
+
+The trained TimesNet model was evaluated separately for each target variable (SOC, SOH, and RUL) to assess its performance in multi-task battery health prediction. The evaluation was conducted on 4,910 test samples, providing comprehensive performance metrics across different battery health indicators.
+
+\subsection{State of Charge (SOC) Prediction Results}
+\label{subsec:soc_results}
+
+The SOC prediction performance demonstrates the model's capability to track charge state variations within battery operational cycles. Table~\ref{tab:soc_results} presents the comprehensive evaluation metrics for SOC estimation.
+
+\begin{table}[htbp]
+\centering
+\caption{State of Charge (SOC) prediction performance metrics}
+\label{tab:soc_results}
+\begin{tabular}{lc}
+\hline
+\textbf{Metric} & \textbf{Value} \\
+\hline
+Mean Absolute Error (MAE) & 0.0621 \\
+Mean Squared Error (MSE) & 0.0507 \\
+Root Mean Squared Error (RMSE) & 0.2251 \\
+Test Samples & 4,910 \\
+\hline
+\end{tabular}
+\end{table}
+
+The SOC results show strong performance with a relatively low RMSE of 0.2251, demonstrating accurate tracking of charge state variations.
+
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=1.0\textwidth]{imgs/soc_comprehensive_analysis.png}
+%\caption{Comprehensive SOC prediction analysis showing prediction accuracy, error distribution, and time series comparison between predicted and actual SOC values.}
+%\label{fig:soc_analysis}
+%\end{figure}
+
+\subsection{State of Health (SOH) Prediction Results}
+\label{subsec:soh_results}
+
+The SOH prediction results reveal the challenges associated with modeling battery degradation patterns. Table~\ref{tab:soh_results} presents the performance metrics for SOH estimation.
+
+\begin{table}[htbp]
+\centering
+\caption{State of Health (SOH) prediction performance metrics}
+\label{tab:soh_results}
+\begin{tabular}{lc}
+\hline
+\textbf{Metric} & \textbf{Value} \\
+\hline
+Mean Absolute Error (MAE) & 0.2039 \\
+Mean Squared Error (MSE) & 0.2790 \\
+Root Mean Squared Error (RMSE) & 0.5282 \\
+Test Samples & 4,910 \\
+\hline
+\end{tabular}
+\end{table}
+
+The SOH results show moderate performance with an RMSE of 0.5282, reflecting the increased difficulty in modeling long-term degradation patterns compared to SOC.
+
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=1.0\textwidth]{imgs/soh_comprehensive_analysis.png}
+%\caption{Comprehensive SOH prediction analysis showing prediction accuracy, error distribution, and time series comparison between predicted and actual SOH values.}
+%\label{fig:soh_analysis}
+%\end{figure}
+
+\subsection{Remaining Useful Life (RUL) Prediction Results}
+\label{subsec:rul_results}
+
+The RUL prediction represents the most challenging aspect of battery health modeling, as it requires accurate forecasting of future battery degradation. Table~\ref{tab:rul_results} presents the performance metrics for RUL estimation.
+
+\begin{table}[htbp]
+\centering
+\caption{Remaining Useful Life (RUL) prediction performance metrics}
+\label{tab:rul_results}
+\begin{tabular}{lc}
+\hline
+\textbf{Metric} & \textbf{Value} \\
+\hline
+Mean Absolute Error (MAE) & 0.2078 \\
+Mean Squared Error (MSE) & 0.2821 \\
+Root Mean Squared Error (RMSE) & 0.5311 \\
+Test Samples & 4,910 \\
+\hline
+\end{tabular}
+\end{table}
+
+The RUL results show the highest prediction errors among the three target variables, with an RMSE of 0.5311. This reflects the inherent complexity of predicting future battery life based on current operational patterns.
+
+\section{Results Analysis and Discussion}
+\label{sec:results_discussion}
+
+The experimental results reveal important insights about the challenges and limitations of multi-task learning for battery health prediction using state-of-the-art deep learning architectures.
+
+\subsection{Performance Analysis}
+\label{subsec:performance_analysis}
+
+The results demonstrate a clear performance hierarchy across the three prediction tasks:
+
+\begin{enumerate}
+    \item \textbf{SOC Prediction}: Achieved the best performance (RMSE = 0.2251)
+    \item \textbf{SOH Prediction}: Showed moderate performance (RMSE = 0.5282)
+    \item \textbf{RUL Prediction}: Exhibited the most challenging results (RMSE = 0.5311)
+\end{enumerate}
+
+This performance gradient reflects the increasing complexity of the prediction tasks. SOC prediction benefits from direct correlation with immediate electrical measurements, while SOH and RUL require modeling of long-term degradation patterns that are more difficult to capture accurately.
+
+\subsection{Limitations and Challenges}
+\label{subsec:limitations}
+
+Despite utilizing a state-of-the-art TimesNet architecture, the results did not achieve the expected performance levels for multi-task battery health prediction. Several factors contribute to these limitations:
+
+\textbf{Multi-task Learning Complexity}: The simultaneous prediction of SOC, SOH, and RUL in a single network presents significant challenges. Each target variable has different temporal characteristics and requires different types of pattern recognition, making it difficult for a single architecture to optimize for all tasks simultaneously.
+
+\textbf{Competing Objectives}: The different target variables may have conflicting optimization requirements. SOC prediction benefits from focusing on short-term electrical patterns, while SOH and RUL require long-term degradation modeling. This creates competing gradients during training that can limit overall performance.
+
+\textbf{Limited Architectural Specialization}: While TimesNet provides advanced temporal modeling capabilities, the multi-task approach prevents the architecture from specializing in the specific patterns most relevant to each individual prediction task.
+
+\subsection{Comparison with Simpler Approaches}
+\label{subsec:comparison_simpler}
+
+When comparing these results with simpler neural network approaches that focus on single-task prediction (e.g., networks designed exclusively for SOC estimation), the trade-offs become apparent. Single-task networks typically achieve better performance on their specific target due to:
+
+\begin{itemize}
+    \item \textbf{Specialized Architecture}: The entire network capacity is dedicated to one prediction task
+    \item \textbf{Focused Optimization}: Training optimization is not diluted across multiple objectives
+    \item \textbf{Task-Specific Features}: Feature extraction can be optimized for the specific characteristics of the target variable
+\end{itemize}
+
+The multi-task approach, while providing comprehensive battery health monitoring in a single model, sacrifices individual task performance for system integration and computational efficiency.
+
+\subsection{Future Research Directions}
+\label{subsec:future_directions}
+
+The results suggest several promising research directions for improving multi-task battery health prediction:
+
+\begin{itemize}
+    \item \textbf{Hierarchical Multi-task Learning}: Implementing specialized sub-networks for each prediction task while maintaining shared feature extraction
+    \item \textbf{Dynamic Task Weighting}: Developing adaptive loss weighting schemes that balance the competing objectives during training
+    \item \textbf{Transfer Learning Approaches}: Pre-training on single-task objectives before fine-tuning for multi-task prediction
+    \item \textbf{Ensemble Methods}: Combining multiple specialized models to achieve both individual task performance and comprehensive monitoring
+\end{itemize}
+
+These findings contribute to the understanding of deep learning applications in battery health monitoring and highlight the ongoing challenges in developing unified architectures for complex multi-task prediction scenarios.
 
 \chapter{Conclusion and Future Work}
 \label{sec:conclusion_future_work}
