@@ -5,4 +5,16 @@
 \label{ch:introduction}
 %************************************************
 
-\dots
+Electric vehicles and electrified trains rely on accurate battery health monitoring to ensure safety and reliability. This involves keeping track of three key parameters: SOC, which reflects the remaining energy; SOH, which indicates how much the battery has degraded over time; and RUL, which estimates how much longer the battery can operate. Predicting these parameters is challenging because batteries undergo complex chemical processes that change with temperature, usage patterns, and aging.
+
+Traditional methods like coulomb counting and Kalman filters have their limits, they perform reasonably well in controlled environments, but struggle in real-world conditions where temperatures and loads vary, and where aging causes nonlinear behavior.
+
+Most current battery management systems still use decades old techniques that don’t adapt well to the way batteries actually behave as they age, often leading to accumulating measurement errors over time.
+
+Machine learning opens up new possibilities by uncovering patterns in battery data that traditional methods tend to miss. However, applying ML to battery health estimation comes with its own challenges: the models must work in real-time, handle different battery chemistries, and run on the limited computing power available in vehicles.
+
+The main goal of this work is to develop methods that can predict SOC, SOH, and RUL simultaneously and accurately. This is difficult because each parameter behaves differently: SOC can change quickly during charge and discharge cycles, SOH declines slowly over months or years, and RUL depends both on the current condition of the battery and on how it will be used in the future.
+
+This work contributes by comparing traditional and AI-based approaches, highlighting their strengths and weaknesses under realistic conditions. We also adapt the TimesNet architecture for battery data, leveraging its ability to capture periodic patterns and transform time series for better prediction. Along the way, we explore important trade-offs that arise when trying to predict multiple battery parameters at once.
+
+The rest of this report is organized as follows: Chapter 2 covers background topics, including battery fundamentals, time series analysis, and evaluation metrics. Chapter 3 reviews existing battery health estimation methods, from traditional physics-based models to modern neural networks, and discusses available datasets. Chapter 4 describes our development process, from MATLAB-based modeling through different neural network architectures to our final TimesNet implementation. Chapter 5 presents experimental results, performance analysis, and comparisons with baseline methods, along with a discussion of limitations and challenges. Finally, Chapter 6 summarizes the key findings and offers recommendations for future research.

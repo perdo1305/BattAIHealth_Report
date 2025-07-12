@@ -12,8 +12,6 @@ The development process was guided by the need to create accurate, strong, and s
 \section{MATLAB Modeling and Simulation}
 \label{sec:matlab_modeling}
 
-\color{Red}senti falta de uma ou duas figuras nesta secção. Uma com o Modelo Matlab Implementado e outra com o diagrama de blocos do Modelo da Batemo (mesmo que não possa mostrar valores por questões de confidencialidade do modelo a qeteve acesso ) \color{Black}
-
 The initial development phase focused on implementing traditional battery modeling approaches in MATLAB to establish baseline performance and understand the basic characteristics of battery degradation patterns.
 
 The exploration began with the MATLAB Simulink Battery State-of-Charge Estimation example~\cite{mathworks_battery_soc_2024} to evaluate the feasibility of generating synthetic battery data through simulation and to test the Kalman filter approach for state estimation. This standard example provided a foundation for understanding how battery behavior could be modeled and simulated using established MATLAB tools. Figure~\ref{fig:simulink_ekf_implementation} shows the complete MATLAB Simulink implementation used for Extended Kalman Filter testing and battery state estimation.
@@ -34,7 +32,7 @@ To enhance the accuracy and realism of the simulations, the standard battery blo
 \label{fig:batemo_blocks}
 \end{figure}
 
-First, the Extended Kalman Filter (EFK) was implemented as the primary estimation algorithm for SOC prediction. The EFK approach was chosen for its proven effectiveness in handling the nonlinear behavior of battery systems and its ability to provide uncertainty measurement. Coulomb counting was integrated as a supporting method for SOC estimation, providing a reference baseline for comparison with the Kalman filter results. Figure~\ref{fig:ekf_results} presents the estimation results obtained from the EKF implementation, demonstrating the algorithm's performance in tracking battery state-of-charge.
+First, the EKF was implemented as the primary estimation algorithm for SOC prediction. The EKF approach was chosen for its proven effectiveness in handling the nonlinear behavior of battery systems and its ability to provide uncertainty measurement. Coulomb counting was integrated as a supporting method for SOC estimation, providing a reference baseline for comparison with the Kalman filter results. Figure~\ref{fig:ekf_results} presents the estimation results obtained from the EKF implementation, demonstrating the algorithm's performance in tracking battery state-of-charge.
 
 \begin{figure}[htbp]
 \centering
@@ -93,9 +91,9 @@ This work evaluated different NN approaches, each addressing specific limitation
 
 During the literature review process, the Transformer network for Remaining Useful Life prediction of lithium-ion batteries~\cite{chen_transformer_2022} was identified as a promising approach that demonstrated superior performance for battery health prediction tasks. This work introduced a Transformer-based neural network specifically designed for battery RUL prediction using the CALCE dataset \cite{CALCE_battery_nodate}.
 
-The Chen et al. approach addressed the challenge of noisy battery capacity data through a two-stage framework. First, a Denoising Auto-Encoder (DAE) was applied to process the raw battery data and reduce noise artifacts commonly present during charge-discharge cycles. The denoised data was then fed into a Transformer network to capture temporal information and learn features relevant to battery degradation patterns. The unified framework combined both denoising and prediction tasks, enabling end-to-end learning for accurate RUL estimation.
+The Chen et al. approach addressed the challenge of noisy battery capacity data through a two-stage framework. First, a DAE was applied to process the raw battery data and reduce noise artifacts commonly present during charge-discharge cycles. The denoised data was then fed into a Transformer network to capture temporal information and learn features relevant to battery degradation patterns. The unified framework combined both denoising and prediction tasks, enabling end-to-end learning for accurate RUL estimation.
 
-The Transformer architecture utilized self-attention mechanisms to model long-range dependencies in battery degradation sequences, effectively capturing relationships between distant time points in the battery operational history. This approach demonstrated superior performance compared to traditional methods on multiple battery datasets, showing improved accuracy in predicting both State of Health (SOH) and End of Life (EOL) estimates. Figure~\ref{fig:transformer_architecture} illustrates the complete Transformer architecture implemented for battery RUL prediction, showing the multi-head attention mechanisms and feed-forward layers that enable effective temporal pattern recognition.
+The Transformer architecture utilized self-attention mechanisms to model long-range dependencies in battery degradation sequences, effectively capturing relationships between distant time points in the battery operational history. This approach demonstrated superior performance compared to traditional methods on multiple battery datasets, showing improved accuracy in predicting both SOH and EOL estimates. Figure~\ref{fig:transformer_architecture} illustrates the complete Transformer architecture implemented for battery RUL prediction, showing the multi-head attention mechanisms and feed-forward layers that enable effective temporal pattern recognition.
 
 \begin{figure}[htbp]
 \centering
@@ -104,7 +102,7 @@ The Transformer architecture utilized self-attention mechanisms to model long-ra
 \label{fig:transformer_architecture}
 \end{figure}
 
-Building on concepts from Transferred Multi-Task Learning \cite{che_battery_2023}, which showed promise for battery state monitoring across different operating conditions, an investigation into Mixture of Experts (MoE) networks was conducted. MoE represents a powerful neural network architecture that combines multiple specialized sub-networks (experts) with a gating mechanism that determines which experts should be activated for each input sample.
+Building on concepts from Transferred Multi-Task Learning \cite{che_battery_2023}, which showed promise for battery state monitoring across different operating conditions, an investigation into MoE networks was conducted. MoE represents a powerful neural network architecture that combines multiple specialized sub-networks (experts) with a gating mechanism that determines which experts should be activated for each input sample.
 
 The MoE architecture offers several advantages for battery health prediction:
 
@@ -120,7 +118,7 @@ To evaluate the effectiveness of MoE networks for battery RUL prediction, the sa
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{imgs/Moe_arq.png}
-\caption{Mixture of Experts (MoE) architecture for battery health prediction, showing the gating network and specialized experts that enable efficient learning of different battery degradation patterns and operating conditions~\cite{moe_arq}.}
+\caption{MoE architecture for battery health prediction, showing the gating network and specialized experts that enable efficient learning of different battery degradation patterns and operating conditions~\cite{moe_arq}.}
 \label{fig:moe_architecture}
 \end{figure}
 
@@ -136,7 +134,7 @@ To evaluate the effectiveness of MoE networks for battery RUL prediction, the sa
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{imgs/moe_graph_results.png}
-    \caption{Mixture of Experts (MoE) network performance results for battery RUL prediction, demonstrating competitive accuracy with reduced computational complexity compared to the Transformer approach.}
+    \caption{MoE network performance results for battery RUL prediction, demonstrating competitive accuracy with reduced computational complexity compared to the Transformer approach.}
     \label{fig:moe_results}
 \end{figure}
 
@@ -154,7 +152,7 @@ To evaluate the effectiveness of MoE networks for battery RUL prediction, the sa
     \end{tabular}
 \end{table}
 
-The experimental results demonstrated that a simple MoE network with just three experts could achieve performance levels comparable to the much more complex Transformer-based architecture. Figure~\ref{fig:transformer_results} shows the training and validation performance of the Transformer network, while Figure~\ref{fig:moe_results} presents the corresponding results for the MoE implementation. Table~\ref{tab:transformer_moe_results} provides a quantitative comparison of the two approaches, showing that while the Transformer model achieved a slightly better Root Mean Square Error (RMSE) of 0.0297 compared to the FCN MoE network's 0.0335, the MoE network provided competitive results with significantly reduced model complexity and computational requirements.
+The experimental results demonstrated that a simple MoE network with just three experts could achieve performance levels comparable to the much more complex Transformer-based architecture. Figure~\ref{fig:transformer_results} shows the training and validation performance of the Transformer network, while Figure~\ref{fig:moe_results} presents the corresponding results for the MoE implementation. Table~\ref{tab:transformer_moe_results} provides a quantitative comparison of the two approaches, showing that while the Transformer model achieved a slightly better RMSE of 0.0297 compared to the FCN MoE network's 0.0335, the MoE network provided competitive results with significantly reduced model complexity and computational requirements.
 
 The MoE approach proved particularly effective due to its ability to specialize different experts for distinct aspects of battery behavior. Expert analysis revealed that the three experts naturally specialized in different degradation phases: early battery life, linear degradation, and end-of-life behavior. This specialization allowed the MoE network to capture the complex multi-phase nature of battery degradation with a simpler overall architecture.
 
@@ -179,7 +177,7 @@ The dataset consists of 886 CSV files with battery cycle data. Initially, the da
 
 The original data contains multiple features including capacity, energy, current, voltage, and resistance measurements. Through preprocessing, the dataset is streamlined to focus on essential variables: Capacity\_Difference, Cumulative\_Cycle\_Index, Current(A), Date\_Time, RUL, SOC, SOH, and Voltage(V).
 
-\subsubsection{State of Charge (SOC) Calculation}
+\subsubsection{SOC Calculation}
 \label{subsubsec:soc_calculation}
 
 SOC is calculated using a cycle-relative approach for each charge-discharge cycle:
@@ -198,12 +196,12 @@ SOC is calculated using a cycle-relative approach for each charge-discharge cycl
     SOC values are clipped to ensure they remain within the physically meaningful range of 0-100\%.
 \end{enumerate}
 
-This approach ensures that SOC represents the true state of charge within each cycle, providing accurate representation of the battery's immediate operational state regardless of capacity degradation over time.
+This approach ensures that SOC represents the true charge state within each cycle, providing accurate representation of the battery's immediate operational state regardless of capacity degradation over time.
 
-\subsubsection{State of Health (SOH) Calculation}
+\subsubsection{SOH Calculation}
 \label{subsubsec:soh_calculation}
 
-The State of Health calculation provides a measure of the battery's current capacity relative to its initial capacity, serving as a key indicator of degradation progression. The calculation process involves:
+The SOH calculation provides a measure of the battery's current capacity relative to its initial capacity, serving as a key indicator of degradation progression. The calculation process involves:
 
 \begin{enumerate}
     \item \textbf{Cycle maximum capacity extraction}: For each cycle, the maximum discharge capacity is determined:
@@ -224,10 +222,10 @@ The State of Health calculation provides a measure of the battery's current capa
 
 This methodology ensures that SOH accurately reflects the battery's capacity retention throughout its operational lifetime, with 100\% representing the initial capacity and declining values indicating progressive degradation.
 
-\subsubsection{Remaining Useful Life (RUL) Calculation}
+\subsubsection{RUL Calculation}
 \label{subsubsec:rul_calculation}
 
-The Remaining Useful Life calculation provides a predictive metric indicating how much operational life remains before the battery reaches end-of-life conditions. The implementation follows industry-standard practices:
+The RUL calculation provides a predictive metric indicating how much operational life remains before the battery reaches end-of-life conditions. The implementation follows industry-standard practices:
 
 \begin{enumerate}
     \item \textbf{End-of-life threshold definition}: The end-of-life condition is defined as 80\% of initial capacity, following typical industry standards:
@@ -235,7 +233,7 @@ The Remaining Useful Life calculation provides a predictive metric indicating ho
         \text{EOL\_threshold} = 80\%
     \end{equation}
     
-    \item \textbf{RUL percentage calculation}: The RUL is calculated as a percentage of remaining useful life:
+    \item \textbf{RUL percentage calculation}: The RUL is calculated as a percentage of RUL:
     \begin{equation}
         RUL = \frac{SOH - \text{EOL\_threshold}}{100\% - \text{EOL\_threshold}} \times 100\%
     \end{equation}
@@ -272,7 +270,7 @@ This systematic approach ensures that all capacity-based calculations maintain a
 \subsection{Cycle Selection System}
 \label{subsec:cycle_selection_system}
 
-A custom Python tool organizes the 886 CSV files using a group-based selection algorithm. Files are divided into groups of 10, with a 7:2:1 ratio applied within each group for training, validation, and test sets. This yields approximately 70\% training, 20\% validation, and 10\% test data.
+A custom made Python script organizes the 886 CSV files using a group-based selection algorithm. Files are divided into groups of 10, with a 7:2:1 ratio applied within each group for training, validation, and test sets. This yields approximately 70\% training, 20\% validation, and 10\% test data.
 
 \subsubsection{Data Shuffling}
 
@@ -291,8 +289,7 @@ Individual battery cycles are fed to the network in shuffled order. TimesNet aut
 \subsection{Configuration Management and Reproducibility}
 \label{subsec:config_management}
 
-The preprocessing pipeline outputs multiple JSON files containing organized file paths for different experimental scenarios. These JSON files include basic selection outputs, distributed subsets, and configurations with specific preprocessing steps applied. This approach ensures that all subsequent modeling phases have access to consistently processed, well-documented datasets with clear provenance and reproducible preparation methodology.
-
+The preprocessing pipeline outputs multiple JSON files containing organized file paths for different experimental scenarios. These JSON files include basic selection outputs, distributed subsets, and configurations with specific preprocessing steps applied.
 \subsection{Calculated Values Analysis}
 \label{subsec:calculated_values_analysis}
 
@@ -307,18 +304,18 @@ Figure~\ref{fig:calculated_values} presents the calculated SOC, SOH, and RUL val
 
 The results demonstrate three distinct behavioral patterns that are fundamental to battery health monitoring:
 
-\textbf{State of Health (SOH) Degradation}: The SOH values show a clear declining trend as battery cycles progress, starting at 100\% and gradually decreasing to approximately 40\% by the end of the dataset. This degradation pattern reflects the natural capacity fade that occurs in lithium-ion batteries due to various aging mechanisms. The occasional sharp drops in SOH correspond to specific degradation events or measurement artifacts during battery testing.
+\textbf{SOH Degradation}: The SOH values show a clear declining trend as battery cycles progress, starting at 100\% and gradually decreasing to approximately 40\% by the end of the dataset. This degradation pattern reflects the natural capacity fade that occurs in lithium-ion batteries due to various aging mechanisms. The occasional sharp drops in SOH correspond to specific degradation events or measurement artifacts during battery testing.
 
-\textbf{State of Charge (SOC) Cycling}: The SOC values exhibit consistent oscillating behavior between 0\% and 100\%, representing the regular charge-discharge cycles throughout battery operation. This cyclic pattern confirms that the SOC calculation correctly captures the charge state variations within each operational cycle, independent of the overall capacity degradation.
+\textbf{SOC Cycling}: The SOC values exhibit consistent oscillating behavior between 0\% and 100\%, representing the regular charge-discharge cycles throughout battery operation. This cyclic pattern confirms that the SOC calculation correctly captures the charge state variations within each operational cycle, independent of the overall capacity degradation.
 
-\textbf{Remaining Useful Life (RUL) Decline}: The RUL values demonstrate a progressive decrease as battery cycles advance, starting at 100\% and declining toward 0\% as the battery approaches end-of-life conditions. The RUL calculation effectively translates the SOH degradation into a predictive metric, providing valuable information about the battery's remaining operational capacity.
+\textbf{RUL Decline}: The RUL values demonstrate a progressive decrease as battery cycles advance, starting at 100\% and declining toward 0\% as the battery approaches end-of-life conditions. The RUL calculation effectively translates the SOH degradation into a predictive metric, providing valuable information about the battery's remaining operational capacity.
 
-These patterns validate the accuracy of the implemented calculation methods and provide the foundation for training machine learning models that can predict battery health evolution and remaining useful life based on operational data.
+These patterns validate the accuracy of the implemented calculation methods and provide the foundation for training machine learning models that can predict battery health evolution and RUL based on operational data.
 
 \section{Selected Deep Learning Approach}
 \label{sec:timesnet_model}
 
-The evaluation of Transformer and Mixture of Experts (MoE) approaches, as described in Section~\ref{subsec:transformer_moe_networks}, provided valuable insights into the strengths and limitations of current state-of-the-art architectures for battery health prediction. While both approaches demonstrated promising results, several critical limitations were identified:
+The evaluation of Transformer and MoE approaches, as described in Section~\ref{subsec:transformer_moe_networks}, provided valuable insights into the strengths and limitations of current state-of-the-art architectures for battery health prediction. While both approaches demonstrated promising results, several critical limitations were identified:
 
 \begin{itemize}
     \item \textbf{Computational complexity}: The Transformer architecture, despite achieving good accuracy (RMSE of 0.0297), required significant computational resources and complex attention mechanisms
@@ -383,7 +380,7 @@ Unlike previous methods that struggle with the complex time patterns in battery 
 \begin{itemize}
     \item \textbf{Input preprocessing}: Battery measurement sequences (voltage, current, temperature) were formatted to exploit the multi-periodicity detection capabilities. The input sequences were structured to capture both charge-discharge cycles and longer-term aging patterns.
     \item \textbf{Output configuration}: Modified for regression tasks to predict continuous SoH values rather than classification outputs. The final layer was adapted to output single scalar values representing battery health percentages.
-    \item \textbf{Loss function}: Used Mean Squared Error (MSE) with additional rules to prevent overfitting and ensure stable training.
+    \item \textbf{Loss function}: Used MSE with additional rules to prevent overfitting and ensure stable training.
     \item \textbf{Feature engineering}: Minimal manual feature creation to use the model's automatic pattern discovery abilities. This approach allows TimesNet to automatically identify relevant time patterns in battery data without requiring specialized feature design.
     \item \textbf{Period selection}: The top-k parameter was optimized specifically for battery data characteristics, allowing the model to focus on the most relevant repeating patterns in battery operation and degradation cycles.
 \end{itemize}
@@ -402,7 +399,7 @@ TimesNet implementation followed the general framework with battery-specific opt
 
 \subsection{Hyperparameter Search}
 
-For model optimization, the Optuna tool detailed in Section~\ref{subsec:optuna} was utilized, which enables hyperparameter optimization for machine learning models, integrated with Weights \& Biases (WandB)detailed in Section~\ref{subsec:wandb}, which allows for result visualization and model comparison. The dataset was reduced to only 1/10 of the data, equally distributed from the original dataset, with the objective of reducing the time required for finding the best hyperparameters, since this process took approximately one week even with this data reduction.
+For model optimization, the Optuna tool detailed in Section~\ref{subsec:optuna} was utilized, which enables hyperparameter optimization for machine learning models, integrated with WandB detailed in Section~\ref{subsec:wandb}, which allows for result visualization and model comparison. The dataset was reduced to only 1/10 of the data, equally distributed from the original dataset, with the objective of reducing the time required for finding the best hyperparameters, since this process took approximately one week even with this data reduction.
 
 For the hyperparameter search, 50 trials were performed, with 50 epochs each, using an early stopping patience of 5 epochs to avoid overfitting and accelerate the optimization process. The parameters that were optimized through Optuna are:
 
@@ -483,7 +480,7 @@ The optimization process was also monitored using Weights \& Biases, which provi
 \chapter{Experiments and Results}
 \label{sec:experiments_results}
 
-This chapter presents the comprehensive experimental evaluation of the TimesNet architecture for battery health prediction. The experiments were conducted using the optimized hyperparameters obtained from the Optuna search process detailed in Section~\ref{sec:model_optimization}. The model was trained to simultaneously predict State of Charge (SOC), State of Health (SOH), and Remaining Useful Life (RUL) from multi-dimensional battery operational data.
+This chapter presents the comprehensive experimental evaluation of the TimesNet architecture for battery health prediction. The experiments were conducted using the optimized hyperparameters obtained from the Optuna search process detailed in Section~\ref{sec:model_optimization}. The model was trained to simultaneously predict SOC, SOH, and RUL from multi-dimensional battery operational data.
 
 \section{Model Training Configuration}
 \label{sec:training_config}
@@ -506,9 +503,9 @@ The model processes six essential input features that capture the comprehensive 
     \item \textbf{Voltage(V)}: Primary electrical characteristic indicating battery terminal voltage
     \item \textbf{Current(A)}: Charge and discharge current measurements
     \item \textbf{Time}: Temporal information for sequence modeling
-    \item \textbf{SOC}: State of Charge feedback for multi-task learning
-    \item \textbf{SOH}: State of Health feedback for degradation tracking
-    \item \textbf{RUL}: Remaining Useful Life feedback for predictive modeling
+    \item \textbf{SOC}: SOC feedback for multi-task learning
+    \item \textbf{SOH}: SOH feedback for degradation tracking
+    \item \textbf{RUL}: RUL feedback for predictive modeling
 \end{itemize}
 
 The selection of voltage and current as the primary input parameters was driven by their fundamental importance and practical accessibility in battery monitoring systems. These parameters represent the \textbf{most basic and straightforward measurements} that can be obtained from any battery system without requiring specialized or expensive instrumentation. Unlike more complex measurements such as impedance spectroscopy, temperature gradients, or electrochemical impedance, voltage and current can be acquired using \textbf{simple, cost-effective sensors} that are readily available in commercial battery management systems. This approach ensures that the developed model can be practically implemented in real-world applications without requiring sophisticated measurement infrastructure, making it accessible for widespread deployment in various battery monitoring scenarios.
@@ -558,22 +555,22 @@ The overall training behavior suggests a stable learning process with good conve
 
 The trained TimesNet model was evaluated separately for each target variable (SOC, SOH, and RUL) to assess its performance in multi-task battery health prediction. The evaluation provides comprehensive performance metrics across different battery health indicators.
 
-\subsection{State of Charge (SOC) Prediction Results}
+\subsection{SOC Prediction Results}
 \label{subsec:soc_results}
 
 The SOC prediction performance demonstrates the model's capability to track charge state variations within battery operational cycles. Table~\ref{tab:soc_results} presents the comprehensive evaluation metrics for SOC estimation.
 
 \begin{table}[htbp]
 \centering
-\caption{State of Charge (SOC) prediction performance metrics}
+\caption{SOC prediction performance metrics}
 \label{tab:soc_results}
 \begin{tabular}{lc}
 \hline
 \textbf{Metric} & \textbf{Value} \\
 \hline
-Mean Absolute Error (MAE) & 0.0621 \\
-Mean Squared Error (MSE) & 0.0507 \\
-Root Mean Squared Error (RMSE) & 0.2251 \\
+MAE & 0.0621 \\
+MSE & 0.0507 \\
+RMSE & 0.2251 \\
 \hline
 \end{tabular}
 \end{table}
@@ -587,22 +584,22 @@ The SOC results show strong performance with a relatively low RMSE of 0.2251, de
 %\label{fig:soc_analysis}
 %\end{figure}
 
-\subsection{State of Health (SOH) Prediction Results}
+\subsection{SOH Prediction Results}
 \label{subsec:soh_results}
 
 The SOH prediction results reveal the challenges associated with modeling battery degradation patterns. Table~\ref{tab:soh_results} presents the performance metrics for SOH estimation.
 
 \begin{table}[htbp]
 \centering
-\caption{State of Health (SOH) prediction performance metrics}
+\caption{SOH prediction performance metrics}
 \label{tab:soh_results}
 \begin{tabular}{lc}
 \hline
 \textbf{Metric} & \textbf{Value} \\
 \hline
-Mean Absolute Error (MAE) & 0.2039 \\
-Mean Squared Error (MSE) & 0.2790 \\
-Root Mean Squared Error (RMSE) & 0.5282 \\
+MAE & 0.2039 \\
+MSE & 0.2790 \\
+RMSE & 0.5282 \\
 \hline
 \end{tabular}
 \end{table}
@@ -616,22 +613,22 @@ The SOH results show moderate performance with an RMSE of 0.5282, reflecting the
 %\label{fig:soh_analysis}
 %\end{figure}
 
-\subsection{Remaining Useful Life (RUL) Prediction Results}
+\subsection{RUL Prediction Results}
 \label{subsec:rul_results}
 
 The RUL prediction represents the most challenging aspect of battery health modeling, as it requires accurate forecasting of future battery degradation. Table~\ref{tab:rul_results} presents the performance metrics for RUL estimation.
 
 \begin{table}[htbp]
 \centering
-\caption{Remaining Useful Life (RUL) prediction performance metrics}
+\caption{RUL prediction performance metrics}
 \label{tab:rul_results}
 \begin{tabular}{lc}
 \hline
 \textbf{Metric} & \textbf{Value} \\
 \hline
-Mean Absolute Error (MAE) & 0.2078 \\
-Mean Squared Error (MSE) & 0.2821 \\
-Root Mean Squared Error (RMSE) & 0.5311 \\
+MAE & 0.2078 \\
+MSE & 0.2821 \\
+RMSE & 0.5311 \\
 \hline
 \end{tabular}
 \end{table}
@@ -670,25 +667,12 @@ When comparing these results with simpler neural network approaches that focus o
 
 The multi-task approach, while providing comprehensive battery health monitoring in a single model, sacrifices individual task performance for \textbf{system integration} and \textbf{computational efficiency}. This represents a fundamental trade-off in deep learning system design between specialized performance and unified functionality.
 
-\subsection{Future Research Directions}
-\label{subsec:future_directions}
 
-The results suggest several promising research directions for improving multi-task battery health prediction. These approaches address the fundamental limitations identified in the unified multi-task approach while leveraging the strengths of specialized architectures.
-
-\textbf{Ensemble Methods for Specialized Task Integration}: The combination of multiple specialized models represents a particularly promising direction, where separate models optimized for SOC, SOH, and RUL prediction are combined using advanced fusion techniques. This approach would leverage \textbf{task-specific architectures} - such as CNNs for feature extraction from voltage and temperature data, LSTMs for time-series RUL prediction, and gradient-boosted decision trees for SOH estimation. The integration could be achieved through \textbf{weighted averaging}, \textbf{stacking}, or \textbf{boosting} methods, allowing each model to excel in its specialized domain while maintaining comprehensive battery health monitoring capabilities.
-
-\textbf{Transfer Learning and Sequential Task Modeling}: A hierarchical approach to battery health prediction could address the task interdependency challenges observed in this work. By \textbf{pre-training models on abundant SOC data} and subsequently fine-tuning for SOH and RUL prediction, this approach would exploit the natural dependencies between battery health indicators. The sequential modeling paradigm, where SOC predictions feed into SOH estimation and both inform RUL prediction, would explicitly model the \textbf{causal relationships} between these variables while avoiding the competing optimization objectives that limited the unified approach.
-
-\textbf{Hybrid Physics-Informed Neural Networks}: Integration of domain knowledge through physics-based models presents an opportunity to improve both interpretability and performance. This approach would combine \textbf{electrochemical models} (such as Thevenin equivalent circuits) for SOC estimation with \textbf{data-driven models} for capturing complex degradation patterns in SOH and RUL prediction. The physics-informed approach could provide \textbf{regularization} for the neural network training while ensuring that predictions respect fundamental battery physics principles.
-
-\textbf{Advanced Graph Neural Networks}: The representation of battery data as graphs offers a novel approach to capturing complex temporal and electrochemical relationships. In this framework, nodes would represent battery measurements at different time steps, while edges would encode temporal dependencies and physical relationships. This approach could be particularly valuable for \textbf{battery pack applications} where cell-to-cell interactions significantly influence overall system health, extending beyond single-cell prediction to comprehensive system-level monitoring.
-
-These future directions collectively address the core challenges identified in this work: the need for architectural specialization, the importance of task relationships, and the integration of domain knowledge. Implementation of these approaches could significantly advance the state-of-the-art in battery health prediction while maintaining the practical benefits of comprehensive monitoring systems.
 
 \chapter{Conclusion and Future Work}
 \label{sec:conclusion_future_work}
 
-This chapter presents the key findings, achievements, and limitations of the BattAIHealth project, along with recommendations for future research directions. The project represents a comprehensive exploration of battery health prediction using state-of-the-art deep learning techniques, spanning from traditional MATLAB-based approaches to cutting-edge TimesNet architectures for simultaneous prediction of State of Charge (SOC), State of Health (SOH), and Remaining Useful Life (RUL).
+This chapter presents the key findings, achievements, and limitations of the BattAIHealth project, along with recommendations for future research directions. The project represents a comprehensive exploration of battery health prediction using state-of-the-art deep learning techniques, spanning from traditional MATLAB-based approaches to cutting-edge TimesNet architectures for simultaneous prediction of SOC, SOH, and RUL.
 
 \section{Conclusion}
 \label{sec:conclusion}
@@ -714,18 +698,16 @@ Despite these limitations, this type of research carries significant practical i
 \section{Future Work}
 \label{sec:future_work}
 
-Based on the findings from this project, several promising directions emerge for future research and development in battery health prediction systems. The main lesson learned is that trying to solve all three prediction tasks (SOC, SOH, and RUL) simultaneously may not be the best approach.
+Based on the findings from this project, several promising directions emerge for future research and development in battery health prediction systems. The main lesson learned is that trying to solve all three prediction tasks (SOC, SOH, and RUL) simultaneously may not be the best approach for achieving optimal individual task performance.
 
-The most promising direction for future work would be to develop ensemble methods that combine multiple specialized models, each optimized for individual prediction tasks. Instead of one large model trying to do everything, we could have separate models for SOC estimation using CNNs for feature extraction from voltage and current profiles, LSTM networks specifically designed for time-series RUL prediction, and gradient-boosted decision trees for SOH estimation. These specialized models could then be combined using advanced fusion techniques like weighted averaging or stacking methods.
+The analysis of the multi-task learning approach revealed fundamental limitations that point toward more effective alternative strategies. The competing optimization objectives between SOC, SOH, and RUL prediction create conflicting gradients during training, while the shared architecture prevents the specialization needed for each distinct prediction task. These insights suggest that future research should focus on approaches that leverage task-specific architectures while maintaining the benefits of comprehensive battery health monitoring.
 
-Another interesting approach would be hierarchical task modeling, where we exploit the natural dependencies between battery health indicators. We could pre-train models on abundant SOC data and then fine-tune them for SOH and RUL prediction. This sequential approach, where SOC predictions feed into SOH estimation and both inform RUL prediction, would explicitly model the causal relationships between these variables while avoiding the competing optimization objectives that limited our unified approach.
+The most promising direction for future work involves developing ensemble methods that combine multiple specialized models, each optimized for individual prediction tasks~\cite{noauthor_pdf_nodate}. Rather than forcing one large model to handle everything, this approach would deploy separate models strategically designed for their specific purposes: CNNs for feature extraction from voltage and current profiles in SOC estimation, LSTM networks specifically engineered for time-series RUL prediction, and gradient-boosted decision trees for SOH estimation. These specialized models could then be integrated using advanced fusion techniques such as weighted averaging, stacking methods, or boosting approaches, allowing each component to excel in its domain while maintaining comprehensive monitoring capabilities.
 
-The integration of physics-based knowledge through physics-informed neural networks also presents significant opportunities. This hybrid approach would combine electrochemical models (like Thevenin equivalent circuits) for SOC estimation with data-driven models for capturing complex degradation patterns in SOH and RUL prediction. The physics-informed approach could provide regularization for neural network training while ensuring that predictions respect fundamental battery physics principles.
+Transfer learning and sequential task modeling present another compelling direction that could address the task interdependency challenges observed in this work~\cite{zhuang_comprehensive_2021}. This hierarchical approach would exploit the natural dependencies between battery health indicators by pre-training models on abundant SOC data and subsequently fine-tuning for SOH and RUL prediction. The sequential modeling paradigm, where SOC predictions feed into SOH estimation and both inform RUL prediction, would explicitly model the causal relationships between these variables while avoiding the competing optimization objectives that limited the unified approach.
 
-For battery pack applications, representing battery data as graphs offers a novel approach to capturing complex temporal and electrochemical relationships. Nodes would represent battery measurements at different time steps, while edges would encode temporal dependencies and physical relationships. This could be particularly valuable for battery pack applications where cell-to-cell interactions significantly influence overall system health.
+The integration of physics-based knowledge through physics-informed neural networks offers significant opportunities for improving both model performance and interpretability~\cite{raissi_physics-informed_2019}. This hybrid approach would combine electrochemical models, such as Thevenin equivalent circuits for SOC estimation, with data-driven models for capturing complex degradation patterns in SOH and RUL prediction. The physics-informed approach could provide regularization for neural network training while ensuring that predictions respect fundamental battery physics principles, potentially leading to more robust and trustworthy predictions.
 
-The practical deployment challenges identified in this work also need attention. Future research should focus on developing efficient model architectures specifically designed for real-time deployment in resource-constrained environments. This includes exploring model compression techniques, knowledge distillation approaches, and hardware-aware neural architecture search methods to create edge-optimized models that can run efficiently on embedded systems.
+Advanced graph neural networks represent another innovative direction where battery data is represented as graphs to capture complex temporal and electrochemical relationships~\cite{zhou_graph_2020}. In this framework, nodes would represent battery measurements at different time steps, while edges would encode temporal dependencies and physical relationships. This approach could be particularly valuable for battery pack applications where cell-to-cell interactions significantly influence overall system health, extending beyond single-cell prediction to comprehensive system-level monitoring.
 
-Finally, the battery health prediction community would benefit from standardized benchmarks and evaluation protocols. Creating comprehensive datasets that include diverse battery chemistries, operating conditions, and degradation patterns would facilitate meaningful comparison between different approaches and accelerate progress in the field. This should also address the challenges of data sharing and reproducibility in battery research.
-
-
+The practical deployment challenges identified in this work require dedicated attention in future research. Developing efficient model architectures specifically designed for real-time deployment in resource-constrained environments remains a critical need. This includes exploring model compression techniques, knowledge distillation approaches, and hardware-aware neural architecture search methods to create edge-optimized models that can run efficiently on embedded systems typical in automotive and railway applications.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.6.23)  12 JUL 2025 20:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.6.23)  13 JUL 2025 00:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1191,7 +1191,7 @@ Package csquotes Info: Redefining alias 'default' -> 'portuguese'.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 139.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) (./main.aux (./Covers/Titlepage.aux) (./Covers/Titleback.aux) (./Covers/Acknowledgments.aux) (./Covers/Abstract.aux) (./Covers/Contents.aux) (./Covers/Acronyms.aux) (./Chapters/Intro.aux) (./Chapters/Background.aux) (./Chapters/StateOfTheArt.aux) (./Chapters/Development.aux) (./Chapters/Conclusion.aux) (./Covers/Bibliography.aux))
+) (./main.aux (./Covers/Titlepage.aux) (./Covers/Titleback.aux) (./Covers/Acknowledgments.aux) (./Covers/Abstract.aux) (./Covers/Contents.aux) (./Covers/Acronyms.aux) (./Chapters/Intro.aux) (./Chapters/Background.aux) (./Chapters/StateOfTheArt.aux) (./Chapters/Development.aux) (./Covers/Bibliography.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
@@ -1554,22 +1554,21 @@ Package microtype Info: Character `029' is missing
 1: chapter
 1: chapter
 1: section
-[8] [9] [10
-
-]
+[8]
 Package tocbasic Info: character protrusion at lof deactivated on input line 40.
- (./main.lof [11
+ (./main.lof [9
+
 
 ]
 Overfull \hbox (2.04584pt too wide) in paragraph at lines 26--26
  [][] []\T1/lmr/m/n/10.95 (-20) Battery state es-ti-ma-tion re-sults ob-tained us-ing the Batemo physics- 
  []
 
-[12])
+[10])
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [13] [14
+ [11] [12
 
 ]
 Package tocbasic Info: character protrusion at lot deactivated on input line 55.
@@ -1577,23 +1576,20 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 55.
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [15
+) [13
 
-] [16
+] [14
 
-] [17] [18
 
-])
+
+]
 \openout2 = `Covers/Acronyms.aux'.
 
- (./Covers/Acronyms.tex [19
+ (./Covers/Acronyms.tex [15
 
 
 
-
-
-
-] [20])
+] [16])
 \openout2 = `Chapters/Intro.aux'.
 
  (./Chapters/Intro.tex
@@ -1603,26 +1599,22 @@ Overfull \hbox (38.53226pt too wide) in paragraph at lines 4--4
 []\U/eur/b/n/70 1 
  []
 
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20 T
+      he rest of this report is organized as follows: Chapter 2 covers backg... [1
+
+
+
+
+
+
+])pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.174 \cleardoublepage\include{Chapters/Intro}
-                                               [1
-
-
-
-
-
-
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.175 \cleardoublepage
-                      \include{Chapters/Background} [2
-
-
-
-]
+                                               [2]
 \openout2 = `Chapters/Background.aux'.
 
  (./Chapters/Background.tex
@@ -1639,27 +1631,34 @@ l.11
       [3
 
 
+
+
+
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 \end{enumerate}
-                     [4]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 41.
+l.25    \item \textbf
+                     {Irregular/Noise Component} includes random changes and... [4]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 37.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [5] [6] [7] [8] [9]
-<imgs/neural_vs_deep.png, id=375, 690.58pt x 373.395pt>
+<imgs/neural_vs_deep.png, id=358, 690.58pt x 373.395pt>
 File: imgs/neural_vs_deep.png Graphic file (type png)
 <use imgs/neural_vs_deep.png>
-Package pdftex.def Info: imgs/neural_vs_deep.png  used on input line 136.
+Package pdftex.def Info: imgs/neural_vs_deep.png  used on input line 132.
 (pdftex.def)             Requested size: 334.60425pt x 180.91972pt.
  [10 <./imgs/neural_vs_deep.png>] [11]
-<imgs/Degradation mechanisms in Li-ion cells.jpg, id=388, 1553.44pt x 851.18pt>
+<imgs/Degradation mechanisms in Li-ion cells.jpg, id=372, 1553.44pt x 851.18pt>
 File: imgs/Degradation mechanisms in Li-ion cells.jpg Graphic file (type jpg)
 <use imgs/Degradation mechanisms in Li-ion cells.jpg>
-Package pdftex.def Info: imgs/Degradation mechanisms in Li-ion cells.jpg  used on input line 167.
+Package pdftex.def Info: imgs/Degradation mechanisms in Li-ion cells.jpg  used on input line 163.
 (pdftex.def)             Requested size: 376.4258pt x 206.24855pt.
- [12] [13 <./imgs/Degradation mechanisms in Li-ion cells.jpg>] [14] [15] [16] [17]) [18]
+ [12] [13 <./imgs/Degradation mechanisms in Li-ion cells.jpg>] [14] [15] [16] [17]) [18] [19] [20
+
+
+
+]
 \openout2 = `Chapters/StateOfTheArt.aux'.
 
  (./Chapters/StateOfTheArt.tex
@@ -1669,43 +1668,39 @@ Overfull \hbox (38.53226pt too wide) in paragraph at lines 2--2
 []\U/eur/b/n/70 3 
  []
 
-[19
-
-
-
+[21
 
 
 ]
-<imgs/ECM_1st_2nd_order.png, id=447, 386.76495pt x 160.07805pt>
+<imgs/ECM_1st_2nd_order.png, id=438, 386.76495pt x 160.07805pt>
 File: imgs/ECM_1st_2nd_order.png Graphic file (type png)
 <use imgs/ECM_1st_2nd_order.png>
-Package pdftex.def Info: imgs/ECM_1st_2nd_order.png  used on input line 21.
+Package pdftex.def Info: imgs/ECM_1st_2nd_order.png  used on input line 20.
 (pdftex.def)             Requested size: 418.25372pt x 173.11618pt.
- [20 <./imgs/ECM_1st_2nd_order.png>]
-<imgs/coulomb.jpg, id=460, 432.04892pt x 332.2849pt>
+ [22 <./imgs/ECM_1st_2nd_order.png>]
+<imgs/coulomb.jpg, id=452, 432.04892pt x 332.2849pt>
 File: imgs/coulomb.jpg Graphic file (type jpg)
 <use imgs/coulomb.jpg>
-Package pdftex.def Info: imgs/coulomb.jpg  used on input line 39.
+Package pdftex.def Info: imgs/coulomb.jpg  used on input line 38.
 (pdftex.def)             Requested size: 334.60425pt x 257.35081pt.
- [21] [22 <./imgs/coulomb.jpg>]
-<imgs/ekf.png, id=477, 587.796pt x 389.0535pt>
+ [23] [24 <./imgs/coulomb.jpg>]
+<imgs/ekf.png, id=469, 587.796pt x 389.0535pt>
 File: imgs/ekf.png Graphic file (type png)
 <use imgs/ekf.png>
-Package pdftex.def Info: imgs/ekf.png  used on input line 48.
+Package pdftex.def Info: imgs/ekf.png  used on input line 47.
 (pdftex.def)             Requested size: 376.4258pt x 249.15366pt.
- [23 <./imgs/ekf.png>]
-<imgs/rnn_lstm.png, id=493, 853.1875pt x 473.77pt>
+ [25 <./imgs/ekf.png>]
+<imgs/rnn_lstm.png, id=486, 853.1875pt x 473.77pt>
 File: imgs/rnn_lstm.png Graphic file (type png)
 <use imgs/rnn_lstm.png>
-Package pdftex.def Info: imgs/rnn_lstm.png  used on input line 68.
+Package pdftex.def Info: imgs/rnn_lstm.png  used on input line 67.
 (pdftex.def)             Requested size: 418.25372pt x 232.25777pt.
- [24] [25 <./imgs/rnn_lstm.png>]
-<imgs/transformer_input.png, id=512, 823.075pt x 540.0175pt>
+<imgs/transformer_input.png, id=491, 823.075pt x 540.0175pt>
 File: imgs/transformer_input.png Graphic file (type png)
 <use imgs/transformer_input.png>
-Package pdftex.def Info: imgs/transformer_input.png  used on input line 78.
+Package pdftex.def Info: imgs/transformer_input.png  used on input line 77.
 (pdftex.def)             Requested size: 376.4258pt x 246.96906pt.
- [26 <./imgs/transformer_input.png>] [27]) [28]
+ [26] [27 <./imgs/rnn_lstm.png>] [28 <./imgs/transformer_input.png>] [29]) [30]
 \openout2 = `Chapters/Development.aux'.
 
  (./Chapters/Development.tex
@@ -1715,163 +1710,146 @@ Overfull \hbox (38.53226pt too wide) in paragraph at lines 2--2
 []\U/eur/b/n/70 4 
  []
 
-<imgs/simulink_EKF.png, id=535, 1340.00626pt x 463.7325pt>
+<imgs/simulink_EKF.png, id=529, 1340.00626pt x 463.7325pt>
 File: imgs/simulink_EKF.png Graphic file (type png)
 <use imgs/simulink_EKF.png>
-Package pdftex.def Info: imgs/simulink_EKF.png  used on input line 23.
+Package pdftex.def Info: imgs/simulink_EKF.png  used on input line 21.
 (pdftex.def)             Requested size: 418.25372pt x 144.73914pt.
-[29
+[31
 
 
 
 
 
 ]
-<imgs/batemo_blocks.png, id=543, 1388.18625pt x 722.7pt>
+<imgs/batemo_blocks.png, id=537, 1388.18625pt x 722.7pt>
 File: imgs/batemo_blocks.png Graphic file (type png)
 <use imgs/batemo_blocks.png>
-Package pdftex.def Info: imgs/batemo_blocks.png  used on input line 32.
+Package pdftex.def Info: imgs/batemo_blocks.png  used on input line 30.
 (pdftex.def)             Requested size: 334.60425pt x 174.19038pt.
-<imgs/EKF_results.png, id=545, 722.7pt x 587.19376pt>
+ [32 <./imgs/simulink_EKF.png> <./imgs/batemo_blocks.png>]
+<imgs/EKF_results.png, id=546, 722.7pt x 587.19376pt>
 File: imgs/EKF_results.png Graphic file (type png)
 <use imgs/EKF_results.png>
-Package pdftex.def Info: imgs/EKF_results.png  used on input line 41.
+Package pdftex.def Info: imgs/EKF_results.png  used on input line 39.
 (pdftex.def)             Requested size: 376.4258pt x 305.84425pt.
- [30 <./imgs/simulink_EKF.png>] [31 <./imgs/batemo_blocks.png> <./imgs/EKF_results.png>]
-<imgs/batemo_configurations.png, id=561, 581.92406pt x 551.05875pt>
+ [33 <./imgs/EKF_results.png>]
+<imgs/batemo_configurations.png, id=554, 581.92406pt x 551.05875pt>
 File: imgs/batemo_configurations.png Graphic file (type png)
 <use imgs/batemo_configurations.png>
-Package pdftex.def Info: imgs/batemo_configurations.png  used on input line 52.
+Package pdftex.def Info: imgs/batemo_configurations.png  used on input line 50.
 (pdftex.def)             Requested size: 334.60425pt x 316.86472pt.
-<imgs/batemo_estimation.png, id=562, 1484.54625pt x 574.39594pt>
+<imgs/batemo_estimation.png, id=555, 1484.54625pt x 574.39594pt>
 File: imgs/batemo_estimation.png Graphic file (type png)
 <use imgs/batemo_estimation.png>
-Package pdftex.def Info: imgs/batemo_estimation.png  used on input line 59.
+Package pdftex.def Info: imgs/batemo_estimation.png  used on input line 57.
 (pdftex.def)             Requested size: 376.4258pt x 145.64076pt.
- [32 <./imgs/batemo_configurations.png>] [33 <./imgs/batemo_estimation.png>]
-<imgs/transformer_arq.png, id=576, 823.075pt x 633.36626pt>
+ [34 <./imgs/batemo_configurations.png>] [35 <./imgs/batemo_estimation.png>]
+<imgs/transformer_arq.png, id=570, 823.075pt x 633.36626pt>
 File: imgs/transformer_arq.png Graphic file (type png)
 <use imgs/transformer_arq.png>
-Package pdftex.def Info: imgs/transformer_arq.png  used on input line 102.
+Package pdftex.def Info: imgs/transformer_arq.png  used on input line 100.
 (pdftex.def)             Requested size: 376.4258pt x 289.66075pt.
- [34] [35 <./imgs/transformer_arq.png>]
-<imgs/Moe_arq.png, id=591, 853.1875pt x 430.60875pt>
+ [36] [37 <./imgs/transformer_arq.png>]
+<imgs/Moe_arq.png, id=585, 853.1875pt x 430.60875pt>
 File: imgs/Moe_arq.png Graphic file (type png)
 <use imgs/Moe_arq.png>
-Package pdftex.def Info: imgs/Moe_arq.png  used on input line 122.
+Package pdftex.def Info: imgs/Moe_arq.png  used on input line 120.
 (pdftex.def)             Requested size: 376.4258pt x 189.9875pt.
-<imgs/transf_graph_results.png, id=594, 1402.23875pt x 1052.93375pt>
+<imgs/transf_graph_results.png, id=588, 1402.23875pt x 1052.93375pt>
 File: imgs/transf_graph_results.png Graphic file (type png)
 <use imgs/transf_graph_results.png>
-Package pdftex.def Info: imgs/transf_graph_results.png  used on input line 130.
+Package pdftex.def Info: imgs/transf_graph_results.png  used on input line 128.
 (pdftex.def)             Requested size: 376.4258pt x 282.65714pt.
-<imgs/moe_graph_results.png, id=595, 1946.27126pt x 1490.56876pt>
+<imgs/moe_graph_results.png, id=589, 1946.27126pt x 1490.56876pt>
 File: imgs/moe_graph_results.png Graphic file (type png)
 <use imgs/moe_graph_results.png>
-Package pdftex.def Info: imgs/moe_graph_results.png  used on input line 138.
+Package pdftex.def Info: imgs/moe_graph_results.png  used on input line 136.
 (pdftex.def)             Requested size: 376.4258pt x 288.28296pt.
- [36] [37 <./imgs/Moe_arq.png> <./imgs/transf_graph_results.png>] [38 <./imgs/moe_graph_results.png (PNG copy)>]
-<imgs/cycles_files.png, id=615, 762.85pt x 514.92375pt>
+ [38 <./imgs/Moe_arq.png>] [39 <./imgs/transf_graph_results.png>] [40 <./imgs/moe_graph_results.png (PNG copy)>]
+<imgs/cycles_files.png, id=607, 762.85pt x 514.92375pt>
 File: imgs/cycles_files.png Graphic file (type png)
 <use imgs/cycles_files.png>
-Package pdftex.def Info: imgs/cycles_files.png  used on input line 175.
+Package pdftex.def Info: imgs/cycles_files.png  used on input line 173.
 (pdftex.def)             Requested size: 418.25372pt x 282.32108pt.
- [39] [40 <./imgs/cycles_files.png>] [41] [42] [43]
-<imgs/soc_soh_rul.png, id=665, 2184.16pt x 1018.80624pt>
+ [41] [42 <./imgs/cycles_files.png>] [43] [44] [45]
+<imgs/soc_soh_rul.png, id=658, 2184.16pt x 1018.80624pt>
 File: imgs/soc_soh_rul.png Graphic file (type png)
 <use imgs/soc_soh_rul.png>
-Package pdftex.def Info: imgs/soc_soh_rul.png  used on input line 303.
+Package pdftex.def Info: imgs/soc_soh_rul.png  used on input line 300.
 (pdftex.def)             Requested size: 418.25372pt x 195.08313pt.
- [44] [45 <./imgs/soc_soh_rul.png>] [46] [47]
-<imgs/timesnet_2d_structure.pdf, id=688, 1890.69362pt x 686.88823pt>
+ [46] [47 <./imgs/soc_soh_rul.png>] [48] [49]
+<imgs/timesnet_2d_structure.pdf, id=682, 1890.69362pt x 686.88823pt>
 File: imgs/timesnet_2d_structure.pdf Graphic file (type pdf)
 <use imgs/timesnet_2d_structure.pdf>
-Package pdftex.def Info: imgs/timesnet_2d_structure.pdf  used on input line 365.
+Package pdftex.def Info: imgs/timesnet_2d_structure.pdf  used on input line 362.
 (pdftex.def)             Requested size: 418.25372pt x 151.94388pt.
- [48] [49 <./imgs/timesnet_2d_structure.pdf>] [50] [51]
-<imgs/Hyperparameter_importance.png, id=744, 1188.44pt x 451.6875pt>
+ [50] [51 <./imgs/timesnet_2d_structure.pdf>] [52] [53]
+<imgs/Hyperparameter_importance.png, id=738, 1188.44pt x 451.6875pt>
 File: imgs/Hyperparameter_importance.png Graphic file (type png)
 <use imgs/Hyperparameter_importance.png>
-Package pdftex.def Info: imgs/Hyperparameter_importance.png  used on input line 422.
+Package pdftex.def Info: imgs/Hyperparameter_importance.png  used on input line 419.
 (pdftex.def)             Requested size: 418.25372pt x 158.96829pt.
-<imgs/objective_parallel_coordinate.png, id=746, 1818.795pt x 451.6875pt>
+<imgs/objective_parallel_coordinate.png, id=740, 1818.795pt x 451.6875pt>
 File: imgs/objective_parallel_coordinate.png Graphic file (type png)
 <use imgs/objective_parallel_coordinate.png>
-Package pdftex.def Info: imgs/objective_parallel_coordinate.png  used on input line 431.
+Package pdftex.def Info: imgs/objective_parallel_coordinate.png  used on input line 428.
 (pdftex.def)             Requested size: 418.25372pt x 103.86525pt.
- [52 <./imgs/Hyperparameter_importance.png>]
-<imgs/optuna_objective_plot.png, id=753, 1818.795pt x 451.6875pt>
+ [54 <./imgs/Hyperparameter_importance.png>]
+<imgs/optuna_objective_plot.png, id=747, 1818.795pt x 451.6875pt>
 File: imgs/optuna_objective_plot.png Graphic file (type png)
 <use imgs/optuna_objective_plot.png>
-Package pdftex.def Info: imgs/optuna_objective_plot.png  used on input line 449.
+Package pdftex.def Info: imgs/optuna_objective_plot.png  used on input line 446.
 (pdftex.def)             Requested size: 418.25372pt x 103.86525pt.
- [53 <./imgs/objective_parallel_coordinate.png> <./imgs/optuna_objective_plot.png>]
-<imgs/W&B_optimization_validation_loss.png, id=761, 2537.48pt x 1332.98pt>
+ [55 <./imgs/objective_parallel_coordinate.png> <./imgs/optuna_objective_plot.png>]
+<imgs/W&B_optimization_validation_loss.png, id=755, 2537.48pt x 1332.98pt>
 File: imgs/W&B_optimization_validation_loss.png Graphic file (type png)
 <use imgs/W&B_optimization_validation_loss.png>
-Package pdftex.def Info: imgs/W&B_optimization_validation_loss.png  used on input line 478.
+Package pdftex.def Info: imgs/W&B_optimization_validation_loss.png  used on input line 475.
 (pdftex.def)             Requested size: 418.25372pt x 219.70847pt.
 
 Chapter 5.
-[54] [55 <./imgs/W&B_optimization_validation_loss.png>] [56
+[56] [57 <./imgs/W&B_optimization_validation_loss.png>] [58
 
 ]
-Overfull \hbox (38.53226pt too wide) in paragraph at lines 483--483
+Overfull \hbox (38.53226pt too wide) in paragraph at lines 480--480
 []\U/eur/b/n/70 5 
  []
 
-[57] [58]
-<imgs/loss_funtions.png, id=785, 7609.42876pt x 1331.97626pt>
+[59] [60]
+<imgs/loss_funtions.png, id=779, 7609.42876pt x 1331.97626pt>
 File: imgs/loss_funtions.png Graphic file (type png)
 <use imgs/loss_funtions.png>
-Package pdftex.def Info: imgs/loss_funtions.png  used on input line 536.
+Package pdftex.def Info: imgs/loss_funtions.png  used on input line 533.
 (pdftex.def)             Requested size: 418.25372pt x 73.2081pt.
- [59 <./imgs/loss_funtions.png>] [60] [61] [62] [63] [64]
+ [61 <./imgs/loss_funtions.png>] [62] [63] [64] [65]
 Chapter 6.
-[65] [66
-
-]
-Overfull \hbox (38.53226pt too wide) in paragraph at lines 688--688
+[66]
+Overfull \hbox (38.53226pt too wide) in paragraph at lines 672--672
 []\U/eur/b/n/70 6 
  []
 
-[67] [68] [69]) [70]
-\openout2 = `Chapters/Conclusion.aux'.
+[67
 
- (./Chapters/Conclusion.tex
-Chapter 7.
-
-Overfull \hbox (38.53226pt too wide) in paragraph at lines 5--5
-[]\U/eur/b/n/70 7 
- []
-
-) [71
-
-
-
-
-
-] [72
-
-
-
-]
+] [68] [69]) [70]
 \openout2 = `Covers/Bibliography.aux'.
 
- (./Covers/Bibliography.tex [73
+ (./Covers/Bibliography.tex [71
 
 
-]
+
+
+
+] [72]
 Overfull \hbox (19.42007pt too wide) in paragraph at lines 13--13
 \T1/lmr/m/n/10.95 (-20) 2025. \T1/lmr/m/sc/10.95 (-20) url\T1/lmr/m/n/10.95 (-20) : [][]$\T1/lmtt/m/n/10.95 https : / / github . com / facontidavide / PlotJuggler$[][] \T1/lmr/m/n/10.95 (-20) (vis-ited on 06/23/2025). 
  []
 
-[74]
 
 Package biblatex Warning: No driver for entry type 'unknown'.
 (biblatex)                Using fallback driver on input line 12.
 
-[75] [76]) [77] (./main.aux (./Covers/Titlepage.aux) (./Covers/Titleback.aux) (./Covers/Acknowledgments.aux) (./Covers/Abstract.aux) (./Covers/Contents.aux) (./Covers/Acronyms.aux) (./Chapters/Intro.aux) (./Chapters/Background.aux) (./Chapters/StateOfTheArt.aux) (./Chapters/Development.aux) (./Chapters/Conclusion.aux) (./Covers/Bibliography.aux)
+[73] [74] [75]) [76] (./main.aux (./Covers/Titlepage.aux) (./Covers/Titleback.aux) (./Covers/Acknowledgments.aux) (./Covers/Abstract.aux) (./Covers/Contents.aux) (./Covers/Acronyms.aux) (./Chapters/Intro.aux) (./Chapters/Background.aux) (./Chapters/StateOfTheArt.aux) (./Chapters/Development.aux) (./Covers/Bibliography.aux)
 
 Package mparhack Warning: Marginpars may have changed.
 (mparhack)                Rerun to get them right.
@@ -2107,7 +2085,6 @@ imgs/objective_parallel_coordinate.png
 imgs/optuna_objective_plot.png
 imgs/W&B_optimization_validation_loss.png
 imgs/loss_funtions.png
-Chapters/Conclusion.tex
 Covers/Bibliography.tex
  ***********
 
@@ -2122,18 +2099,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### semi simple group (level 1) entered at line 296 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 39392 strings out of 478287
- 769862 string characters out of 5849289
- 1851053 words of memory out of 5000000
- 56190 multiletter control sequences out of 15000+600000
- 591082 words of font info for 294 fonts, out of 8000000 for 9000
+ 39412 strings out of 478287
+ 770825 string characters out of 5849289
+ 1848526 words of memory out of 5000000
+ 56205 multiletter control sequences out of 15000+600000
+ 591717 words of font info for 300 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,22n,106p,10662b,13117s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on main.pdf (101 pages, 3130415 bytes).
+Output written on main.pdf (96 pages, 3130321 bytes).
 PDF statistics:
- 1279 PDF objects out of 1440 (max. 8388607)
- 1073 compressed objects within 11 object streams
+ 1284 PDF objects out of 1440 (max. 8388607)
+ 1083 compressed objects within 11 object streams
  265 named destinations out of 1000 (max. 500000)
- 67158 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 67142 words of extra memory for PDF output out of 74296 (max. 10000000)
 

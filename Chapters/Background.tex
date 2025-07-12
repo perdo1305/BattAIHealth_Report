@@ -13,15 +13,11 @@ This section covers the main ideas basic to battery health monitoring, including
 %Key health monitoring parameters for batteries
 %AI/ML fundamentals relevant to your application
 
-\color{Red}
-Deve introduzir aqui um parágrafo a dizer sumariamente o que vai aparecer nas próximas subsecções
-\color{Black}
-
-
+The following subsections provide detailed coverage of the fundamental concepts essential for understanding battery health monitoring and AI-based estimation methods. We begin with \textbf{time series analysis} and \textbf{spectral analysis} techniques that are crucial for processing battery operational data and extracting meaningful patterns from temporal sequences. The \textbf{evaluation metrics} section defines both battery-specific parameters (SoC, SoH, RUL) and machine learning performance measures (MAE, MSE, RMSE, MAPE) used throughout this work. \textbf{Neural networks and deep learning fundamentals} establish the theoretical foundation for the AI methods employed, while the \textbf{battery degradation and aging} section explains the physical mechanisms that drive battery health decline. Finally, we discuss the \textbf{challenges of battery health monitoring} that motivate the need for advanced AI approaches, and conclude with the \textbf{supporting technologies} that enabled this research.
 
 \subsection{Time Series Analysis of Battery Data}
 
-Time series analysis studies how battery parameters like voltage, current, and SoC change over time\color{Red}Adicionar referência\color{Black}. It helps model and predict battery behavior, find trends, and detect problems in the time domain. Time series analysis breaks down battery data into three basic parts that show different patterns in battery behavior and wear:
+Time series analysis studies how battery parameters like voltage, current, and SoC change over time\cite{jorge_time_2023}. It helps model and predict battery behavior, find trends, and detect problems in the time domain. Time series analysis breaks down battery data into three basic parts that show different patterns in battery behavior and wear:
 
 \begin{enumerate}
     \item \textbf{Trend Component} shows the long-term direction of battery parameters over time, capturing how the battery wears down and reflects basic changes in battery chemistry and structure. In battery health monitoring, trend analysis shows capacity loss patterns, where SoH slowly decreases over hundreds or thousands of charge-discharge cycles due to the wear mechanisms detailed in Section~\ref{sec:degradation}. The trend component is useful for RUL prediction, as it shows the rate of wear and helps set expected levels for battery performance decline under specific use conditions.
@@ -35,7 +31,7 @@ Along with this time-based approach, spectral analysis is a frequency-domain met
 
 \subsection{Spectral Analysis of Battery Data}
 
-The Fast Fourier Transform (FFT) is a key computational tool for spectral analysis that efficiently converts time-domain battery data into frequency-domain representations\color{Red}Adicionar referência\color{Black}. FFT analysis is particularly valuable for battery health monitoring because it can identify hidden periodic patterns in battery operational data that are not obvious when looking at the raw time series. In battery applications, FFT helps identify several important patterns:
+The Fast Fourier Transform (FFT) is a key computational tool for spectral analysis that efficiently converts time-domain battery data into frequency-domain representations \cite{chae_state--health_2025}. FFT analysis is particularly valuable for battery health monitoring because it can identify hidden periodic patterns in battery operational data that are not obvious when looking at the raw time series. In battery applications, FFT helps identify several important patterns:
 
 \begin{itemize}
 \item \textbf{Charge-discharge cycle frequencies}: Regular charging and discharging patterns create dominant frequencies that FFT can detect, helping to understand battery usage patterns and predict future behavior.
@@ -58,17 +54,17 @@ This section explains the key metrics commonly used in battery health monitoring
 \vspace{1cm}
 \textbf{State of Charge (SoC)}
 
-The State of Charge shows the amount of energy remaining in a battery relative to its maximum capacity. It can be expressed as:
+SoC shows the amount of energy remaining in a battery relative to its maximum capacity. It can be expressed as:
 \begin{equation}
 \text{SoC} = \frac{\text{Remaining Charge or Energy}}{\text{Maximum Charge or Energy Capacity}} \times 100\%
 \end{equation}
-However, due to the chemical complexity of batteries and differences among individual cells, the SoC is always an approximate estimate. One factor contributing to the nonlinearity in its estimation is the formation of impurity layers in the pores of the electrodes. When these pores are blocked by impurities, electron movement is hindered, leading to irregular voltages and currents.
+However, due to the chemical complexity of batteries and differences among individual cells, SoC is always an approximate estimate. One factor contributing to the nonlinearity in its estimation is the formation of impurity layers in the pores of the electrodes. When these pores are blocked by impurities, electron movement is hindered, leading to irregular voltages and currents.
 
 % Creating section for State of Health
 \vspace{1cm}
 \textbf{State of Health (SoH)}
 
-The State of Health shows the battery's ability to store and deliver energy compared to its original specifications. It can be expressed as:
+SoH shows the battery's ability to store and deliver energy compared to its original specifications. It can be expressed as:
 \begin{equation}
 \text{SoH} = \frac{\text{Current Maximum Capacity}}{\text{Original Maximum Capacity}} \times 100\%
 \end{equation}
@@ -78,7 +74,7 @@ The nonlinearity in SoH estimation mainly comes from the progressive wear of ele
 \vspace{1cm}
 \textbf{Remaining Useful Life (RUL)}
 
-The Remaining Useful Life shows the number of cycles remaining before the battery's performance drops below a specified threshold. It can be expressed as:
+RUL shows the number of cycles remaining before the battery's performance drops below a specified threshold. It can be expressed as:
 \begin{equation}
 \text{RUL} = \text{Total Expected Useful Life} - \text{Current Age}
 \end{equation}
@@ -88,7 +84,7 @@ Predicting RUL is particularly challenging due to the buildup of impurities in t
 
 \textbf{Mean Absolute Error (MAE)}
 
-The Mean Absolute Error measures the average size of errors in a set of predictions, without considering their direction. It is calculated as:
+MAE measures the average size of errors in a set of predictions, without considering their direction. It is calculated as:
 \begin{equation}
 \text{MAE} = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|
 \end{equation}
@@ -98,17 +94,17 @@ where $y_i$ is the actual value, $\hat{y}_i$ is the predicted value, and $n$ is 
 \vspace{1cm}
 \textbf{Mean Squared Error (MSE)}
 
-The Mean Squared Error measures the average of the squared differences between predicted and actual values. It is expressed as:
+MSE measures the average of the squared differences between predicted and actual values. It is expressed as:
 \begin{equation}
 \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
 \end{equation}
-MSE emphasizes larger errors due to the squaring of differences, making it sensitive to outliers. In battery modeling, this can be useful for detecting significant deviations in predictions of parameters like State of Charge or State of Health, but its sensitivity to outliers may amplify the impact of irregular data points caused by factors like electrode impurities or sensor noise.
+MSE emphasizes larger errors due to the squaring of differences, making it sensitive to outliers. In battery modeling, this can be useful for detecting significant deviations in predictions of parameters like SoC or SoH, but its sensitivity to outliers may amplify the impact of irregular data points caused by factors like electrode impurities or sensor noise.
 
 % Explaining Root Mean Squared Error
 \vspace{1cm}
 \textbf{Root Mean Squared Error (RMSE)}
 
-The Root Mean Squared Error is the square root of the MSE, providing an error metric in the same units as the original data. It is defined as:
+RMSE is the square root of the MSE, providing an error metric in the same units as the original data. It is defined as:
 \begin{equation}
 \text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}
 \end{equation}
@@ -118,7 +114,7 @@ RMSE balances the emphasis on larger errors from MSE while being easier to under
 \vspace{1cm}
 \textbf{Mean Absolute Percentage Error (MAPE)}
 
-The Mean Absolute Percentage Error measures the average percentage error between predicted and actual values. It is calculated as:
+MAPE measures the average percentage error between predicted and actual values. It is calculated as:
 \begin{equation}
 \text{MAPE} = \frac{1}{n} \sum_{i=1}^{n} \left| \frac{y_i - \hat{y}_i}{y_i} \right| \times 100\%
 \end{equation}
@@ -127,7 +123,7 @@ MAPE is useful for comparing prediction accuracy across datasets with different 
 \vspace{1cm}
 \subsection{Neural Networks and Deep Learning Fundamentals}
 
-Neural Networks (NNs) are computer models inspired by the structure and workings of networks of neurons in the brain, capable of performing various tasks such as classification, translation, prediction, and data generation. These networks have the remarkable ability to learn from data through a process called training, where the network receives input-output pairs and adjusts its internal parameters, known as weights and activations, to minimize the loss function. The loss shows the difference between the network's predicted outputs and the true outputs, with various optimization algorithms such as gradient descent or stochastic gradient descent guiding the training process by repeatedly updating the network's parameters to improve performance. Beyond their basic learning abilities, neural networks show a crucial ability to generalize from training data to new, unseen data, achieved through the use of non-linear activation functions and regularization techniques that enable them to learn complex relationships between inputs and outputs.
+NNs are computer models inspired by the structure and workings of networks of neurons in the brain, capable of performing various tasks such as classification, translation, prediction, and data generation. These networks have the remarkable ability to learn from data through a process called training, where the network receives input-output pairs and adjusts its internal parameters, known as weights and activations, to minimize the loss function. The loss shows the difference between the network's predicted outputs and the true outputs, with various optimization algorithms such as gradient descent or stochastic gradient descent guiding the training process by repeatedly updating the network's parameters to improve performance. Beyond their basic learning abilities, neural networks show a crucial ability to generalize from training data to new, unseen data, achieved through the use of non-linear activation functions and regularization techniques that enable them to learn complex relationships between inputs and outputs.
 
 Neural network methods can be broadly categorized into two main types: \textbf{traditional machine learning methods} and \textbf{deep learning methods}. Traditional machine learning approaches, such as Support Vector Machines, Random Forests, and shallow neural networks, typically require manual feature engineering and domain expertise to extract relevant characteristics from raw data, demanding significant preprocessing effort and domain knowledge. In contrast, \textbf{deep learning methods} use multi-layered neural networks that can automatically learn hierarchical feature representations directly from raw input data, removing the need for manual feature extraction and enabling end-to-end learning. Figure~\ref{fig:neural_vs_deep} shows this basic distinction between traditional neural networks and deep learning architectures, highlighting the increased complexity and hierarchical feature learning capabilities of deep learning systems.
 
@@ -140,7 +136,7 @@ Neural network methods can be broadly categorized into two main types: \textbf{t
 
 Deep learning architectures consist of multiple hidden layers, each containing many artificial neurons (nodes) that process information through weighted connections. Each neuron receives inputs, applies a weighted sum followed by an activation function, and passes the result to subsequent layers. This layered structure enables the network to learn increasingly complex and abstract representations, with early layers capturing low-level features and deeper layers combining these into high-level patterns. The depth of these networks allows them to model complex, non-linear relationships that are particularly valuable for complex temporal data such as battery wear patterns.
 
-For this project, the deep learning approach was specifically chosen due to its superior ability to capture complex temporal patterns inherent in battery wear data and its capacity to handle the high-dimensional, sequential nature of battery health monitoring without requiring extensive domain-specific preprocessing or manual feature design. Deep learning excels in battery applications because it can automatically discover relevant features from raw sensor measurements (voltage, current, temperature) and learn the subtle, non-linear relationships between these measurements and battery health states~\cite{noauthor_comprehensive_nodate}. The hierarchical feature learning capability is particularly important for battery data, where wear patterns show across multiple time scales and involve complex interactions between chemical processes. Furthermore, deep learning architectures such as recurrent neural networks (RNNs), Long Short-Term Memory (LSTM) networks, and Transformers are specifically designed to handle sequential data, making them ideal for modeling the temporal dependencies present in battery operational data and predicting future health states based on historical patterns. as this paper demonstrates, Transformer-based approaches are effective for battery RUL prediction~\cite{chen_transformer_2022}.
+For this project, the deep learning approach was specifically chosen due to its superior ability to capture complex temporal patterns inherent in battery wear data and its capacity to handle the high-dimensional, sequential nature of battery health monitoring without requiring extensive domain-specific preprocessing or manual feature design. Deep learning excels in battery applications because it can automatically discover relevant features from raw sensor measurements (voltage, current, temperature) and learn the subtle, non-linear relationships between these measurements and battery health states~\cite{noauthor_comprehensive_nodate}. The hierarchical feature learning capability is particularly important for battery data, where wear patterns show across multiple time scales and involve complex interactions between chemical processes. Furthermore, deep learning architectures such as RNNs, LSTM networks, and Transformers are specifically designed to handle sequential data, making them ideal for modeling the temporal dependencies present in battery operational data and predicting future health states based on historical patterns. as this paper demonstrates, Transformer-based approaches are effective for battery RUL prediction~\cite{chen_transformer_2022}.
 
 
 Understanding key training parameters and concepts is crucial for developing effective battery state estimation models. The most relevant of these are:
@@ -169,11 +165,11 @@ Battery wear refers to the gradual loss of a battery's ability to store and deli
 \label{fig:degradation_mechanisms}
 \end{figure}
 
-The key mechanisms contributing to this wear include several interconnected processes. \textbf{Solid Electrolyte Interphase (SEI) Growth} occurs when a layer forms on the anode, consuming lithium ions and reducing capacity. This process is accelerated at high temperatures and currents, leading to an initial irreversible capacity loss of approximately 10\% during formation cycles. \textbf{Lithium Plating} represents another critical mechanism where, at low temperatures or high charge rates, lithium deposits on the anode, forming ``dead lithium'' that contributes to irreversible capacity loss and increases safety risks. \textbf{Particle Fracture} results from mechanical stress during cycling, causing cracks in electrode materials that reduce active material availability and make capacity decline worse. \textbf{Positive Electrode (PE) Decomposition} involves structural changes in the cathode, such as spinel/rock salt phase formation, which degrade performance and contribute to active material loss. Finally, \textbf{Impedance Increase} shows as rising interfacial resistance, mainly at the positive electrode, which limits efficient charge transfer and indirectly reduces usable capacity. After 800 cycles, electrode resistance can increase tenfold, significantly impacting battery performance. The authors in \cite{zhang_studies_2000} discuss the \textbf{Capacity Fade} mechanism, that refers to the progressive decline in the ability of a lithium-ion battery to store energy, manifested as a reduced device runtime or a reduced electric vehicle driving range. Capacity losses range from 12.4\% to 32\% after 500--800 cycles, corresponding to an average loss of 0.025--0.05\% per cycle.
+The key mechanisms contributing to this wear include several interconnected processes. \textbf{SEI Growth} occurs when a layer forms on the anode, consuming lithium ions and reducing capacity. This process is accelerated at high temperatures and currents, leading to an initial irreversible capacity loss of approximately 10\% during formation cycles. \textbf{Lithium Plating} represents another critical mechanism where, at low temperatures or high charge rates, lithium deposits on the anode, forming ``dead lithium'' that contributes to irreversible capacity loss and increases safety risks. \textbf{Particle Fracture} results from mechanical stress during cycling, causing cracks in electrode materials that reduce active material availability and make capacity decline worse. \textbf{PE Decomposition} involves structural changes in the cathode, such as spinel/rock salt phase formation, which degrade performance and contribute to active material loss. Finally, \textbf{Impedance Increase} shows as rising interfacial resistance, mainly at the positive electrode, which limits efficient charge transfer and indirectly reduces usable capacity. After 800 cycles, electrode resistance can increase tenfold, significantly impacting battery performance. The authors in \cite{zhang_studies_2000} discuss the \textbf{Capacity Fade} mechanism, that refers to the progressive decline in the ability of a lithium-ion battery to store energy, manifested as a reduced device runtime or a reduced electric vehicle driving range. Capacity losses range from 12.4\% to 32\% after 500--800 cycles, corresponding to an average loss of 0.025--0.05\% per cycle.
 
-As lithium ion batteries age, their internal resistance increases, badly affecting power delivery, charging efficiency, and thermal management. This wear is particularly noticeable during calendar aging, as detailed in the study by \cite{stroe_degradation_2018} on LFP/C-based batteries. The primary mechanisms contributing to this increase involve several interconnected processes. \textbf{Solid Electrolyte Interface (SEI) Growth} is characterized by the thickening of the SEI layer on the graphite anode over time, reducing Li$^+$ ion permeability. This growth follows a power law dependence (approximately $t^{0.8}$) and is accelerated at high temperatures and high state-of-charge (SOC) levels, leading to increased resistance and contact loss within the anode. \textbf{Lithium Plating} involves the deposition of metallic lithium on the anode, which clogs electrode pores, blocking ion transport and elevating resistance, particularly under high SOC conditions. \textbf{Cathode Structural Degradation} occurs at the LFP cathode, where binder decomposition, oxidation of conductive agents, and corrosion of current collectors reduce inter-particle conductivity, contributing to resistance increase, especially at elevated temperatures. Also, \textbf{Electrolyte Decomposition} produces decomposition products that form resistive surface layers on both electrodes, further increasing internal resistance, with effects amplified at high temperatures and SOC levels. This same study shows that internal resistance increases nonlinearly with storage time, with exponential acceleration due to higher storage temperatures (e.g., 55°C) and SOC levels (e.g., 90\%). For instance, after 20 years at 25°C and 50\% SOC, resistance may rise by approximately 71\%, doubling at 100\% SOC. This increased resistance results in slower charging, reduced power output, and accelerated wear due to enhanced heat generation, impacting battery performance and lifespan.
+As lithium ion batteries age, their internal resistance increases, badly affecting power delivery, charging efficiency, and thermal management. This wear is particularly noticeable during calendar aging, as detailed in the study by \cite{stroe_degradation_2018} on LFP/C-based batteries. The primary mechanisms contributing to this increase involve several interconnected processes. \textbf{SEI Growth} is characterized by the thickening of the SEI layer on the graphite anode over time, reducing Li$^+$ ion permeability. This growth follows a power law dependence (approximately $t^{0.8}$) and is accelerated at high temperatures and high SOC levels, leading to increased resistance and contact loss within the anode. \textbf{Lithium Plating} involves the deposition of metallic lithium on the anode, which clogs electrode pores, blocking ion transport and elevating resistance, particularly under high SOC conditions. \textbf{Cathode Structural Degradation} occurs at the LFP cathode, where binder decomposition, oxidation of conductive agents, and corrosion of current collectors reduce inter-particle conductivity, contributing to resistance increase, especially at elevated temperatures. Also, \textbf{Electrolyte Decomposition} produces decomposition products that form resistive surface layers on both electrodes, further increasing internal resistance, with effects amplified at high temperatures and SOC levels. This same study shows that internal resistance increases nonlinearly with storage time, with exponential acceleration due to higher storage temperatures (e.g., 55°C) and SOC levels (e.g., 90\%). For instance, after 20 years at 25°C and 50\% SOC, resistance may rise by approximately 71\%, doubling at 100\% SOC. This increased resistance results in slower charging, reduced power output, and accelerated wear due to enhanced heat generation, impacting battery performance and lifespan.
 
-For these reasons, battery health monitoring is critical for ensuring reliability, safety, and longevity of battery systems. Monitoring involves checking key parameters such as the state of charge and the state of health, which provide essential insights into battery performance and remaining operational capacity. However, this is not and easy task and many challenges must be overcome. 
+For these reasons, battery health monitoring is critical for ensuring reliability, safety, and longevity of battery systems. Monitoring involves checking key parameters such as SoC and SoH, which provide essential insights into battery performance and remaining operational capacity. However, this is not and easy task and many challenges must be overcome. 
 
 
 
@@ -189,7 +185,7 @@ The technical challenges in monitoring battery health come from the complex natu
     \item \textbf{Limitations of Data-Driven Methods}: Data-driven approaches, such as machine learning techniques (e.g. Support Vector Regression, Gaussian Process Regression, Artificial Neural Networks), rely on large, high-quality datasets, which can be difficult to obtain. These methods also lack physical understanding, making it difficult to understand their predictions. Also, issues like overfitting and high computational demands pose challenges for real-time applications.
     \item \textbf{Complexity of Hybrid Methods}: Hybrid approaches, which combine model-based and data-driven methods, can improve accuracy but increase system complexity and computational costs. Understanding errors in these systems remains a challenge, requiring further research to enhance transparency and efficiency.
     \item \textbf{Laboratory vs Real World Conditions}: There is a significant difference between laboratory-simulated conditions and actual operational environments. Laboratory settings often use sophisticated equipment that is not available in real-world applications, limiting the applicability of monitoring methods. For example, real-world conditions like varying temperatures or road vibrations are difficult to replicate in a lab, affecting SOH estimation accuracy.
-    \item \textbf{Real-Time Monitoring}: Getting real-time, reliable SOH monitoring is crucial for safety-critical applications but is technically demanding. Battery management systems (BMS) must balance accuracy with computational efficiency to provide timely insights without overloading system resources.
+    \item \textbf{Real-Time Monitoring}: Getting real-time, reliable SOH monitoring is crucial for safety-critical applications but is technically demanding. BMS must balance accuracy with computational efficiency to provide timely insights without overloading system resources.
     \item \textbf{Environmental Factors}: Batteries are sensitive to environmental conditions such as temperature, humidity, and vibration. Monitoring systems must account for these factors, which can significantly impact battery health and performance.
     \item For example, high temperatures can accelerate battery wear, while low temperatures may reduce capacity, complicating health estimation.
     \item \textbf{Cost of Monitoring Systems}: Setting up sophisticated battery health monitoring systems can be expensive, both in terms of initial setup and ongoing maintenance. This includes the cost of sensors, data storage, and computational infrastructure, which can be too expensive for smaller organizations or applications.
@@ -221,7 +217,7 @@ This section describes the complete suite of software tools and platforms that h
 
 \textbf{Weights and Biases (WandB)}
 \label{subsec:wandb}
-Weights \& Biases (WandB) is a machine learning platform designed for experiment tracking and display~\cite{noauthor_weights_nodate}. It enables real-time logging and monitoring of training metrics, parameters, and model outputs. In this study, WandB was used to keep track of training processes and display losses, providing interactive dashboards to analyze experiments.
+WandB is a machine learning platform designed for experiment tracking and display~\cite{noauthor_weights_nodate}. It enables real-time logging and monitoring of training metrics, parameters, and model outputs. In this study, WandB was used to keep track of training processes and display losses, providing interactive dashboards to analyze experiments.
 
 \textbf{PlotJuggler}
 PlotJuggler is an open-source time series display tool designed for fast, easy-to-use, and extensible data analysis~\cite{faconti_facontidavideplotjuggler_2025}. It features a user-friendly drag-and-drop interface, enabling efficient display of large datasets. In this work, PlotJuggler was highly effective for exploring and analyzing data within datasets, allowing for the display of time series, identification of patterns. Its a valuable tool for detailed data inspection and analysis.
@@ -244,7 +240,7 @@ development machines, and guaranteed that the exact software environment could b
 
 \textbf{Optuna}
 \label{subsec:optuna}
-Optuna is an open-source hyparameter tuning framework used to search for the best parameters in machine learning models~\cite{akiba_optuna_2019}. It uses algorithms like Tree-structured Parzen Estimator (TPE) to systematically explore parameter spaces, supporting parallel and distributed optimization. In this work, Optuna was used to automate the tuning process, improving model performance by identifying optimal parameter configurations with reduced manual effort.
+Optuna is an open-source hyparameter tuning framework used to search for the best parameters in machine learning models~\cite{akiba_optuna_2019}. It uses algorithms like TPE to systematically explore parameter spaces, supporting parallel and distributed optimization. In this work, Optuna was used to automate the tuning process, improving model performance by identifying optimal parameter configurations with reduced manual effort.
 
 \textbf{PyTorch}
 PyTorch is an open-source machine learning framework developed by Facebook's AI Research lab, designed for deep learning applications with a 

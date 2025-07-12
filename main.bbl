@@ -19,6 +19,31 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{noauthor_pdf_nodate}{misc}{}
+      \list{language}{1}{%
+        {en}%
+      }
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{PDF {|} Ensemble methods have emerged as powerful techniques in machine learning, enabling the combination of multiple models to enhance prediction... {|} Find, read and cite all the research you need on ResearchGate}
+      \field{journaltitle}{ResearchGate}
+      \field{shorttitle}{({PDF}) {Ensemble} {Methods}}
+      \field{title}{({PDF}) {Ensemble} {Methods}: {Combining} multiple models to improve prediction accuracy and robustness}
+      \field{urlday}{12}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/KBEJRTVB/384627805_Ensemble_Methods_Combining_multiple_models_to_improve_prediction_accuracy_and_robustn.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/384627805_Ensemble_Methods_Combining_multiple_models_to_improve_prediction_accuracy_and_robustness
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/384627805_Ensemble_Methods_Combining_multiple_models_to_improve_prediction_accuracy_and_robustness
+      \endverb
+    \endentry
     \entry{noauthor_comprehensive_nodate}{misc}{}
       \list{language}{1}{%
         {en}%
@@ -505,6 +530,58 @@
       \verb https://github.com/biolab/orange3
       \endverb
     \endentry
+    \entry{chae_state--health_2025}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e9083abad43621e4ffa76d3ca1bf938f}{%
+           family={Chae},
+           familyi={C\bibinitperiod},
+           given={Sun\bibnamedelima Geu},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=b2a5cb55f535fc969584f5c357ee1033}{%
+           family={Bae},
+           familyi={B\bibinitperiod},
+           given={Suk\bibnamedelima Joo},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=7a6de896209c53521ba176f88efcb0c2}{%
+           family={Oh},
+           familyi={O\bibinitperiod},
+           given={Ki-Yong},
+           giveni={K\bibinithyphendelim Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{90fd92aa086e8bac1aaca162ffedb526}
+      \strng{fullhash}{d6c133c5bda299477ac752e0a18ae764}
+      \strng{bibnamehash}{d6c133c5bda299477ac752e0a18ae764}
+      \strng{authorbibnamehash}{d6c133c5bda299477ac752e0a18ae764}
+      \strng{authornamehash}{90fd92aa086e8bac1aaca162ffedb526}
+      \strng{authorfullhash}{d6c133c5bda299477ac752e0a18ae764}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Accurate evaluation of state-of-health (SoH) and prediction of remaining useful life (RUL) are crucial to sustain the reliability of lithium-ion batteries (LIBs) via timely maintenance actions. However, ambient noises under various operating conditions hinder accurate diagnosis of dynamic status for LIBs in real-world applications. To overcome this difficulty, an allied denoising convolutional neural network (DnCNN) and convolutional neural network (CNN) model is proposed as a new framework for estimating SoH and predicting RUL of LIBs under various operating environments. In the presence of unknown ambient noises, DnCNN is applied to improve prediction accuracy of SoH to eliminate the noises using a residual learning technique. To verify denoising abilities and resulting SoH prediction performance under real-life scenarios, multi-physics feature degradation testing data collected from custom test benches are used to evaluate its performance over competitive denoising techniques. Results from the experiments under various operating environments demonstrate that the proposed allied framework results in a higher accuracy and robustness than other state-of-the-art denoising methods in estimating SoH and predicting RUL of LIBs.}
+      \field{issn}{2352-152X}
+      \field{journaltitle}{Journal of Energy Storage}
+      \field{month}{1}
+      \field{title}{State-of-health estimation and remaining useful life prediction of lithium-ion batteries using {DnCNN}-{CNN}}
+      \field{urlday}{12}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{106}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \field{pages}{114826}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.est.2024.114826
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2352152X24044128
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2352152X24044128
+      \endverb
+      \keyw{Bayesian optimization,Deep learning,Feature fusion,Health monitoring,Variational autoencoder}
+    \endentry
     \entry{che_battery_2023}{article}{}
       \name{author}{7}{}{%
         {{hash=607270facec37a99111a9a3e31e4abc0}{%
@@ -695,6 +772,62 @@
       \verb https://github.com/conda/conda
       \endverb
     \endentry
+    \entry{dini_exploiting_2025}{article}{}
+      \name{author}{2}{}{%
+        {{hash=de1798d7eaf709e4beb52f87dfc738e5}{%
+           family={Dini},
+           familyi={D\bibinitperiod},
+           given={Pierpaolo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=acd483516846927c5fb081cd6da24d07}{%
+           family={Paolini},
+           familyi={P\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{8b756572082ea5b9890805a8f69e0d91}
+      \strng{fullhash}{8b756572082ea5b9890805a8f69e0d91}
+      \strng{bibnamehash}{8b756572082ea5b9890805a8f69e0d91}
+      \strng{authorbibnamehash}{8b756572082ea5b9890805a8f69e0d91}
+      \strng{authornamehash}{8b756572082ea5b9890805a8f69e0d91}
+      \strng{authorfullhash}{8b756572082ea5b9890805a8f69e0d91}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Artificial Neural Networks (ANNs) improve battery management in electric vehicles (EVs) by enhancing the safety, durability, and reliability of electrochemical batteries, particularly through improvements in the State of Charge (SOC) estimation. EV batteries operate under demanding conditions, which can affect performance and, in extreme cases, lead to critical failures such as thermal runaway—an exothermic chain reaction that may result in overheating, fires, and even explosions. Addressing these risks requires advanced diagnostic and management strategies, and machine learning presents a powerful solution due to its ability to adapt across multiple facets of battery management. The versatility of ML enables its application to material discovery, model development, quality control, real-time monitoring, charge optimization, and fault detection, positioning it as an essential technology for modern battery management systems. Specifically, ANN models excel at detecting subtle, complex patterns that reflect battery health and performance, crucial for accurate SOC estimation. The effectiveness of ML applications in this domain, however, is highly dependent on the selection of quality datasets, relevant features, and suitable algorithms. Advanced techniques such as active learning are being explored to enhance ANN model performance by improving the models’ responsiveness to diverse and nuanced battery behavior. This compact survey consolidates recent advances in machine learning for SOC estimation, analyzing the current state of the field and highlighting the challenges and opportunities that remain. By structuring insights from the extensive literature, this paper aims to establish ANNs as a foundational tool in next-generation battery management systems, ultimately supporting safer and more efficient EVs through real-time fault detection, accurate SOC estimation, and robust safety protocols. Future research directions include refining dataset quality, optimizing algorithm selection, and enhancing diagnostic precision, thereby broadening ANNs’ role in ensuring reliable battery management in electric vehicles.}
+      \field{issn}{2313-0105}
+      \field{journaltitle}{Batteries}
+      \field{month}{3}
+      \field{note}{Number: 3 Publisher: Multidisciplinary Digital Publishing Institute}
+      \field{number}{3}
+      \field{shorttitle}{Exploiting {Artificial} {Neural} {Networks} for the {State} of {Charge} {Estimation} in {EV}/{HV} {Battery} {Systems}}
+      \field{title}{Exploiting {Artificial} {Neural} {Networks} for the {State} of {Charge} {Estimation} in {EV}/{HV} {Battery} {Systems}: {A} {Review}}
+      \field{urlday}{12}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{11}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \field{pages}{107}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/batteries11030107
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/MJV7KKK6/Dini and Paolini - 2025 - Exploiting Artificial Neural Networks for the State of Charge Estimation in EVHV Battery Systems A.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2313-0105/11/3/107
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2313-0105/11/3/107
+      \endverb
+      \keyw{Artifical Neural Networks (ANNs),battery system,data-driven strategy,electric vehicles,Smart Industry 5.0,SOC monitoring}
+    \endentry
     \entry{MATR_dataset_nodate}{misc}{}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
@@ -877,6 +1010,66 @@
       \verb{url}
       \verb https://www.researchgate.net/publication/352428548_Implementation_of_Coulomb_Counting_Method_for_Estimating_the_State_of_Charge_of_Lithium-Ion_Battery
       \endverb
+    \endentry
+    \entry{jorge_time_2023}{article}{}
+      \name{author}{4}{}{%
+        {{hash=704b83c85bb46c1f4cd9a287e73a8d9c}{%
+           family={Jorge},
+           familyi={J\bibinitperiod},
+           given={Inès},
+           giveni={I\bibinitperiod}}}%
+        {{hash=f1e3abb7ac91ca8750c21133a97be616}{%
+           family={Mesbahi},
+           familyi={M\bibinitperiod},
+           given={Tedjani},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0931433292d597d15b2fbb7b625df110}{%
+           family={Samet},
+           familyi={S\bibinitperiod},
+           given={Ahmed},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c7ed1e7bee2c95ef8beb1151cb70028f}{%
+           family={Boné},
+           familyi={B\bibinitperiod},
+           given={Romuald},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{392e37c440b2ce691e0faf409fde878d}
+      \strng{fullhash}{4998765ea25c1d29f6d333124ba6b584}
+      \strng{bibnamehash}{392e37c440b2ce691e0faf409fde878d}
+      \strng{authorbibnamehash}{392e37c440b2ce691e0faf409fde878d}
+      \strng{authornamehash}{392e37c440b2ce691e0faf409fde878d}
+      \strng{authorfullhash}{4998765ea25c1d29f6d333124ba6b584}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Lithium-Ion batteries are a core component of many devices recently designed. Despite their very high performances, their use in electric vehicles involves sometimes harsh conditions, which results in a limited driving range and a variable cycle life from one vehicle to another. The goal of prognostics and health management applied to Lithium-Ion batteries in electric vehicles is to better understand the ageing mechanisms that take place during the whole cycle life of a battery through the observation of operating data. Predicting with accuracy the State-Of-Health of a battery, in relationship with usage data, is a key step in the development of electric vehicles and of the improvement of any battery powered devices. This paper proposes an approach based on the extraction of features from current, voltage and temperature curves during charge and discharge to predict the evolution of the State-Of-Health of a battery. A sliding window of cycles is used as input to a Long Short Term Memory neural network that outputs a multi-step ahead prediction of the State-Of-Health. Our study is based on several datasets, namely two major benchmarks published by the MIT and the NASA Prognostics Centre of Excellence.}
+      \field{issn}{2352-152X}
+      \field{journaltitle}{Journal of Energy Storage}
+      \field{month}{3}
+      \field{title}{Time {Series} {Feature} extraction for {Lithium}-{Ion} batteries {State}-{Of}-{Health} prediction}
+      \field{urlday}{12}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{59}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{106436}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.est.2022.106436
+      \endverb
+      \verb{file}
+      \verb ScienceDirect Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/NKWLK7YL/S2352152X22024252.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2352152X22024252
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2352152X22024252
+      \endverb
+      \keyw{Deep learning,Electric vehicles,Feature extraction,Lithium-Ion battery,Long Short Term Memory,Predictive prognostics,State-Of-Health}
     \endentry
     \entry{kabir_degradation_2017}{article}{}
       \name{author}{2}{}{%
@@ -1211,6 +1404,62 @@
       \verb{url}
       \verb https://www.researchgate.net/publication/341131167_PhenomNet_Bridging_Phenotype-Genotype_Gap_A_CNN-LSTM_Based_Automatic_Plant_Root_Anatomization_System
       \endverb
+    \endentry
+    \entry{raissi_physics-informed_2019}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a3194cb4f8e3959e569236521aa2fd86}{%
+           family={Raissi},
+           familyi={R\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c2e8423b7b49343a85abf9af92ee2a82}{%
+           family={Perdikaris},
+           familyi={P\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=1c2f5930e36485e8d38a87746769fdcc}{%
+           family={Karniadakis},
+           familyi={K\bibinitperiod},
+           given={G.\bibnamedelimi E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{38cf3149596a29a18976b23d267bacc7}
+      \strng{fullhash}{a17a0649dc8bad70026488d4ea37c508}
+      \strng{bibnamehash}{a17a0649dc8bad70026488d4ea37c508}
+      \strng{authorbibnamehash}{a17a0649dc8bad70026488d4ea37c508}
+      \strng{authornamehash}{38cf3149596a29a18976b23d267bacc7}
+      \strng{authorfullhash}{a17a0649dc8bad70026488d4ea37c508}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We introduce physics-informed neural networks – neural networks that are trained to solve supervised learning tasks while respecting any given laws of physics described by general nonlinear partial differential equations. In this work, we present our developments in the context of solving two main classes of problems: data-driven solution and data-driven discovery of partial differential equations. Depending on the nature and arrangement of the available data, we devise two distinct types of algorithms, namely continuous time and discrete time models. The first type of models forms a new family of data-efficient spatio-temporal function approximators, while the latter type allows the use of arbitrarily accurate implicit Runge–Kutta time stepping schemes with unlimited number of stages. The effectiveness of the proposed framework is demonstrated through a collection of classical problems in fluids, quantum mechanics, reaction–diffusion systems, and the propagation of nonlinear shallow-water waves.}
+      \field{issn}{0021-9991}
+      \field{journaltitle}{Journal of Computational Physics}
+      \field{month}{2}
+      \field{shorttitle}{Physics-informed neural networks}
+      \field{title}{Physics-informed neural networks: {A} deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations}
+      \field{urlday}{12}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{378}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{686\bibrangedash 707}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1016/j.jcp.2018.10.045
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/6RUMBUAQ/Raissi et al. - 2019 - Physics-informed neural networks A deep learning framework for solving forward and inverse problems.pdf:application/pdf;ScienceDirect Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/SLHV66E5/S0021999118307125.html:text/html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0021999118307125
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0021999118307125
+      \endverb
+      \keyw{Data-driven scientific computing,Machine learning,Nonlinear dynamics,Predictive modeling,Runge–Kutta methods}
     \endentry
     \entry{ren_review_2023}{article}{}
       \name{author}{2}{}{%
@@ -1776,6 +2025,173 @@
       \verb https://www.sciencedirect.com/science/article/pii/S0378775300004699
       \endverb
       \keyw{Capacity fade,Electrochemical impedance spectroscopy,Lithium-ion battery,Surface film}
+    \endentry
+    \entry{zhou_graph_2020}{article}{}
+      \name{author}{9}{}{%
+        {{hash=873b7b14d7a3c7290a8ad393066ee9a3}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=85909d8a0dae0f58235434d6a4c3a425}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Ganqu},
+           giveni={G\bibinitperiod}}}%
+        {{hash=dbc192d3823d1022eb9ca28a4f81d27a}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Shengding},
+           giveni={S\bibinitperiod}}}%
+        {{hash=27c7fad66da172aaa64e08e3539ff172}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zhengyan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=29ccf7aa9391a3e9e13ba3b57f4c48eb}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Cheng},
+           giveni={C\bibinitperiod}}}%
+        {{hash=5b9a54b9d83697231299711961622ab8}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Zhiyuan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=b089f6bd0b31a94e61b42f89d966b1e1}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Lifeng},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d35819f1b7580b5294fc7d3dc3d24550}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Changcheng},
+           giveni={C\bibinitperiod}}}%
+        {{hash=faa6f5041a22004ca0dd547c03476790}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Maosong},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{52ac8b06238656e0c352b6e46f10dece}
+      \strng{fullhash}{26b43ae59077cc1dba8f7bd57dea2b48}
+      \strng{bibnamehash}{52ac8b06238656e0c352b6e46f10dece}
+      \strng{authorbibnamehash}{52ac8b06238656e0c352b6e46f10dece}
+      \strng{authornamehash}{52ac8b06238656e0c352b6e46f10dece}
+      \strng{authorfullhash}{26b43ae59077cc1dba8f7bd57dea2b48}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Lots of learning tasks require dealing with graph data which contains rich relation information among elements. Modeling physics systems, learning molecular fingerprints, predicting protein interface, and classifying diseases demand a model to learn from graph inputs. In other domains such as learning from non-structural data like texts and images, reasoning on extracted structures (like the dependency trees of sentences and the scene graphs of images) is an important research topic which also needs graph reasoning models. Graph neural networks (GNNs) are neural models that capture the dependence of graphs via message passing between the nodes of graphs. In recent years, variants of GNNs such as graph convolutional network (GCN), graph attention network (GAT), graph recurrent network (GRN) have demonstrated ground-breaking performances on many deep learning tasks. In this survey, we propose a general design pipeline for GNN models and discuss the variants of each component, systematically categorize the applications, and propose four open problems for future research.}
+      \field{issn}{2666-6510}
+      \field{journaltitle}{AI Open}
+      \field{month}{1}
+      \field{shorttitle}{Graph neural networks}
+      \field{title}{Graph neural networks: {A} review of methods and applications}
+      \field{urlday}{12}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{1}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{57\bibrangedash 81}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1016/j.aiopen.2021.01.001
+      \endverb
+      \verb{file}
+      \verb ScienceDirect Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/BDP2SI6K/S2666651021000012.html:text/html;Submitted Version:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/VIRI2MDR/Zhou et al. - 2020 - Graph neural networks A review of methods and applications.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2666651021000012
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2666651021000012
+      \endverb
+      \keyw{Deep learning,Graph neural network}
+    \endentry
+    \entry{zhuang_comprehensive_2021}{article}{}
+      \name{author}{8}{}{%
+        {{hash=f80c633bdaeb37dfe8ee7a8562a118b0}{%
+           family={Zhuang},
+           familyi={Z\bibinitperiod},
+           given={Fuzhen},
+           giveni={F\bibinitperiod}}}%
+        {{hash=1170a654922724ea47c36d0961bcdba3}{%
+           family={Qi},
+           familyi={Q\bibinitperiod},
+           given={Zhiyuan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=ccc5fede6d425151794d6eabaefb1f08}{%
+           family={Duan},
+           familyi={D\bibinitperiod},
+           given={Keyu},
+           giveni={K\bibinitperiod}}}%
+        {{hash=65b14154afccb41d2c3d56f51927c049}{%
+           family={Xi},
+           familyi={X\bibinitperiod},
+           given={Dongbo},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b76935a05c886aa24f9e3861344c420c}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Yongchun},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=9b711e1aff9a8c67d1eb39bca853aa41}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Hengshu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=aa0c7ab0b9dad5902ab8fc501f57cd77}{%
+           family={Xiong},
+           familyi={X\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod}}}%
+        {{hash=7c27f1b2b48feefb0593a05e9c6a8b12}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Qing},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{280ac335acbe982cf6197f52ba0caff1}
+      \strng{fullhash}{1bdcca6dad1bcac9c936c6829c869185}
+      \strng{bibnamehash}{280ac335acbe982cf6197f52ba0caff1}
+      \strng{authorbibnamehash}{280ac335acbe982cf6197f52ba0caff1}
+      \strng{authornamehash}{280ac335acbe982cf6197f52ba0caff1}
+      \strng{authorfullhash}{1bdcca6dad1bcac9c936c6829c869185}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Transfer learning aims at improving the performance of target learners on target domains by transferring the knowledge contained in different but related source domains. In this way, the dependence on a large number of target-domain data can be reduced for constructing target learners. Due to the wide application prospects, transfer learning has become a popular and promising area in machine learning. Although there are already some valuable and impressive surveys on transfer learning, these surveys introduce approaches in a relatively isolated way and lack the recent advances in transfer learning. Due to the rapid expansion of the transfer learning area, it is both necessary and challenging to comprehensively review the relevant studies. This survey attempts to connect and systematize the existing transfer learning research studies, as well as to summarize and interpret the mechanisms and the strategies of transfer learning in a comprehensive way, which may help readers have a better understanding of the current research status and ideas. Unlike previous surveys, this survey article reviews more than 40 representative transfer learning approaches, especially homogeneous transfer learning approaches, from the perspectives of data and model. The applications of transfer learning are also briefly introduced. In order to show the performance of different transfer learning models, over 20 representative transfer learning models are used for experiments. The models are performed on three different data sets, that is, Amazon Reviews, Reuters-21578, and Office-31, and the experimental results demonstrate the importance of selecting appropriate transfer learning models for different applications in practice.}
+      \field{issn}{1558-2256}
+      \field{journaltitle}{Proceedings of the IEEE}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{A {Comprehensive} {Survey} on {Transfer} {Learning}}
+      \field{urlday}{12}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{109}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \field{pages}{43\bibrangedash 76}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1109/JPROC.2020.3004555
+      \endverb
+      \verb{file}
+      \verb Snapshot:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/IVE7CIFD/9134370.html:text/html;Submitted Version:/home/pedroferreira/snap/zotero-snap/common/Zotero/storage/TCRTKCY8/Zhuang et al. - 2021 - A Comprehensive Survey on Transfer Learning.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9134370
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9134370
+      \endverb
+      \keyw{Adaptation models,Covariance matrices,Data models,Domain adaptation,interpretation,machine learning,Machine learning,Semisupervised learning,transfer learning,Transfer learning}
     \endentry
   \enddatalist
 \endrefsection
