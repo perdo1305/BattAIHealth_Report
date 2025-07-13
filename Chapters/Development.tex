@@ -3,18 +3,16 @@
 \label{ch:Development}
 %************************************************
 
-
-
 This chapter details the development phases of the battery health prediction system, covering the complete progress from initial MATLAB modeling to advanced deep learning implementation. The project evolved through distinct phases: (1) MATLAB-based modeling and simulation using traditional methods, (2) exploration of hybrid neural network approaches, (3) transition to pure data-driven models, and (4) implementation of state-of-the-art deep learning architectures for time series forecasting.
 
-The development process was guided by the need to create accurate, strong, and scalable battery health prediction models capable of handling real-world applications. Each phase built upon lessons learned from previous approaches, ultimately leading to the implementation of TimesNet, a state of the art time series analysis architecture that demonstrates superior performance in time series tasks, and in this work specifically in battery degradation prediction tasks.
+The development process was guided by the need to create accurate, strong, and scalable battery health prediction models capable of handling real world applications. Each phase built upon lessons learned from previous approaches, ultimately leading to the implementation of TimesNet, a state of the art time series analysis architecture that demonstrates superior performance in time series tasks, and in this work specifically in battery degradation prediction tasks.
 
 \section{MATLAB Modeling and Simulation}
 \label{sec:matlab_modeling}
 
 The initial development phase focused on implementing traditional battery modeling approaches in MATLAB to establish baseline performance and understand the basic characteristics of battery degradation patterns.
 
-The exploration began with the MATLAB Simulink Battery State-of-Charge Estimation example~\cite{mathworks_battery_soc_2024} to evaluate the feasibility of generating synthetic battery data through simulation and to test the Kalman filter approach for state estimation. This standard example provided a foundation for understanding how battery behavior could be modeled and simulated using established MATLAB tools. Figure~\ref{fig:simulink_ekf_implementation} shows the complete MATLAB Simulink implementation used for Extended Kalman Filter testing and battery state estimation.
+The exploration began with the MATLAB Simulink Battery State-of-Charge Estimation example~\cite{mathworks_battery_soc_2024} to evaluate the feasibility of generating synthetic battery data through simulation and to test the Kalman filter approach for state estimation. This standard example provided a foundation for understanding how battery behavior could be modeled and simulated using standard MATLAB tools. Figure~\ref{fig:simulink_ekf_implementation} shows the complete MATLAB Simulink implementation used for Extended Kalman Filter testing and battery state estimation.
 
 \begin{figure}[htbp]
 \centering
@@ -23,7 +21,7 @@ The exploration began with the MATLAB Simulink Battery State-of-Charge Estimatio
 \label{fig:simulink_ekf_implementation}
 \end{figure}
 
-To enhance the accuracy and realism of the simulations, the standard battery block was replaced with the Batemo INR21700-p45b model, which was accessible through the Formula Student team collaboration at the polytechnic. The Batemo model~\cite{batemo_website_2024} offers a highly accurate, physics-based battery simulation with its own dedicated Simulink block, enabling more realistic testing conditions and validation of the proposed approaches. Figure~\ref{fig:batemo_blocks} illustrates the block diagram structure of the Batemo battery model integration within the simulation framework.
+To enhance the accuracy and realism of the simulations, the standard battery block was replaced with the Batemo INR21700-p45b model, which was accessible through the Formula Student team collaboration at the polytechnic. The Batemo model~\cite{batemo_website_2024} offers a highly accurate, physics-based battery simulation with its own dedicated Simulink block, enabling realistic testing conditions and validation of the proposed approaches. Figure~\ref{fig:batemo_blocks} illustrates the block diagram structure of the Batemo battery model integration.
 
 \begin{figure}[htbp]
 \centering
@@ -32,7 +30,7 @@ To enhance the accuracy and realism of the simulations, the standard battery blo
 \label{fig:batemo_blocks}
 \end{figure}
 
-First, the EKF was implemented as the primary estimation algorithm for SOC prediction. The EKF approach was chosen for its proven effectiveness in handling the nonlinear behavior of battery systems and its ability to provide uncertainty measurement. Coulomb counting was integrated as a supporting method for SOC estimation, providing a reference baseline for comparison with the Kalman filter results. Figure~\ref{fig:ekf_results} presents the estimation results obtained from the EKF implementation, demonstrating the algorithm's performance in tracking battery state-of-charge.
+First, the EKF was implemented as the primary estimation algorithm for SOC prediction. The EKF approach was chosen for its proven effectiveness in handling the nonlinear behavior of battery systems and its ability to provide uncertainty measurement. Coulomb counting was integrated as a supporting method for SOC estimation, providing a reference baseline for comparison with the Kalman filter results. Figure~\ref{fig:ekf_results} presents the estimation results obtained from the EKF implementation, demonstrating the algorithm's performance in tracking battery SOC.
 
 \begin{figure}[htbp]
 \centering
@@ -59,7 +57,7 @@ The Batemo battery model was incorporated to provide physics-based battery behav
 \label{fig:batemo_estimation}
 \end{figure}
 
-\textbf{Validation of estimation algorithms under controlled conditions} was enabled through the model's ability to simulate precise battery behaviors, allowing for systematic testing of algorithm performance across various operational scenarios. \textbf{Potential for synthetic data generation} was identified as a valuable capability for training and evaluating neural networks when real-world data is limited, though this approach was not pursued in favor of using real data datasets. \textbf{Analysis of model sensitivity to various degradation mechanisms} was made possible by the physics-based nature of the Batemo model, enabling detailed investigation of how different aging phenomena affect battery performance predictions. 
+\textbf{Validation of estimation algorithms under controlled conditions} was enabled through the model's ability to simulate battery behaviors, allowing for systematic testing of algorithm performance across various operational scenarios. \textbf{Potential for synthetic data generation} was identified as a valuable capability for training and evaluating neural networks when real world data is limited, though this approach was not pursued in favor of using real data datasets. \textbf{Analysis of model sensitivity to various degradation mechanisms} was made possible by the physics-based nature of the Batemo model, enabling detailed investigation of how different aging phenomena affect battery performance predictions. 
 
 This MATLAB implementation served as a foundation for understanding battery dynamics and provided insights that informed subsequent neural network development phases. The experience gained from working with both simulated and physics-based models highlighted the importance of high-quality data and the potential benefits of combining model-based insights with data-driven approaches.
 
@@ -73,7 +71,7 @@ This work evaluated different NN approaches, each addressing specific limitation
 %
 %The first neural network implementation combined CNN with LSTM networks to leverage both spatial feature extraction and temporal sequence modeling capabilities\color{Red}Referencia da rede que usou\color{Black}. This CNN+LSTM architecture was structured to use the supporting strengths of both convolutional and recurrent neural networks. The design incorporated multiple specialized layers, each serving a distinct purpose in the feature extraction and temporal modeling pipeline.\color{Red}Ficava bem a referência a uma figura que mostrasse o diagrama de blocos da arquitetura\color{Black} \textbf{CNN layers} were responsible for extracting local patterns and features from battery measurement sequences, identifying spatial relationships and important signal characteristics within the input data. \textbf{LSTM layers} focused on modeling long-term dependencies and temporal relationships, capturing the sequential nature of battery degradation and state evolution over time. Finally, \textbf{Dense layers} provided the final prediction mapping with appropriate activation functions, transforming the processed features into accurate SOC and SOH estimates.
 %
-%Several significant challenges were encountered during the implementation that highlighted the complexity of applying deep learning to battery health monitoring. These obstacles required careful analysis and ultimately influenced the decision to pursue alternative approaches. \textbf{Gradient vanishing} emerged as a critical issue where long sequences caused training instability, preventing the network from effectively learning long-term dependencies essential for accurate battery state prediction. \textbf{Overfitting} presented another major concern, as the high model complexity led to poor generalization, with the network memorizing training patterns rather than learning transferable features applicable to new battery data. \textbf{Computational efficiency} posed practical limitations, with training time becoming too long for large datasets, making the approach unsuitable for real-world applications requiring timely model updates. Additionally, \textbf{Feature engineering} proved challenging, as manual feature selection proved suboptimal, requiring extensive domain expertise and iterative refinement that limited the model's adaptability to different battery types and operating conditions.
+%Several significant challenges were encountered during the implementation that highlighted the complexity of applying deep learning to battery health monitoring. These obstacles required careful analysis and ultimately influenced the decision to pursue alternative approaches. \textbf{Gradient vanishing} emerged as a critical issue where long sequences caused training instability, preventing the network from effectively learning long-term dependencies essential for accurate battery state prediction. \textbf{Overfitting} presented another major concern, as the high model complexity led to poor generalization, with the network memorizing training patterns rather than learning transferable features applicable to new battery data. \textbf{Computational efficiency} posed practical limitations, with training time becoming too long for large datasets, making the approach unsuitable for real world applications requiring timely model updates. Additionally, \textbf{Feature engineering} proved challenging, as manual feature selection proved suboptimal, requiring extensive domain expertise and iterative refinement that limited the model's adaptability to different battery types and operating conditions.
 %
 %\subsection{Hybrid vs. Data-Driven Approach Evaluation}
 %\label{subsec:hybrid_vs_datadriven}
@@ -82,7 +80,7 @@ This work evaluated different NN approaches, each addressing specific limitation
 %
 %The hybrid approach integrated multiple supporting techniques to use both physics-based understanding and data-driven learning capabilities. This complete strategy incorporated several key components designed to enhance prediction accuracy and reliability. \textbf{Physics-based model outputs as additional input features} provided domain-specific insights that enriched the neural network's understanding of battery behavior, incorporating basic electrochemical principles into the learning process. \textbf{Kalman filter estimates as regularization terms} helped constrain the neural network training by incorporating well-established state estimation techniques, reducing the likelihood of unrealistic predictions and improving model stability. Furthermore, \textbf{domain knowledge constraints in loss function design} ensured that the learned models respected known physical limitations and relationships, preventing the network from learning patterns that violated basic battery physics principles.
 %
-%The pure data-driven approach emphasized maximum use of machine learning capabilities while minimizing reliance on explicit domain knowledge. This methodology focused on allowing the neural network to discover patterns and relationships directly from the data. \textbf{End-to-end learning from raw sensor data} enabled the model to process unfiltered battery measurements, potentially capturing subtle patterns that might be lost during manual preprocessing or feature engineering steps. \textbf{Automatic feature extraction and representation learning} allowed the network to identify the most relevant characteristics for battery health prediction without requiring extensive domain expertise or manual feature design. Additionally, \textbf{minimal domain-specific preprocessing requirements} reduced implementation complexity and improved the method's adaptability to different battery types and measurement configurations, making it more suitable for diverse real-world applications.
+%The pure data-driven approach emphasized maximum use of machine learning capabilities while minimizing reliance on explicit domain knowledge. This methodology focused on allowing the neural network to discover patterns and relationships directly from the data. \textbf{End-to-end learning from raw sensor data} enabled the model to process unfiltered battery measurements, potentially capturing subtle patterns that might be lost during manual preprocessing or feature engineering steps. \textbf{Automatic feature extraction and representation learning} allowed the network to identify the most relevant characteristics for battery health prediction without requiring extensive domain expertise or manual feature design. Additionally, \textbf{minimal domain-specific preprocessing requirements} reduced implementation complexity and improved the method's adaptability to different battery types and measurement configurations, making it more suitable for diverse real world applications.
 %
 %The evaluation revealed that data-driven approaches demonstrated \textbf{better generalization} across different battery chemistries, \textbf{reduced dependency} on accurate physics model parameters, \textbf{better scalability} to large datasets, and \textbf{more strong performance} under varying operating conditions. This analysis motivated the transition to advanced pure data-driven architectures, which require the use of comprehensive and high-quality datasets.
 
@@ -91,7 +89,7 @@ This work evaluated different NN approaches, each addressing specific limitation
 
 During the literature review process, the Transformer network for Remaining Useful Life prediction of lithium-ion batteries~\cite{chen_transformer_2022} was identified as a promising approach that demonstrated superior performance for battery health prediction tasks. This work introduced a Transformer-based neural network specifically designed for battery RUL prediction using the CALCE dataset \cite{CALCE_battery_nodate}.
 
-The paper addressed the challenge of noisy battery capacity data through a two-stage framework. First, a DAE was applied to process the raw battery data and reduce noise artifacts commonly present during charge-discharge cycles. The denoised data was then fed into a Transformer network to capture temporal information and learn features relevant to battery degradation patterns. The unified framework combined both denoising and prediction tasks, enabling end-to-end learning for accurate RUL estimation.
+The paper addressed the challenge of noisy battery capacity data through a two-stage framework. First, a Denoising Auto-Encoder(DAE) was applied to process the raw battery data and reduce noise commonly present during charge-discharge cycles. The denoised data was then fed into a Transformer network to capture temporal information and learn features relevant to battery degradation patterns. The unified framework combined both denoising and prediction tasks, enabling accurate RUL estimation.
 
 The Transformer architecture utilized self-attention mechanisms to model long-range dependencies in battery degradation sequences, effectively capturing relationships between distant time points in the battery operational history. This approach demonstrated superior performance compared to traditional methods on multiple battery datasets, showing improved accuracy in predicting both SOH and EOL estimates. Figure~\ref{fig:transformer_architecture} illustrates the complete Transformer architecture implemented for battery RUL prediction, showing the multi-head attention mechanisms and feed-forward layers that enable effective temporal pattern recognition.
 
@@ -102,7 +100,7 @@ The Transformer architecture utilized self-attention mechanisms to model long-ra
 \label{fig:transformer_architecture}
 \end{figure}
 
-Building on concepts from Transferred Multi-Task Learning \cite{che_battery_2023}, which showed promise for battery state monitoring across different operating conditions, an investigation into MoE networks was conducted. MoE represents a powerful neural network architecture that combines multiple specialized sub-networks (experts) with a gating mechanism that determines which experts should be activated for each input sample.
+Building on concepts from Transferred Multi-Task Learning \cite{che_battery_2023}, which showed promise for battery state monitoring across different operating conditions, an investigation into Mixture of Experts(MoE) networks was conducted. MoE represents a powerful neural network architecture that combines multiple specialized sub-networks (experts) with a gating mechanism that determines which experts should be activated for each input sample.
 
 The MoE architecture offers several advantages for battery health prediction:
 
@@ -113,7 +111,7 @@ The MoE architecture offers several advantages for battery health prediction:
     \item \textbf{Scalable capacity}: Model capacity can be increased by adding experts without proportional computational cost increase
 \end{itemize}
 
-To evaluate the effectiveness of MoE networks for battery RUL prediction, the same experimental setup as the Chen et al. Transformer paper was replicated, but with the Transformer architecture replaced by a MoE network. The MoE implementation consisted of three specialized experts and a learned gating network that dynamically weighted expert contributions based on input characteristics. Figure~\ref{fig:moe_architecture} presents the detailed architecture of the implemented MoE network, highlighting the gating mechanism and expert specialization that enables efficient and targeted learning for different aspects of battery behavior.
+To evaluate the effectiveness of MoE networks for battery RUL prediction, the same experimental setup as the Transformer paper was replicated, but with the Transformer architecture replaced by a MoE network. The MoE implementation consisted of three specialized experts and a learned gating network that dynamically weighted expert contributions based on input characteristics. Figure~\ref{fig:moe_architecture} presents the detailed architecture of the implemented MoE network, highlighting the gating mechanism and expert specialization.
 
 \begin{figure}[htbp]
 \centering
@@ -122,7 +120,7 @@ To evaluate the effectiveness of MoE networks for battery RUL prediction, the sa
 \label{fig:moe_architecture}
 \end{figure}
 
-% Transformer results figure
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{imgs/transf_graph_results.png}
@@ -130,7 +128,7 @@ To evaluate the effectiveness of MoE networks for battery RUL prediction, the sa
     \label{fig:transformer_results}
 \end{figure}
 
-% MoE results figure
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\textwidth]{imgs/moe_graph_results.png}
@@ -154,7 +152,6 @@ To evaluate the effectiveness of MoE networks for battery RUL prediction, the sa
 
 The experimental results demonstrated that a simple MoE network with just three experts could achieve performance levels comparable to the much more complex Transformer-based architecture. Figure~\ref{fig:transformer_results} shows the training and validation performance of the Transformer network, while Figure~\ref{fig:moe_results} presents the corresponding results for the MoE implementation. Table~\ref{tab:transformer_moe_results} provides a quantitative comparison of the two approaches, showing that while the Transformer model achieved a slightly better RMSE of 0.0297 compared to the FCN MoE network's 0.0335, the MoE network provided competitive results with significantly reduced model complexity and computational requirements.
 
-The MoE approach proved particularly effective due to its ability to specialize different experts for distinct aspects of battery behavior. Expert analysis revealed that the three experts naturally specialized in different degradation phases: early battery life, linear degradation, and end-of-life behavior. This specialization allowed the MoE network to capture the complex multi-phase nature of battery degradation with a simpler overall architecture.
 
 This experiment demonstrated the potential of MoE networks as an efficient alternative to complex Transformer architectures for battery health prediction tasks, offering a good balance between prediction accuracy and computational efficiency.
 
@@ -196,7 +193,7 @@ SOC is calculated using a cycle-relative approach for each charge-discharge cycl
     SOC values are clipped to ensure they remain within the physically meaningful range of 0-100\%.
 \end{enumerate}
 
-This approach ensures that SOC represents the true charge state within each cycle, providing accurate representation of the battery's immediate operational state regardless of capacity degradation over time.
+This approach ensures that SOC represents the true charge state within each cycle, providing accurate representation of the battery's operational state regardless of capacity degradation over time.
 
 \subsubsection{SOH Calculation}
 \label{subsubsec:soh_calculation}
@@ -246,7 +243,7 @@ This calculation approach provides a normalized measure of remaining battery lif
 \subsubsection{Capacity Reset and Tracking}
 \label{subsubsec:capacity_tracking}
 
-The accurate calculation of SOC, SOH, and RUL depends on proper capacity tracking throughout battery testing. The implementation includes sophisticated capacity reset mechanisms:
+The accurate calculation of SOC, SOH, and RUL depends on proper capacity tracking throughout battery testing. The implementation includes capacity reset mechanisms:
 
 \begin{enumerate}
     \item \textbf{Step-based capacity reset}: Capacities are reset when the step index reaches 9, indicating the start of a new charge-discharge cycle:
@@ -266,7 +263,7 @@ The accurate calculation of SOC, SOH, and RUL depends on proper capacity trackin
     \end{equation}
 \end{enumerate}
 
-This systematic approach ensures that all capacity-based calculations maintain accuracy throughout the battery's operational history, providing foundation data for SOC, SOH, and RUL.
+This approach ensures that all capacity-based calculations maintain accuracy throughout the battery's operational history, providing foundation data for SOC, SOH, and RUL.
 \subsection{Cycle Selection System}
 \label{subsec:cycle_selection_system}
 
@@ -331,13 +328,13 @@ Based on these findings and the need for a more versatile and efficient approach
     \item \textbf{Long-range dependency modeling}: Effective capture of dependencies across extended time horizons while maintaining computational efficiency
     \item \textbf{Parameter efficiency}: Reduced model complexity while maintaining or improving performance compared to Transformer architectures
     \item \textbf{Multi-scale temporal analysis}: Capability to analyze patterns at different time scales simultaneously, from charge-discharge cycles to long-term degradation trends
-    \item \textbf{Versatility}: Capability to handle various time series analysis tasks beyond just forecasting, enabling broader applicability
+    \item \textbf{Versatility}: Capability to handle various time series analysis tasks beyond just forecasting
 \end{itemize}
 
 These requirements led to the selection and implementation of TimesNet, a cutting-edge architecture specifically designed for general time-series analysis. TimesNet is a modern neural network designed specifically for analyzing time series data~\cite{wu_timesnet_2023}. This model tackles the basic challenge of understanding how data changes over time by converting the complex problem from analyzing 1D time series into analyzing 2D patterns, as illustrated in Figure~\ref{fig:timesnet_2d_transformation}. The key innovation of TimesNet is its ability to discover repeating patterns (periodicity) in time series data and break down complex time changes into smaller, more manageable pieces.
 
 
-TimesNet starts by analyzing the time series in the frequency domain using FFT to discover multiple periods. Real-world time series usually present multi-periodicity, such as daily and yearly variations for weather observations, or weekly and quarterly variations for electricity consumption. The period discovery process works by analyzing the frequency spectrum of the input data. The algorithm calculates the amplitude of different frequencies and identifies the strongest periodic patterns by selecting the top-k frequencies with the highest amplitudes. These dominant frequencies correspond to the most important periodic behaviors in the data, such as charge-discharge cycles in battery operations or longer-term capacity fade patterns.
+TimesNet starts by analyzing the time series in the frequency domain using FFT to discover multiple periods. real world time series usually present multi-periodicity, such as daily and yearly variations for weather observations, or weekly and quarterly variations for electricity consumption. The period discovery process works by analyzing the frequency spectrum of the input data. The algorithm calculates the amplitude of different frequencies and identifies the strongest periodic patterns by selecting the top-k frequencies with the highest amplitudes. These dominant frequencies correspond to the most important periodic behaviors in the data, such as charge-discharge cycles in battery operations or longer-term capacity fade patterns.
 
 
 The architecture works by converting 1D time series into a set of 2D grids based on multiple identified periods. This transformation organizes patterns within each period into columns and patterns across different periods into rows of the 2D grids, making time patterns easier to analyze using 2D image processing techniques. Based on the selected frequencies and corresponding period lengths, the 1D time series is reshaped into multiple 2D tensors. This process takes the original time series data and reorganizes it into a grid-like format where each period becomes a row and the progression through different periods becomes columns.
@@ -364,9 +361,9 @@ The shared inception block design makes the model size stay the same regardless 
     \label{fig:timesnet_2d_transformation}
 \end{figure}
 
-TimesNet shows better performance across five main time series analysis tasks: short-term and long-term forecasting, filling in missing data, classification, and anomaly detection. This flexibility makes it particularly suitable for battery health prediction tasks, where complex time dependencies and patterns at multiple scales are crucial for accurate state-of-health estimation. 
+TimesNet shows better performance across four main time series analysis tasks: short-term and long-term forecasting, classification, and anomaly detection.
 
-The model's ability to handle various sequence lengths and its strong design for capturing time dynamics work well with the requirements of battery degradation modeling, where both short-term changes and long-term trends must be considered at the same time. Key advantages include:
+The model's ability to handle various sequence lengths and its strong design for capturing time dynamics work well with the requirements of battery degradation modeling, where both short-term changes and long-term trends must be considered at the same time. The key advantages include:
 
 \begin{itemize}
 \item \textbf{Multi-scale time modeling}: The 2D transformation allows capturing both short-term battery behavior (within periods) and long-term degradation trends (across periods) at the same time.
@@ -378,23 +375,11 @@ The model's ability to handle various sequence lengths and its strong design for
 Unlike previous methods that struggle with the complex time patterns in battery data, TimesNet's 2D approach makes time changes easier to analyze. The transformation breaks the limitation of representation ability in the original 1D space, enabling more effective modeling of complex battery degradation patterns. The TimesNet architecture was therefore adapted for battery health prediction with several key modifications to optimize performance for this specific domain:
 
 \begin{itemize}
-    \item \textbf{Input preprocessing}: Battery measurement sequences (voltage, current, temperature) were formatted to exploit the multi-periodicity detection capabilities. The input sequences were structured to capture both charge-discharge cycles and longer-term aging patterns.
+    \item \textbf{Input preprocessing}: Battery measurement sequences were formatted. The input sequences were structured to capture both charge-discharge cycles and longer-term aging patterns.
     \item \textbf{Output configuration}: Modified for regression tasks to predict continuous SoH values rather than classification outputs. The final layer was adapted to output single scalar values representing battery health percentages.
     \item \textbf{Loss function}: Used MSE with additional rules to prevent overfitting and ensure stable training.
-    \item \textbf{Feature engineering}: Minimal manual feature creation to use the model's automatic pattern discovery abilities. This approach allows TimesNet to automatically identify relevant time patterns in battery data without requiring specialized feature design.
+    \item \textbf{Feature engineering}: Minimal manual feature creation to use the model's automatic pattern discovery abilities. 
     \item \textbf{Period selection}: The top-k parameter was optimized specifically for battery data characteristics, allowing the model to focus on the most relevant repeating patterns in battery operation and degradation cycles.
-\end{itemize}
-
-\subsection{Model Optimization}
-\label{sec:model_optimization}
-
-TimesNet implementation followed the general framework with battery-specific optimizations:
-
-\begin{itemize}
-    \item \textbf{Sequence length}: Fixed-length sequences of 100 time steps were used to capture sufficient temporal context while maintaining computational efficiency.
-    \item \textbf{Period discovery}: The FFT-based period detection was applied to identify natural cycles in battery operation, such as charge-discharge patterns and longer-term capacity fade cycles.
-    \item \textbf{2D tensor processing}: The inception blocks were configured with appropriate kernel sizes to capture multi-scale temporal variations relevant to battery degradation processes.
-    \item \textbf{Aggregation weights}: The amplitude-based aggregation mechanism was used to automatically weight different periodic components based on their importance in the frequency domain.
 \end{itemize}
 
 \subsection{Hyperparameter Search}
@@ -468,7 +453,7 @@ The most successful trial was trial 15, which presented the following results:
 
 The results show that using 2 encoder layers works better than deeper networks, likely avoiding overfitting on the battery dataset. The high expansion factor of 4 allows the model to capture more complex patterns, while setting top\_k to 9 means the model considers more frequency components than the default range, which helps capture the various periodic behaviors in battery degradation cycles.
 
-The optimization process was also monitored using Weights \& Biases, which provided real-time tracking of the validation loss across all trials. This monitoring capability proved extremely valuable for verifying that training was proceeding correctly, particularly given the very slow nature of the hyperparameter search process. The ability to observe real-time training progress allowed for early detection of problematic configurations and ensured efficient use of computational resources during the week-long optimization process. Figure~\ref{fig:wandb_validation_loss} shows the validation loss curves for different trials, illustrating the convergence behavior and helping identify the most promi-sing hyperparameter configurations during the optimization process.
+The optimization process was also monitored using Weights \& Biases, which provided tracking of the validation loss across all trials. This monitoring proved extremely valuable for verifying that training was proceeding correctly, particularly given the very slow process of the hyperparameter search process. The ability to observe real-time training progress allowed for early detection of problematic configurations and ensured efficient use of computational resources during the time of optimization process. Figure~\ref{fig:wandb_validation_loss} shows the validation loss curves for different trials, illustrating the convergence behavior and helping identify the most promising hyperparameter configurations during the optimization process.
 
 \begin{figure}[htbp]
     \centering
@@ -480,7 +465,7 @@ The optimization process was also monitored using Weights \& Biases, which provi
 \chapter{Experiments and Results}
 \label{sec:experiments_results}
 
-This chapter presents the comprehensive experimental evaluation of the TimesNet architecture for battery health prediction. The experiments were conducted using the optimized hyperparameters obtained from the Optuna search process detailed in Section~\ref{sec:model_optimization}. The model was trained to simultaneously predict SOC, SOH, and RUL from multi-dimensional battery operational data.
+This chapter presents the comprehensive experimental evaluation of the TimesNet architecture for battery health prediction. The experiments were conducted using the optimized hyperparameters obtained from the Optuna search process detailed earlier. The model was trained to simultaneously predict SOC, SOH, and RUL from multi-dimensional battery operational data.
 
 \section{Model Training Configuration}
 \label{sec:training_config}
@@ -490,9 +475,9 @@ The TimesNet model was trained using the optimal hyperparameters identified thro
 \subsection{Model Architecture and Complexity}
 \label{subsec:model_complexity}
 
-The final TimesNet model comprises 37,515,455 trainable parameters, making it a substantially complex deep learning architecture. To provide perspective on this complexity, this parameter count is comparable to smaller versions of modern language models - for context, GPT-2 Small contains 124 million parameters, making our model approximately 30\% of that size. This comparison helps illustrate the computational requirements for general users unfamiliar with neural network scales.
+The final TimesNet model comprises 37,515,455 trainable parameters, making it a substantially complex deep learning architecture. To provide perspective on this complexity, this parameter count is comparable to smaller versions of modern language models, for context, GPT-2 Small (2019) contains 124 million parameters, making our model approximately 30\% of that size. This comparison helps illustrate the computational requirements for general users unfamiliar with neural network scales.
 
-The model's memory footprint is 143.42 MB, which presents important considerations for deployment scenarios. While this size makes the model suitable for modern desktop and server environments, it poses challenges for edge device deployment. The memory requirements exceed typical constraints for embedded systems or mobile devices, limiting real-time battery monitoring applications in resource-constrained environments such as IoT devices or embedded battery management systems.
+The model's memory footprint is 143.42 MB, which presents important considerations for deployment scenarios. While this size makes the model suitable for modern desktop and server environments, it poses challenges for edge device deployment. The memory requirements exceed typical constraints for embedded systems or mobile devices, limiting real-time battery monitoring applications in resource-constrained environments such as in embedded battery management systems.
 
 \subsection{Input Feature Configuration}
 \label{subsec:input_features}
@@ -508,7 +493,7 @@ The model processes six essential input features that capture the comprehensive 
     \item \textbf{RUL}: RUL feedback for predictive modeling
 \end{itemize}
 
-The selection of voltage and current as the primary input parameters was driven by their fundamental importance and practical accessibility in battery monitoring systems. These parameters represent the \textbf{most basic and straightforward measurements} that can be obtained from any battery system without requiring specialized or expensive instrumentation. Unlike more complex measurements such as impedance spectroscopy, temperature gradients, or electrochemical impedance, voltage and current can be acquired using \textbf{simple, cost-effective sensors} that are readily available in commercial battery management systems. This approach ensures that the developed model can be practically implemented in real-world applications without requiring sophisticated measurement infrastructure, making it accessible for widespread deployment in various battery monitoring scenarios.
+The selection of voltage and current as the primary input parameters was driven by their fundamental importance and practical accessibility in battery monitoring systems. These parameters represent the \textbf{most basic and straightforward measurements} that can be obtained from any battery system without requiring specialized or expensive instrumentation. Unlike more complex measurements such as impedance spectroscopy, temperature gradients, or electrochemical impedance, voltage and current can be acquired using \textbf{simple, cost-effective sensors} that are readily available in commercial battery management systems. This approach ensures that the developed model can be practically implemented in real world applications without requiring sophisticated measurement infrastructure, making it accessible for widespread deployment in various battery monitoring scenarios.
 
 This multi-dimensional input configuration enables the model to learn complex interdependencies between different battery state variables, supporting the simultaneous prediction of multiple health indicators.
 
