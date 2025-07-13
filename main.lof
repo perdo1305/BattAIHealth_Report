@@ -30,13 +30,13 @@
 \contentsline {figure}{\numberline {16}{\ignorespaces MoE network performance results for battery RUL prediction, demonstrating competitive accuracy with reduced computational complexity compared to the Transformer approach.\relax }}{40}{figure.caption.18}%
 \contentsline {figure}{\numberline {17}{\ignorespaces Dataset structure showing the systematic organization of battery cycle data from batches to individual files.\relax }}{42}{figure.caption.20}%
 \contentsline {figure}{\numberline {18}{\ignorespaces Calculated SOC, SOH, and RUL values across battery operational cycles, showing the characteristic patterns of battery degradation and state evolution.\relax }}{47}{figure.caption.21}%
-\contentsline {figure}{\numberline {19}{\ignorespaces TimesNet 2D transformation: converting 1D time series into structured 2D tensors by discovering periodicity~\blx@tocontentsinit {0}\cite {wu_timesnet_2023}.\relax }}{51}{figure.caption.22}%
+\contentsline {figure}{\numberline {19}{\ignorespaces TimesNet 2D transformation: converting 1D time series into structured 2D tensors by discovering periodicity~\blx@tocontentsinit {0}\cite {wu_timesnet_2023}.\relax }}{50}{figure.caption.22}%
 \contentsline {figure}{\numberline {20}{\ignorespaces Hyperparameter importance analysis showing the relative influence of each parameter on model performance during Optuna optimization.\relax }}{54}{figure.caption.23}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Parallel coordinate plot showing the relationship between hyperparameter configurations and objective values across all 50 optimization trials. Each line represents a trial, with color intensity indicating performance (darker lines represent better MSE values).\relax }}{55}{figure.caption.24}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Parallel coordinate plot showing the relationship between hyperparameter configurations and objective values across all 50 optimization trials. Each line represents a trial, with color intensity indicating performance (darker lines represent better MSE values).\relax }}{54}{figure.caption.24}%
 \contentsline {figure}{\numberline {22}{\ignorespaces Optuna objective value progression showing the improvement in MSE loss over 50 optimization trials.\relax }}{55}{figure.caption.25}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Weights \& Biases validation loss tracking across multiple Optuna trials, showing the convergence behavior and performance comparison between different hyperparameter configurations.\relax }}{57}{figure.caption.26}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Weights \& Biases validation loss tracking across multiple Optuna trials, showing the convergence behavior and performance comparison between different hyperparameter configurations.\relax }}{56}{figure.caption.26}%
 \ttl@tocsep 
-\contentsline {figure}{\numberline {24}{\ignorespaces Training, validation, and test loss progression throughout the training process, showing individual convergence behavior for each dataset split and demonstrating the generalization performance of the TimesNet model.\relax }}{61}{figure.caption.27}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Training, validation, and test loss progression throughout the training process, showing individual convergence behavior for each dataset split and demonstrating the generalization performance of the TimesNet model.\relax }}{59}{figure.caption.27}%
 \ttl@tocsep 
 \ttl@tocsep 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

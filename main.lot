@@ -13,11 +13,11 @@
 \ttl@tocsep 
 \contentsline {table}{\numberline {1}{\ignorespaces Comprehensive comparison of available battery datasets and their features\relax }}{29}{table.caption.9}%
 \ttl@tocsep 
-\contentsline {table}{\numberline {2}{\ignorespaces Quantitative comparison of Transformer vs. MoE network performance for battery RUL prediction\relax }}{39}{table.caption.19}%
+\contentsline {table}{\numberline {2}{\ignorespaces Quantitative comparison of Transformer vs. MoE network performance for battery RUL prediction\relax }}{38}{table.caption.19}%
 \ttl@tocsep 
-\contentsline {table}{\numberline {3}{\ignorespaces SOC prediction performance metrics\relax }}{63}{table.caption.28}%
-\contentsline {table}{\numberline {4}{\ignorespaces SOH prediction performance metrics\relax }}{63}{table.caption.29}%
-\contentsline {table}{\numberline {5}{\ignorespaces RUL prediction performance metrics\relax }}{64}{table.caption.30}%
+\contentsline {table}{\numberline {3}{\ignorespaces SOC prediction performance metrics\relax }}{61}{table.caption.28}%
+\contentsline {table}{\numberline {4}{\ignorespaces SOH prediction performance metrics\relax }}{61}{table.caption.29}%
+\contentsline {table}{\numberline {5}{\ignorespaces RUL prediction performance metrics\relax }}{62}{table.caption.30}%
 \ttl@tocsep 
 \ttl@tocsep 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -7,7 +7,7 @@
 
 This chapter details the development phases of the battery health prediction system, covering the complete progress from initial MATLAB modeling to advanced deep learning implementation. The project evolved through distinct phases: (1) MATLAB-based modeling and simulation using traditional methods, (2) exploration of hybrid neural network approaches, (3) transition to pure data-driven models, and (4) implementation of state-of-the-art deep learning architectures for time series forecasting.
 
-The development process was guided by the need to create accurate, strong, and scalable battery health prediction models capable of handling real-world applications. Each phase built upon lessons learned from previous approaches, ultimately leading to the implementation of TimesNet, a cutting-edge time series analysis architecture that demonstrates superior performance in battery degradation prediction tasks.
+The development process was guided by the need to create accurate, strong, and scalable battery health prediction models capable of handling real-world applications. Each phase built upon lessons learned from previous approaches, ultimately leading to the implementation of TimesNet, a state of the art time series analysis architecture that demonstrates superior performance in time series tasks, and in this work specifically in battery degradation prediction tasks.
 
 \section{MATLAB Modeling and Simulation}
 \label{sec:matlab_modeling}
@@ -41,7 +41,7 @@ First, the EKF was implemented as the primary estimation algorithm for SOC predi
 \label{fig:ekf_results}
 \end{figure} 
 
-The implementation addressed several critical considerations to ensure accuracy and reliability. \textbf{Current integration accuracy and drift compensation} were prioritized to minimize cumulative errors that could significantly impact SOC estimates over extended periods. \textbf{Temperature effects on coulombic efficiency} were carefully analyzed, as thermal variations can substantially alter the charge-discharge efficiency and affect the accuracy of capacity calculations. \textbf{Aging effects on capacity estimation} were incorporated to account for the gradual degradation of battery capacity over operational lifetime, ensuring that SOC estimates remain accurate as the battery ages. Finally, \textbf{calibration procedures for initial SOC determination} were established to provide accurate baseline measurements, which are crucial for the cumulative nature of coulomb counting methods.
+The implementation addressed several critical considerations to ensure accuracy and reliability. \textbf{Current integration accuracy and drift compensation} were prioritized to minimize cumulative errors that could significantly impact SOC estimates over extended periods. \textbf{Temperature effects} were carefully analyzed, as thermal variations can substantially alter the charge-discharge efficiency and affect the accuracy of capacity calculations. \textbf{Aging effects on capacity estimation} were incorporated to account for the gradual degradation of battery capacity over operational lifetime, ensuring that SOC estimates remain accurate as the battery ages. Finally, \textbf{calibration procedures for initial SOC} were established to provide accurate baseline measurements, which are crucial for the cumulative nature of coulomb counting methods.
 
 The Batemo battery model was incorporated to provide physics-based battery behavior simulation. This integration offered complete capabilities for model development and validation. Figure~\ref{fig:batemo_configurations} shows the detailed configuration options available in the Batemo model, while Figure~\ref{fig:batemo_estimation} demonstrates the estimation capabilities achieved through the physics-based simulation approach.
 
@@ -59,7 +59,7 @@ The Batemo battery model was incorporated to provide physics-based battery behav
 \label{fig:batemo_estimation}
 \end{figure}
 
-\textbf{Validation of estimation algorithms under controlled conditions} was enabled through the model's ability to simulate precise battery behaviors, allowing for systematic testing of algorithm performance across various operational scenarios. \textbf{Generation of synthetic data for algorithm testing} provided a valuable resource for training and evaluating neural networks when real-world data was limited or when specific degradation patterns needed to be studied. \textbf{Analysis of model sensitivity to various degradation mechanisms} was made possible by the physics-based nature of the Batemo model, enabling detailed investigation of how different aging phenomena affect battery performance predictions. Additionally, \textbf{comparison between model-based and data-driven approaches} was made possible, allowing for complete evaluation of different estimation methodologies and their respective strengths and limitations.
+\textbf{Validation of estimation algorithms under controlled conditions} was enabled through the model's ability to simulate precise battery behaviors, allowing for systematic testing of algorithm performance across various operational scenarios. \textbf{Potential for synthetic data generation} was identified as a valuable capability for training and evaluating neural networks when real-world data is limited, though this approach was not pursued in favor of using real data datasets. \textbf{Analysis of model sensitivity to various degradation mechanisms} was made possible by the physics-based nature of the Batemo model, enabling detailed investigation of how different aging phenomena affect battery performance predictions. 
 
 This MATLAB implementation served as a foundation for understanding battery dynamics and provided insights that informed subsequent neural network development phases. The experience gained from working with both simulated and physics-based models highlighted the importance of high-quality data and the potential benefits of combining model-based insights with data-driven approaches.
 
@@ -91,7 +91,7 @@ This work evaluated different NN approaches, each addressing specific limitation
 
 During the literature review process, the Transformer network for Remaining Useful Life prediction of lithium-ion batteries~\cite{chen_transformer_2022} was identified as a promising approach that demonstrated superior performance for battery health prediction tasks. This work introduced a Transformer-based neural network specifically designed for battery RUL prediction using the CALCE dataset \cite{CALCE_battery_nodate}.
 
-The Chen et al. approach addressed the challenge of noisy battery capacity data through a two-stage framework. First, a DAE was applied to process the raw battery data and reduce noise artifacts commonly present during charge-discharge cycles. The denoised data was then fed into a Transformer network to capture temporal information and learn features relevant to battery degradation patterns. The unified framework combined both denoising and prediction tasks, enabling end-to-end learning for accurate RUL estimation.
+The paper addressed the challenge of noisy battery capacity data through a two-stage framework. First, a DAE was applied to process the raw battery data and reduce noise artifacts commonly present during charge-discharge cycles. The denoised data was then fed into a Transformer network to capture temporal information and learn features relevant to battery degradation patterns. The unified framework combined both denoising and prediction tasks, enabling end-to-end learning for accurate RUL estimation.
 
 The Transformer architecture utilized self-attention mechanisms to model long-range dependencies in battery degradation sequences, effectively capturing relationships between distant time points in the battery operational history. This approach demonstrated superior performance compared to traditional methods on multiple battery datasets, showing improved accuracy in predicting both SOH and EOL estimates. Figure~\ref{fig:transformer_architecture} illustrates the complete Transformer architecture implemented for battery RUL prediction, showing the multi-head attention mechanisms and feed-forward layers that enable effective temporal pattern recognition.
 
@@ -166,7 +166,7 @@ The CALCE battery dataset was selected as the primary dataset for this work due 
 \subsection{Dataset Characteristics and Features}
 \label{subsec:dataset_characteristics}
 
-The dataset consists of 886 CSV files with battery cycle data. Initially, the data comes in batches of 50 cycles each. The first cycle of each batch is removed to eliminate initialization artifacts. A Python script separates all cycles into individual files, numbered sequentially from 1.csv to 886.csv.
+The CALCE dataset contains multiple battery cells subjected to complete discharge-charge cycling until EOL under various current profiles. For this study, the CS2 battery cell was selected, which was cycled at a constant current rate of 0.5C. This particular cell provides 886 CSV files containing battery cycle data. The original dataset is organized in batches of 50 cycles each, with the first cycle of each batch removed to eliminate initialization artifacts. A custom made Python script was developed to separate all cycles into individual files, sequentially numbered from 1.csv to 886.csv.
 
 \begin{figure}[htbp]
 \centering
@@ -266,7 +266,7 @@ The accurate calculation of SOC, SOH, and RUL depends on proper capacity trackin
     \end{equation}
 \end{enumerate}
 
-This systematic approach ensures that all capacity-based calculations maintain accuracy throughout the battery's operational history, providing reliable foundation data for SOC, SOH, and RUL computations that are essential for effective battery health prediction modeling.
+This systematic approach ensures that all capacity-based calculations maintain accuracy throughout the battery's operational history, providing foundation data for SOC, SOH, and RUL.
 \subsection{Cycle Selection System}
 \label{subsec:cycle_selection_system}
 
