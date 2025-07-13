@@ -2017,6 +2017,7 @@ INPUT ./Covers/Abstract.tex
 INPUT Covers/Abstract.tex
 INPUT ./Covers/Abstract.tex
 INPUT Covers/Abstract.tex
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx10.tfm
 INPUT ./Covers/Contents.tex
 INPUT ./Covers/Contents.tex
 INPUT ./Covers/Contents.tex
@@ -2030,7 +2031,6 @@ INPUT Covers/Contents.tex
 INPUT ./main.toc
 INPUT main.toc
 INPUT main.toc
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmcsc10.tfm
 OUTPUT main.toc
